@@ -10,7 +10,9 @@ if (isset($_POST['submit'])) {
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+	$cpwd = mysqli_real_escape_string($conn, $_POST['cpwd']);
         $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
+	
 
 	//Error handlers
 	//Check for empty fields
@@ -36,6 +38,11 @@ if (isset($_POST['submit'])) {
 					header("Location: ../signup.php?signup=usertaken");
 					exit();
 				} else {
+					if($pwd != $cpwd){
+                                            header("Location: ../signup.php?signup=wrongpwd");
+					     exit();
+                                        }
+					else{
 					//Hashing the password
 					$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
                                         
@@ -67,6 +74,7 @@ if (isset($_POST['submit'])) {
                                        
                                       //  echo mysqli_connect_errno();
 					exit();
+					}	
 				}
 			}
 		}
