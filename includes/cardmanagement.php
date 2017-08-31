@@ -1,5 +1,5 @@
 <?php
-include_once 'db.php';
+include_once 'dbh.inc.php';
 global $conn;
 
 $cardset = array('a001'=>2,'a002'=>2,'a003'=>1,'a004'=>2,'a005'=>2);
