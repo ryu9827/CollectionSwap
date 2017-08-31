@@ -38,8 +38,8 @@ if (isset($_POST['submit'])) {
 					header("Location: ../signup.php?signup=usertaken");
 					exit();
 				} else {
-					if($pwd != $cpwd){
-                                            header("Location: ../signup.php?signup=wrongpwd");
+					if($pwd != $pwd2){
+                                           // header("Location: ../signup.php?signup=wrongpwd");
 					     exit();
                                         }
 					else{
