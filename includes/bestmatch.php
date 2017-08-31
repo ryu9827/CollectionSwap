@@ -2,7 +2,7 @@
 
 
 include 'match.php';
-include 'db.php';
+include 'dbh.inc.php';
  $want = array('a001','a002');
  $extra= array('a005','a006');
 
