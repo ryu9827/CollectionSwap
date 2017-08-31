@@ -1,7 +1,7 @@
 <?php
 
 
-include_once 'db.php';
+include_once 'dbh.inc.php';
 
 global $conn;
 
