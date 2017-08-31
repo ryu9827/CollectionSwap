@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'dbh.inc.php';
 
 //find users from database that can offer/need cards and sorting the list
 function matchup($cardlist = array(),$cardstatus='' ){
