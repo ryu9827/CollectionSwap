@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-	$cpwd = mysqli_real_escape_string($conn, $_POST['pwd2']);
+	$pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
         $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
 	
 
