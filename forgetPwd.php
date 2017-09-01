@@ -22,7 +22,7 @@ if (isset($_SESSION['u_id'])){
 		<H4>Please input your register E-mail address, we will sent you an E-mail with a password reset link.</H4>
 	</div>
 	</br>
-			<form class="form-horizontal" method="POST">
+			<form class="form-horizontal" action="includes/sendPWEmail.php" method="POST">
 				<div class="form-group">
 					<div class="row">					
 				        <label for="uid" class="col-xs-2 col-md-offset-2 control-label">E-mail: </label>
