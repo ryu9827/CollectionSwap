@@ -98,19 +98,12 @@
 
 <div style="height: 50px; visibility:hidden;"></div> 
 
-<style>
-    #sentRequest
-    {
-        top:250px;
-    }
-</style>
-
 <!-- Button trigger modal -->
 <div class="row">
   <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest">Sent Request</button>
 </div>
 <!-- Modal -->
-<div class="modal fade" border="1px" id="sentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" border="1px" id="sentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:250px;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">

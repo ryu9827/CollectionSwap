@@ -6,8 +6,8 @@ if (isset($_SESSION['u_id'])){
 ?>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#submit').click(function(){
-			$('#submit').hide();
+		$('#submit').click(event(){
+
 		})
 
 	});
@@ -29,24 +29,21 @@ if (isset($_SESSION['u_id'])){
 				        <div class="col-xs-4">
 							<input type="text" class="form-control" name="uid" placeholder="Valid E-mail address">						
 						</div>
-						<button id="submit" class="btn btn-info" name="submit">Sent E-mail</button>	
+						<button id="submit" type="button" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-sm" name="submit">Sent E-mail</button>	
 					</div>					 					
 				</div>
 			</form>
 			</br>
+			
 			
 			</br></br></br>
 			<div style="text-align: center"> 						
 				<p>Remember your password? &nbsp<a href="login.php" style="text-decoration: underline;">Login</a></p>			
 			</div> 			
 			
-			<!--the popup modal shows if the e-mail been send successfully-->
-			<div class="modal fade bs-example-modal-sm" tabindex="-1" id="tips" role="dialog" aria-labelledby="mySmallModalLabel" style="top:250px">
-			  <div class="modal-dialog modal-sm" role="document">
-			    <div class="alert alert-success" role="alert">E-mail has been send successfully.</div>
-			  </div>
-			</div>
+			
 					
+
 <?php
 include_once('includes/footer.php');
 ?>
