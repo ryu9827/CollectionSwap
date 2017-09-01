@@ -47,9 +47,9 @@ class sendemail{
         $mail->IsHTML(true);
 
          if(!$mail->Send()){
-         echo "Mailer Error:".$mail->ErrorInfo;
+         //echo "Mailer Error:".$mail->ErrorInfo;
          }else{
-        echo "Message has been sent";
+          echo "Message has been sent,please check your email";
        
         
          }

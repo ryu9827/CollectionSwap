@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
 				      // header("Location: ../signup.php?signup=success");
                                        $mail = new sendemail();
                                        $subject = "test";
-                                       $body = "Dear".$first."：<br/>Thanks for registering in collection-swap。<br/>please click below link to active your account。<br/> 
+                                       $body = "Dear ".$uid."：<br/>Thanks for registering in collection-swap。<br/>please click below link to active your account。<br/> 
                                                                      <a href='http://mysites/netbeans/login/includes/active.php?verify=".$token."' target= 
                                                                      '_blank'>http://mysites/netbeans/login/includes/active.php?verify=".$token."</a><br/> 
                                                                      if the link is not work, please cpqy and paste to your broswer, it will be expired after 24h"; ;
