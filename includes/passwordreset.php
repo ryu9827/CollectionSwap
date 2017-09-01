@@ -1,5 +1,5 @@
 <?php
-
+if (isset($_POST['submit'])) {
 $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 $pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
 
@@ -11,3 +11,4 @@ $pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
      $sql = "UPDATE users SET user_pwd = '$hashedPwd' WHERE user_uid = '$user_uid'";
      mysqli_query($conn, $sql);
  }
+}
