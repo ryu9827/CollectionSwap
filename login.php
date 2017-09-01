@@ -28,6 +28,9 @@ if (isset($_SESSION['u_id'])){
 					</div>  					
 				</div>
 			</form>
+			</br>
+			
+	<p class="text-center"><a href="forgetPwd">Forget your password?</a></p>
 					
 
 <?php
