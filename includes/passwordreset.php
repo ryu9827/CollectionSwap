@@ -1,5 +1,12 @@
 <?php
 if (isset($_POST['submit'])) {
+$verify = stripslashes(trim($_GET['verify'])); 
+$sql = "SELECT * FROM users WHERE token = '$verify'";
+
+$res= mysqli_query($conn, $sql); 
+$row = mysqli_fetch_array($res); 
+
+$user_uid = $row['user_uid'];
 $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 $pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
 
