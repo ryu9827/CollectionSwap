@@ -16,21 +16,11 @@
 		<h2>User Profile</h2>
 	</div><br/>
 
-<div class="row">
+<!-- <div class="row">
 	<div class="col-lg-6 col-xs-offset-3">	
 		<div class="well">
 			<form class="form-horizontal" action="#" method="POST">
 				<div class="form-group">
-					<!-- <label for="Firstname" class="col-xs-2 col-xs-offset-2 control-label">First Name: </label>
-					<div class="col-xs-4">
-						<input type="text" class="form-control" name="first" placeholder="First name">
-					</div>
-					</br></br></br>
-					<label for="Lastname" class="col-xs-2 col-xs-offset-2 control-label">Last Name: </label>
-					<div class="col-xs-4">
-						<input type="text" class="form-control" name="last" placeholder="Last name">
-					</div> 
-					</br></br></br>-->
 					<div class="row">
 						<label for="uid" class="col-xs-3 control-label">User Name: </label>
 				        <div class="col-xs-6">
@@ -49,17 +39,12 @@
 							<input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo $_SESSION['u_email']; ?>">
 						</div>
 						<button type="submit" class="btn btn-info" name="submit">&nbsp Verify &nbsp E-mail &nbsp</button>	
-					</div>				
-					<!-- <label for="Postcode" class="col-xs-2 col-xs-offset-2 control-label">Postcode: </label>
-					<div class="col-xs-4">
-			            <input type="text" class="form-control" name="postcode" placeholder="Postcode">
-			        </div>
-			        </br></br></br> -->
+					</div>	
 				</div>
 			</form>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div class="row">
 	<div class="col-lg-6 col-xs-offset-3">
