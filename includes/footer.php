@@ -34,7 +34,6 @@
 </div> -->
 <!--footer end-->
 </div>
-<script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wb.carousel.min.js"></script>

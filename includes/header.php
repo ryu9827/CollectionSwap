@@ -14,6 +14,7 @@
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body data-spy="scroll">

@@ -22,7 +22,7 @@ if (isset($_SESSION['u_id'])){
 						<input type="password" class="form-control" name="pwd" placeholder="Password">
 					</div> 
 					</br></br></br>
-					<div class="col-md-4 col-md-offset-4">                    
+					<div class="col-md-4 col-md-offset-4">
 						<button type="submit" class="btn btn-info btn-lg" name="submit">Log in</button>	
 						<h4 class="pull-right">Don't have an account yet? &nbsp<a href="register.php" style="text-decoration: underline;">Signup</a></h4>				
 					</div>  					

@@ -100,7 +100,7 @@
 
 <!-- Button trigger modal -->
 <div class="row">
-  <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest">Sent Request</button>
+  <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest">Send Request</button>
 </div>
 <!-- Modal -->
 <div class="modal fade" border="1px" id="sentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:250px;">
