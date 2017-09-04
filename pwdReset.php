@@ -3,6 +3,7 @@ include_once('includes/header.php');
 if (isset($_SESSION['u_id'])){
 		header("Location:profile.php");
 	}
+$verify=$_GET['verify'];
 ?>
 
 </script>
@@ -26,8 +27,9 @@ if (isset($_SESSION['u_id'])){
 					<label for="pwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
 					<div class="col-md-4">
 						<input type="password" class="form-control" name="pwd" placeholder="Confirm Password">
-					</div> 
+					</div> 					
 					</br></br></br>
+						<input style="visibility: hidden;"><?php echo $verify ?></div>
 					<div class="col-md-4 col-md-offset-4">                    
 						<button type="submit" class="btn btn-info btn-lg" name="submit">Submit</button>							
 					</div>  					

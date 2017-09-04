@@ -15,7 +15,7 @@ $num = mysqli_num_rows($res);
 $result = mysqli_fetch_array($res);
 $user_uid = $result['user_uid'];
 
-$token = md5($uid); 
+$token = md5($user_uid); 
 
 if($num > 0){
     $sql = "UPDATE users SET token= '$token' WHERE user_uid = '$user_uid'";
