@@ -1,6 +1,7 @@
 <?php
 include_once('includes/header.php');
 if (isset($_SESSION['u_id'])){
+    
 		header("Location:profile.php");
 	}
 ?>

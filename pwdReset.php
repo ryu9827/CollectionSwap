@@ -25,7 +25,7 @@ $verify = stripslashes(trim($_GET['verify']));
 						<input type="text" class="form-control" name="pwd" placeholder="New Password">
 					</div>
 					</br></br></br>
-					<label for="pwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
+					<label for="cpwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
 					<div class="col-md-4">
 						<input type="password" class="form-control" name="cpwd" placeholder="Confirm Password">
 					</div> 					
