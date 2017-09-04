@@ -32,7 +32,7 @@ $verify = stripslashes(trim($_GET['verify']));
 					</br></br></br>
                         <input type="hidden" name="verify" value="<?php echo $verify?>">
 					<div class="col-md-4 col-md-offset-4">                    
-						<button type="submit" class="btn btn-info btn-lg" name="submit">Submit</button>						
+						<button type="submit" class="btn btn-info btn-lg" name="submit">Submit</button>							
 					</div>  					
 				</div>
 			</form>
