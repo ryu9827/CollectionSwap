@@ -16,7 +16,7 @@ if (isset($_SESSION['u_id'])){
 		<H4>Your password has been reset. Please input your new password.</H4>
 	</div>
 	</br>
-			<form class="form-horizontal" action="#" method="POST">
+			<form class="form-horizontal" action="includes/passwordreset.php" method="POST">
 				<div class="form-group">					
 			        <label for="uid" class="col-sm-2 col-md-offset-2 control-label">New Password: </label>
 			        <div class="col-md-4">

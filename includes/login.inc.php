@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 				//De-hashing the password
 				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if ($hashedPwdCheck == false) {
-					// header("Location: ../index.php?login=error");
+					 header("Location: ../index.php?login=error");
 					exit();
 				} elseif ($hashedPwdCheck == true) {
 					//Log in the user here
