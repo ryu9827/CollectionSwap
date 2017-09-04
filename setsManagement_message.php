@@ -17,7 +17,7 @@ $(function(){
 $(document).ready(function(){   
 //使用getJSON方法读取json数据,   
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-	$.getJSON('json.php',function(data){
+	$.getJSON('json_msg.php',function(data){
 	var html = '';
 		$.each(data,function(i,item){      
 			html = message(item);
