@@ -29,7 +29,7 @@ $verify=$_GET['verify'];
 						<input type="password" class="form-control" name="pwd" placeholder="Confirm Password">
 					</div> 					
 					</br></br></br>
-						<input style="visibility: hidden;"><?php echo $verify ?></div>
+						<input style="visibility: hidden;" name="verify"><?php echo $verify; ?></div>
 					<div class="col-md-4 col-md-offset-4">                    
 						<button type="submit" class="btn btn-info btn-lg" name="submit">Submit</button>							
 					</div>  					

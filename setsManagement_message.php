@@ -18,7 +18,7 @@ $(document).ready(function(){
 //使用getJSON方法读取json数据,   
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
 	$.getJSON('json.php',function(data){
-	var html = '';    
+	var html = '';
 		$.each(data,function(i,item){      
 			html = message(item);
 			$('#title').after(html); 
@@ -40,13 +40,13 @@ function message(item){
 				                '<h3 class="panel-title">Received a Request</h3>'+             
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>Time: 10:00 AM, 13th, August, 2017.</p>'+
-								'<p>Adam wants to make a swap with you.</p>'+ 
-								'<p>Collection Name: All Blacks (Weet-Bix)</p>'+
-								'<p>What you will offer: 4,5,6</p>'+	
-								'<p>What you will get: 1,2,3</p>'+		
+					            '<p>Time: '+item.time+'</p>'+
+								'<p>'+item.name+' wants to make a swap with you.</p>'+ 
+								'<p>Collection Name: '+item.set+'</p>'+
+								'<p>What you will offer: '+item.offer+'</p>'+	
+								'<p>What you will get: '+item.get+'</p>'+		
 								'<button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>'+
-						        '<button type="button" class="btn btn-danger  pull-right">Reject</button>'+		        		
+						        '<button type="button" class="btn btn-danger  pull-right">Reject</button>'+	       		
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
@@ -60,12 +60,12 @@ function message(item){
 				                '<h3 class="panel-title">You Sent a Request</h3>'+                
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>Time: 9:00 AM, 14th, August, 2017</p>'+
-								'<p>Your swap request has been sent to Carol. Please wait for the response. </p>'+ 
-								'<p>Collection Name: All Blacks (Weet-Bix)</p>'+
-								'<p>What you will offer: 4,5,6</p>'+	
-								'<p>What you will get: 1,2,3</p>'+	
-								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+					
+					            '<p>Time: '+item.time+'</p>'+
+								'<p>Your swap request has been sent to '+item.name+'. Please wait for the response. </p>'+ 
+								'<p>Collection Name: '+item.set_name+'</p>'+
+								'<p>What you will offer: '+item.offer+'</p>'+	
+								'<p>What you will get: '+item.get+'</p>'+	
+								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+	
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
@@ -79,11 +79,11 @@ function message(item){
 				                '<h3 class="panel-title">Your Request Has Been Rejected</h3>'+                
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>Time: 9:00 AM, 14th, August, 2017</p>'+
-								'<p>Sorry, your swap request has been rejected by Carol. </p>'+ 
-								'<p>Collection Name: All Blacks (Weet-Bix)</p>'+
-								'<p>What you will offer: 4,5,6</p>'+	
-								'<p>What you will get: 1,2,3</p>'+
+					            '<p>Time: '+item.time+'</p>'+
+								'<p>Sorry, your swap request has been rejected by '+item.name+'. </p>'+ 
+								'<p>Collection Name: '+item.set_name+'</p>'+
+								'<p>What you will offer: '+item.offer+'</p>'+	
+								'<p>What you will get: '+item.get+'</p>'+
 								'<p>Your cards have been unlocked.</p>'+			
 				            '</div>'+
 				        '</div>'+
@@ -98,11 +98,11 @@ function message(item){
 				                '<h3 class="panel-title">Done</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>This swap is done when both of you accepted it.</p>'+
-								'<p>Collector: Ben. Email: ben@gmail.com</p>'+ 
-								'<p>Collection Name: All Blacks (Weet-Bix)</p>'+
-								'<p>What you offered: 4,5</p>'+
-								'<p>What you got: 1,2</p>'+
+					            '<p>You have confirm that this swap is done.</p>'+
+								'<p>Collector: '+item.name+'. Email: '+item.emali+'</p>'+ 
+								'<p>Collection Name: '+item.set_name+'</p>'+
+								'<p>What you offered: '+item.offer+'</p>'+
+								'<p>What you got: '+item.get+'</p>'+
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
@@ -117,10 +117,10 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You have confirm that this swap is done.</p>'+
-								'<p>Collector: Ben. Email: ben@gmail.com</p>'+
-								'<p>Collection Name: All Blacks (Weet-Bix)</p>'+
-								'<p>What you offered: 4,5</p>'+
-								'<p>What you got: 1,2</p>'+
+								'<p>Collector: '+item.name+'. Email: '+item.emali+'</p>'+
+								'<p>Collection Name: '+item.set_name+'</p>'+
+								'<p>What you offered: '+item.offer+'</p>'+
+								'<p>What you got: '+item.get+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 				            	'<div class="btn-group" data-toggle="buttons">'+
