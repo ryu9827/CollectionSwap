@@ -21,16 +21,16 @@ if (isset($_POST['submit'])) {
 		
 
 		if ($resultCheck < 1) {
-			// echo $uid;
-			// echo $pwd;
-			header("Location: ../index.php?login=error");
+			
+			echo 'user does not exist';
 			exit();
 		} else {
 			if ($row = mysqli_fetch_assoc($result)) {
 				//De-hashing the password
 				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if ($hashedPwdCheck == false) {
-					 header("Location: ../index.php?login=error");
+                                        echo 'wrong password';
+					// header("Location: ../index.php?login=error");
 					exit();
 				} elseif ($hashedPwdCheck == true) {
 					//Log in the user here

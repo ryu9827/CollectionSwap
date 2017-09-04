@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
 include_once 'dbh.inc.php';
 global $conn;
 
-$verify = stripslashes(trim($_GET['verify'])); 
+$verify = $_POST['verify'];
 
 $sql = "SELECT * FROM users WHERE token = '$verify'";
 
@@ -14,12 +14,13 @@ $row = mysqli_fetch_array($res);
 
 $user_uid = $row['user_uid'];
 
-echo $user_uid;
-$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-$pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
+$pwd = $_POST['pwd'];
+$cpwd = $_POST['cpwd'];
 
  if($pwd != $cpwd){
-     exit();
+     header("Location: ../login.php?login=error");
+    // exit();
+      
  }
  else{
      $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
