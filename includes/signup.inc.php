@@ -51,11 +51,11 @@ if (isset($_POST['submit'])) {
  
                                         $token = md5($uid.$pwd.$regtime); 
                                         $token_exptime = time()+60*60*24;//set expire time
- 
+                                        $lastlogin = date("d/m/Y");
                                         
                                         
 					//Insert the user into the database
-					$sql = "INSERT INTO users ( user_first, user_last, user_email, user_uid, user_pwd, user_postcode,token,token_time,regtime) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd', '$postcode', '$token', '$token_exptime','$regtime');";
+					$sql = "INSERT INTO users ( user_first, user_last, user_email, user_uid, user_pwd, user_postcode,token,token_time,regtime,lastlogin_time) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd', '$postcode', '$token', '$token_exptime','$regtime','$lastlogin');";
 					
 
                                        mysqli_query($conn, $sql);

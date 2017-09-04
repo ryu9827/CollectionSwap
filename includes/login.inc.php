@@ -39,6 +39,11 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_last'] = $row['user_last'];
 					$_SESSION['u_email'] = $row['user_email'];
 					$_SESSION['u_uid'] = $row['user_uid'];
+                                        $uid = $row['user_uid'];
+                                        
+                                        $lastlogin = date("d/m/Y");
+                                        $sql = "UPDATE users SET lastlogin_time = '$lastlogin' WHERE user_uid = '$uid'";
+                                        mysqli_query($conn,$sql);
 					header("Location: ../index.php?login=success");
 					exit();
 				}
