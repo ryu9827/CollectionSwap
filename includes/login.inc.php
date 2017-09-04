@@ -5,6 +5,7 @@ session_start();
 if (isset($_POST['submit'])) {
 	
 	include 'dbh.inc.php';
+        date_default_timezone_set('NZ');
 
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
@@ -41,7 +42,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['u_uid'] = $row['user_uid'];
                                         $uid = $row['user_uid'];
                                         
-                                        $lastlogin = date("d/m/Y");
+                                        $lastlogin = date("d-m-Y");
                                         $sql = "UPDATE users SET lastlogin_time = '$lastlogin' WHERE user_uid = '$uid'";
                                         mysqli_query($conn,$sql);
 					header("Location: ../index.php?login=success");

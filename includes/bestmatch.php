@@ -6,10 +6,7 @@ include 'dbh.inc.php';
  $want = array('a001','a002');
  $extra= array('a005','a006');
 
- 
-// $cardstatus = 1;
 
- 
  $res = matchup($want,'1'); 
  $result = $res;
 
@@ -44,6 +41,7 @@ foreach($result as $key => $value){
     $offer = implode(",",$offerlist);
     $miss =  implode(",",$misslist);
     
+    //get rating from database
     $sql = "SELECT * FROM rating WHERE user_uid = '$userid'";
     $res = mysqli_query($conn, $sql);
     $rate = mysqli_fetch_array($res);
@@ -51,6 +49,7 @@ foreach($result as $key => $value){
     $normal = $rate['normal'];
     $bad = $rate['bad'];
     
+    //get last login time from database
     $sql = "SELECT * FROM users WHERE user_uid = '$userid'";
     $res = mysqli_query($conn, $sql);
     $rate = mysqli_fetch_array($res);
