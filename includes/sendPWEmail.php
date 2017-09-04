@@ -24,7 +24,7 @@ if($num > 0){
     $mail = new sendemail();
     $subject = "Password Reset";
     $body = "Dear ".$user_uid."：<br/>please click below link to reset your password<br/>
-     <a href='http://mysites/CS/pwdReset.php?verify=".$token."' target= '_blank'>http://mysites/netbeans/login/includes/active.php?verify=".$token."</a>";
+     <a href='http://mysites/CS/pwdReset.php?verify=".$token."' target= '_blank'>http://mysites/CS/pwdReset.php?verify=".$token."</a>";
    
      $mail->sendEmail($email,$subject,$body);
     // header("Location: ../forgetPwd.php?sendemail=error");

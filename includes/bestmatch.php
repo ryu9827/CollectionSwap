@@ -44,17 +44,21 @@ foreach($result as $key => $value){
     $offer = implode(",",$offerlist);
     $miss =  implode(",",$misslist);
     
-    $list = array($userid,$offer,$miss);
-
+    $sql = "SELECT * FROM rating WHERE user_uid = '$userid'";
+    $res = mysqli_query($conn, $sql);
+    $rate = mysqli_fetch_array($res);
+    $good = $rate['good'];
+    $normal = $rate['normal'];
+    $bad = $rate['bad'];
+    
+    $sql = "SELECT * FROM users WHERE user_uid = '$userid'";
+    $res = mysqli_query($conn, $sql);
+    $rate = mysqli_fetch_array($res);
+    $lastlogin = $rate['lastlogin_time'];
+    
+    $list = array('name'=>$userid,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
     $finallist[] = $list;
   
 }
-//echo sizeof($finallist);
-for($i = 0;$i < sizeof($finallist);$i++ ){
-    for($j = 0; $j<3 ;$j++){
-        echo $finallist[$i][$j].'<br/>';
-    }
-    
-}
-  
+    echo json_encode($finallist); 
      

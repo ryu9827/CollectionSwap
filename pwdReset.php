@@ -3,7 +3,8 @@ include_once('includes/header.php');
 if (isset($_SESSION['u_id'])){
 		header("Location:profile.php");
 	}
-$verify=$_GET['verify'];
+//$verify=$_GET['verify'];
+$verify = stripslashes(trim($_GET['verify'])); 
 ?>
 
 </script>
@@ -19,17 +20,17 @@ $verify=$_GET['verify'];
 	</br>
 			<form class="form-horizontal" action="includes/passwordreset.php" method="POST">
 				<div class="form-group">					
-			        <label for="uid" class="col-sm-2 col-md-offset-2 control-label">New Password: </label>
+			        <label for="pwd" class="col-sm-2 col-md-offset-2 control-label">New Password: </label>
 			        <div class="col-md-4">
-						<input type="text" class="form-control" name="uid" placeholder="New Password">
+						<input type="password" class="form-control" name="pwd" placeholder="New Password">
 					</div>
 					</br></br></br>
-					<label for="pwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
+					<label for="cpwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
 					<div class="col-md-4">
-						<input type="password" class="form-control" name="pwd" placeholder="Confirm Password">
+						<input type="password" class="form-control" name="cpwd" placeholder="Confirm Password">
 					</div> 					
 					</br></br></br>
-						<input style="visibility: hidden;" name="verify"><?php echo $verify; ?></div>
+                        <input type="hidden" name="verify" value="<?php echo $verify?>">
 					<div class="col-md-4 col-md-offset-4">                    
 						<button type="submit" class="btn btn-info btn-lg" name="submit">Submit</button>							
 					</div>  					
