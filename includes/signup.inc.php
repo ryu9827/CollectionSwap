@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
 	
 	include_once 'dbh.inc.php';
         include_once 'sendemail.inc.php';
+        date_default_timezone_set('NZ');
 
 	$first = mysqli_real_escape_string($conn, $_POST['first']);
 	$last = mysqli_real_escape_string($conn, $_POST['last']);
@@ -51,7 +52,7 @@ if (isset($_POST['submit'])) {
  
                                         $token = md5($uid.$pwd.$regtime); 
                                         $token_exptime = time()+60*60*24;//set expire time
-                                        $lastlogin = date("d/m/Y");
+                                        $lastlogin = date("d-m-Y");
                                         
                                         
 					//Insert the user into the database
