@@ -3,14 +3,19 @@
 
 include 'match.php';
 include 'dbh.inc.php';
+if (!isset($_SESSION['u_id'])){
+     header("location:login.php");
+	}
+        
+ $user_uid = $_SESSION['u_id'];
  $want = array('a001','a002');
  $extra= array('a005','a006');
 
 
- $res = matchup($want,'1'); 
+ $res = matchup($want,'1',$user_uid); 
  $result = $res;
 
- $res2 = matchup($extra,'2');
+ $res2 = matchup($extra,'2',$user_uid);
 
  //Computes the intersection of arrays
  foreach($res2 as $key => $value){

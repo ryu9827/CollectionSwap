@@ -2,7 +2,7 @@
 include 'dbh.inc.php';
 
 //find users from database that can offer/need cards and sorting the list
-function matchup($cardlist = array(),$cardstatus='' ){
+function matchup($cardlist = array(),$cardstatus='',$user_uid='' ){
 
   global $conn;
   $extralist = array();
@@ -13,7 +13,7 @@ function matchup($cardlist = array(),$cardstatus='' ){
        $card_id = $cardlist[$i];
       
        
-        $res = mysqli_query($conn, "SELECT user_uid FROM cards_status WHERE card_id = '$card_id' AND card_status = '$cardstatus'");
+        $res = mysqli_query($conn, "SELECT user_uid FROM cards_status WHERE card_id = '$card_id' AND card_status = '$cardstatus' AND user_uid!='$user_uid'");
        while ($row= mysqli_fetch_array($res))
 	{  
                 $uid = $row['user_uid'];
