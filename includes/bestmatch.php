@@ -5,9 +5,12 @@ include 'match.php';
 include 'dbh.inc.php';
 if (!isset($_SESSION['u_id'])){
      header("location:login.php");
+     exit();
 	}
         
- $user_uid = $_SESSION['u_id'];
+ $user_uid = $_SESSION['u_id'];        
+ $action = $_GET('act');
+ 
  $want = array('a001','a002');
  $extra= array('a005','a006');
 
@@ -64,5 +67,21 @@ foreach($result as $key => $value){
     $finallist[] = $list;
   
 }
+if($action == 'getJSON'){
     echo json_encode($finallist); 
      
+}
+
+else if($action == ''){
+    $reciver_uid = $id;
+    $row = count($finallist, 1);
+    
+    
+    $mail = new sendemail();
+    $subject = "New Swap Request";
+    $body = "Dear".$reciver_uid."：<br/>".$user_uid."send you a swap request <br/>offer:".$offerlist.
+            "<br/>miss: ".$misslist;
+            
+    $mail->sendEmail($email,$subject,$body);
+    
+}
