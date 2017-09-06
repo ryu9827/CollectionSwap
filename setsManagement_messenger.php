@@ -12,8 +12,7 @@
 	</div><br/>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script>  
-$(function(){  
-
+$(function(){
 $(document).ready(function(){   
 //使用getJSON方法读取json数据,   
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
@@ -28,8 +27,6 @@ $(document).ready(function(){
 	}); 
 });  
 function message(item){
-	// this.status = status;
-	// alert();
 	var html='';
 	switch(item.status){
 		case "0":
