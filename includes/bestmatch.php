@@ -1,10 +1,10 @@
 <?php
-
-
 include 'match.php';
 include 'dbh.inc.php';
+ob_start(); 
+session_start();
 if (!isset($_SESSION['u_id'])){
-     header("location:login.php");
+     header("location:../login.php");
 	}
         
  $user_uid = $_SESSION['u_id'];

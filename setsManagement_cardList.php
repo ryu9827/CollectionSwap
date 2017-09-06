@@ -15,7 +15,7 @@
 		<div class="row">
 			<ul class="nav nav-tabs">
 				<li role="presentation" class="active"><a href="#">My Sets</a></li>
-				<li role="presentation"><a href="setsManagement_message">Message</a></li> 
+				<li role="presentation"><a href="setsManagement_message">Messenger</a></li> 
 			</ul>
 			<br/><br/>
 		</div>

@@ -51,7 +51,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-footer">'+                
                 // Button trigger modal
-                  '<button type="button" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendIDtoModal('+item.name+')">Send Request</button>'+                
+                  '<button type="button" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendIDtoModal()">Send Request</button>'+            
                 '</div>'+
               '</div>'+
             '</div>'+
