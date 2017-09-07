@@ -96,7 +96,7 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You have confirm that this swap is done.</p>'+
-								'<p>Collector: '+item.name+'. Email: '+item.emali+'</p>'+ 
+								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+ 
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>What you offered: '+item.offer+'</p>'+
 								'<p>What you got: '+item.get+'</p>'+
@@ -114,7 +114,7 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You have confirm that this swap is done.</p>'+
-								'<p>Collector: '+item.name+'. Email: '+item.emali+'</p>'+
+								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>What you offered: '+item.offer+'</p>'+
 								'<p>What you got: '+item.get+'</p>'+
