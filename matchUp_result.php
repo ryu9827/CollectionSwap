@@ -23,12 +23,12 @@ function GetQueryString(name){
 </script> 
 
 <script type="text/javascript">
-function sendRequest(name){
+function sendRequest(name,offer,miss,set_id){
 	// alert(set_id);
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/bestmatch2.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name);
+	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id'+set_id);
 };
 </script>
 
@@ -58,6 +58,8 @@ function match(i,item){
   switch(i){
     case 0:
     var name = jQuery.parseJSON(JSON.stringify(item.name));
+    var offer = jQuery.parseJSON(JSON.stringify(item.offer));
+    var miss = jQuery.parseJSON(JSON.stringify(item.miss));
     html += '<div class="item active">'+
             '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-primary">'+
@@ -77,7 +79,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-footer">'+                
                 // Button trigger modal                
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
@@ -103,7 +105,7 @@ function match(i,item){
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
                 '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
