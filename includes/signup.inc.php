@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
  
                                         $token = md5($uid.$pwd.$regtime); 
                                         $token_exptime = time()+60*60*24;//set expire time
-                                        $lastlogin = date("d-m-Y");
+                                        $lastlogin = date("d/m/Y");
                                         
                                         
 					//Insert the user into the database
