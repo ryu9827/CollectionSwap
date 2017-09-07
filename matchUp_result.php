@@ -28,18 +28,21 @@ function sendRequest(name){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/bestmatch2.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('act=sendRequest&name='+name);
+	xmlhttp.send('name='+name);
 };
 </script>
 
-<script>  
-
+<script>
 $(function(){  
 $(document).ready(function(){   
-	set_id=GetQueryString("set_id");
-//使用getJSON方法读取json数据,   
+	var set_id=GetQueryString("set_id");
+  var url = "includes/bestmatch.php";
+  var dataSend = {"act":"getJSON",
+                  "set_id":set_id
+                  };
+//使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-  $.getJSON('includes/bestmatch.php?act=getJSON&set_id='+set_id,function(data){
+  $.getJSON(url,dataSend,function(data){
   var html = '';
     $.each(data,function(i,item){      
       html = match(i,item);

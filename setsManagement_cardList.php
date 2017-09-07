@@ -15,7 +15,8 @@
 		<div class="row">
 			<ul class="nav nav-tabs">
 				<li role="presentation" class="active"><a href="#">My Sets</a></li>
-				<li role="presentation"><a href="setsManagement_messenger">Messenger</a></li> 
+				<li role="presentation"><a href="setsManagement_messages.php">Messages</a></li> 
+				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
 			</ul>
 			<br/><br/>
 		</div>

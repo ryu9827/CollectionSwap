@@ -68,13 +68,14 @@ foreach($result as $key => $value){
     $list = array('name'=>$userid,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
     $finallist[] = $list;
   
-}
+};
 if($action == 'getJSON'){
     echo json_encode($finallist); 
  //    error_log($action,3,'my-errors.log'); 
 }
-else if($action == 'sendRequest'){
-    $reciver_uid = $_POST['name'];
+else {
+    error_log($action,3,'my-errors.log');
+    $reciver_uid = $_GET['name'];
     error_log($reciver_uid,3,'my-errors.log');
   //  $reciver_uid = $id;
     $count = 0;

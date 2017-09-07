@@ -8,7 +8,7 @@
 
 <!-- 二级导航 -->
 	<div style="text-align: center">
-		<h2>Messenger</h2>
+		<h2>Messages</h2>
 	</div><br/>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script>  
@@ -41,10 +41,12 @@ function message(item){
 								'<p>'+item.name+' wants to make a swap with you.</p>'+ 
 								'<p>Collection Name: '+item.set+'</p>'+
 								'<p>What you will offer: '+item.offer+'</p>'+	
-								'<p>What you will get: '+item.get+'</p>'+		
-								'<button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>'+
-						        '<button type="button" class="btn btn-danger  pull-right">Reject</button>'+	       		
+								'<p>What you will get: '+item.get+'</p>'+
 				            '</div>'+
+				            '<div class="panel-footer">'+	
+									'<button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>'+
+							        '<button type="button" class="btn btn-danger  pull-right">Reject</button>'+
+							'</div'+	
 				        '</div>'+
 				    '</div>'+
 				'</div>'
@@ -90,17 +92,20 @@ function message(item){
 		case "3":
 		html += '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
-				    	'<div class="panel panel-success">'+
+				    	'<div class="panel panel-primary">'+
 				            '<div class="panel-heading">'+             
-				                '<h3 class="panel-title">Done</h3>'+
+				                '<h3 class="panel-title">Swap in Progress</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>You have confirm that this swap is done.</p>'+
-								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+ 
+					            '<p>You are swapping collectables with '+item.name+'.</p>'+
+								'<p>Collector\'s Email: '+item.email+'</p>'+ 
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>What you offered: '+item.offer+'</p>'+
-								'<p>What you got: '+item.get+'</p>'+
+								'<p>What you are offering: '+item.offer+'</p>'+
+								'<p>What you are getting: '+item.get+'</p>'+
 				            '</div>'+
+				            '<div class="panel-footer">'+	
+								'<button type="button" class="btn btn-success" data-dismiss="modal">Done</button>'+    
+							'</div'+	
 				        '</div>'+
 				    '</div>'+
 				'</div>'
@@ -149,7 +154,8 @@ function message(item){
 		<div class="row">
 			<ul class="nav nav-tabs">
 				<li role="presentation"><a href="setsManagement.php">My Sets</a></li>
-				<li role="presentation" class="active"><a href="#">Messenger</a></li> 
+				<li role="presentation" class="active"><a href="#">Messages</a></li> 
+				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
 			</ul>
 			<br/><br/>
 		</div>

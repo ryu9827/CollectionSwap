@@ -10,32 +10,23 @@ include_once('includes/header.php');
 	</div>
 	</br>
 			<form class="form-horizontal" action="includes/signup.inc.php" method="POST">
-				<div class="form-group">
-					<label for="Firstname" class="col-xs-2 col-xs-offset-2 control-label">First Name: </label>
-					<div class="col-xs-4">
-						<input type="text" class="form-control" name="first" placeholder="First name">
-					</div>
-					</br></br></br>
-					<label for="Lastname" class="col-xs-2 col-xs-offset-2 control-label">Last Name: </label>
-					<div class="col-xs-4">
-						<input type="text" class="form-control" name="last" placeholder="Last name">
-					</div>
-					</br></br></br>
+				<div class="form-group">					
 					<label for="email" class="col-xs-2 col-xs-offset-2 control-label">E-mail: </label>
 					<div class="col-xs-4">
 						<input type="text" class="form-control" name="email" placeholder="E-mail">
 					</div>
 					</br></br></br>
-					<label for="Postcode" class="col-xs-2 col-xs-offset-2 control-label">Postcode: </label>
-					<div class="col-xs-4">
-			            <input type="text" class="form-control" name="postcode" placeholder="Postcode">
-			        </div>
-			        </br></br></br>
-			        <label for="uid" class="col-xs-2 col-xs-offset-2 control-label">User Name: </label>
+					<label for="uid" class="col-xs-2 col-xs-offset-2 control-label">User Name: </label>
 			        <div class="col-xs-4">
 						<input type="text" class="form-control" name="uid" placeholder="User name">
 					</div>
 					</br></br></br>
+					<label for="address" class="col-xs-2 col-xs-offset-2 control-label">Post Address: </label>
+					<div class="col-xs-4">
+			            <input type="text" class="form-control" name="address" placeholder="Post Address">
+			        </div>
+			        </br></br></br>
+			        
 					<label for="pwd" class="col-xs-2 col-xs-offset-2 control-label">Password: </label>
 					<div class="col-xs-4">
 						<input type="password" class="form-control" name="pwd" placeholder="Password">
