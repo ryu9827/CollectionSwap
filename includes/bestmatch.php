@@ -73,9 +73,8 @@ if($action == 'getJSON'){
     echo json_encode($finallist); 
      
 }
-
 else if($action == 'sendRequest'){
-    $reciver_uid = $_POST('name');
+    $reciver_uid = $_POST['name'];
     error_log($reciver_uid,3,'my-errors.log');
   //  $reciver_uid = $id;
     $count = 0;
@@ -98,3 +97,4 @@ else if($action == 'sendRequest'){
     $mail->sendEmail($email,$subject,$body);
     
 }
+?>
