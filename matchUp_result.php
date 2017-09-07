@@ -26,7 +26,7 @@ function GetQueryString(name){
 function sendRequest(name){
 	// alert(set_id);
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open('POST','includes/bestmatch.php',true);
+	xmlhttp.open('POST','includes/bestmatch2.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	xmlhttp.send('act=sendRequest&name='+name);
 };

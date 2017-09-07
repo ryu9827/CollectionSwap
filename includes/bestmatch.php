@@ -71,7 +71,7 @@ foreach($result as $key => $value){
 }
 if($action == 'getJSON'){
     echo json_encode($finallist); 
-     
+ //    error_log($action,3,'my-errors.log'); 
 }
 else if($action == 'sendRequest'){
     $reciver_uid = $_POST['name'];
