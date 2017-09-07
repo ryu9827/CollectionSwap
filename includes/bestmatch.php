@@ -1,6 +1,7 @@
 <?php
-include 'match.php';
-include 'dbh.inc.php';
+include_once 'match.php';
+include_once 'dbh.inc.php';
+global $conn;
 ob_start(); 
 session_start();
 if (!isset($_SESSION['u_id'])){
@@ -9,18 +10,15 @@ if (!isset($_SESSION['u_id'])){
 	}
         
  $user_uid = $_SESSION['u_id'];        
- $action = stripslashes(trim($_GET['act'])); 
- 
- //echo $action;
- 
- $want = array('a001','a002');
- $extra= array('a005','a006');
+
+ $want = cardlist($user_uid, '2', $set_id);
+ $extra= cardlist($user_uid, '1', $set_id);
 
 
- $res = matchup($want,'1',$user_uid); 
+ $res = matchup($want,'1',$user_uid,$set_id); 
  $result = $res;
 
- $res2 = matchup($extra,'2',$user_uid);
+ $res2 = matchup($extra,'2',$user_uid,$set_id);
 
  //Computes the intersection of arrays
  foreach($res2 as $key => $value){
@@ -65,7 +63,7 @@ foreach($result as $key => $value){
     $rate = mysqli_fetch_array($res);
     $lastlogin = $rate['lastlogin_time'];
     
-    $list = array('name'=>$userid,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
+    $list = array('name'=>$userid,'setid'=>$set_id,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
     $finallist[] = $list;
   
 };
