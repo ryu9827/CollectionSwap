@@ -1,6 +1,6 @@
 <?php
 
-include_once 'match.php';
+//include_once 'match.php';
 include_once 'dbh.inc.php';
 //include_once 'bestmatch.php';
 ob_start(); 
@@ -25,21 +25,30 @@ if (!isset($_SESSION['u_id'])){
     
     
     
-    $reciver_uid = 'Bruce';
-    echo $reciver_uid ;
-    echo json_encode($finallist); 
-    $count = 0;
-    foreach($finallist as $subarray){
-    $count += count($subarray);
-    }
-    for($i = 0;$i<$finallist;$i++){
-        if($finallist[$i][0] == $reciver_uid){
-            $offerlist = $finallist[$i][2];
-            $misslist = $finallist[$i][3];
-            echo $offerlist;
-        }
-    }
-    explode(',', $offerlist);
+    $reciver_uid = $_POST['name'];
+    $set_id = $_POST['set_id'];
+    $offerlist = $_POST['offer'];
+    $misslist = $_POST['miss'];
+    error_log($reciver_uid,3,'my-errors.log');
+   
+//    $count = 0;
+//    foreach($finallist as $subarray){
+//    $count += count($subarray);
+//    }
+//    for($i = 0;$i<$finallist;$i++){
+//        if($finallist[$i][0] == $reciver_uid){
+//            $offerlist = $finallist[$i][2];
+//            $misslist = $finallist[$i][3];
+//            echo $offerlist;
+//        }
+//    }
+    $offerarray = explode(',', $offerlist);
+    lockcard($offerarray, $user_uid);
+    lockcard($offerarray, $reciver_uid);
+    
+    $missarray = explode(',',$misslist);
+    lockcard($missarray, $user_uid);
+    lockcard($missarray, $reciver_uid);
     
     $mail = new sendemail();
     $subject = "New Swap Request";
