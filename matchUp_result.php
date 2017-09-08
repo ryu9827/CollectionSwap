@@ -24,11 +24,14 @@ function GetQueryString(name){
 
 <script type="text/javascript">
 function sendRequest(name,offer,miss,set_id){
-	// alert(set_id);
+  alert(name);
+  alert(offer);
+  alert(miss);
+  // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id'+set_id);
+	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
 };
 </script>
 
@@ -68,7 +71,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
-                  '<p>Possible Swap</p>'+
+                  '<p>Set Name: '+item.set_name+'</p>'+
                   '<p>Offer：'+item.offer+'</p>'+
                   '<p>Need：'+item.miss+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
