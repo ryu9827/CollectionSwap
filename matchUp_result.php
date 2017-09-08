@@ -28,7 +28,7 @@ function sendRequest(name,offer,miss,set_id){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id'+set_id);
+	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
 };
 </script>
 

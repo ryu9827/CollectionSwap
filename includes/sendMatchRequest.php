@@ -14,8 +14,7 @@ if (!isset($_SESSION['u_id'])){
      
 //lock the card when request is sent        
     function lockcard($cardid ,$user_uid){
-        //$list = array();
-        //$list = explode(',', $cardid);
+
         echo $user_uid;
         foreach($cardid as $values){
          //     $sql = "UPDATE users SET lastlogin_time = '$lastlogin' WHERE user_uid = '$uid'";
@@ -23,12 +22,15 @@ if (!isset($_SESSION['u_id'])){
         $res = mysqli_query($conn, $sql);
        // echo $values."<br/>";
         
-      //  echo mysqli_error($conn); 
+       echo mysqli_error($conn); 
         }
         $time = time();
         $sql = "UPDATE cards_status SET locked_time = '$time' WHERE user_uid = '$user_uid'";
         mysqli_query($conn, $sql);
         echo mysqli_error($conn);
+    }
+    function updatemessage(){
+        
     }
  
 //      $reciver_uid = 'Tony';
@@ -37,18 +39,21 @@ if (!isset($_SESSION['u_id'])){
 //      $misslist = array('a005','a006');
 //get data from front-end    
     $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
-    $set_id = mysqli_real_escape_string($conn, $_POST['set_id']);;
-    $offerlist = mysqli_real_escape_string($conn, $_POST['offer']);
-    $misslist = mysqli_real_escape_string($conn, $_POST['miss']);
+    $set_id = $_POST['set_id'];
+    $offerlist = $_POST['offer'];
+    $misslist =  $_POST['miss'];
     
    $sql = "SELECT * FROM users WHERE user_uid = '$reciver_uid'";
    $res = mysqli_query($conn, $sql);
    $row = mysqli_fetch_assoc($res);
    $email = $row['user_email'];
+   
+    $offer = implode(",",$offerlist);
+    $miss =  implode(",",$misslist);
 
     //change card status when request is sent
   //  lockcard($offerlist, $user_uid);
-    lockcard($offerlist, $reciver_uid);
+      lockcard($offerlist, $reciver_uid);
     
   //  lockcard($misslist, $user_uid);
   //  lockcard($misslist, $reciver_uid);
@@ -56,8 +61,8 @@ if (!isset($_SESSION['u_id'])){
     //send email to reciver
     $mail = new sendemail();
     $subject = "New Swap Request";
-    $body = "Dear".$reciver_uid."：<br/>".$user_uid."send you a swap request <br/>card set".$set_id."<br/>you need to offer:".$offerlist.
-            "<br/>he/she can offer you: ".$misslist;
+    $body = "Dear ".$reciver_uid."：<br/>".$user_uid."send you a swap request <br/>card set: ".$set_id."<br/>you need to offer: ".$offerlist.
+            "<br/>he/she can offer you: ".$miss;
             
     $mail->sendEmail($email,$subject,$body);
 
