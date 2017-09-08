@@ -9,9 +9,22 @@ if (!isset($_SESSION['u_id'])){
      header("location:../login.php");
 
 	}
-   // $user_uid = $_SESSION['u_id'];        
-
-   // $reciver_uid = $_GET['name'];
+        
+//lock the card when request is sent        
+    function lockcard($cardid,$user_uid){
+        $list = array();
+        $list = explode(',', $cardid);
+        foreach($list as $values){
+        $sql = "UPDATE cards_status SET card_status = '0' WHERE card_id = '$values' AND user_uid = '$user_uid'";
+        mysqli_query($conn, $sql);
+        $time = time();
+        $sql = "UPDATE card_status SET locked_time = '$time' WHERE user_uid = '$user_uid'";
+        mysqli_query($conn, $sql);
+        }
+    }
+    
+    
+    
     $reciver_uid = 'Bruce';
     echo $reciver_uid ;
     echo json_encode($finallist); 
@@ -26,7 +39,7 @@ if (!isset($_SESSION['u_id'])){
             echo $offerlist;
         }
     }
-    
+    explode(',', $offerlist);
     
     $mail = new sendemail();
     $subject = "New Swap Request";
@@ -35,3 +48,5 @@ if (!isset($_SESSION['u_id'])){
             
     $mail->sendEmail($email,$subject,$body);
 
+
+  
