@@ -172,7 +172,7 @@
 <a href="https://nz.pinterest.com/"><div id="FontAwesomeIcon26"><i class="fa fa-pinterest">&nbsp;</i></div></a>
 </div>
 <div id="wb_Text17">
-<span style="color:#FFFFFF;font-family:Arial;font-size:12px;">Copyright 2017 WebWOXygen <br>All Rights Reserved <br>sponsored Wellington Institution of Technology</span>
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;">Collection Swap (version 1.0) Copyright 2017 WebWOX <br>All Rights Reserved <br>sponsored Wellington Institution of Technology</span>
 </div>
 </div>
 </div>

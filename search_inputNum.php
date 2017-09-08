@@ -43,12 +43,12 @@ function message(item){
 </script> 
 
 <script type="text/javascript">
-function sendSearch(name){
-	// alert(set_id);
+function sendSearch(){
+	var input = document.getElementById('search').value;
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/bestmatch2.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name);
+	xmlhttp.send('search='+input);
 };
 </script>
 
@@ -59,7 +59,7 @@ function sendSearch(name){
 	<div class="row">
 		<div class="col-lg-3" style="float: none;margin: 0 auto">
 		    <div class="input-group">
-			    <input type="text" class="form-control" placeholder="Search for...">
+			    <input id="search" type="text" class="form-control" placeholder="Search for..." />
 			    <span class="input-group-btn">
 			    	<button class="btn btn-info" type="submit" onclick="sendSearch()">Search</button>
 			    </span>
