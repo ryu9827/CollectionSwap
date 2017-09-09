@@ -27,7 +27,10 @@ if (!isset($_SESSION['u_id'])){
         mysqli_query($conn, $sql);
         echo mysqli_error($conn);
     }
-    function updatemessage(){
+    function newmessage($user_uid,$status,$set_id,$offer_id,$get_id,$msg_id){
+        global $conn;
+        $time = date('d/m/Y H:i:s');
+        $sql = "INSERT INTO messages (user_uid,status,time,set_id,offer_id,get_id,msg_id) VALUES ($user_uid,$status,$time,$set_id,$offer_id,$get_id,$msg_id)";
         
     }
  
@@ -64,6 +67,8 @@ if (!isset($_SESSION['u_id'])){
             "<br/>he/she can offer you: ".$misslist;
             
     $mail->sendEmail($email,$subject,$body);
-
+    
+    newmessage($user_uid, $status, $set_id, $offerlist,$misslist, $msg_id);
+    newmessage($reciver_uid, $status, $set_id, $misslist,$offerlist, $msg_id);
 
   
