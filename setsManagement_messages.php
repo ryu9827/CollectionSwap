@@ -69,26 +69,7 @@ function message(item){
 				        '</div>'+
 				    '</div>'+
 				'</div>'
-		break;
-		case "2":
-		html += '<div class="row">'+
-					'<div class="col-xs-6 col-xs-offset-3">'+
-				    	'<div class="panel panel-warning">'+
-				            '<div class="panel-heading">'+              
-				                '<h3 class="panel-title">Your Request Has Been Rejected</h3>'+                
-				            '</div>'+
-				            '<div class="panel-body">'+
-					            '<p>Time: '+item.time+'</p>'+
-								'<p>Sorry, your swap request has been rejected by '+item.name+'. </p>'+ 
-								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>What you will offer: '+item.offer+'</p>'+	
-								'<p>What you will get: '+item.get+'</p>'+
-								'<p>Your cards have been unlocked.</p>'+			
-				            '</div>'+
-				        '</div>'+
-				    '</div>'+
-				'</div>'
-		break;
+		break;		
 		case "3":
 		html += '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+

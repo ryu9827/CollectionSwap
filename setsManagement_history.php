@@ -28,13 +28,32 @@ $(document).ready(function(){
 });  
 function message(item){
 	var html='';
-	switch(item.status){		
+	switch(item.status){	
+		case "2":
+			html += '<div class="row">'+
+						'<div class="col-xs-6 col-xs-offset-3">'+
+					    	'<div class="panel panel-warning">'+
+					            '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.message_id+'" aria-expanded="false" aria-controls="'+item.message_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+					                '<h3 class="panel-title">Your Request Has Been Rejected by '+item.name+' ('+item.time+')</h3>'+            
+					            '</div>'+
+					            '<div class="collapse" id="'+item.message_id+'">'+
+					            '<div class="panel-body">'+									
+									'<p>Collection Name: '+item.set_name+'</p>'+
+									'<p>What you will offer: '+item.offer+'</p>'+
+									'<p>What you will get: '+item.get+'</p>'+
+									'<p>Your cards have been unlocked.</p>'+		
+					            '</div>'+
+					        '</div>'+
+					    '</div>'+
+					'</div>'+
+				'</div>'
+		break;	
 		case "5":
 		html += '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 						'<div class="panel panel-success">'+
 							'<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.message_id+'" aria-expanded="false" aria-controls="'+item.message_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
-								'<h3 class="panel-title">Done swap with '+item.name+'</h3>'+
+								'<h3 class="panel-title">Done swap with '+item.name+' ('+item.time+')</h3>'+
 							'</div>'+
 							'<div class="collapse" id="'+item.message_id+'">'+
 								'<div class="panel-body">'+

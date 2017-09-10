@@ -24,9 +24,9 @@ function GetQueryString(name){
 
 <script type="text/javascript">
 function sendRequest(name,offer,miss,set_id){
-  alert(name);
-  alert(offer);
-  alert(miss);
+  // alert(name);
+  // alert(offer);
+  // alert(miss);
   // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
