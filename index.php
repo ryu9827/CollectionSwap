@@ -41,20 +41,14 @@
 </div>
 </header>
 
-<div id="home" style="position:relative;text-align:center;width:100%;height:100%;float:left;display:block;z-index:181;">
-<div id="home-overlay"></div>
-<div id="home_Container" style="width:968px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<!--<div id="home" style="position:relative;text-align:center;width:100%;height:100%;float:left;display:block;z-index:181;">-->
+<!--<div id="home-overlay"></div>-->
+<!--<div id="home_Container" style="width:968px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">-->
 <div id="wb_Heading1" style="position:absolute;left:167px;top:50em;width:618px;height:57px;text-align:center;z-index:4;">
-<h1 id="Heading1"><a href="setsManagement.php">Get Start</a></h1>
+<!--<h1 id="Heading1"><a href="setsManagement.php">Get Start</a></h1>-->
 </div>
-<!-- <div id="wb_down-arrow" style="position:absolute;left:459px;top:630px;width:36px;height:36px;text-align:center;z-index:5;"> -->
-<!-- <a href="#services"><div id="down-arrow"><i class="fa fa-angle-down">&nbsp;</i></div></a></div> -->
-<!-- <div id="NewsFeedTicker1" style="overflow:hidden;position:absolute;left:56px;top:254px;width:825px;height:84px;z-index:6;">
-</div> -->
-</div>
-</div>
-
-
+<!--</div>-->
+<!--</div>-->
 
 <div id="wb_LayoutGrid1" style="display:none">
 <div id="wb_MaterialIcon1" style="display:none">
@@ -74,7 +68,7 @@
 <div id="wb_ServicesText3"></div>
 </div>
 </div>
-<div id="wb_LayoutGrid3" >
+<!--<div id="wb_LayoutGrid3" >-->
 <div id="LayoutGrid3">
 <div class="row">
 <div id="wb_MaterialIcon4" style="display:none"></div>
@@ -83,24 +77,7 @@
 </div>
 
 
-
-
-
-
-
-<!-- this is 
-<div id="wb_reviews">
-<div id="reviews">
-<div class="row">
-<div class="col-1">
-<div id="wb_Heading13" style="display:inline-block;width:100%;text-align:center;z-index:54;">
-<h1 id="Heading13">REVIEWS</h1>
-</div>
-</div>
-</div>
-</div>
-</div> 
--->
+<div style="height: 100px; visibility:hidden;"></div>
 
 <div id="wb_Carousel1" style="position:absolute;left:0px;top:2299px;width:970px;height:650px;z-index:182;overflow:hidden;position:relative;">
 <div id="Carousel1" style="position:absolute">
@@ -148,8 +125,18 @@
 <a href="#home"><div id="up-arrow"><i class="fa fa-angle-up">&nbsp;</i></div></a></div>
 </div>
 
-
-
+<div style="text-align: center">
+    <h1>instruction </h1></br></br>
+    <h2>1.	Get Signed Up</h2>
+    <p>Choose you favourite collection.</p>
+    <p>select what you have and extras then look for what you are missing.</p>
+    </br>
+    <h2>2.	Get Excited </h2>
+    <p>We will select and source awesome collectiions from around New Zealand.</p>
+    </br>
+    <h2>3.	Get Swapping</h2>
+    <p>Receive your delivery of superise, quality collectables  to enjoy!</p>
+</div>
 
 <!-- footer start -->
 <div id="wb_LayoutGrid8">
@@ -172,13 +159,15 @@
 <a href="https://nz.pinterest.com/"><div id="FontAwesomeIcon26"><i class="fa fa-pinterest">&nbsp;</i></div></a>
 </div>
 <div id="wb_Text17">
-<span style="color:#FFFFFF;font-family:Arial;font-size:12px;">Collection Swap (version 1.0) Copyright 2017 WebWOX <br>All Rights Reserved <br>sponsored Wellington Institution of Technology</span>
+<span style="color:#FFFFFF;font-family:Arial;font-size:12px;">Copyright 2017, Delight <br>Powered by WebWox <br>Partner with Wellington Institution of Technology</span>
 </div>
 </div>
 </div>
 </div>
 </div>
 <!--footer end-->
+
+
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>

@@ -34,7 +34,7 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-warning">'+
 				            '<div class="panel-heading">'+              
-				                '<h3 class="panel-title">Received a Request</h3>'+             
+				                '<h3 class="panel-title">A New Request</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
@@ -56,7 +56,7 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-default">'+
 				            '<div class="panel-heading">'+              
-				                '<h3 class="panel-title">You Sent a Request</h3>'+                
+				                '<h3 class="panel-title">Request’s sent</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
@@ -75,14 +75,14 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-primary">'+
 				            '<div class="panel-heading">'+             
-				                '<h3 class="panel-title">Swap in Progress</h3>'+
+				                '<h3 class="panel-title">Swapping</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You are swapping collectables with '+item.name+'.</p>'+
-								'<p>Collector\'s Email: '+item.email+'</p>'+ 
+								'<p>Collector\'s Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>What you are offering: '+item.offer+'</p>'+
-								'<p>What you are getting: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer+'</p>'+
+								'<p>Receiving: '+item.get+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+	
 								'<button type="button" class="btn btn-success" data-dismiss="modal">Done</button>'+    
@@ -134,7 +134,7 @@ function message(item){
 	<div class="col-xs-12">
 		<div class="row">
 			<ul class="nav nav-tabs">
-				<li role="presentation"><a href="setsManagement.php">My Sets</a></li>
+				<li role="presentation"><a href="setsManagement.php">My Collection</a></li>
 				<li role="presentation" class="active"><a href="#">Messages</a></li> 
 				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
 			</ul>

@@ -9,7 +9,7 @@
 
 <!-- 二级导航 -->
 	<div style="text-align: center">
-		<h2>Match Up Result</h2>
+		<h2>Search Results</h2>
 	</div><br/>
 
 <script type="text/javascript">
@@ -37,8 +37,8 @@ function sendRequest(name,offer,miss,set_id){
 
 <script>
 $(function(){  
-$(document).ready(function(){   
-	var set_id=GetQueryString("set_id");
+$(document).ready(function(){
+    var set_id=GetQueryString("set_id");
   var url = "includes/bestmatch.php";
   var dataSend = {"act":"getJSON",
                   "set_id":set_id
@@ -73,14 +73,14 @@ function match(i,item){
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Set Name: '+item.set_name+'</p>'+
                   '<p>Offer：'+item.offer+'</p>'+
-                  '<p>Need：'+item.miss+'</p>'+
+                  '<p>Demand：'+item.miss+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
                   '<p>Rating：</p>'+
                   '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
                   '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
-                '<div class="panel-footer">'+                
+                '<div class="panel-footer">'+
                 // Button trigger modal                
                   '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\')">Send Request</button>'+
                 '</div>'+
@@ -98,7 +98,6 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
-                  '<p>Possible Swap</p>'+
                   '<p>Offer：'+item.offer+'</p>'+
                   '<p>Need：'+item.miss+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
@@ -158,12 +157,12 @@ function match(i,item){
         <h4 class="modal-title" id="myModalLabel">Your request has been sent</h4>
       </div>
       <div class="modal-body">
-        <p>Your swap request has been sent. Please wait the user's response. </p> 
-        <p>Your cards have been locked temporarily until receive user's response. Or they will be unlocked if the user does not response in 7 days</p>
+        <p>Please wait the user's response. </p>
+        <p>Attention: Your collectables for the request have been temporary latched during the swap process. If your request has not been reposed in next 7 days or rejected, the latched items would be automatically released.</p>
       </div>
-      <div class="modal-footer">                
+      <div class="modal-footer">
         <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close">Get It</button>        
-        <a href="setsManagement_message.php">
+        <a href="setsManagement_messages.php">
           <button type="button" class="btn btn-info">View In Message</button>
         </a>      
       </div>

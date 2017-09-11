@@ -26,12 +26,8 @@
 			</div>
 		</div>
 		<p class="text-center">'.$rows[1].'</p>
-		<p class="text-center">'.$rows[3].' users is collecting this set.</p><br/><br/>';		
+		<p class="text-center">'.$rows[3].' users are collecting "'.$rows[1].'".</p><br/><br/>';
 	}
-
-
-
-
 
 ?>
 	

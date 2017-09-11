@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 07, 2017 at 05:34 AM
--- Server version: 5.7.14
+-- Generation Time: Sep 10, 2017 at 10:43 PM
+-- Server version: 5.7.18-log
 -- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -31,53 +31,54 @@ CREATE TABLE `cards_status` (
   `card_id` varchar(45) DEFAULT NULL,
   `card_status` int(1) DEFAULT NULL,
   `id` int(11) NOT NULL,
-  `set_id` varchar(45) DEFAULT NULL
+  `set_id` varchar(45) DEFAULT NULL,
+  `locked_time` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cards_status`
 --
 
-INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`) VALUES
-('yehan', 'a001', 1, 1, NULL),
-('yehan', 'a002', 2, 2, NULL),
-('yehan', 'a003', 1, 3, NULL),
-('yehan', 'a004', 2, 4, NULL),
-('yehan', 'a005', 1, 5, NULL),
-('yehan', 'a006', 1, 6, NULL),
-('amy', 'a001', 1, 7, NULL),
-('amy', 'a002', 1, 8, NULL),
-('amy', 'a003', 2, 9, NULL),
-('amy', 'a004', 1, 10, NULL),
-('amy', 'a005', 2, 11, NULL),
-('amy', 'a006', 1, 12, NULL),
-('wendy', 'a001', 2, 13, NULL),
-('wendy', 'a002', 2, 14, NULL),
-('wendy', 'a003', 1, 15, NULL),
-('wendy', 'a004', 1, 16, NULL),
-('wendy', 'a005', 2, 17, NULL),
-('wendy', 'a006', 2, 18, NULL),
-('Tony', 'a001', 1, 19, NULL),
-('Tony', 'a002', 1, 20, NULL),
-('Tony', 'a003', 2, 21, NULL),
-('Tony', 'a004', 2, 22, NULL),
-('Tony', 'a005', 2, 23, NULL),
-('Tony', 'a006', 2, 24, NULL),
-('Bruce', 'a001', 1, 25, NULL),
-('Bruce', 'a002', 1, 26, NULL),
-('Bruce', 'a003', 2, 27, NULL),
-('Bruce', 'a004', 2, 28, NULL),
-('Bruce', 'a005', 2, 29, NULL),
-('Bruce', 'a006', 2, 30, NULL),
-('xinkai', 'a001', 2, 31, NULL),
-('xinkai', 'a002', 2, 32, NULL),
-('xinkai', 'a003', 1, 33, NULL),
-('xinkai', 'a004', 2, 34, NULL),
-('xinkai', 'a005', 1, 35, NULL),
-('xinkai1', 'a002', 2, 37, NULL),
-('xinkai1', 'a003', 1, 38, NULL),
-('xinkai1', 'a004', 2, 39, NULL),
-('xinkai1', 'a005', 2, 40, NULL);
+INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`, `locked_time`) VALUES
+('yehan', 'a001', 1, 1, 'a', NULL),
+('yehan', 'a002', 2, 2, 'a', NULL),
+('yehan', 'a003', 1, 3, 'a', NULL),
+('yehan', 'a004', 2, 4, 'a', NULL),
+('yehan', 'a005', 1, 5, 'a', NULL),
+('yehan', 'a006', 1, 6, 'a', NULL),
+('amy', 'a001', 1, 7, 'a', 1505081638),
+('amy', 'a002', 1, 8, 'a', 1505081638),
+('amy', 'a003', 2, 9, 'a', 1505081638),
+('amy', 'a004', 1, 10, 'a', 1505081638),
+('amy', 'a005', 2, 11, 'a', 1505081638),
+('amy', 'a006', 1, 12, 'a', 1505081638),
+('wendy', 'a001', 2, 13, 'a', NULL),
+('wendy', 'a002', 2, 14, 'a', NULL),
+('wendy', 'a003', 1, 15, 'a', NULL),
+('wendy', 'a004', 1, 16, 'a', NULL),
+('wendy', 'a005', 2, 17, 'a', NULL),
+('wendy', 'a006', 2, 18, 'a', NULL),
+('Tony', 'a001', 1, 19, 'a', 1505081638),
+('Tony', 'a002', 1, 20, 'a', 1505081638),
+('Tony', 'a003', 2, 21, 'a', 1505081638),
+('Tony', 'a004', 2, 22, 'a', 1505081638),
+('Tony', 'a005', 2, 23, 'a', 1505081638),
+('Tony', 'a006', 2, 24, 'a', 1505081638),
+('Bruce', 'a001', 2, 25, 'a', NULL),
+('Bruce', 'a002', 1, 26, 'a', NULL),
+('Bruce', 'a003', 2, 27, 'a', NULL),
+('Bruce', 'a004', 2, 28, 'a', NULL),
+('Bruce', 'a005', 2, 29, 'a', NULL),
+('Bruce', 'a006', 2, 30, 'a', NULL),
+('xinkai', 'a001', 2, 31, 'a', NULL),
+('xinkai', 'a002', 2, 32, 'a', NULL),
+('xinkai', 'a003', 1, 33, 'a', NULL),
+('xinkai', 'a004', 2, 34, 'a', NULL),
+('xinkai', 'a005', 1, 35, 'a', NULL),
+('xinkai1', 'a002', 2, 37, 'a', NULL),
+('xinkai1', 'a003', 1, 38, 'a', NULL),
+('xinkai1', 'a004', 2, 39, 'a', NULL),
+('xinkai1', 'a005', 2, 40, 'a', NULL);
 
 -- --------------------------------------------------------
 
@@ -156,6 +157,29 @@ INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_num`) 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `sets_exist`
+--
+
+CREATE TABLE `sets_exist` (
+  `set_id` int(20) NOT NULL,
+  `set_name` varchar(500) NOT NULL,
+  `set_cover_image` varchar(500) NOT NULL,
+  `set_cards_amount` int(20) NOT NULL,
+  `ishidden` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sets_exist`
+--
+
+INSERT INTO `sets_exist` (`set_id`, `set_name`, `set_cover_image`, `set_cards_amount`, `ishidden`) VALUES
+(1, 'All Blacks (Weet-Bix)', 'images/setImages/All_Blacks.jpg\r\n', 30, 0),
+(2, 'Disney Movie Stars', 'images/setImages/Disney_Movie_Star.jpg', 100, 0),
+(3, 'Smurf', 'images/setImages/Smurf.jpg', 15, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -217,7 +241,7 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (47, 'aimee', 'aimee', 'yhchixigua@gmail.com', 'aimee123', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017'),
 (48, 'bruce', 'li', '111@gmail.com', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017'),
 (49, 'tony', 'wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017'),
-(50, 'amy', 'wang', '333@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '07-09-2017');
+(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '11/09/2017');
 
 -- --------------------------------------------------------
 
@@ -268,22 +292,18 @@ ALTER TABLE `rating`
   ADD UNIQUE KEY `user_uid_UNIQUE` (`user_uid`);
 
 --
--- Indexes for table `sets_cards`
+-- Indexes for table `sets_exist`
 --
-ALTER TABLE `sets_cards`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `sets_exist`
+  ADD PRIMARY KEY (`set_id`),
+  ADD UNIQUE KEY `set_id` (`set_id`),
+  ADD UNIQUE KEY `set_name` (`set_name`);
 
 --
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
-
---
--- Indexes for table `user_sets`
---
-ALTER TABLE `user_sets`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -305,20 +325,15 @@ ALTER TABLE `charity_card`
 ALTER TABLE `rating`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `sets_cards`
+-- AUTO_INCREMENT for table `sets_exist`
 --
-ALTER TABLE `sets_cards`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `sets_exist`
+  MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
---
--- AUTO_INCREMENT for table `user_sets`
---
-ALTER TABLE `user_sets`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

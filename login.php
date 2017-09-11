@@ -8,7 +8,8 @@ if (isset($_SESSION['u_id'])){
 <div class="container-fluid">
 	<div style="height: 100px; visibility:hidden;"></div>
 	<div style="text-align: center">
-		<h2>Login</h2>
+		<h2>Account Login</h2>
+        <p>Manage your collectables & other information regarding your account</p>
 	</div>
 	</br>
 			<form class="form-horizontal" action="includes/login.inc.php" method="POST">
