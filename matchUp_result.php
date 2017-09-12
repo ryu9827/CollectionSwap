@@ -24,10 +24,11 @@ function GetQueryString(name){
 var set_id = GetQueryString("set_id");
 
 function sendRequest(name,offer,miss,set_id){
-//   alert(name);
-//   alert(offer);
-//   alert(miss);
-//   alert(set_id);
+   alert(name);
+   alert(offer);
+   alert(miss);
+   alert(set_id);
+
   // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);

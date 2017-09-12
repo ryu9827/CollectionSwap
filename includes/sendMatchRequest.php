@@ -17,13 +17,13 @@ if (!isset($_SESSION['u_id'])){
 //      $misslist = 'a005,a006';
 //get data from front-end
 $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
-$set_id = mysqli_real_escape_string($_POST['set_id']);
-$offerlist = mysqli_real_escape_string($_POST['offer']);
-$misslist =  mysqli_real_escape_string($_POST['miss']);
-error_log($reciver_uid,$set_id,$offerlist,$misslist,3,my-errors.log);
-//error_log($set_id,3,my-errors.log);
-//error_log($offerlist,3,my-errors.log);
-//error_log($misslist,3,my-errors.log);
+$set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
+$offerlist = mysqli_real_escape_string($conn,$_POST['offer']);
+$misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
+//error_log($offerlist,3,"my_errors.log");
+//error_log($set_id,3,"my_errors.log");
+//error_log($offerlist,3,"my_errors.log");
+//error_log($misslist,3,"my_errors.log");
 
 
 $offer = explode(",",$offerlist);
