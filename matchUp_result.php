@@ -13,20 +13,21 @@
 	</div><br/>
 
 <script type="text/javascript">
-var set_id;
+
 //to get premeters from url
 function GetQueryString(name){
      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
      var r = window.location.search.substr(1).match(reg);
      if(r!=null)return  unescape(r[2]); return null;
 };
-</script> 
 
-<script type="text/javascript">
+var set_id = GetQueryString("set_id");
+
 function sendRequest(name,offer,miss,set_id){
-  // alert(name);
-  // alert(offer);
-  // alert(miss);
+//   alert(name);
+//   alert(offer);
+//   alert(miss);
+//   alert(set_id);
   // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
@@ -82,7 +83,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-footer">'+
                 // Button trigger modal                
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
@@ -107,7 +108,7 @@ function match(i,item){
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
                 '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+

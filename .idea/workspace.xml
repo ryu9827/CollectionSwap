@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/SQL/Dump20170908.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/my-errors.log" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SQL/collectionswap.sql" afterPath="$PROJECT_DIR$/SQL/collectionswap.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/wb12_bluemonday.css" afterPath="$PROJECT_DIR$/css/wb12_bluemonday.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgetPwd.php" afterPath="$PROJECT_DIR$/forgetPwd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/bestmatch.php" afterPath="$PROJECT_DIR$/includes/bestmatch.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/sendMatchRequest.php" afterPath="$PROJECT_DIR$/includes/sendMatchRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matchUp.php" afterPath="$PROJECT_DIR$/matchUp.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matchUp_result.php" afterPath="$PROJECT_DIR$/matchUp_result.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pwdReset.php" afterPath="$PROJECT_DIR$/pwdReset.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search_inputNum.php" afterPath="$PROJECT_DIR$/search_inputNum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement.php" afterPath="$PROJECT_DIR$/setsManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_cardList.php" afterPath="$PROJECT_DIR$/setsManagement_cardList.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_history.php" afterPath="$PROJECT_DIR$/setsManagement_history.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_messages.php" afterPath="$PROJECT_DIR$/setsManagement_messages.php" />
     </list>
@@ -33,21 +24,23 @@
       <file leaf-file-name="matchUp_result.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matchUp_result.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-331">
-              <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+            <state relative-caret-position="-740">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bestmatch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/bestmatch.php">
+      <file leaf-file-name="sendMatchRequest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/sendMatchRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="260">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <marker date="1505165752503" expanded="true" signature="1144:1191" ph="SELECT * FRO... rating" />
-                <marker date="1505165752503" expanded="true" signature="1410:1456" ph="SELECT * FRO... users" />
+                <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+                <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+                <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+                <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
               </folding>
             </state>
           </provider>
@@ -66,21 +59,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/sendMatchRequest.php" />
         <option value="$PROJECT_DIR$/css/wb12_bluemonday.css" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/forgetPwd.php" />
         <option value="$PROJECT_DIR$/setsManagement_cardList.php" />
         <option value="$PROJECT_DIR$/setsManagement.php" />
-        <option value="$PROJECT_DIR$/setsManagement_history.php" />
-        <option value="$PROJECT_DIR$/setsManagement_messages.php" />
         <option value="$PROJECT_DIR$/matchUp.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/search_inputNum.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/pwdReset.php" />
-        <option value="$PROJECT_DIR$/matchUp_result.php" />
         <option value="$PROJECT_DIR$/includes/bestmatch.php" />
+        <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/setsManagement_history.php" />
+        <option value="$PROJECT_DIR$/setsManagement_messages.php" />
+        <option value="$PROJECT_DIR$/includes/sendMatchRequest.php" />
+        <option value="$PROJECT_DIR$/matchUp_result.php" />
       </list>
     </option>
   </component>
@@ -90,6 +84,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="215" />
@@ -141,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,11 +158,13 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -217,12 +213,13 @@
       <workItem from="1505104670745" duration="114000" />
       <workItem from="1505104805628" duration="2832000" />
       <workItem from="1505115665880" duration="4886000" />
-      <workItem from="1505165501959" duration="298000" />
+      <workItem from="1505165501959" duration="1048000" />
+      <workItem from="1505184074078" duration="4271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9840000" />
+    <option name="totallyTimeSpent" value="14861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -232,18 +229,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39958158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -255,7 +252,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -321,10 +318,10 @@
         <state relative-caret-position="1280">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -351,10 +348,10 @@
         <state relative-caret-position="2304">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -389,10 +386,10 @@
         <state relative-caret-position="1472">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -427,10 +424,10 @@
         <state relative-caret-position="2880">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -465,10 +462,10 @@
         <state relative-caret-position="1344">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -511,10 +508,10 @@
         <state relative-caret-position="1344">
           <caret line="64" column="36" lean-forward="false" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -549,10 +546,10 @@
         <state relative-caret-position="1344">
           <caret line="64" column="36" lean-forward="true" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
           <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -593,13 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="67" lean-forward="false" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="36" column="79" lean-forward="false" selection-start-line="36" selection-start-column="79" selection-end-line="36" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -647,24 +637,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
+    <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" column="73" lean-forward="false" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
+        <state relative-caret-position="600">
+          <caret line="54" column="22" lean-forward="true" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/sendMatchRequest.php">
+    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <marker date="1505102926644" expanded="true" signature="542:636" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="759:833" ph="UPDATE cards... " />
-            <marker date="1505102926644" expanded="true" signature="1064:1204" ph="INSERT INTO messages... " />
-            <marker date="1505102926644" expanded="true" signature="1640:1691" ph="SELECT * FRO... users" />
-          </folding>
+        <state relative-caret-position="840">
+          <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="59" column="69" lean-forward="true" selection-start-line="59" selection-start-column="69" selection-end-line="59" selection-end-column="69" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -679,10 +672,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/my-errors.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/0log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/sendMatchRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <marker date="1505192107894" expanded="true" signature="1181:1275" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1398:1472" ph="UPDATE cards... " />
+            <marker date="1505192107894" expanded="true" signature="1703:1843" ph="INSERT INTO messages... " />
+            <marker date="1505192107894" expanded="true" signature="2116:2164" ph="SELECT * FRO... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matchUp_result.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-331">
-          <caret line="82" column="45" lean-forward="false" selection-start-line="82" selection-start-column="45" selection-end-line="82" selection-end-column="45" />
+        <state relative-caret-position="-740">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="23" selection-end-column="38" />
           <folding />
         </state>
       </provider>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2017 at 10:43 PM
+-- Generation Time: Sep 12, 2017 at 02:24 AM
 -- Server version: 5.7.18-log
 -- PHP Version: 5.6.25
 
@@ -32,53 +32,54 @@ CREATE TABLE `cards_status` (
   `card_status` int(1) DEFAULT NULL,
   `id` int(11) NOT NULL,
   `set_id` varchar(45) DEFAULT NULL,
-  `locked_time` int(10) DEFAULT NULL
+  `locked_time` int(10) DEFAULT NULL,
+  `card_name` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cards_status`
 --
 
-INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`, `locked_time`) VALUES
-('yehan', 'a001', 1, 1, 'a', NULL),
-('yehan', 'a002', 2, 2, 'a', NULL),
-('yehan', 'a003', 1, 3, 'a', NULL),
-('yehan', 'a004', 2, 4, 'a', NULL),
-('yehan', 'a005', 1, 5, 'a', NULL),
-('yehan', 'a006', 1, 6, 'a', NULL),
-('amy', 'a001', 1, 7, 'a', 1505081638),
-('amy', 'a002', 1, 8, 'a', 1505081638),
-('amy', 'a003', 2, 9, 'a', 1505081638),
-('amy', 'a004', 1, 10, 'a', 1505081638),
-('amy', 'a005', 2, 11, 'a', 1505081638),
-('amy', 'a006', 1, 12, 'a', 1505081638),
-('wendy', 'a001', 2, 13, 'a', NULL),
-('wendy', 'a002', 2, 14, 'a', NULL),
-('wendy', 'a003', 1, 15, 'a', NULL),
-('wendy', 'a004', 1, 16, 'a', NULL),
-('wendy', 'a005', 2, 17, 'a', NULL),
-('wendy', 'a006', 2, 18, 'a', NULL),
-('Tony', 'a001', 1, 19, 'a', 1505081638),
-('Tony', 'a002', 1, 20, 'a', 1505081638),
-('Tony', 'a003', 2, 21, 'a', 1505081638),
-('Tony', 'a004', 2, 22, 'a', 1505081638),
-('Tony', 'a005', 2, 23, 'a', 1505081638),
-('Tony', 'a006', 2, 24, 'a', 1505081638),
-('Bruce', 'a001', 2, 25, 'a', NULL),
-('Bruce', 'a002', 1, 26, 'a', NULL),
-('Bruce', 'a003', 2, 27, 'a', NULL),
-('Bruce', 'a004', 2, 28, 'a', NULL),
-('Bruce', 'a005', 2, 29, 'a', NULL),
-('Bruce', 'a006', 2, 30, 'a', NULL),
-('xinkai', 'a001', 2, 31, 'a', NULL),
-('xinkai', 'a002', 2, 32, 'a', NULL),
-('xinkai', 'a003', 1, 33, 'a', NULL),
-('xinkai', 'a004', 2, 34, 'a', NULL),
-('xinkai', 'a005', 1, 35, 'a', NULL),
-('xinkai1', 'a002', 2, 37, 'a', NULL),
-('xinkai1', 'a003', 1, 38, 'a', NULL),
-('xinkai1', 'a004', 2, 39, 'a', NULL),
-('xinkai1', 'a005', 2, 40, 'a', NULL);
+INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`, `locked_time`, `card_name`) VALUES
+('yehan', 'a001', 1, 1, '1', NULL, ''),
+('yehan', 'a002', 2, 2, '1', NULL, ''),
+('yehan', 'a003', 1, 3, '1', NULL, ''),
+('yehan', 'a004', 2, 4, '1', NULL, ''),
+('yehan', 'a005', 1, 5, '1', NULL, ''),
+('yehan', 'a006', 1, 6, '1', NULL, ''),
+('amy', 'a001', 0, 7, '1', 1505166349, ''),
+('amy', 'a002', 0, 8, '1', 1505166349, ''),
+('amy', 'a003', 2, 9, '1', 1505166349, ''),
+('amy', 'a004', 1, 10, '1', 1505166349, ''),
+('amy', 'a005', 0, 11, '1', 1505166349, ''),
+('amy', 'a006', 0, 12, '1', 1505166349, ''),
+('wendy', 'a001', 2, 13, '1', NULL, ''),
+('wendy', 'a002', 2, 14, '1', NULL, ''),
+('wendy', 'a003', 1, 15, '1', NULL, ''),
+('wendy', 'a004', 1, 16, '1', NULL, ''),
+('wendy', 'a005', 2, 17, '1', NULL, ''),
+('wendy', 'a006', 2, 18, '1', NULL, ''),
+('Tony', 'a001', 0, 19, '1', 1505166349, ''),
+('Tony', 'a002', 0, 20, '1', 1505166349, ''),
+('Tony', 'a003', 2, 21, '1', 1505166349, ''),
+('Tony', 'a004', 2, 22, '1', 1505166349, ''),
+('Tony', 'a005', 0, 23, '1', 1505166349, ''),
+('Tony', 'a006', 0, 24, '1', 1505166349, ''),
+('Bruce', 'a001', 2, 25, '1', NULL, ''),
+('Bruce', 'a002', 1, 26, '1', NULL, ''),
+('Bruce', 'a003', 2, 27, '1', NULL, ''),
+('Bruce', 'a004', 2, 28, '1', NULL, ''),
+('Bruce', 'a005', 2, 29, '1', NULL, ''),
+('Bruce', 'a006', 2, 30, '1', NULL, ''),
+('xinkai', 'a001', 2, 31, '1', NULL, ''),
+('xinkai', 'a002', 2, 32, '1', NULL, ''),
+('xinkai', 'a003', 1, 33, '1', NULL, ''),
+('xinkai', 'a004', 2, 34, '1', NULL, ''),
+('xinkai', 'a005', 1, 35, '1', NULL, ''),
+('xinkai1', 'a002', 2, 37, '1', NULL, ''),
+('xinkai1', 'a003', 1, 38, '1', NULL, ''),
+('xinkai1', 'a004', 2, 39, '1', NULL, ''),
+('xinkai1', 'a005', 2, 40, '1', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -136,23 +137,23 @@ INSERT INTO `rating` (`id`, `user_uid`, `good`, `normal`, `bad`, `average`, `cou
 
 CREATE TABLE `sets_cards` (
   `id` int(20) NOT NULL,
-  `set_id` int(20) NOT NULL,
+  `set_id` varchar(500) NOT NULL,
   `card_id` int(20) NOT NULL,
   `card_images` varchar(500) NOT NULL,
-  `card_num` int(20) NOT NULL
+  `card_name` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sets_cards`
 --
 
-INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_num`) VALUES
-(1, 1, 1, 'images/cardImages/card-1.png', 1),
-(2, 1, 2, 'images/cardImages/card-2.png', 2),
-(3, 1, 3, 'images/cardImages/card-3.png', 3),
-(4, 1, 4, 'images/cardImages/card-4.png', 4),
-(5, 1, 5, 'images/cardImages/card-5.png', 5),
-(6, 1, 6, 'images/cardImages/card-6.png', 6);
+INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_name`) VALUES
+(1, 'a', 1, 'images/cardImages/card-1.png', '1'),
+(2, 'a', 2, 'images/cardImages/card-2.png', '2'),
+(3, 'a', 3, 'images/cardImages/card-3.png', '3'),
+(4, 'a', 4, 'images/cardImages/card-4.png', '4'),
+(5, 'a', 5, 'images/cardImages/card-5.png', '5'),
+(6, 'a', 6, 'images/cardImages/card-6.png', '6');
 
 -- --------------------------------------------------------
 
@@ -241,7 +242,7 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (47, 'aimee', 'aimee', 'yhchixigua@gmail.com', 'aimee123', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017'),
 (48, 'bruce', 'li', '111@gmail.com', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017'),
 (49, 'tony', 'wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017'),
-(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '11/09/2017');
+(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '12/09/2017');
 
 -- --------------------------------------------------------
 
@@ -252,7 +253,7 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 CREATE TABLE `user_sets` (
   `id` int(20) NOT NULL,
   `user_id` int(20) NOT NULL,
-  `set_id` int(20) NOT NULL,
+  `set_id` varchar(500) NOT NULL,
   `set_image` varchar(500) NOT NULL,
   `set_name` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -262,9 +263,9 @@ CREATE TABLE `user_sets` (
 --
 
 INSERT INTO `user_sets` (`id`, `user_id`, `set_id`, `set_image`, `set_name`) VALUES
-(1, 50, 1, 'images/setImages/All_Blacks.jpg', 'All Blacks'),
-(2, 50, 2, 'images/setImages/Disney_Movie_Star.jpg', 'Disney Movie Star'),
-(3, 50, 3, 'images/setImages/Smurf.jpg', 'Smurf');
+(1, 50, 'a', 'images/setImages/All_Blacks.jpg', 'All Blacks'),
+(2, 50, 'b', 'images/setImages/Disney_Movie_Star.jpg', 'Disney Movie Star'),
+(3, 50, 'c', 'images/setImages/Smurf.jpg', 'Smurf');
 
 --
 -- Indexes for dumped tables
@@ -292,6 +293,14 @@ ALTER TABLE `rating`
   ADD UNIQUE KEY `user_uid_UNIQUE` (`user_uid`);
 
 --
+-- Indexes for table `sets_cards`
+--
+ALTER TABLE `sets_cards`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD UNIQUE KEY `card_id` (`card_id`);
+
+--
 -- Indexes for table `sets_exist`
 --
 ALTER TABLE `sets_exist`
@@ -304,6 +313,13 @@ ALTER TABLE `sets_exist`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `user_sets`
+--
+ALTER TABLE `user_sets`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables

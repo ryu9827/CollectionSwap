@@ -32,7 +32,7 @@ function message(item){
 		case "0":
 		html += '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
-				    	'<div class="panel panel-warning">'+
+				    	'<div class="panel panel-danger">'+
 				            '<div class="panel-heading">'+              
 				                '<h3 class="panel-title">A New Request</h3>'+
 				            '</div>'+
@@ -40,8 +40,8 @@ function message(item){
 					            '<p>Time: '+item.time+'</p>'+
 								'<p>'+item.name+' wants to make a swap with you.</p>'+ 
 								'<p>Collection Name: '+item.set+'</p>'+
-								'<p>What you will offer: '+item.offer+'</p>'+	
-								'<p>What you will get: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer+'</p>'+
+								'<p>Receiving: '+item.get+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+	
 									'<button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>'+
@@ -62,8 +62,8 @@ function message(item){
 					            '<p>Time: '+item.time+'</p>'+
 								'<p>Your swap request has been sent to '+item.name+'. Please wait for the response. </p>'+ 
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>What you will offer: '+item.offer+'</p>'+	
-								'<p>What you will get: '+item.get+'</p>'+	
+								'<p>Giving Away: '+item.offer+'</p>'+
+								'<p>Receiving: '+item.get+'</p>'+
 								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+	
 				            '</div>'+
 				        '</div>'+
@@ -102,8 +102,8 @@ function message(item){
 					            '<p>You have confirm that this swap is done.</p>'+
 								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>What you offered: '+item.offer+'</p>'+
-								'<p>What you got: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer+'</p>'+
+								'<p>Receiving: '+item.get+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 				            	'<div class="btn-group" data-toggle="buttons">'+
@@ -118,7 +118,8 @@ function message(item){
 								  '</label>'+
 								'</div>'+
 								'<button type="button" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
-				            '</div>'+
+				                '<p>*It cannot be modified after submission*</p>'+
+                            '</div>'+
 				        '</div>'+
 				    '</div>'+
 				'</div>'
