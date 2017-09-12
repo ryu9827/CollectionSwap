@@ -13,7 +13,7 @@ global $conn;
 
 //$user_uid = $_SESSION['u_id'];
 $user_uid = 'amy';
-$sql = "SELECT * FROM message WHERE user_uid = '$user_uid' AND status IN('1','2','5','6') ORDER BY time";
+$sql = "SELECT * FROM message WHERE user_uid = '$user_uid' AND status IN（'3','4','7'） ORDER BY time";
 $res = mysqli_query($conn, $sql);
 echo mysqli_num_rows($res);
 while($row = mysqli_fetch_assoc($res)){

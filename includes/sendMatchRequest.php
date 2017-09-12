@@ -54,10 +54,7 @@ date_default_timezone_set('NZ');
 //    $set_id = mysqli_real_escape_string($_POST['set_id']);
 //    $offerlist = mysqli_real_escape_string($_POST['offer']);
 //    $misslist =  mysqli_real_escape_string($_POST['miss']);
-    
-
-  
-   
+     
     $offer = explode(",",$offerlist);
     $miss =  explode(",",$misslist);
 

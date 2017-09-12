@@ -5,7 +5,7 @@ include 'dbh.inc.php';
 function search($table,$card_name, $status,$set_id){
 
   global $conn;  
-  $sql = "SELECT * FROM $table WHERE card_name like '$card_name' AND set_id = '$set_id' AND card_status = '$status'";
+  $sql = "SELECT * FROM $table WHERE card_name like '$card_name' AND set_id = '$set_id' AND card_status = '$status' GROUP BY card_id";
   $res = mysqli_query($conn, $sql);
   $num = mysqli_num_rows($res);
  
