@@ -72,7 +72,7 @@ date_default_timezone_set('NZ');
 //    $set_id = mysqli_real_escape_string($_POST['set_id']);
 //    $offerlist = mysqli_real_escape_string($_POST['offer']);
 //    $misslist =  mysqli_real_escape_string($_POST['miss']);
-     
+
     $offer = explode(",",$offerlist);
     $miss =  explode(",",$misslist);
 
@@ -99,4 +99,4 @@ date_default_timezone_set('NZ');
    newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1);
    newmessage($reciver_uid,$user_uid,$uemail,1, $set_id, $misslist,$offerlist, 1);
 
-  
+
