@@ -14,7 +14,7 @@
 	<div class="col-xs-12">
 		<div class="row">
 			<ul class="nav nav-tabs">
-				<li role="presentation" class="active"><a href="#">My Sets</a></li>
+				<li role="presentation" class="active"><a href="#">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages">Messages</a></li> 
 				<li role="presentation"><a href="setsManagement_history">History</a></li> 
 			</ul>
@@ -46,7 +46,7 @@
 
 
 ?>
-	<button type="submit" class="btn btn-success btn-lg center-block" >+ Add Card Set +</button>
+	<button type="submit" class="btn btn-success btn-lg center-block" >+ Add New Collection +</button>
 	<div style="height: 500px; visibility:hidden;"></div>	
 			
 

@@ -15,11 +15,11 @@ if (isset($_SESSION['u_id'])){
 <div class="container-fluid">
 	<div style="height: 100px; visibility:hidden;"></div>
 	<div style="text-align: center">
-		<h2>Reset Your Password</h2>
+		<h2>Forgot your password?</h2>
 	</div>
 	</br></br>
 	<div style="text-align: center">
-		<H4>Please input your register E-mail address, we will sent you an E-mail with a password reset link.</H4>
+		<H4>Please enter your registered Email address below, we will email instructions on how to reset your password.</H4>
 	</div>
 	</br>
 			<form class="form-horizontal" action="includes/sendPWEmail.php" method="POST">
@@ -38,7 +38,7 @@ if (isset($_SESSION['u_id'])){
 			
 			</br></br></br>
 			<div style="text-align: center"> 						
-				<p>Remember your password? &nbsp<a href="login.php" style="text-decoration: underline;">Login</a></p>			
+				<p>Need help? Learn more about how to retrieve an existing account &nbsp<a href="login.php" style="text-decoration: underline;">Login</a></p>
 			</div> 			
 			
 			

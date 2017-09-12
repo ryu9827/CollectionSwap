@@ -8,7 +8,7 @@
 
 <!-- 二级导航 -->
 	<div style="text-align: center">
-		<h2>Select a set to match</h2>
+		<h2>Choose your favourite collection!</h2>
 	</div><br/>
 
 <?php

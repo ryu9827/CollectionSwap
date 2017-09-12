@@ -4,29 +4,23 @@ if (isset($_SESSION['u_id'])){
 		header("Location:profile.php");
 	}
 //$verify=$_GET['verify'];
-$verify = stripslashes(trim($_GET['verify'])); 
+$verify = @stripslashes(trim($_GET['verify']));
 ?>
 
 </script>
 <div class="container-fluid">
 	<div style="height: 100px; visibility:hidden;"></div>
 	<div style="text-align: center">
-		<h2>Input your new password</h2>
+		<h2>Reset Your Password</h2>
 	</div>
-	</br></br>
-	<div style="text-align: center">
-		<H4>Your password has been reset. Please input your new password.</H4>
-	</div>
-	</br>
+	</br></br></br>
 			<form class="form-horizontal" action="includes/passwordreset.php" method="POST">
-				<div class="form-group">					
-			        <label for="pwd" class="col-sm-2 col-md-offset-2 control-label">New Password: </label>
-			        <div class="col-md-4">
+				<div class="form-group">
+			        <div class="col-md-4 col-md-offset-4">
 						<input type="password" class="form-control" name="pwd" placeholder="New Password">
 					</div>
 					</br></br></br>
-					<label for="cpwd" class="col-sm-2 col-md-offset-2 control-label">Confirm Password: </label>
-					<div class="col-md-4">
+					<div class="col-md-4 col-md-offset-4">
 						<input type="password" class="form-control" name="cpwd" placeholder="Confirm Password">
 					</div> 					
 					</br></br></br>
