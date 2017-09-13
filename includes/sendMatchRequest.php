@@ -20,17 +20,14 @@ $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
 $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
 $offerlist = mysqli_real_escape_string($conn,$_POST['offer']);
 $misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
-//error_log($reciver_uid,$set_id,$offerlist,$misslist,3,my-errors.log);
-//error_log($set_id,3,my-errors.log);
-//error_log($offerlist,3,my-errors.log);
-//error_log($misslist,3,my-errors.log);
-
 
 $offer = explode(",",$offerlist);
 $miss =  explode(",",$misslist);
+
 date_default_timezone_set('NZ');     
     // $user_uid = $_SESSION['u_id'];
-     $user_uid = 'amy';
+$user_uid = 'amy';
+     
 //lock the card when request is sent        
     function lockcard($cardid = array() ,$user_uid){
         global $conn;  
@@ -62,17 +59,8 @@ date_default_timezone_set('NZ');
        $email = $row['user_email'];
        return $email;
    }
- 
-      $reciver_uid = 'Tony';
-      $set_id = 'a';
-      $offerlist = 'a001,a002';
-      $misslist = 'a005,a006';
-//get data from front-end    
-//    $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
-//    $set_id = mysqli_real_escape_string($_POST['set_id']);
-//    $offerlist = mysqli_real_escape_string($_POST['offer']);
-//    $misslist =  mysqli_real_escape_string($_POST['miss']);
 
+ 
     $offer = explode(",",$offerlist);
     $miss =  explode(",",$misslist);
 
