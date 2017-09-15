@@ -11,13 +11,13 @@ foreach($cardset as $key => $value){
     $res = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($res);
   
-    //check if the user already manage this card 
+//check if the user already manage this card 
     if($resultCheck > 0){
         $row = mysqli_fetch_array($res);
         $status = $row[card_status];
 
         if(!($status == $value)){
-    //if the card already exit in database, update status
+//if the card already exit in database, update status
             if($value == 0){
                $sql = "DELETE * FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid'";
                mysqli_query($conn, $sql);
