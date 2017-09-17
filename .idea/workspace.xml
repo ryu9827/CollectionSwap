@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_cardList.php" afterPath="$PROJECT_DIR$/setsManagement_cardList.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,42 +13,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="setsManagement_cardList.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="setsManagement_cardList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="58" />
+            <state relative-caret-position="580">
+              <caret line="136" column="67" lean-forward="false" selection-start-line="136" selection-start-column="63" selection-end-line="136" selection-end-column="67" />
               <folding>
-                <marker date="1505683646428" expanded="true" signature="982:1029" ph="select * fro... sets_cards" />
-                <marker date="1505683646428" expanded="true" signature="1296:1377" ph="select card_... cards_status" />
-                <marker date="1505683646428" expanded="true" signature="1708:2051" ph="..." />
-                <marker date="1505683646428" expanded="true" signature="1708:2157" ph="..." />
-                <marker date="1505683646428" expanded="true" signature="1708:2262" ph="..." />
-                <marker date="1505683646428" expanded="true" signature="1708:2332" ph="..." />
-                <marker date="1505683646428" expanded="true" signature="1872:1985" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testReceive.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/testReceive.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <marker date="1505642046106" expanded="true" signature="73:107" ph="SELECT * FRO... test" />
-                <marker date="1505642046106" expanded="true" signature="73:109" ph="SELECT * FRO... test" />
+                <marker date="1505684206321" expanded="true" signature="982:1029" ph="select * fro... sets_cards" />
+                <marker date="1505684206321" expanded="true" signature="1296:1377" ph="select card_... cards_status" />
+                <marker date="1505684206321" expanded="true" signature="1708:2051" ph="..." />
+                <marker date="1505684206321" expanded="true" signature="1708:2157" ph="..." />
+                <marker date="1505684206321" expanded="true" signature="1708:2262" ph="..." />
+                <marker date="1505684206321" expanded="true" signature="1708:2332" ph="..." />
+                <marker date="1505684206321" expanded="true" signature="1872:1985" ph="..." />
               </folding>
             </state>
           </provider>
@@ -257,12 +232,12 @@
       <workItem from="1505557608880" duration="12000" />
       <workItem from="1505590055744" duration="9535000" />
       <workItem from="1505639556724" duration="4572000" />
-      <workItem from="1505680831253" duration="985000" />
+      <workItem from="1505680831253" duration="1515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43989000" />
+    <option name="totallyTimeSpent" value="44519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -659,6 +634,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/testReceive.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -672,25 +655,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="140" column="16" lean-forward="false" selection-start-line="140" selection-start-column="16" selection-end-line="140" selection-end-column="58" />
+        <state relative-caret-position="580">
+          <caret line="136" column="67" lean-forward="false" selection-start-line="136" selection-start-column="63" selection-end-line="136" selection-end-column="67" />
           <folding>
-            <marker date="1505683646428" expanded="true" signature="982:1029" ph="select * fro... sets_cards" />
-            <marker date="1505683646428" expanded="true" signature="1296:1377" ph="select card_... cards_status" />
-            <marker date="1505683646428" expanded="true" signature="1708:2051" ph="..." />
-            <marker date="1505683646428" expanded="true" signature="1708:2157" ph="..." />
-            <marker date="1505683646428" expanded="true" signature="1708:2262" ph="..." />
-            <marker date="1505683646428" expanded="true" signature="1708:2332" ph="..." />
-            <marker date="1505683646428" expanded="true" signature="1872:1985" ph="..." />
+            <marker date="1505684206321" expanded="true" signature="982:1029" ph="select * fro... sets_cards" />
+            <marker date="1505684206321" expanded="true" signature="1296:1377" ph="select card_... cards_status" />
+            <marker date="1505684206321" expanded="true" signature="1708:2051" ph="..." />
+            <marker date="1505684206321" expanded="true" signature="1708:2157" ph="..." />
+            <marker date="1505684206321" expanded="true" signature="1708:2262" ph="..." />
+            <marker date="1505684206321" expanded="true" signature="1708:2332" ph="..." />
+            <marker date="1505684206321" expanded="true" signature="1872:1985" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/testReceive.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
