@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2017 at 02:24 AM
+-- Generation Time: Sep 17, 2017 at 09:39 PM
 -- Server version: 5.7.18-log
 -- PHP Version: 5.6.25
 
@@ -47,30 +47,30 @@ INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`
 ('yehan', 'a004', 2, 4, '1', NULL, ''),
 ('yehan', 'a005', 1, 5, '1', NULL, ''),
 ('yehan', 'a006', 1, 6, '1', NULL, ''),
-('amy', 'a001', 0, 7, '1', 1505166349, ''),
-('amy', 'a002', 0, 8, '1', 1505166349, ''),
-('amy', 'a003', 2, 9, '1', 1505166349, ''),
-('amy', 'a004', 1, 10, '1', 1505166349, ''),
-('amy', 'a005', 0, 11, '1', 1505166349, ''),
-('amy', 'a006', 0, 12, '1', 1505166349, ''),
+('amy', 'a001', 1, 7, '1', 1505614891, ''),
+('amy', 'a002', 1, 8, '1', 1505614891, ''),
+('amy', 'a003', 2, 9, '1', 1505614891, ''),
+('amy', 'a004', 2, 10, '1', 1505614891, ''),
+('amy', 'a005', 2, 11, '1', 1505614891, ''),
+('amy', 'a006', 2, 12, '1', 1505614891, ''),
 ('wendy', 'a001', 2, 13, '1', NULL, ''),
 ('wendy', 'a002', 2, 14, '1', NULL, ''),
 ('wendy', 'a003', 1, 15, '1', NULL, ''),
 ('wendy', 'a004', 1, 16, '1', NULL, ''),
-('wendy', 'a005', 2, 17, '1', NULL, ''),
-('wendy', 'a006', 2, 18, '1', NULL, ''),
-('Tony', 'a001', 0, 19, '1', 1505166349, ''),
-('Tony', 'a002', 0, 20, '1', 1505166349, ''),
-('Tony', 'a003', 2, 21, '1', 1505166349, ''),
-('Tony', 'a004', 2, 22, '1', 1505166349, ''),
-('Tony', 'a005', 0, 23, '1', 1505166349, ''),
-('Tony', 'a006', 0, 24, '1', 1505166349, ''),
-('Bruce', 'a001', 2, 25, '1', NULL, ''),
-('Bruce', 'a002', 1, 26, '1', NULL, ''),
-('Bruce', 'a003', 2, 27, '1', NULL, ''),
-('Bruce', 'a004', 2, 28, '1', NULL, ''),
-('Bruce', 'a005', 2, 29, '1', NULL, ''),
-('Bruce', 'a006', 2, 30, '1', NULL, ''),
+('wendy', 'a005', 1, 17, '1', NULL, ''),
+('wendy', 'a006', 1, 18, '1', NULL, ''),
+('Tony', 'a001', 2, 19, '1', 1505265894, ''),
+('Tony', 'a002', 2, 20, '1', 1505265894, ''),
+('Tony', 'a003', 2, 21, '1', 1505265894, ''),
+('Tony', 'a004', 2, 22, '1', 1505265894, ''),
+('Tony', 'a005', 1, 23, '1', 1505265894, ''),
+('Tony', 'a006', 1, 24, '1', 1505265894, ''),
+('Bruce', 'a001', 1, 25, '1', 1505192607, ''),
+('Bruce', 'a002', 1, 26, '1', 1505192607, ''),
+('Bruce', 'a003', 2, 27, '1', 1505192607, ''),
+('Bruce', 'a004', 2, 28, '1', 1505192607, ''),
+('Bruce', 'a005', 2, 29, '1', 1505192607, ''),
+('Bruce', 'a006', 1, 30, '1', 1505192607, ''),
 ('xinkai', 'a001', 2, 31, '1', NULL, ''),
 ('xinkai', 'a002', 2, 32, '1', NULL, ''),
 ('xinkai', 'a003', 1, 33, '1', NULL, ''),
@@ -138,7 +138,7 @@ INSERT INTO `rating` (`id`, `user_uid`, `good`, `normal`, `bad`, `average`, `cou
 CREATE TABLE `sets_cards` (
   `id` int(20) NOT NULL,
   `set_id` varchar(500) NOT NULL,
-  `card_id` int(20) NOT NULL,
+  `card_id` varchar(500) NOT NULL,
   `card_images` varchar(500) NOT NULL,
   `card_name` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -148,12 +148,12 @@ CREATE TABLE `sets_cards` (
 --
 
 INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_name`) VALUES
-(1, 'a', 1, 'images/cardImages/card-1.png', '1'),
-(2, 'a', 2, 'images/cardImages/card-2.png', '2'),
-(3, 'a', 3, 'images/cardImages/card-3.png', '3'),
-(4, 'a', 4, 'images/cardImages/card-4.png', '4'),
-(5, 'a', 5, 'images/cardImages/card-5.png', '5'),
-(6, 'a', 6, 'images/cardImages/card-6.png', '6');
+(1, 'a', 'a001', 'images/cardImages/card-1.png', '1'),
+(2, 'a', 'a002', 'images/cardImages/card-2.png', '2'),
+(3, 'a', 'a003', 'images/cardImages/card-3.png', '3'),
+(4, 'a', 'a004', 'images/cardImages/card-4.png', '4'),
+(5, 'a', 'a005', 'images/cardImages/card-5.png', '5'),
+(6, 'a', 'a006', 'images/cardImages/card-6.png', '6');
 
 -- --------------------------------------------------------
 
@@ -242,7 +242,7 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (47, 'aimee', 'aimee', 'yhchixigua@gmail.com', 'aimee123', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017'),
 (48, 'bruce', 'li', '111@gmail.com', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017'),
 (49, 'tony', 'wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017'),
-(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '12/09/2017');
+(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$0jPeqM1PmFEPLhklx20Cz.i4qGYPO4MaPFJaUcSWP0d/XpH8Nryli', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '18/09/2017');
 
 -- --------------------------------------------------------
 
