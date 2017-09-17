@@ -84,9 +84,9 @@
                     <td>
                         <img src="'.$rows[3].'" alt="'.$rows[4].'"> <!-- card image-->
                     </td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="missing">Missing</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="extra">Extra</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="have">Already Have</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="2">Missing</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="1">Extra</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Already Have</td>
                 </tr>
 			';
 	}
@@ -134,11 +134,11 @@
             $("#save").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/testReceive.php',true);
+                xmlhttp.open('POST','includes/cardmanagement.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-//                $(window).attr('href', 'setManagement.php');
-                window.location.href='setsManagement.php';
+               // (window).attr('href', 'includes/testReceive.php');
+                 window.location.href='includes/testReceive.php';
             })
         })
 
@@ -147,7 +147,8 @@
             $("#match").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/testReceive.php',true);
+                xmlhttp.open('POST','includes/cardmanagement.php',true);
+                xmlhttp.open('POST','includes/bestmatch.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                 $(window).attr('href', 'matchUp_result.php?set_id='+set_id);

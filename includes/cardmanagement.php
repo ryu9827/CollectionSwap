@@ -2,8 +2,24 @@
 include_once 'dbh.inc.php';
 global $conn;
 
-$cardset = array('a001'=>2,'a002'=>2,'a003'=>1,'a004'=>2,'a005'=>2);
-$user_uid = 'xinkai1';
+ob_start(); 
+session_start();
+if (!isset($_SESSION['u_id'])){
+     header("location:../login.php");
+
+	}
+        
+ $user_uid = $_SESSION['u_id'];   
+
+$obj = $_POST['post_json'];
+var_dump($_POST);
+$cardset =json_decode($obj,true);
+//$test = array('a001'=>1,'a002'=>1,'a003'=>1,'a004'=>1,'a005'=>3);
+//$test = json_encode($test);
+//$cardset = json_decode($test,true);
+
+
+$user_uid = 'amy';
 
 foreach($cardset as $key => $value){
     
@@ -18,8 +34,8 @@ foreach($cardset as $key => $value){
 
         if(!($status == $value)){
 //if the card already exit in database, update status
-            if($value == 0){
-               $sql = "DELETE * FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid'";
+            if($value == 3){
+               $sql = "DELETE FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid'";
                mysqli_query($conn, $sql);
                 
             }
