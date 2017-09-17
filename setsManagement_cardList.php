@@ -137,7 +137,6 @@
                 xmlhttp.open('POST','includes/cardmanagement.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-               // (window).attr('href', 'includes/testReceive.php');
                  window.location.href='includes/testReceive.php';
             })
         })

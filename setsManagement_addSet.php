@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Sets Management</h2>
+		<h2>Add Sets</h2>
 	</div><br/>
 
 	<div class="col-xs-12">
@@ -26,23 +26,19 @@
 <?php
 	include_once 'includes/dbh.inc.php';
 	$u_id = $_SESSION['u_id'];
-	$sql = "select * from user_sets where user_id='$u_id'";
+	$sql = "select * from sets_exist where ishidden !=1;";
 	$result = mysqli_query($conn, $sql);
 	while ($rows = mysqli_fetch_row($result)){
-		// echo $rows[3]."<br/>";
 		echo '
 		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4">			
-				<a href="setsManagement_cardList?set_id='.$rows[2].'" class="thumbnail">
-					<img src="'.$rows[3].'" class="img-responsive center-block" alt="'.$rows[4].'">
-				</a>	
+			<div class="col-xs-4 col-xs-offset-4 thumbnail">				
+				<img src="'.$rows[2].'" class="img-responsive center-block" alt="'.$rows[1].'" >				
 			</div>
 			<div class="col-xs-2">
-			    <a href="setsManagement_cardList?set_id='.$rows[2].'" class="btn btn-info">Edit</a>
-			    <a href="includes/removeSet?set_id='.$rows[2].'"  class="btn btn-danger">Remove it</a>			       
+			    <a href="setsManagement_cardList?set_id='.$rows[0].'" class="btn btn-info">add to my collection</a>			    
 			</div>
 		</div>
-		<p class="text-center">'.$rows[4].'</p><br/><br/>';		
+		<p class="text-center">'.$rows[1].'</p><br/><br/>';
 	}
 
 
@@ -50,8 +46,8 @@
 
 
 ?>
-    <button type="submit" class="btn btn-success btn-lg center-block" onclick="location.href='setsManagement_addSet.php'" >+ Add New Collection +</button>
-	<div style="height: 500px; visibility:hidden;"></div>	
+
+	<div style="height: 300px; visibility:hidden;"></div>
 			
 
 <?php

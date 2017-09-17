@@ -12,7 +12,7 @@ var_dump($_POST);
 
 //--解析Json，获取对应的变量值
 $post_array=json_decode($obj,TRUE);
-echo 'success';
+echo 'setsManagement.php';
 
 
 
