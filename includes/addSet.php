@@ -18,7 +18,7 @@ $set_id = $_GET['set_id'];
 $sql = "SELECT * FROM USER_SETS WHERE user_id ='$user_uid' and set_id='$set_id'";
 $rows = mysqli_query($conn,$sql);
 if (mysqli_num_rows($rows) >= 1){
-    echo "You have this set. Nothing changes.";
+    echo "Nothing changes because you already have this set in the list.";
 }
 else{
     $addSql = "INSERT INTO USER_SETS (id, user_id, set_id) VALUES (DEFAULT ,'$user_uid', '$set_id')";

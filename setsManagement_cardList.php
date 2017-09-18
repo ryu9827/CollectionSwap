@@ -109,7 +109,7 @@
     <script type="text/javascript">
 
         //jquery form序列化转换为json对象
-        var set_id="a";
+//        var set_id="a";
         console.log(set_id);
         (function($){
             $.fn.serializeJson=function(){
@@ -131,6 +131,7 @@
             };
         })(jQuery);
 
+        var set_id=GetQueryString("set_id");
 //click save button
         $(document).ready(function(){
             $("#save").click(function(){
@@ -140,21 +141,20 @@
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                  window.location.href='includes/testReceive.php';
-            })
-        })
+            });
 
-//click start to match button
-        $(document).ready(function(){
+            //click start to match button
             $("#match").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.open('POST','includes/cardmanagement.php',true);
-                xmlhttp.open('POST','includes/bestmatch.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                 $(window).attr('href', 'matchUp_result.php?set_id='+set_id);
-            })
         })
+
+
+
     </script>
 <div style="height: 300px; visibility:hidden;"></div>
 	
