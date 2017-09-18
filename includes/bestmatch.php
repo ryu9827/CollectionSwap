@@ -9,7 +9,7 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_id'];        
+ $user_uid = $_SESSION['u_uid'];        
 
 // $want = cardlist($user_uid, '2', $set_id);
 // $extra= cardlist($user_uid, '1', $set_id);
@@ -28,7 +28,7 @@ if (!isset($_SESSION['u_id'])){
  $extra = requestList($user_uid,1,$set_id);
 //$want = array('a001','a002');
 //$extra = array('a005','a006');
-$set_id = '1';
+ $set_id = '1';
 
  $res = matchup($want,'1',$user_uid,$set_id); 
  $result = $res;
