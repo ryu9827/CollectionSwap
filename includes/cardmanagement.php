@@ -9,15 +9,14 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_id'];   
+ $user_id = $_SESSION['u_id'];   
 
 $obj = $_POST['post_json'];
 var_dump($_POST);
 $cardset =json_decode($obj,true);
-//$test = array('a001'=>1,'a002'=>1,'a003'=>1,'a004'=>1,'a005'=>3);
+//$test = array('a001'=>2,'a002'=>2,'a003'=>1,'a004'=>1,'a005'=>2);
 //$test = json_encode($test);
 //$cardset = json_decode($test,true);
-
 
 $user_uid = 'amy';
 
@@ -57,8 +56,7 @@ foreach($cardset as $key => $value){
            $card_status = $value; 
            $sql = "INSERT INTO cards_status (user_uid,card_id,card_status) VALUES('$user_uid','$card_id','$card_status')";
            mysqli_query($conn, $sql);
-           
-           
+             
        }
     }
 }

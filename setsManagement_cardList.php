@@ -45,9 +45,9 @@
 <form id="post_form">
 <?php
 	include_once 'includes/dbh.inc.php';
-	$u_id = $_SESSION['u_id'];
+	$u_uid = $_SESSION['u_uid'];
 	$set_id=$_GET['set_id'];
-
+      
 	//define status premeters
 	$missing = 1;
 	$extra = 2;
@@ -61,16 +61,18 @@
 	while ($rows = mysqli_fetch_row($result)){
 		$i++;
 		$isChecked1=null;
-        $isChecked2=null;
-        $isChecked3=null;
-		$sql_status = "select card_status from cards_status where user_id='$u_id' and card_id='$rows[2]'";
+                $isChecked2=null;
+                $isChecked3=null;
+		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]'";
 		$result_status = mysqli_query($conn, $sql_status);
-		 if (mysqli_query($conn, $sql_status)){
-			$status = mysqli_fetch_row($result_status);
-			if($status==0){
+                $num = mysqli_num_rows($result_status);
+		 if ( $num > 0 ){
+			$row = mysqli_fetch_array($result_status);
+                        $status = $row['card_status'];
+			if($status==1){
 			    $isChecked1="checked";
 			}
-			else if($status==1) {
+			else if($status==2) {
 			    $isChecked2="checked";
 			}
 		} else {

@@ -28,7 +28,7 @@ if (!isset($_SESSION['u_id'])){
  $extra = requestList($user_uid,1,$set_id);
 //$want = array('a001','a002');
 //$extra = array('a005','a006');
-$set_id = 'a';
+$set_id = '1';
 
  $res = matchup($want,'1',$user_uid,$set_id); 
  $result = $res;
