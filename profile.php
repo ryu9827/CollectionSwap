@@ -26,7 +26,7 @@
                         <div class="col-xs-6">
                             <input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo $_SESSION['u_email']; ?>">
                         </div>
-                        <button type="submit" class="btn btn-info" name="submit">&nbsp Verify &nbsp E-mail &nbsp</button>
+                        <button type="submit" class="btn btn-info" name="submit">Verify</button>
                     </div>
                 </div>
             </form>

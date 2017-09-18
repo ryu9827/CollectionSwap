@@ -37,12 +37,17 @@
 					<img src="'.$rows[3].'" class="img-responsive center-block" alt="'.$rows[4].'">
 				</a>	
 			</div>
-			<div class="col-xs-2">
-			    <a href="setsManagement_cardList?set_id='.$rows[2].'" class="btn btn-info">Edit</a>
-			    <a href="includes/removeSet?set_id='.$rows[2].'"  class="btn btn-danger">Remove it</a>			       
+		</div>
+        
+        <div class="row">
+			<div class="col-xs-4 col-xs-offset-4">
+			<h5 class="text-center">'.$rows[4].'</h5>
+			    <a href="setsManagement_cardList?set_id='.$rows[2].'"><button class="btn btn-info pull-right">Edit</button></a>&nbsp
+			    <a href="includes/removeSet?set_id='.$rows[2].'"><button class="btn btn-danger pull-right">Remove</button></a>
 			</div>
 		</div>
-		<p class="text-center">'.$rows[4].'</p><br/><br/>';
+		<br/><br/>
+		';
 	}
 
 

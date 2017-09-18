@@ -14,7 +14,7 @@
 <?php
   include_once 'includes/dbh.inc.php';
   $u_id = $_SESSION['u_id'];
-  $sql = "select * from user_sets where user_id='$u_id'";
+  $sql = "select * from user_sets_details where user_id='$u_id'";
   $result = mysqli_query($conn, $sql);
   while ($rows = mysqli_fetch_row($result)){
     // echo $rows[3]."<br/>";
