@@ -16,7 +16,7 @@ if (!isset($_SESSION['u_id'])){
  function requestList($user_uid,$status,$set_id){
      global $conn;
      $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$status' AND set_id = '$set_id'";
-     $res = mysqli_query($conn, $res);
+     $res = mysqli_query($conn, $sql);
      while($row = mysqli_fetch_assoc($res)){
          $rlist[] = $row['card_id'];
          
