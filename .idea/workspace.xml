@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/addSet.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/my_errors.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement.php" afterPath="$PROJECT_DIR$/setsManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_addSet.php" afterPath="$PROJECT_DIR$/setsManagement_addSet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_cardList.php" afterPath="$PROJECT_DIR$/setsManagement_cardList.php" />
-    </list>
+    <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +11,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="setsManagement_cardList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setsManagement_cardList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="240">
               <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding>
                 <marker date="1505708242113" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
@@ -29,6 +22,23 @@
                 <marker date="1505708242113" expanded="true" signature="1796:2427" ph="..." />
                 <marker date="1505708242113" expanded="true" signature="1960:2073" ph="..." />
                 <marker date="1505708242113" expanded="true" signature="2298:2427" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setsManagement.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setsManagement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+              <folding>
+                <marker date="1505703609375" expanded="true" signature="633:686" ph="select * fro... user_sets" />
+                <marker date="1505703609375" expanded="true" signature="826:1293" ph="..." />
+                <marker date="1505703609375" expanded="true" signature="868:1053" ph="..." />
+                <marker date="1505703609375" expanded="true" signature="948:1042" ph="..." />
+                <marker date="1505703609375" expanded="true" signature="1079:1284" ph="..." />
+                <marker date="1505703609375" expanded="true" signature="1162:1278" ph="..." />
               </folding>
             </state>
           </provider>
@@ -238,12 +248,12 @@
       <workItem from="1505557608880" duration="12000" />
       <workItem from="1505590055744" duration="9535000" />
       <workItem from="1505639556724" duration="4572000" />
-      <workItem from="1505680831253" duration="16804000" />
+      <workItem from="1505680831253" duration="16931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59808000" />
+    <option name="totallyTimeSpent" value="59935000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -665,21 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding>
-            <marker date="1505703609375" expanded="true" signature="633:686" ph="select * fro... user_sets" />
-            <marker date="1505703609375" expanded="true" signature="826:1293" ph="..." />
-            <marker date="1505703609375" expanded="true" signature="868:1053" ph="..." />
-            <marker date="1505703609375" expanded="true" signature="948:1042" ph="..." />
-            <marker date="1505703609375" expanded="true" signature="1079:1284" ph="..." />
-            <marker date="1505703609375" expanded="true" signature="1162:1278" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../apps/phpmyadmin4.6.4/sql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -713,7 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="240">
           <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding>
             <marker date="1505708242113" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
@@ -721,6 +716,21 @@
             <marker date="1505708242113" expanded="true" signature="1796:2427" ph="..." />
             <marker date="1505708242113" expanded="true" signature="1960:2073" ph="..." />
             <marker date="1505708242113" expanded="true" signature="2298:2427" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setsManagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <marker date="1505703609375" expanded="true" signature="633:686" ph="select * fro... user_sets" />
+            <marker date="1505703609375" expanded="true" signature="826:1293" ph="..." />
+            <marker date="1505703609375" expanded="true" signature="868:1053" ph="..." />
+            <marker date="1505703609375" expanded="true" signature="948:1042" ph="..." />
+            <marker date="1505703609375" expanded="true" signature="1079:1284" ph="..." />
+            <marker date="1505703609375" expanded="true" signature="1162:1278" ph="..." />
           </folding>
         </state>
       </provider>
