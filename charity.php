@@ -13,7 +13,7 @@
 
   <div class="row">
       <div class="col-xs-3" style="float:none;margin: 0 auto;">      
-        <a href="php" class="thumbnail">
+        <a href="charity_offer_select.php" class="thumbnail">
           <img src="images/offerCharity.png" class="img-responsive" alt="Offer Charity">
         </a>  
       </div>

@@ -11,18 +11,6 @@
 		<h2>Card List</h2>
 	</div><br/>
 
-	<div class="col-xs-12">
-		<div class="row">
-			<ul class="nav nav-tabs">
-				<li role="presentation" class="active"><a href="#">My Collection</a></li>
-				<li role="presentation"><a href="setsManagement_messages.php">Messages</a></li> 
-				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
-			</ul>
-			<br/><br/>
-		</div>
-	</div>
-	<br/>
-
 <!-- 定义一下table的尺寸，不然显示得不太好 -->
 <style type="text/css">
 	img{
@@ -88,9 +76,7 @@
                             <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->
                         </div>
                     </td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Extra</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Missing</td>                    
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Already Have</td>
+                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="'.$rows[2].'" '.$isChecked1.' value="1">Offer This</td>                    
                 </tr>
 			';
 	}
@@ -98,14 +84,7 @@
 </table>
 
 <div style="height: 100px; visibility:hidden;"></div>
-	<div class="row">
-		<div class="col-xs-2 col-xs-offset-4">
-			<button class="btn btn-success btn-lg center-block" id="save" >Save</button>
-		</div>
-		<div class="col-xs-2">
-			<button class="btn btn-warning btn-lg center-block" id="match">Start to match</button>
-		</div>
-	</div>
+    <button class="btn btn-success btn-lg center-block" id="save" >Save</button>
 </form>
 
     <script type="text/javascript">
@@ -144,15 +123,6 @@
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                  window.location.href='includes/testReceive.php';
             });
-
-            //click start to match button
-            $("#match").click(function(){
-                var post_data=$("#post_form").serializeJson();//表单序列化
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/cardmanagement.php',true);
-                xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-                xmlhttp.send('post_json='+JSON.stringify(post_data));
-                $(window).attr('href', 'matchUp_result.php?set_id='+set_id);
         })
 
 
