@@ -61,8 +61,8 @@
 	while ($rows = mysqli_fetch_row($result)){
 		$i++;
 		$isChecked1=null;
-                $isChecked2=null;
-                $isChecked3=null;
+        $isChecked2=null;
+        $isChecked3=null;
 		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]'";
 		$result_status = mysqli_query($conn, $sql_status);
                 $num = mysqli_num_rows($result_status);
@@ -86,8 +86,8 @@
                     <td>
                         <img src="'.$rows[3].'" alt="'.$rows[4].'"> <!-- card image-->
                     </td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="2">Missing</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="1">Extra</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Extra</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Missing</td>                    
                     <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Already Have</td>
                 </tr>
 			';

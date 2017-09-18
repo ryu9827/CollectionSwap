@@ -26,7 +26,7 @@
 <?php
 	include_once 'includes/dbh.inc.php';
 	$u_id = $_SESSION['u_id'];
-	$sql = "select * from user_sets where user_id='$u_id'";
+	$sql = "select * from user_sets_details where user_id='$u_id'";
 	$result = mysqli_query($conn, $sql);
 	while ($rows = mysqli_fetch_row($result)){
 		// echo $rows[3]."<br/>";
@@ -42,7 +42,7 @@
 			    <a href="includes/removeSet?set_id='.$rows[2].'"  class="btn btn-danger">Remove it</a>			       
 			</div>
 		</div>
-		<p class="text-center">'.$rows[4].'</p><br/><br/>';		
+		<p class="text-center">'.$rows[4].'</p><br/><br/>';
 	}
 
 

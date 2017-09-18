@@ -35,7 +35,7 @@
 				<img src="'.$rows[2].'" class="img-responsive center-block" alt="'.$rows[1].'" >				
 			</div>
 			<div class="col-xs-2">
-			    <a href="setsManagement_cardList?set_id='.$rows[0].'" class="btn btn-info">add to my collection</a>			    
+			    <a href="includes/addSet.php?set_id='.$rows[0].'" class="btn btn-info">Add to My Collection</a>			    
 			</div>
 		</div>
 		<p class="text-center">'.$rows[1].'</p><br/><br/>';
