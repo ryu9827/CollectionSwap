@@ -21,7 +21,12 @@ if (!isset($_SESSION['u_id'])){
      }
      return $rlist;
  }
+ //get set name
  $set_id = '1';
+ $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
+ $res = mysqli_query($conn, $sql);
+ $row = mysqli_fetch_assoc($res);
+ $set_name = $row['set_name'];
 
  $want = requestList($user_uid,'2',$set_id);
  $extra = requestList($user_uid,'1',$set_id);
@@ -77,7 +82,7 @@ foreach($result as $key => $value){
     $rate = mysqli_fetch_array($res);
     $lastlogin = $rate['lastlogin_time'];
     
-    $list = array('name'=>$userid,'setid'=>$set_id,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
+    $list = array('name'=>$userid,'setname'=>$set_name,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
     $finallist[] = $list;
   
 };
