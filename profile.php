@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="col-lg-6 col-xs-offset-3">
 		<div class="well">
-            <form class="form-horizontal" action="#" method="POST">
+            <form class="form-horizontal" action="userProfile" method="POST">
                 <div class="form-group">
                     <div class="row">
                         <label for="email" class="col-xs-3 control-label">E-mail: </label>

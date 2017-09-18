@@ -18,7 +18,7 @@ $res = mysqli_query($conn, $sql);
 echo mysqli_num_rows($res);
 while($row = mysqli_fetch_assoc($res)){
     
-    $msg = array('swap_id' => $row['swap_uid'],'email' => $row['swap_email'],'status' => $row['time'],'time' => $row['time'],
+    $msg = array('swap_id' => $row['swap_uid'],'email' => $row['swap_email'],'status' => $row['status'],'time' => $row['time'],
                 'set_id' => $row['set_id'],'offer_id' => $row['offer_id'],'get_id' => $row['get_id']
                );
     $msglist[] = $msg;

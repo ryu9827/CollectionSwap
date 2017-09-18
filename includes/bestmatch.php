@@ -11,28 +11,27 @@ if (!isset($_SESSION['u_id'])){
         
  $user_uid = $_SESSION['u_uid'];        
 
-// $want = cardlist($user_uid, '2', $set_id);
-// $extra= cardlist($user_uid, '1', $set_id);
  function requestList($user_uid,$status,$set_id){
      global $conn;
      $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$status' AND set_id = '$set_id'";
-     $res = mysqli_query($conn, $res);
+     $res = mysqli_query($conn, $sql);
      while($row = mysqli_fetch_assoc($res)){
          $rlist[] = $row['card_id'];
          
      }
-     return rlist;
+     return $rlist;
  }
- 
- $want = requestList($user_uid,2,$set_id);
- $extra = requestList($user_uid,1,$set_id);
-//$want = array('a001','a002');
-//$extra = array('a005','a006');
  $set_id = '1';
 
- $res = matchup($want,'1',$user_uid,$set_id); 
- $result = $res;
+ $want = requestList($user_uid,'2',$set_id);
+ $extra = requestList($user_uid,'1',$set_id);
+ //$want = array('1','2');
+ //$extra = array('5','6');
 
+//echo sizeof($want);
+//echo sizeof($extra);
+
+ $result = matchup($want,'1',$user_uid,$set_id); 
  $res2 = matchup($extra,'2',$user_uid,$set_id);
 
  //Computes the intersection of arrays

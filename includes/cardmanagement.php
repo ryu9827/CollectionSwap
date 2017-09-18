@@ -9,7 +9,7 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_id = $_SESSION['u_id'];   
+ $user_uid = $_SESSION['u_uid'];   
 
 $obj = $_POST['post_json'];
 var_dump($_POST);
@@ -18,11 +18,12 @@ $cardset =json_decode($obj,true);
 //$test = json_encode($test);
 //$cardset = json_decode($test,true);
 
-$user_uid = 'amy';
+//$user_uid = 'amy';
+$set_id = '1';
 
 foreach($cardset as $key => $value){
     
-    $sql = "SELECT * FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid'";
+    $sql = "SELECT * FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid' AND set_id = '$set_id'";
     $res = mysqli_query($conn, $sql);
     $resultCheck = mysqli_num_rows($res);
   
@@ -34,12 +35,12 @@ foreach($cardset as $key => $value){
         if(!($status == $value)){
 //if the card already exit in database, update status
             if($value == 3){
-               $sql = "DELETE FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid'";
+               $sql = "DELETE FROM cards_status WHERE card_id = '$key' AND user_uid = '$user_uid' AND set_id = '$set_id'";
                mysqli_query($conn, $sql);
                 
             }
             else{
-                $sql = "UPDATE cards_status SET card_status = '$value' WHERE card_id = '$key' AND user_uid = '$user_uid'";
+                $sql = "UPDATE cards_status SET card_status = '$value' WHERE card_id = '$key' AND user_uid = '$user_uid' AND set_id = '$set_id'";
                 mysqli_query($conn, $sql);
                 
             }
@@ -54,7 +55,7 @@ foreach($cardset as $key => $value){
            //echo $value;
            $card_id = $key;
            $card_status = $value; 
-           $sql = "INSERT INTO cards_status (user_uid,card_id,card_status) VALUES('$user_uid','$card_id','$card_status')";
+           $sql = "INSERT INTO cards_status (user_uid,card_id,card_status,set_id) VALUES('$user_uid','$card_id','$card_status','$set_id')";
            mysqli_query($conn, $sql);
              
        }
