@@ -39,7 +39,10 @@ function sendRequest(name,offer,miss,set_id){
 <script>
 $(function(){  
 $(document).ready(function(){
+    debugger;
+
     var set_id=GetQueryString("set_id");
+    console.log(set_id);
   var url = "includes/bestmatch.php";
   var dataSend = {"act":"getJSON",
                   "set_id":set_id

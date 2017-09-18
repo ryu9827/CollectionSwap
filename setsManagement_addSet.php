@@ -30,15 +30,21 @@
 	$result = mysqli_query($conn, $sql);
 	while ($rows = mysqli_fetch_row($result)){
 		echo '
-		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4 thumbnail">				
-				<img src="'.$rows[2].'" class="img-responsive center-block" alt="'.$rows[1].'" >				
-			</div>
-			<div class="col-xs-2">
-			    <a href="includes/addSet.php?set_id='.$rows[0].'" class="btn btn-info">Add to My Collection</a>			    
-			</div>
-		</div>
-		<p class="text-center">'.$rows[1].'</p><br/><br/>';
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 thumbnail">				
+                    <img src="'.$rows[2].'" class="img-responsive center-block" alt="'.$rows[1].'" >				
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                    <h4 class="text-center">'.$rows[1].'</h4>
+                    <a href="includes/addSet.php?set_id='.$rows[0].'">
+                        <button class="btn btn-info pull-right">Add to My Collection</button>
+                    </a>		    
+                </div>
+            </div>
+            <br/><br/>
+		    ';
 	}
 
 
