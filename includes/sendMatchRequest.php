@@ -29,13 +29,14 @@ $miss =  explode(",",$missname);
 date_default_timezone_set('NZ');     
     // $user_uid = $_SESSION['u_id'];
 $user_uid = $_SESSION['u_uid'];
+$uid = $_SESSION['u_id'];
      
 //lock the card when request is sent        
     function lockcard($user_uid,$set_id){
         global $conn;  
     
         $time = time();
-        $sql = "UPDATE cards_status SET card_status = '0', locked_time = '$time' WHERE set_id = '$set_id' AND user_uid = '$user_uid'";
+        $sql = "UPDATE cards_status SET islocked = '1', locked_time = '$time' WHERE set_id = '$set_id' AND user_uid = '$user_uid'";
         mysqli_query($conn, $sql);
         echo mysqli_error($conn); 
      
@@ -79,8 +80,11 @@ $user_uid = $_SESSION['u_uid'];
             "<br/>he/she can offer you: ".$missname;
             
     $mail->sendEmail($remail,$subject,$body);
-
     
+   $sql = "UPDATE user_sets SET islocked = '1' WHERE user_id = '$uid'";
+   mysqli_query($conn, $sql);
+
+  //create new message for both user and reciver
    newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1);
    newmessage($reciver_uid,$user_uid,$uemail,1, $set_id, $misslist,$offerlist, 1);
 

@@ -1,4 +1,4 @@
-<?php
+4<?php
 
 include_once("dbh.inc.php");
 global $conn;
@@ -28,13 +28,13 @@ if($row){
       mysqli_query($conn, $sql1); 
      
         if(mysqli_affected_rows($conn)!=1) die(0)  ;      
-        $msg = 'active successfully';    
+       // $msg = 'active successfully';    
     }
 }
  else{
-      $msg = 'error.';     
+     // $msg = 'error.';     
       } 
-     echo $msg;
+    // echo $msg;
  ?>
 
 

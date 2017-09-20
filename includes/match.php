@@ -13,7 +13,7 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
        $card_id = $cardlist[$i];
       
        
-        $res = mysqli_query($conn, "SELECT user_uid FROM cards_status WHERE card_id = '$card_id' AND card_status = '$cardstatus' AND set_id = '$set_id' AND user_uid!='$user_uid'");
+        $res = mysqli_query($conn, "SELECT user_uid FROM cards_status WHERE card_id = '$card_id' AND card_status = '$cardstatus' AND set_id = '$set_id' AND user_uid!='$user_uid' AND islocked = '0'");
        while ($row= mysqli_fetch_array($res))
 	{  
                 $uid = $row['user_uid'];
@@ -40,7 +40,7 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
       
          $cardid = $want[$i]; 
          
-         $res = mysqli_query($conn,"SELECT * FROM cards_status WHERE user_uid = '$userid' AND card_id= '$cardid' AND card_status = '$cardstatus'");
+         $res = mysqli_query($conn,"SELECT * FROM cards_status WHERE user_uid = '$userid' AND card_id= '$cardid' AND card_status = '$cardstatus' AND islocked = '0'");
          $resultCheck = mysqli_num_rows($res);
     
          if($resultCheck>0){
@@ -53,7 +53,7 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
   
   
  function usercard($user_uid,$card_status,$set_id){
- $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$card_status' AND set_id = '$set_id'";
+ $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$card_status' AND set_id = '$set_id' AND islocked = '0'";
  $res = mysqli_query($conn, $sql);
  while($row = mysqli_fetch_assoc($res)){
      $array[]=$row['card_id'];

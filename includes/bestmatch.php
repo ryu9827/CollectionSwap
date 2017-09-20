@@ -13,7 +13,7 @@ if (!isset($_SESSION['u_id'])){
 
  function requestList($user_uid,$status,$set_id){
      global $conn;
-     $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$status' AND set_id = '$set_id'";
+     $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$status' AND set_id = '$set_id' AND islocked = '0'";
      $res = mysqli_query($conn, $sql);
      while($row = mysqli_fetch_assoc($res)){
          $rlist[] = $row['card_id'];
@@ -28,6 +28,12 @@ if (!isset($_SESSION['u_id'])){
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
  $set_name = $row['set_name'];
+ 
+ $sql = "SELECT * FROM user_sets WHERE user_id = '$uid' AND set_id = '$set_id'";
+ $res = mysqli_query($conn, $sql);
+ $row = mysqli_fetch_assoc($res);
+ 
+ if($row['islocked'] == 0){
 
  $want = requestList($user_uid,'2',$set_id);
  $extra = requestList($user_uid,'1',$set_id); 
@@ -107,6 +113,13 @@ foreach($result as $key => $value){
   
 };
    echo json_encode($finallist); 
+   
+ }
+ 
+ else{
+    $json = array('status'=>'locked');
+    echo json_encode($json);
+ }
 
 
 ?>

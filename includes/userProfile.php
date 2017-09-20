@@ -22,6 +22,6 @@ $email = mysqli_real_escape_string($conn, $_POST['email']);
 $mail = new sendemail();
 $subject = "verify new email";
 $body = "Dear ".$user_uid."：<br/>please click below link to verify your new email<br/>
-     <a href='http://mysites/CS/pwdReset.php?verify=".$token."' target= '_blank'>http://mysites/CS/pwdReset.php?verify=".$token."</a>";
+     <a href='http://mysites/CS/login.php?verify=".$token."' target= '_blank'>http://mysites/CS/login.php?verify=".$token."</a>";
    
 $mail->sendEmail($email,$subject,$body);
