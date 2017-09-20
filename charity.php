@@ -21,7 +21,7 @@
   <br/><br/>
   <div class="row">
       <div class="col-xs-3"  style="float:none;margin: 0 auto;">      
-        <a href="php'" class="thumbnail">
+        <a href="charity_look_select.php" class="thumbnail">
           <img src="images/lookForCharity.png" class="img-responsive" alt="Look For Charity">
         </a>  
       </div>

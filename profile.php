@@ -19,7 +19,27 @@
 <div class="row">
 	<div class="col-lg-6 col-xs-offset-3">
 		<div class="well">
-            <form class="form-horizontal" action="userProfile" method="POST">
+            <form class="form-horizontal" action="#" method="POST">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="First" class="col-xs-3 control-label">First Name: </label>
+                        <label for="First" class="col-xs-1 control-label"><?php echo $_SESSION['u_uid']; ?></label>
+<!--                        <button type="submit" class="btn btn-info" name="submit">Save</button>-->
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-horizontal" action="#" method="POST">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="Last" class="col-xs-3 control-label">Last Name: </label>
+                        <label for="Last" class="col-xs-1 control-label"><?php echo $_SESSION['u_uid']; ?></label>
+<!--                        <button type="submit" class="btn btn-info" name="submit">Save</button>-->
+                    </div>
+                </div>
+            </form>
+
+            <form class="form-horizontal" action="#" method="POST">
                 <div class="form-group">
                     <div class="row">
                         <label for="email" class="col-xs-3 control-label">E-mail: </label>
@@ -30,6 +50,8 @@
                     </div>
                 </div>
             </form>
+
+
 
             <form class="form-horizontal" action="#" method="POST">
 				<div class="form-group">

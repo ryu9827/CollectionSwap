@@ -5,6 +5,11 @@ session_start();
 <!doctype html>
 <html>
 <head>
+    <script type="text/javascript">
+        function logout(){
+            location.href="includes/logout.inc.php";
+        }
+    </script>
 <meta charset="utf-8">
 <title>Collection Swap</title>
 <meta name="generator" content="H@CKED">

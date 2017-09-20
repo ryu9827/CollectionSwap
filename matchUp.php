@@ -21,7 +21,7 @@
     echo '
     <div class="row">
       <div class="col-xs-4 col-xs-offset-4">      
-        <a href="matchUp_result?set_id='.$rows[2].'" class="thumbnail">
+        <a href="matchUp_result?set_id='.$rows[2].'" class="thumbnail" >
           <img src="'.$rows[3].'" class="img-responsive center-block" alt="'.$rows[4].'">
         </a>  
       </div>

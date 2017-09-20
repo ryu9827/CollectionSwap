@@ -9,7 +9,7 @@
 
 <!-- 二级导航 -->
 	<div style="text-align: center">
-		<h2>Search Results</h2>
+		<h2>Charity Match Results</h2>
 	</div><br/>
 
 <script type="text/javascript">
@@ -23,7 +23,7 @@ function GetQueryString(name){
 
 var set_id = GetQueryString("set_id");
 
-function sendRequest(name,offer,miss,set_id,missname,offername){
+function sendRequest(name,offer,miss,set_id){
 //   alert(name);
 //   alert(offer);
 //   alert(miss);
@@ -32,14 +32,14 @@ function sendRequest(name,offer,miss,set_id,missname,offername){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id+'&missname='+missname+'&offername='+offername);
+	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
 };
 </script>
 
 <script>
 $(function(){  
 $(document).ready(function(){
-//    debugger;
+    debugger;
 
     var set_id=GetQueryString("set_id");
     console.log(set_id);
@@ -50,11 +50,9 @@ $(document).ready(function(){
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
   $.getJSON(url,dataSend,function(data){
-
+      console.log(data);
   var html = '';
-    $.each(data,function(i,item){
-//        debugger;
-        console.log(data);
+    $.each(data,function(i,item){      
       html = match(i,item);
       $('#carousel-inner').after(html); 
       });
@@ -70,8 +68,6 @@ function match(i,item){
     var name = jQuery.parseJSON(JSON.stringify(item.name));
     var offer = jQuery.parseJSON(JSON.stringify(item.offer));
     var miss = jQuery.parseJSON(JSON.stringify(item.miss));
-    var offername = jQuery.parseJSON(JSON.stringify(item.offername));
-    var missname = jQuery.parseJSON(JSON.stringify(item.missname));
     html += '<div class="item active">'+
             '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-primary">'+
@@ -91,14 +87,14 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-footer">'+
                 // Button trigger modal                
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
           '</div>'
     break;
     default:
-    var name = jQuery.parseJSON(JSON.stringify(item.name));
+//    var name = jQuery.parseJSON(JSON.stringify(item.name));
       html += '<div class="item">'+
               '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-info">'+
@@ -117,7 +113,7 @@ function match(i,item){
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
                 '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+

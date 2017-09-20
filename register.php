@@ -21,6 +21,16 @@ include_once('includes/header.php');
 						<input type="text" class="form-control" name="uid" placeholder="User name">
 					</div>
 					</br></br></br>
+                    <label for="uid" class="col-xs-2 col-xs-offset-2 control-label">First Name: </label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                    </div>
+                    </br></br></br>
+                    <label for="uid" class="col-xs-2 col-xs-offset-2 control-label">Last Name: </label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                    </div>
+                    </br></br></br>
 					<label for="address" class="col-xs-2 col-xs-offset-2 control-label">Post Address: </label>
 					<div class="col-xs-4">
 			            <input type="text" class="form-control" name="address" placeholder="Post Address">
