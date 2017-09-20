@@ -18,7 +18,8 @@ if (!isset($_SESSION['u_id'])){
  $cpwd = mysqli_real_escape_string($conn, $_POST['pwd2']);
  
  $sql = "SELECT * FROM users WHERE user_uid = '$user_uid'";
-  $row = mysqli_fetch_assoc($result);
+ $res = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($res);
   
  $hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 	if ($hashedPwdCheck == false) {

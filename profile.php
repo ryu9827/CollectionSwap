@@ -83,7 +83,7 @@
 <div class="row">
 	<div class="col-lg-6 col-xs-offset-3">
 		<div class="well">
-			<form class="form-horizontal" action="passwordreset2" method="POST">
+			<form class="form-horizontal" action="includes/passwordreset2.php" method="POST">
 				<div class="form-group">
 					<div class="row">
 						<label for="pwd" class="col-xs-3 control-label">Old Password: </label>
