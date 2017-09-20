@@ -20,9 +20,11 @@ $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
 $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
 $offerlist = mysqli_real_escape_string($conn,$_POST['offer']);
 $misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
+$offername = mysqli_real_escape_string($conn,$_POST['offername']);
+$missname = mysqli_real_escape_string($conn,$_POST['missname']);
 
-$offer = explode(",",$offerlist);
-$miss =  explode(",",$misslist);
+//$offer = explode(",",$offerlist);
+//$miss =  explode(",",$misslist);
 
 date_default_timezone_set('NZ');     
     // $user_uid = $_SESSION['u_id'];
@@ -73,8 +75,8 @@ $user_uid = $_SESSION['u_uid'];
     //send email to reciver
     $mail = new sendemail();
     $subject = "New Swap Request";
-    $body = "Dear ".$reciver_uid."：<br/>".$user_uid." send you a swap request <br/>card set: ".$set_name."<br/>you need to offer: ".$offerlist.
-            "<br/>he/she can offer you: ".$misslist;
+    $body = "Dear ".$reciver_uid."：<br/>".$user_uid." send you a swap request <br/>card set: ".$set_name."<br/>you need to offer: ".$offername.
+            "<br/>he/she can offer you: ".$missname;
             
     $mail->sendEmail($remail,$subject,$body);
 

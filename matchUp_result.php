@@ -23,7 +23,7 @@ function GetQueryString(name){
 
 var set_id = GetQueryString("set_id");
 
-function sendRequest(name,offer,miss,set_id){
+function sendRequest(name,offer,miss,set_id,missname,offername){
 //   alert(name);
 //   alert(offer);
 //   alert(miss);
@@ -32,7 +32,7 @@ function sendRequest(name,offer,miss,set_id){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
+	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id+'&missname='+missname+'&offername='+offername);
 };
 </script>
 
@@ -76,9 +76,9 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
-                  '<p>Set Name: '+item.set_name+'</p>'+
-                  '<p>Offer：'+item.offer+'</p>'+
-                  '<p>Demand：'+item.miss+'</p>'+
+                  '<p>Set Name: '+item.setname+'</p>'+
+                  '<p>Offer：'+item.offername+'</p>'+
+                  '<p>Demand：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
                   '<p>Rating：</p>'+
                   '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
@@ -113,7 +113,7 @@ function match(i,item){
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
                 '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
