@@ -23,8 +23,8 @@ $misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
 $offername = mysqli_real_escape_string($conn,$_POST['offername']);
 $missname = mysqli_real_escape_string($conn,$_POST['missname']);
 
-//$offer = explode(",",$offerlist);
-//$miss =  explode(",",$misslist);
+$offer = explode(",",$offername);
+$miss =  explode(",",$missname);
 
 date_default_timezone_set('NZ');     
     // $user_uid = $_SESSION['u_id'];

@@ -22,8 +22,8 @@ if (!isset($_SESSION['u_id'])){
      return $rlist;
  }
  //get set name
-// $set_id = '1';
- $set_id = stripslashes(trim($_GET['set_id'])); 
+ $set_id = '1';
+ //$set_id = stripslashes(trim($_GET['set_id'])); 
  $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
