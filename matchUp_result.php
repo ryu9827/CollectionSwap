@@ -50,12 +50,13 @@ $(document).ready(function(){
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
   $.getJSON(url,dataSend,function(data){
+      console.log(data);
   var html = '';
     $.each(data,function(i,item){      
       html = match(i,item);
       $('#carousel-inner').after(html); 
-      });    
-    //after方法:在每个匹配的元素之后插入内容。  
+      });
+    //after方法:在每个匹配的元素之后插入内容。
     });  
   }); 
 });  
@@ -93,7 +94,7 @@ function match(i,item){
           '</div>'
     break;
     default:
-    var name = jQuery.parseJSON(JSON.stringify(item.name));
+//    var name = jQuery.parseJSON(JSON.stringify(item.name));
       html += '<div class="item">'+
               '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-info">'+
@@ -102,6 +103,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
+                  '<p>Set Name: '+item.set_name+'</p>'+
                   '<p>Offer：'+item.offer+'</p>'+
                   '<p>Need：'+item.miss+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
@@ -138,11 +140,11 @@ function match(i,item){
           <div id="carousel-inner">
       <!-- 左，右翻页图标    -->       
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Prev User</p></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><p>Next User</p></span>
           <span class="sr-only">Next</span>
         </a>
     </div>

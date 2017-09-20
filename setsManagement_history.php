@@ -8,7 +8,7 @@
 
 <!-- 二级导航 -->
 	<div style="text-align: center">
-		<h2>Messages</h2>
+		<h2>History Messages</h2>
 	</div><br/>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script>  
