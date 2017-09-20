@@ -61,13 +61,7 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
  return $array;
  }
  
- function getCardname($card_id,$set_id){
-    $sql = "SELECT * FROM sets_cards WHERE card_id = '$card_id' AND set_id = '$set_id'";
-    $res = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($res);
-    $cardname = $row['card_name'];
-    return $cardname;
-}
+
 
    
   

@@ -22,6 +22,7 @@ if (!isset($_SESSION['u_id'])){
      return $rlist;
  }
  //get set name
+ $set_id = '1';
  $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
  $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
  $res = mysqli_query($conn, $sql);
@@ -29,9 +30,10 @@ if (!isset($_SESSION['u_id'])){
  $set_name = $row['set_name'];
 
  $want = requestList($user_uid,'2',$set_id);
- $extra = requestList($user_uid,'1',$set_id);
-// $want = array('1','2');
-// $extra = array('5','6');
+ $extra = requestList($user_uid,'1',$set_id); 
+// $want = array('5','6');
+// $extra = array('1','2');
+
 
 
  $result = matchup($want,'1',$user_uid,$set_id); 
@@ -62,19 +64,29 @@ foreach($result as $key => $value){
     
     $offerlist = showlist($want,$userid,'1');
     $misslist = showlist($extra,$userid,'2');
+     $offernamelist = array();
+     $missnamelist = array();
     
     foreach($offerlist as $value){
-        $offernamelist[] = getCardname($value, $set_id);
+          $sql = "SELECT * FROM sets_cards WHERE card_id = '$value' AND set_id = '$set_id'";
+          $res = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($res);
+          $offernamelist[]= $row['card_name'];
+       // $offernamelist[] = getCardname($value, $set_id);
+         
     }
     
     foreach($misslist as $value){
-        $missnamelist[] = getCardname($value, $set_id);
+          $sql = "SELECT * FROM sets_cards WHERE card_id = '$value' AND set_id = '$set_id'";
+          $res = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($res);
+          $missnamelist[]= $row['card_name'];
     }
     
     $offer = implode(",",$offerlist);
     $miss =  implode(",",$misslist);
-    $offername = implode(",",offernamelist);
-    $missname = implode(",",missnamelist);
+    $offername = implode(",",$offernamelist);
+    $missname = implode(",",$missnamelist);
     
     //get rating from database
     $sql = "SELECT * FROM rating WHERE user_uid = '$userid'";
