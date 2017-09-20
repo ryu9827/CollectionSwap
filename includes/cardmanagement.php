@@ -11,12 +11,12 @@ if (!isset($_SESSION['u_id'])){
         
  $user_uid = $_SESSION['u_uid'];   
 
-$obj = $_POST['post_json'];
-var_dump($_POST);
-$cardset =json_decode($obj,true);
-//$test = array('a001'=>2,'a002'=>2,'a003'=>1,'a004'=>1,'a005'=>2);
-//$test = json_encode($test);
-//$cardset = json_decode($test,true);
+//$obj = $_POST['post_json'];
+//var_dump($_POST);
+//$cardset =json_decode($obj,true);
+$test = array('1'=>2,'2'=>1,'3'=>3,'4'=>1,'5'=>2);
+$test = json_encode($test);
+$cardset = json_decode($test,true);
 
 //$user_uid = 'amy';
 $set_id = '1';
@@ -49,9 +49,9 @@ foreach($cardset as $key => $value){
         
     }
     
-    //if the card do not exist in database, insert a new record
+//if the card do not exist in database, insert a new record
     else{
-       if($value == 1 || $value == 2){
+       if($value == '1' || $value == '2'){
            //echo $value;
            $card_id = $key;
            $card_status = $value; 

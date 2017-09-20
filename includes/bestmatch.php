@@ -22,7 +22,7 @@ if (!isset($_SESSION['u_id'])){
      return $rlist;
  }
  //get set name
- $set_id = '1';
+ $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
  $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
@@ -30,11 +30,9 @@ if (!isset($_SESSION['u_id'])){
 
  $want = requestList($user_uid,'2',$set_id);
  $extra = requestList($user_uid,'1',$set_id);
- //$want = array('1','2');
- //$extra = array('5','6');
+// $want = array('1','2');
+// $extra = array('5','6');
 
-//echo sizeof($want);
-//echo sizeof($extra);
 
  $result = matchup($want,'1',$user_uid,$set_id); 
  $res2 = matchup($extra,'2',$user_uid,$set_id);
@@ -65,8 +63,18 @@ foreach($result as $key => $value){
     $offerlist = showlist($want,$userid,'1');
     $misslist = showlist($extra,$userid,'2');
     
+    foreach($offerlist as $value){
+        $offernamelist[] = getCardname($value, $set_id);
+    }
+    
+    foreach($misslist as $value){
+        $missnamelist[] = getCardname($value, $set_id);
+    }
+    
     $offer = implode(",",$offerlist);
     $miss =  implode(",",$misslist);
+    $offername = implode(",",offernamelist);
+    $missname = implode(",",missnamelist);
     
     //get rating from database
     $sql = "SELECT * FROM rating WHERE user_uid = '$userid'";
@@ -82,7 +90,7 @@ foreach($result as $key => $value){
     $rate = mysqli_fetch_array($res);
     $lastlogin = $rate['lastlogin_time'];
     
-    $list = array('name'=>$userid,'setname'=>$set_name,'offer'=>$offer,'miss'=>$miss,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
+    $list = array('name'=>$userid,'setname'=>$set_name,'offer'=>$offer,'offername'=>$offername,'miss'=>$miss,'missname'=>$missname,'lastlogin'=>$lastlogin,'good'=>$good,'normal'=>$normal,'bad'=>$bad);
     $finallist[] = $list;
   
 };
