@@ -133,7 +133,8 @@
             };
         })(jQuery);
 
-        var set_id=GetQueryString("set_id");
+ //       var set_id=GetQueryString("set_id");
+ var set_id = '1';
 //click save button
         $(document).ready(function(){
             $("#save").click(function(){
@@ -142,8 +143,14 @@
                 xmlhttp.open('POST','includes/cardmanagement.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-                 window.location.href='includes/testReceive.php';
+              xmlhttp.onreadystatechange = function() {
+                if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                       window.location.href='includes/testReceive.php';
+                }
+            };
             });
+            
+
 
             //click start to match button
             $("#match").click(function(){
@@ -153,7 +160,8 @@
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                 $(window).attr('href', 'matchUp_result.php?set_id='+set_id);
-        })
+            });
+        });
 
 
 
