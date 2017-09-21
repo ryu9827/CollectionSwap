@@ -56,7 +56,7 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-default">'+
 				            '<div class="panel-heading">'+              
-				                '<h3 class="panel-title">Request’s sent</h3>'+
+				                '<h3 class="panel-title">Request’s Sent</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
@@ -96,10 +96,10 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-success">'+
 				            '<div class="panel-heading">'+
-				                '<h3 class="panel-title">Done</h3>'+
+				                '<h3 class="panel-title">Swap Completed</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>You have confirm that this swap is done.</p>'+
+					            '<p>Congratulation! This swap process has been successfully completed!</p>'+
 								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer+'</p>'+

@@ -42,7 +42,7 @@ $(document).ready(function(){
 //    debugger;
 
     var set_id=GetQueryString("set_id");
-    console.log(set_id);
+//    console.log(set_id);
   var url = "includes/bestmatch.php";
   var dataSend = {"act":"getJSON",
                   "set_id":set_id
@@ -50,18 +50,31 @@ $(document).ready(function(){
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
   $.getJSON(url,dataSend,function(data){
-
-  var html = '';
+      if (jQuery.isEmptyObject(data)) {
+          console.log("NO DATA!")
+      }
+//      debugger;
+//      console.log(html);
+      var html = '';
     $.each(data,function(i,item){
 //        debugger;
-        console.log(data);
+        console.log(item);
       html = match(i,item);
       $('#carousel-inner').after(html); 
       });
     //after方法:在每个匹配的元素之后插入内容。
-    });  
-  }); 
-});  
+    });
+  });
+//If no match up result is callback, show Charity tips to user;
+    html = '<h3 class="center-block">Sorry, there is no other user can match up with you based on your condition.</h3><br/>'+
+            '<h3 style="text-align: center">You can go to check if there is any one wants to donate charity collections.</h3><br/>'+
+            '<a href="charity.php"><button class="btn btn-info btn-lg center-block">Charity</button></a><br/>'+
+            '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>'+
+            '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Turn Back</button>'
+
+        $('#noData').after(html);
+});
+
 function match(i,item){
   this.item = item; 
   var html='';
@@ -109,7 +122,7 @@ function match(i,item){
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Set Name: '+item.setname+'</p>'+
                   '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Need：'+item.missname+'</p>'+
+                  '<p>Demand：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
                   '<p>Rating：</p>'+
                   '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
@@ -144,19 +157,21 @@ function match(i,item){
           <div id="carousel-inner">
       <!-- 左，右翻页图标    -->       
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Prev User</p></span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Return</p></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><p>Next User</p></span>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><p>Next</p></span>
           <span class="sr-only">Next</span>
         </a>
     </div>
   </div>
 </div>
+</div>
+</div>
 
 <div style="height: 50px; visibility:hidden;"></div> 
-
+<div id="noData"></div>
 
 <!-- Modal -->
 <div class="modal fade" border="1px" id="sentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:250px;">

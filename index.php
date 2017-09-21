@@ -22,7 +22,7 @@
 
 <body data-spy="scroll">
 <header id="PageHeader1" style="position:fixed;text-align:center;left: 0;top:0;right:0;height:100px;z-index:7777;">
-<div id="PageHeader1_Container" style="width:1400px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="PageHeader1_Container" style="width:1200px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
 <div id="wb_MaterialIcon15" style="position:absolute;left:0px;top:10px;width:36px;height:36px;text-align:center;z-index:0;">
 <a href="#"><!--Icon link to add on the left-->
 <div id="MaterialIcon15"><i class="material-icons">&#xe41d;</i></div></a></div>
@@ -103,7 +103,7 @@
 <div id="Carousel1" style="position:absolute">
 <div class="frame frame-1">
 <div id="wb_Title1" style="position:absolute;left:201px;top:350px;width:569px;height:49px;text-align:center;z-index:55;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Start</a></div>
+<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
 <div id="wb_Review1" style="position:absolute;left:151px;top:400px;width:669px;height:48px;text-align:center;z-index:56;">
 <span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>Disney Movie Stars</em></span></div>
 
@@ -113,7 +113,7 @@
 </div>
 <div class="frame frame-2">
 <div id="wb_Title2" style="position:absolute;left:1190px;top:350px;width:531px;height:36px;text-align:center;z-index:58;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Start</a></div>
+<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
 <div id="wb_Review2" style="position:absolute;left:1121px;top:400px;width:669px;height:48px;text-align:center;z-index:59;">
 <span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>All Blacks</em></span></div>
 
@@ -128,7 +128,7 @@
 </div>
 <div class="frame frame-3">
 <div id="wb_Title3" style="position:absolute;left:2165px;top:350px;width:520px;height:36px;text-align:center;z-index:61;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Start</a></div>
+<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
 <div id="wb_Review3" style="position:absolute;left:2091px;top:400px;width:669px;height:48px;text-align:center;z-index:62;">
 <span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>Smurf</em></span></div>
 
