@@ -109,9 +109,13 @@
 </form>
 
     <script type="text/javascript">
-
+        function GetQueryString(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        };
         //jquery form序列化转换为json对象
-//        var set_id="a";
+
         console.log(set_id);
         (function($){
             $.fn.serializeJson=function(){
@@ -133,8 +137,8 @@
             };
         })(jQuery);
 
- //       var set_id=GetQueryString("set_id");
- var set_id = '1';
+        var set_id=GetQueryString("set_id");
+// var set_id = '1';
 //click save button
         $(document).ready(function(){
             $("#save").click(function(){
@@ -143,12 +147,13 @@
                 xmlhttp.open('POST','includes/cardmanagement.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-              xmlhttp.onreadystatechange = function() {
+                xmlhttp.onreadystatechange = function() {
                 if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
-                       window.location.href='includes/testReceive.php';
+                       alert('Save success.');
+                       window.location.href='setsManagement.php';
                 }
             };
-            });
+        });
             
 
 
@@ -159,7 +164,12 @@
                 xmlhttp.open('POST','includes/cardmanagement.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-                $(window).attr('href', 'matchUp_result.php?set_id='+set_id);
+                xmlhttp.onreadystatechange = function() {
+                    if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                        alert('Save success.');
+                        window.location.href='matchUp_result.php?set_id='+set_id;
+                    }
+                };
             });
         });
 

@@ -65,7 +65,7 @@
                     <td>
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->                        
                     </td>
-                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="'.$rows[2].'" '.$isChecked.' value="4">Ask For This</td>                    
+                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="'.$rows[2].'" '.$isChecked.' value="4">Wanted</td>                    
                 </tr>
 			';
 	}
@@ -111,6 +111,12 @@
                 xmlhttp.open('POST','includes/testReceive.php',true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        alert('Save success. Let\'s see who is offering!');
+                        window.location.href = 'charity_look_result.php';
+                    }
+                }
             });
         })
 

@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Select a Set</h2>
+		<h2>You want to see what is in this platform? Select a Set to get started.</h2>
 	</div><br/>
 
 <?php
@@ -28,7 +28,6 @@
 		<p class="text-center">'.$rows[1].'</p>
 		<p class="text-center">'.$rows[3].' users are collecting "'.$rows[1].'".</p><br/><br/>';
 	}
-
 ?>
 	
 	<div style="height: 200px; visibility:hidden;"></div>	

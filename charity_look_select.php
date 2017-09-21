@@ -22,7 +22,7 @@
 		echo '
 		<div class="row">
 			<div class="col-xs-4 col-xs-offset-4">			
-				<a href="charity_offer_cardList.php?set_id='.$rows[2].'" class="thumbnail">
+				<a href="charity_look_cardList.php?set_id='.$rows[2].'" class="thumbnail">
 					<img src="'.$rows[3].'" class="img-responsive center-block" alt="'.$rows[4].'">
 				</a>	
 			</div>

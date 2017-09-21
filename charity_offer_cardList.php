@@ -105,17 +105,20 @@
 //        var set_id=GetQueryString("set_id");
 //click save button
         $(document).ready(function(){
-            $("#save").click(function(){
-                var post_data=$("#post_form").serializeJson();//表单序列化
+            $("#save").click(function() {
+                var post_data = $("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/offerCharity.php',true);
-                xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-                xmlhttp.send('post_json='+JSON.stringify(post_data));
+                xmlhttp.open('POST', 'includes/offerCharity.php', true);
+                xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xmlhttp.send('post_json=' + JSON.stringify(post_data));
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        alert('Save success. Thank you for your generosity!');
+                        window.location.href = 'charity.php';
+                    }
+                }
             });
         })
-
-
-
     </script>
 <div style="height: 300px; visibility:hidden;"></div>
 	

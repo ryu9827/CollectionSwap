@@ -24,11 +24,6 @@ function GetQueryString(name){
 var set_id = GetQueryString("set_id");
 
 function sendRequest(name,offer,miss,set_id,missname,offername){
-//   alert(name);
-//   alert(offer);
-//   alert(miss);
-//   alert(set_id);
-  // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -37,39 +32,40 @@ function sendRequest(name,offer,miss,set_id,missname,offername){
 </script>
 
 <script>
-$(function(){  
-$(document).ready(function(){
-//    debugger;
-
-    var set_id=GetQueryString("set_id");
-//    console.log(set_id);
-  var url = "includes/bestmatch.php";
-  var dataSend = {"act":"getJSON",
-                  "set_id":set_id
-                  };
+$(function() {
+    $(document).ready(function () {
+        var set_id = GetQueryString("set_id");
+        var url = "includes/bestmatch.php";
+        var dataSend = {
+            "act": "getJSON",
+            "set_id": set_id
+        };
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-  $.getJSON(url,dataSend,function(data){
-      if (jQuery.isEmptyObject(data)) {
-          console.log("NO DATA!")
-      }
-//      debugger;
-//      console.log(html);
-      var html = '';
-    $.each(data,function(i,item){
-//        debugger;
-        console.log(item);
-      html = match(i,item);
-      $('#carousel-inner').after(html); 
-      });
-    //after方法:在每个匹配的元素之后插入内容。
+        $.getJSON(url, dataSend, function (data) {
+            if (jQuery.isEmptyObject(data)) {
+                console.log("NO DATA!");
+                alert('nnn');
+                debugger;
+            }
+            var html = '';
+            $.each(data, function (i, item) {
+                html = match(i, item);
+                $('#carousel-inner').after(html);
+            });
+            //after方法:在每个匹配的元素之后插入内容。
+        });
     });
-  });
+
 //If no match up result is callback, show Charity tips to user;
-    html = '<h3 class="center-block">Sorry, there is no other user can match up with you based on your condition.</h3><br/>'+
-            '<h3 style="text-align: center">You can go to check if there is any one wants to donate charity collections.</h3><br/>'+
-            '<a href="charity.php"><button class="btn btn-info btn-lg center-block">Charity</button></a><br/>'+
-            '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>'+
+    html = '<div style="text-align: center">' +
+        '<h3 class="center-block">Sorry, there is no user matching with you based on your condition.</h3><br/>'+
+            '<h3 style="text-align: center">You can go and check if there is any one wants to donate.</h3><br/>' +
+        '</div>'+
+            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>'+
+            '<div style="text-align: center">' +
+        '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>' +
+        '</div>'+
             '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Turn Back</button>'
 
         $('#noData').after(html);
