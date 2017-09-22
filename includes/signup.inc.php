@@ -1,35 +1,38 @@
 <?php
 
-if (isset($_POST['submit'])) {
+//if (isset($_POST['submit'])) {
 	
 	include_once 'dbh.inc.php';
         include_once 'sendemail.inc.php';
+        
+        ob_start(); 
+        session_start();
         date_default_timezone_set('NZ');
 
-	//$first = mysqli_real_escape_string($conn, $_POST['first']);
-	//$last = mysqli_real_escape_string($conn, $_POST['last']);
+	$first = mysqli_real_escape_string($conn, $_POST['first']);
+	$last = mysqli_real_escape_string($conn, $_POST['last']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 	$pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
-        $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
+       // $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
         $ads = mysqli_real_escape_string($conn, $_POST['address']);
 	
 
 	//Error handlers
 	//Check for empty fields
 	if (empty($first) || empty($last) || empty($email) || empty($uid) || empty($pwd)) {
-		header("Location: ../signup.php?signup=empty");
+		header("Location: ../register.php?register=empty");
 	        exit();
 	} else {
 		//Check if input characters are valid
 		if (!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)) {
-			header("Location: ../signup.php?signup=invalid");
+			header("Location: ../register.php?register=invalid");
 			exit();
 		} else {
 			//Check if email is valid
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				header("Location: ../signup.php?signup=email");
+				header("Location: ../register.php?signup=email");
 				exit();
 			} else {
 				$sql = "SELECT * FROM users WHERE user_uid='$uid' OR user_email = '$email'";
@@ -37,7 +40,7 @@ if (isset($_POST['submit'])) {
 				$resultCheck = mysqli_num_rows($result);
 
 				if ($resultCheck > 0) {
-					header("Location: ../signup.php?signup=usertaken");
+					header("Location: ../register.php?signup=usertaken");
 					exit();
 				} else {
 					if($pwd != $pwd2){
@@ -82,7 +85,7 @@ if (isset($_POST['submit'])) {
 		}
 	}
 
-} else {
+//} else {
 //	header("Location: ../signup.php");
-	exit();
-}
+//	exit();
+//}

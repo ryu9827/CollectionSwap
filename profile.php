@@ -39,7 +39,7 @@
                 </div>
             </form>
 
-            <form class="form-horizontal" action="userProfile" method="POST">
+            <form class="form-horizontal" action="includes/userProfile" method="POST">
                 <div class="form-group">
                     <div class="row">
                         <label for="email" class="col-xs-3 control-label">E-mail: </label>
@@ -53,7 +53,7 @@
 
 
 
-            <form class="form-horizontal" action="updateAddress" method="POST">
+            <form class="form-horizontal" action="includes/updateAddress.php" method="POST">
 				<div class="form-group">
 					<div class="row">
 						<label for="uid" class="col-xs-3 control-label">Post Address: </label>
@@ -65,7 +65,7 @@
   				</div>
 			</form>
 
-            <form class="form-horizontal" action="updatePostcode" method="POST">
+            <form class="form-horizontal" action="includes/updatePostcode.php" method="POST">
                 <div class="form-group">
                     <div class="row">
                         <label for="uid" class="col-xs-3 control-label">Post Code: </label>

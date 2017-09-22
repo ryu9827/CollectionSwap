@@ -14,5 +14,7 @@ if (!isset($_SESSION['u_id'])){
 $postcode = $_POST['postCode'];
 $sql = "UPDATE users SET user_postcode = '$postcode' WHERE user_uid = '$user_uid'";
 mysqli_query($conn, $sql);
-header("Location: ../profile.php");
+echo "update successfully";
+
+//header("Location: ../profile.php");
 
