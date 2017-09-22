@@ -36,29 +36,22 @@ session_start();
 <div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:600px;height:49px;z-index:3;">
 	<ul>
 
-	<li id="setsManagement"><a href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
+	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
 	</li>
-	<li id="matchUp"><a href="matchUp.php" target="_self">Match&nbsp;Up</a>
+	<li id="matchUp"><a class="norm" href="matchUp.php" target="_self">Match&nbsp;Up</a>
 	</li>
-	<li id="charity"><a href="charity.php" target="_self">Charity</a>
+	<li id="charity"><a class="norm" href="charity.php" target="_self">Charity</a>
 	</li>
-	<li id="search"><a href="search.php" target="_self">Search</a>
+	<li id="search"><a class="norm" href="search.php" target="_self">Search</a>
 	</li>
-    <li id="register"><a href="login.php" target="_self">
-            <?php
-            if(isset($_SESSION['u_uid'])) {
-                $u_uid = $_SESSION['u_uid'];
-                echo $u_uid;
-            } else{
-                echo "Log in";}
-            ?></a>
-    </li>
-    <?php
-    if(isset($_SESSION['u_uid'])) {
-        echo '
-            <li><a href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>
-            ';}
-    ?>
+        <?php
+        if(isset($_SESSION['u_uid'])) {
+            $u_uid = $_SESSION['u_uid'];
+            echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
+            echo '<li><a class="norm" href="#" name="logout" target="_self" style="text-decoration: underline" onclick="logout()">Log out</a></li>';
+        } else{
+            echo '<li id="register"><a class="norm" href="login.php" style="text-decoration: underline" target="_self">Log in</a></li>';}
+        ?>
 	</ul>
 </div>
 </div>

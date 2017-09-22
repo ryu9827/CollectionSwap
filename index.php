@@ -33,29 +33,22 @@
 <div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:600px;height:49px;z-index:3;">
 	<ul>
 
-	<li id="setsManagement"><a href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
+	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
 	</li>
-	<li id="matchUp"><a href="matchUp.php" target="_self">Match&nbsp;Up</a>
+	<li id="matchUp"><a class="norm" href="matchUp.php" target="_self">Match&nbsp;Up</a>
 	</li>
-	<li id="charity"><a href="charity.php" target="_self">Charity</a>
+	<li id="charity"><a class="norm" href="charity.php" target="_self">Charity</a>
 	</li>
-	<li id="search"><a href="search.php" target="_self">Search</a>
+	<li id="search"><a class="norm" href="search.php" target="_self">Search</a>
 	</li>
-    <li id="register"><a href="login.php" target="_self">
-            <?php
-            if(isset($_SESSION['u_uid'])) {
-                $u_uid = $_SESSION['u_uid'];
-                echo $u_uid;
-            } else{
-                echo "Log in";}
-            ?></a>
-    </li>
-        <?php
-            if(isset($_SESSION['u_uid'])) {
-            echo '
-                <li><a href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>
-                ';}
-        ?>
+     <?php
+     if(isset($_SESSION['u_uid'])) {
+         $u_uid = $_SESSION['u_uid'];
+         echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
+         echo '<li><a class="norm" href="#" name="logout" target="_self" style="text-decoration: underline" onclick="logout()">Log out</a></li>';
+     } else{
+         echo '<li id="register"><a class="norm" href="login.php" style="text-decoration: underline" target="_self">Log in</a></li>';}
+     ?>
 	</ul>
 </div>
 </div>
@@ -103,9 +96,9 @@
 <div id="Carousel1" style="position:absolute">
 <div class="frame frame-1">
 <div id="wb_Title1" style="position:absolute;left:201px;top:350px;width:569px;height:49px;text-align:center;z-index:55;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
+<h1 id="Heading2"><a href="setsManagement.php"></a></div>
 <div id="wb_Review1" style="position:absolute;left:151px;top:400px;width:669px;height:48px;text-align:center;z-index:56;">
-<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>Disney Movie Stars</em></span></div>
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em></em></span></div>
 
 <!-- <div id="wb_User1" style="position:absolute;left:438px;top:83px;width:58px;height:58px;text-align:center;z-index:57;">
 <a href="#top" title="Top"><div id="User1"><i class="fa fa-user-o">&nbsp;</i></div></a></div> -->
@@ -113,9 +106,9 @@
 </div>
 <div class="frame frame-2">
 <div id="wb_Title2" style="position:absolute;left:1190px;top:350px;width:531px;height:36px;text-align:center;z-index:58;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
+<h1 id="Heading2"><a href="setsManagement.php"></a></div>
 <div id="wb_Review2" style="position:absolute;left:1121px;top:400px;width:669px;height:48px;text-align:center;z-index:59;">
-<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>All Blacks</em></span></div>
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em></em></span></div>
 
 <!-- <div id="wb_User2" style="position:absolute;left:1408px;top:83px;width:58px;height:58px;text-align:center;z-index:60;">
 <a href="#top" title="Top">
@@ -128,9 +121,9 @@
 </div>
 <div class="frame frame-3">
 <div id="wb_Title3" style="position:absolute;left:2165px;top:350px;width:520px;height:36px;text-align:center;z-index:61;">
-<h1 id="Heading2"><a href="setsManagement.php">Get Started</a></div>
+<h1 id="Heading2"><a href="setsManagement.php"></a></div>
 <div id="wb_Review3" style="position:absolute;left:2091px;top:400px;width:669px;height:48px;text-align:center;z-index:62;">
-<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em>Smurf</em></span></div>
+<span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><em></em></span></div>
 
 <!-- <div id="wb_User3" style="position:absolute;left:2378px;top:83px;width:58px;height:58px;text-align:center;z-index:63;">
 <a href="#top" title="Top"><div id="User3"><i class="fa fa-user">&nbsp;</i></div></a></div> -->
