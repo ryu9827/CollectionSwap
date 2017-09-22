@@ -18,12 +18,14 @@
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/BlueMonday.css" rel="stylesheet">
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
 
-<body data-spy="scroll">
+<div data-spy="scroll">
 <header id="PageHeader1" style="position:fixed;text-align:center;left: 0;top:0;right:0;height:100px;z-index:7777;">
 <div id="PageHeader1_Container" style="width:1200px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
-<div id="wb_MaterialIcon15" style="position:absolute;left:0px;top:10px;width:36px;height:36px;text-align:center;z-index:0;">
+<div id="wb_MaterialIcon15" style="position:absolute;left:0px;top:10px;width:72px;height:72px;text-align:center;z-index:0;">
 <a href="#"><!--Icon link to add on the left-->
 <div id="MaterialIcon15"><i class="material-icons">&#xe41d;</i></div></a></div>
 <div id="wb_Heading2" style="position:absolute;left:74px;top:17px;width:281px;height:36px;text-align:center;z-index:1;">
@@ -133,42 +135,73 @@
 <div id="Carousel1_back" style="position:absolute;left:10px;top:46%;width:20px;height:30px;z-index:999"><a style="cursor:pointer"><img alt="Back" style="border-width:0" src="images/arrow-prev-white.png"></a></div>
 <div id="Carousel1_next" style="position:absolute;right:10px;top:46%;width:20px;height:30px;z-index:999"><a style="cursor:pointer"><img alt="Next" style="border-width:0" src="images/arrow-next-white.png"></a></div>
 </div>
-<div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:46px;height:46px;z-index:184;">
-<div id="wb_up-arrow" style="position:absolute;left:7px;top:6px;width:24px;height:24px;text-align:center;z-index:180;">
-<a href="#home"><div id="up-arrow"><i class="fa fa-angle-up">&nbsp;</i></div></a></div>
-</div>
+<!--<div id="StickyLayer" style="position:fixed;text-align:left;left:auto;right:25px;top:auto;bottom:25px;width:46px;height:46px;z-index:184;">-->
+<!--<div id="wb_up-arrow" style="position:absolute;left:7px;top:6px;width:24px;height:24px;text-align:center;z-index:180;">-->
+<!--<a href="#home"><div id="up-arrow"><i class="fa fa-angle-up">&nbsp;</i></div></a></div>-->
+<!--</div>-->
+<br/>
+    <div class="container-fluid">
+        <div style="height: 650px; visibility:hidden;"></div>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>1.Get Signed Up</h2>
+                </div>
+                <div class="panel-body">
+                    <h3>Choose you favourite collection.</h3><br/>
+                    <h3>Select what you have and extras then look for what you are missing.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>2.Get Excited</h2>
+                </div>
+                <div class="panel-body">
+                    <h3>We will select and source awesome collectiions from around New Zealand.</h3><br/>
+                    <h3> &nbsp</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>3.Get Swapping</h2>
+                </div>
+                <div class="panel-body">
+                    <h3>Receive your delivery of superise, quality collectables  to enjoy!</h3><br/>
+                    <h3> &nbsp</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div style="text-align: center">
-    <h1>instruction </h1></br></br>
-    <h2>1.	Get Signed Up</h2>
-    <p>Choose you favourite collection.</p>
-    <p>select what you have and extras then look for what you are missing.</p>
-    </br>
-    <h2>2.	Get Excited </h2>
-    <p>We will select and source awesome collectiions from around New Zealand.</p>
-    </br>
-    <h2>3.	Get Swapping</h2>
-    <p>Receive your delivery of superise, quality collectables  to enjoy!</p>
-</div>
+    <img src="images/kids-trading-cards.jpg" class="col-xs-8 thumbnail">
 
+        <div class="col-xs-4">
+            <h2>NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter </h2>
+        </div>
+    </div>
 <!-- footer start -->
 <div id="wb_LayoutGrid8">
 <div id="LayoutGrid8">
 <div class="row">
 <div class="col-1">
-<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:94;">
+<div id="wb_FontAwesomeIcon3" style="display:inline-block;width:72px;height:72px;text-align:center;z-index:94;">
 <a href="https://www.facebook.com/"><div id="FontAwesomeIcon3"><i class="fa fa-facebook">&nbsp;</i></div></a>
 </div>
-<div id="wb_FontAwesomeIcon8" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:95;">
+<div id="wb_FontAwesomeIcon8" style="display:inline-block;width:72px;height:72px;text-align:center;z-index:95;">
 <a href="https://twitter.com/"><div id="FontAwesomeIcon8"><i class="fa fa-twitter">&nbsp;</i></div></a>
 </div>
-<div id="wb_FontAwesomeIcon10" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:96;">
+<div id="wb_FontAwesomeIcon10" style="display:inline-block;width:72px;height:72px;text-align:center;z-index:96;">
 <a href="https://www.instagram.com/"><div id="FontAwesomeIcon10"><i class="fa fa-instagram">&nbsp;</i></div></a>
 </div>
-<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:97;">
+<div id="wb_FontAwesomeIcon11" style="display:inline-block;width:72px;height:72px;text-align:center;z-index:97;">
 <a href="https://www.youtube.com/"><div id="FontAwesomeIcon11"><i class="fa fa-youtube">&nbsp;</i></div></a>
 </div>
-<div id="wb_FontAwesomeIcon26" style="display:inline-block;width:30px;height:30px;text-align:center;z-index:98;">
+<div id="wb_FontAwesomeIcon26" style="display:inline-block;width:72px;height:72px;text-align:center;z-index:98;">
 <a href="https://nz.pinterest.com/"><div id="FontAwesomeIcon26"><i class="fa fa-pinterest">&nbsp;</i></div></a>
 </div>
 <div id="wb_Text17">
