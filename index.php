@@ -14,7 +14,7 @@
 <title>Collection Swap</title>
 <meta name="generator" content="H@CKED">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut" href="images/timg.ico">
+<link rel="shortcut icon" href="images/icons/timg.ico" type="image/x-icon">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/BlueMonday.css" rel="stylesheet">
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
@@ -141,7 +141,7 @@
 <!--</div>-->
 <br/>
     <div class="container-fluid">
-        <div style="height: 650px; visibility:hidden;"></div>
+        <div style="height: 47em; visibility:hidden;"></div>
     <div class="row">
         <div class="col-xs-4">
             <div class="panel panel-info">

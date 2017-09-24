@@ -23,7 +23,7 @@ if (mysqli_num_rows($rows) >= 1){
 else{
     $addSql = "INSERT INTO USER_SETS (id, user_id, set_id) VALUES (DEFAULT ,'$user_uid', '$set_id')";
     mysqli_query($conn, $addSql);
-    echo "Successfully!";
+    header('location:../setsManagement.php');
 };
 
 
