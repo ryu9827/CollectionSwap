@@ -53,17 +53,32 @@
       <file leaf-file-name="setsManagement_cardList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="163" column="72" lean-forward="false" selection-start-line="163" selection-start-column="72" selection-end-line="163" selection-end-column="72" />
+            <state relative-caret-position="167">
+              <caret line="146" column="72" lean-forward="false" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="72" />
               <folding>
-                <marker date="1506293088434" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
-                <marker date="1506293088434" expanded="true" signature="1309:1382" ph="select * fro... cards_status" />
-                <marker date="1506293088434" expanded="true" signature="1309:1403" ph="select * fro... cards_status" />
-                <marker date="1506293088434" expanded="true" signature="1842:1875" ph="..." />
-                <marker date="1506293088434" expanded="true" signature="1842:2593" ph="..." />
-                <marker date="1506293088434" expanded="true" signature="2006:2042" ph="..." />
-                <marker date="1506293088434" expanded="true" signature="2006:2239" ph="..." />
-                <marker date="1506293088434" expanded="true" signature="2045:2213" ph="..." />
+                <marker date="1506293599135" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
+                <marker date="1506293599135" expanded="true" signature="1309:1382" ph="select * fro... cards_status" />
+                <marker date="1506293599135" expanded="true" signature="1309:1403" ph="select * fro... cards_status" />
+                <marker date="1506293599135" expanded="true" signature="1842:1875" ph="..." />
+                <marker date="1506293599135" expanded="true" signature="1842:2593" ph="..." />
+                <marker date="1506293599135" expanded="true" signature="2006:2042" ph="..." />
+                <marker date="1506293599135" expanded="true" signature="2006:2239" ph="..." />
+                <marker date="1506293599135" expanded="true" signature="2045:2213" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cardmanagement.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/cardmanagement.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <marker date="1505954238171" expanded="true" signature="490:566" ph="SELECT * FRO... cards_status" />
+                <marker date="1505954238171" expanded="true" signature="968:1065" ph="DELETE FROM " />
+                <marker date="1505954238171" expanded="true" signature="1183:1302" ph="UPDATE cards... " />
+                <marker date="1505954238171" expanded="true" signature="1643:1761" ph="INSERT INTO cards_status... " />
               </folding>
             </state>
           </provider>
@@ -323,12 +338,12 @@
       <workItem from="1506027276777" duration="1442000" />
       <workItem from="1506028972595" duration="1870000" />
       <workItem from="1506033661826" duration="14449000" />
-      <workItem from="1506288918201" duration="3955000" />
+      <workItem from="1506288918201" duration="4422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141905000" />
+    <option name="totallyTimeSpent" value="142372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -450,19 +465,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/my_errors.log" />
-    <entry file="file://$PROJECT_DIR$/includes/cardmanagement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1505954238171" expanded="true" signature="490:566" ph="SELECT * FRO... cards_status" />
-            <marker date="1505954238171" expanded="true" signature="943:1017" ph="DELETE FROM " />
-            <marker date="1505954238171" expanded="true" signature="1135:1231" ph="UPDATE cards... " />
-            <marker date="1505954238171" expanded="true" signature="1759:1763" ph="INSERT INTO cards_status... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/BlueMonday.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42">
@@ -831,19 +833,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/includes/cardmanagement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1505954238171" expanded="true" signature="490:566" ph="SELECT * FRO... cards_status" />
+            <marker date="1505954238171" expanded="true" signature="968:1065" ph="DELETE FROM " />
+            <marker date="1505954238171" expanded="true" signature="1183:1302" ph="UPDATE cards... " />
+            <marker date="1505954238171" expanded="true" signature="1643:1761" ph="INSERT INTO cards_status... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="163" column="72" lean-forward="false" selection-start-line="163" selection-start-column="72" selection-end-line="163" selection-end-column="72" />
+        <state relative-caret-position="167">
+          <caret line="146" column="72" lean-forward="false" selection-start-line="146" selection-start-column="72" selection-end-line="146" selection-end-column="72" />
           <folding>
-            <marker date="1506293088434" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
-            <marker date="1506293088434" expanded="true" signature="1309:1382" ph="select * fro... cards_status" />
-            <marker date="1506293088434" expanded="true" signature="1309:1403" ph="select * fro... cards_status" />
-            <marker date="1506293088434" expanded="true" signature="1842:1875" ph="..." />
-            <marker date="1506293088434" expanded="true" signature="1842:2593" ph="..." />
-            <marker date="1506293088434" expanded="true" signature="2006:2042" ph="..." />
-            <marker date="1506293088434" expanded="true" signature="2006:2239" ph="..." />
-            <marker date="1506293088434" expanded="true" signature="2045:2213" ph="..." />
+            <marker date="1506293599135" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
+            <marker date="1506293599135" expanded="true" signature="1309:1382" ph="select * fro... cards_status" />
+            <marker date="1506293599135" expanded="true" signature="1309:1403" ph="select * fro... cards_status" />
+            <marker date="1506293599135" expanded="true" signature="1842:1875" ph="..." />
+            <marker date="1506293599135" expanded="true" signature="1842:2593" ph="..." />
+            <marker date="1506293599135" expanded="true" signature="2006:2042" ph="..." />
+            <marker date="1506293599135" expanded="true" signature="2006:2239" ph="..." />
+            <marker date="1506293599135" expanded="true" signature="2045:2213" ph="..." />
           </folding>
         </state>
       </provider>
