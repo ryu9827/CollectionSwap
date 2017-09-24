@@ -63,7 +63,7 @@
 		$isChecked1=null;
         $isChecked2=null;
         $isChecked3="checked";
-		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]'";
+		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]' and set_id='$set_id'";
 		$result_status = mysqli_query($conn, $sql_status);
                 $num = mysqli_num_rows($result_status);
 		 if ( $num > 0 ){
