@@ -15,7 +15,7 @@
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 	$pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
-       // $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
+        $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
         $ads = mysqli_real_escape_string($conn, $_POST['address']);
 	
 

@@ -8,7 +8,7 @@ function charitylist($user_uid){
     global $conn;
     $charity = array();
     
-    $sql = "SELECT * FROM card_status WHERE user_uid = '$user_uid' AND card_status = '2'";
+    $sql = "SELECT * FROM card_status WHERE user_uid = '$user_uid' AND card_status = '4'";
     $res = mysqli_query($conn, $sql);
     while($row = mysqli_fetch_array($res)){
         $charitycard[] = $row['card_id'];
@@ -17,7 +17,7 @@ function charitylist($user_uid){
 }
 
 //upadte charity card to database
-function charitymanagement($charity= array(), $user_uid='', $set_id=''){
+function charitymanagement($charity= array(), $user_uid='', $set_id){
 global $conn;
 
 foreach ($charity as $key => $value){
@@ -31,7 +31,7 @@ foreach ($charity as $key => $value){
      
     if($row > 0){
         $result = mysqli_fetch_array($res);
-        if(!($value == $result['status'])){
+        if(!($value == $result['card_status'])){
             $sql = "DELETE FROM charity_card WHERE card_id = '$card_id' AND user_uid = '$user_uid'";
             mysqli_query($conn, $sql);
         }
@@ -39,13 +39,25 @@ foreach ($charity as $key => $value){
     
     else{
     if($value == 4){
-    $sql = "INSERT INTO charity_card (card_id, set_id, user_uid,status) VALUES ('$key','$set_id', '$user_uid','$value')";
+    $sql = "INSERT INTO charity_card (card_id, set_id, user_uid,card_status) VALUES ('$key','$set_id', '$user_uid','$value')";
     mysqli_query($conn, $sql);
     
    
       }
     }
    }
+}
+function charityManagement2($charity= array(), $user_uid='', $set_id =''){
+  global $conn;
+  $sql = "DELETE FROM charity_card WHERE user_uid = '$user_uid' AND set_id = '$set_id'";
+  mysqli_query($conn, $sql);
+
+     foreach ($charity as $key => $value){
+
+      $sql = "INSERT INTO charity_card (card_id, set_id, user_uid,card_status) VALUES ('$key','$set_id', '$user_uid','$value')";
+      mysqli_query($conn, $sql);
+
+      } 
 }
 
 //if provider accept the request, the card will not be avaliable any more.

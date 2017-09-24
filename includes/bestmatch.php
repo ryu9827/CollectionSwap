@@ -29,7 +29,7 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $set_name = $row['set_name'];
  
- $sql = "SELECT * FROM user_sets WHERE user_id = '$uid' AND set_id = '$set_id'";
+ $sql = "SELECT * FROM user_sets WHERE user_id = '$user_uid' AND set_id = '$set_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
  

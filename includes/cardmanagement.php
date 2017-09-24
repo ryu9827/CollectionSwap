@@ -19,7 +19,8 @@ $cardset =json_decode($obj,true);
 //$cardset = json_decode($test,true);
 
 //$user_uid = 'amy';
-$set_id = '1';
+// $set_id = stripslashes(trim($_GET['set_id'])); 
+ $set_id = $_GET['set_id'];
 
 foreach($cardset as $key => $value){
     

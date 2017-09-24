@@ -17,6 +17,8 @@ if (!isset($_SESSION['u_id'])){
  $charitylist =json_decode($obj,true);
  
  $set_id = stripslashes(trim($_GET['set_id'])); 
+// echo $set_id;
+ //$set_id = 1;
  
- charitymanagement($charitylist,$user_uid,$set_id);
+ charityManagement2($charitylist,$user_uid,$set_id);
 
