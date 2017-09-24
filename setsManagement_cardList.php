@@ -62,7 +62,7 @@
 		$i++;
 		$isChecked1=null;
         $isChecked2=null;
-        $isChecked3=null;
+        $isChecked3="checked";
 		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]'";
 		$result_status = mysqli_query($conn, $sql_status);
                 $num = mysqli_num_rows($result_status);
@@ -71,12 +71,12 @@
                         $status = $row['card_status'];
 			if($status==1){
 			    $isChecked1="checked";
+			    $isChecked3=null;
 			}
 			else if($status==2) {
 			    $isChecked2="checked";
+                $isChecked3=null;
 			}
-		} else {
-			$isChecked3 = "checked";
 		}
 
 		echo '
