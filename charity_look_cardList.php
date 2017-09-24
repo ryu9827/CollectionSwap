@@ -78,10 +78,12 @@
 <button class="btn btn-success btn-lg center-block" id="save" >Save</button>
 
     <script type="text/javascript">
-
+        function GetQueryString(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        };
         //jquery form序列化转换为json对象
-//        var set_id="a";
-//        console.log(set_id);
         (function($){
             $.fn.serializeJson=function(){
                 var serializeObj={};
@@ -102,7 +104,6 @@
             };
         })(jQuery);
 
-//        var set_id=GetQueryString("set_id");
 //click save button
         $(document).ready(function(){
             $("#save").click(function(){

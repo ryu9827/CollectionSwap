@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charity_look_cardList.php" afterPath="$PROJECT_DIR$/charity_look_cardList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charity_offer_cardList.php" afterPath="$PROJECT_DIR$/charity_offer_cardList.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charity_offer_cardList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="charity_offer_cardList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/charity_offer_cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="84" column="10" lean-forward="false" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+            <state relative-caret-position="117">
+              <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="84" selection-end-column="10" />
               <folding>
                 <marker date="1506294042013" expanded="true" signature="616:663" ph="select * fro... sets_cards" />
                 <marker date="1506294042013" expanded="true" signature="883:944" ph="select card_... charity_card" />
@@ -86,17 +85,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="charity_look_cardList.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="charity_look_cardList.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/charity_look_cardList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1922">
-              <caret line="110" column="77" lean-forward="false" selection-start-line="110" selection-start-column="77" selection-end-line="110" selection-end-column="77" />
+            <state relative-caret-position="387">
+              <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
               <folding>
-                <marker date="1506293906409" expanded="true" signature="647:694" ph="select * fro... sets_cards" />
-                <marker date="1506293906409" expanded="true" signature="914:975" ph="select card_... charity_card" />
-                <marker date="1506293906409" expanded="true" signature="1265:1826" ph="..." />
-                <marker date="1506293906409" expanded="true" signature="1438:1621" ph="..." />
-                <marker date="1506293906409" expanded="false" signature="1677:1727" ph="..." />
+                <marker date="1506294161074" expanded="true" signature="647:694" ph="select * fro... sets_cards" />
+                <marker date="1506294161074" expanded="true" signature="914:975" ph="select card_... charity_card" />
+                <marker date="1506294161074" expanded="true" signature="1265:1826" ph="..." />
+                <marker date="1506294161074" expanded="true" signature="1438:1621" ph="..." />
+                <marker date="1506294161074" expanded="false" signature="1677:1727" ph="..." />
               </folding>
             </state>
           </provider>
@@ -170,8 +169,8 @@
         <option value="$PROJECT_DIR$/includes/addSet.php" />
         <option value="$PROJECT_DIR$/includes/bestmatch.php" />
         <option value="$PROJECT_DIR$/setsManagement_cardList.php" />
-        <option value="$PROJECT_DIR$/charity_look_cardList.php" />
         <option value="$PROJECT_DIR$/charity_offer_cardList.php" />
+        <option value="$PROJECT_DIR$/charity_look_cardList.php" />
       </list>
     </option>
   </component>
@@ -371,12 +370,12 @@
       <workItem from="1506027276777" duration="1442000" />
       <workItem from="1506028972595" duration="1870000" />
       <workItem from="1506033661826" duration="14449000" />
-      <workItem from="1506288918201" duration="4851000" />
+      <workItem from="1506288918201" duration="4942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142801000" />
+    <option name="totallyTimeSpent" value="142892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -858,20 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/charity_look_cardList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1922">
-          <caret line="110" column="77" lean-forward="false" selection-start-line="110" selection-start-column="77" selection-end-line="110" selection-end-column="77" />
-          <folding>
-            <marker date="1506293906409" expanded="true" signature="647:694" ph="select * fro... sets_cards" />
-            <marker date="1506293906409" expanded="true" signature="914:975" ph="select card_... charity_card" />
-            <marker date="1506293906409" expanded="true" signature="1265:1826" ph="..." />
-            <marker date="1506293906409" expanded="true" signature="1438:1621" ph="..." />
-            <marker date="1506293906409" expanded="false" signature="1677:1727" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_cardList.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -891,14 +876,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/charity_offer_cardList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="84" column="10" lean-forward="false" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+        <state relative-caret-position="117">
+          <caret line="80" column="8" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="84" selection-end-column="10" />
           <folding>
             <marker date="1506294042013" expanded="true" signature="616:663" ph="select * fro... sets_cards" />
             <marker date="1506294042013" expanded="true" signature="883:944" ph="select card_... charity_card" />
             <marker date="1506294042013" expanded="true" signature="1234:1799" ph="..." />
             <marker date="1506294042013" expanded="true" signature="1407:1590" ph="..." />
             <marker date="1506294042013" expanded="false" signature="1646:1696" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/charity_look_cardList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="46" column="46" lean-forward="true" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
+          <folding>
+            <marker date="1506294161074" expanded="true" signature="647:694" ph="select * fro... sets_cards" />
+            <marker date="1506294161074" expanded="true" signature="914:975" ph="select card_... charity_card" />
+            <marker date="1506294161074" expanded="true" signature="1265:1826" ph="..." />
+            <marker date="1506294161074" expanded="true" signature="1438:1621" ph="..." />
+            <marker date="1506294161074" expanded="false" signature="1677:1727" ph="..." />
           </folding>
         </state>
       </provider>
