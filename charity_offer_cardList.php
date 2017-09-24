@@ -78,10 +78,12 @@
 <button class="btn btn-success btn-lg center-block" id="save" >Save</button>
 
     <script type="text/javascript">
-
+        function GetQueryString(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r!=null)return  unescape(r[2]); return null;
+        };
         //jquery form序列化转换为json对象
-//        var set_id="a";
-//        console.log(set_id);
         (function($){
             $.fn.serializeJson=function(){
                 var serializeObj={};
@@ -102,13 +104,13 @@
             };
         })(jQuery);
 
-//        var set_id=GetQueryString("set_id");
+        var set_id=GetQueryString("set_id");
 //click save button
         $(document).ready(function(){
             $("#save").click(function() {
                 var post_data = $("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST', 'includes/offerCharity.php', true);
+                xmlhttp.open('POST', 'includes/offerCharity.php?set_id='+set_id, true);
                 xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xmlhttp.send('post_json=' + JSON.stringify(post_data));
                 xmlhttp.onreadystatechange = function () {
