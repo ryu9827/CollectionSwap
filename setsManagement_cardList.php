@@ -161,7 +161,7 @@
             $("#match").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/cardmanagement.php'+set_id,true);
+                xmlhttp.open('POST','includes/cardmanagement.php?set_id='+set_id,true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                 xmlhttp.onreadystatechange = function() {

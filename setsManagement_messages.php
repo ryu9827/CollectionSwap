@@ -30,7 +30,8 @@ function message(item){
 	var html='';
 	switch(item.status){
 		case "0":
-		html += '<div class="row">'+
+		html += '<form action="" method="GET">'+
+                '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-danger">'+
 				            '<div class="panel-heading">'+              
@@ -49,7 +50,8 @@ function message(item){
 							'</div'+	
 				        '</div>'+
 				    '</div>'+
-				'</div>'
+				'</div>'+
+                '</form>'
 		break;
 		case "1":
 		html += '<div class="row">'+

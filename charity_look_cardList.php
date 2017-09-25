@@ -75,7 +75,14 @@
 <div style="height: 100px; visibility:hidden;"></div>
 
 </form>
-<button class="btn btn-success btn-lg center-block" id="save" >Save</button>
+<div class="row">
+    <div class="col-xs-2 col-xs-offset-4">
+        <button class="btn btn-success btn-lg center-block" id="save" >Save</button>
+    </div>
+    <div class="col-xs-2">
+        <button class="btn btn-warning btn-lg center-block" id="match">Start to match</button>
+    </div>
+</div>
 
     <script type="text/javascript">
         function GetQueryString(name){
@@ -104,18 +111,33 @@
             };
         })(jQuery);
 
+        var set_id=GetQueryString("set_id");
 //click save button
         $(document).ready(function(){
             $("#save").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/lookCharity.php?set_id='+set_id,true);
+                xmlhttp.open('POST','includes/askforCharity.php?set_id='+set_id,true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
                 xmlhttp.onreadystatechange = function () {
                     if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                        alert('Save success. Let\'s see who is offering!');
-                        window.location.href = 'charity_look_result.php';
+                        alert('Success');
+//                        window.location.href = 'charity_look_result.php';
+                    }
+                }
+            });
+
+            $("#match").click(function(){
+                var post_data=$("#post_form").serializeJson();//表单序列化
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open('POST','includes/askforCharity.php?set_id='+set_id,true);
+                xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                xmlhttp.send('post_json='+JSON.stringify(post_data));
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        alert('Successfully saved. Let\'s see who is offering!');
+                        window.location.href = 'charity_look_result.php?set_id='+set_id;
                     }
                 }
             });

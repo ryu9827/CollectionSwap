@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     var set_id=GetQueryString("set_id");
     console.log(set_id);
-  var url = "includes/bestmatch.php";
+  var url = "includes/askforCharity.php";
   var dataSend = {"act":"getJSON",
                   "set_id":set_id
                   };
@@ -51,6 +51,7 @@ $(document).ready(function(){
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
   $.getJSON(url,dataSend,function(data){
       console.log(data);
+      alert("no data");
   var html = '';
     $.each(data,function(i,item){      
       html = match(i,item);

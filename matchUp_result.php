@@ -41,12 +41,21 @@ $(function() {
             "set_id": set_id
         };
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
-//注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-        $.getJSON(url, dataSend, function (data) {
-            if (jQuery.isEmptyObject(data)) {
-                console.log("NO DATA!");
-                alert('nnn');
-                debugger;
+//注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
+$.getJSON(url, dataSend, function (data) {
+    if (jQuery.isEmptyObject(data)) {
+    html = '<div style="text-align: center">' +
+           '<h3 class="center-block">Sorry, there is no user matching with you based on your condition.</h3><br/>'+
+           '<h3 style="text-align: center">You can go and check if there is any one wants to donate.</h3><br/>' +
+           '</div>'+
+           '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>'+
+           '<div style="text-align: center">' +
+           '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>' +
+           '</div>'+
+           '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Turn Back</button>'
+
+                $('#noData').after(html);
+
             }
             var html = '';
             $.each(data, function (i, item) {
@@ -58,17 +67,7 @@ $(function() {
     });
 
 //If no match up result is callback, show Charity tips to user;
-    html = '<div style="text-align: center">' +
-        '<h3 class="center-block">Sorry, there is no user matching with you based on your condition.</h3><br/>'+
-            '<h3 style="text-align: center">You can go and check if there is any one wants to donate.</h3><br/>' +
-        '</div>'+
-            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>'+
-            '<div style="text-align: center">' +
-        '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>' +
-        '</div>'+
-            '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Turn Back</button>'
 
-        $('#noData').after(html);
 });
 
 function match(i,item){
