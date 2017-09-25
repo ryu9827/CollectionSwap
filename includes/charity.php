@@ -71,6 +71,7 @@ function askForCharity($charity, $set_id = ''){
     $res = mysqli_query($conn, $sql);
     $rate = mysqli_fetch_array($res);
     $lastlogin = $rate['lastlogin_time'];
+    $provider = array();
     
     $provider[] = array('name'=>$uid,'cardid'=>$freecardid, 'cardname'=>$freecardname, 
         'good'=>$good, 'normal' =>$normal,'bad'=>$bad, 'lastlogin'=>$lastlogin, 'point'=>$point);

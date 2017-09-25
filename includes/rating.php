@@ -3,11 +3,12 @@
 
 include_once 'dbh.inc.php';
 
-global $conn;
-
-$user_uid = "amy";
+$user_uid ="amy";
 $mark = "normal";
 
+function rating($user_uid, $mark){
+
+global $conn;
 switch($mark):
     case "good": $addpoint = 3;
         break;
@@ -36,4 +37,5 @@ $sql = "UPDATE rating SET $mark = '$num',average = '$aver',count = '$count',tota
 $res = mysqli_query($conn, $sql);
 if(!$res){
     echo mysqli_error($conn);
+}
 }
