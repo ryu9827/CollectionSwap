@@ -1,0 +1,44 @@
+<?php
+
+include_once 'match.php';
+include_once 'dbh.inc.php';
+include_once 'sendMatchRequest.php';
+global $conn;
+ob_start(); 
+session_start();
+if (!isset($_SESSION['u_id'])){
+     header("location:../login.php");
+
+	}
+        
+ $user_uid = $_SESSION['u_uid'];       
+
+ function getaddress($uname){
+ $sql = "SELECT * FROM users WHERE user_uid = '$uname";
+ $res = mysqli_query($conn, $sql); 
+ $row = mysqli_fetch_assoc($res);
+ $address = $row['address'];
+ return $address;
+ }
+ 
+ $address = getaddress($user_uid);
+ $raddress = getaddress($ruid);
+ 
+ $sql = "UPDATE messages SET status = '4' WHERE id = '$msg_id'";
+ mysqli_query($conn, $sql);
+ 
+ $email = getemail($ruid);
+ $email = getemail($user_uid);
+ 
+ $mail = new sendemail();
+ $subject = "Your swap request has been Accepted!";
+ $body = "Dear ".$ruid."：<br/> Congratulations!<br/>Your swap request has been successfully accepted!<br/>Collection Set Name: "
+         .$set_name."<br/>Offer: ".$missname."<br/>Demand: ".$offername."<br/>Applicant Username or Acceptant Username: ".$ruid.
+         "<br/>Offer: ".$remails."<br/>Shipping details:<br/>Delivery address:  ".$address."<br/>";
+ $mail->sendEmail($email,$subject,$body);
+ 
+ $subject = "Swaping Details";
+ $body = "Dear ".$user_uid."：<br/> Your already accept the swap request from user: ".$ruid."<br/>Collection Set Name: "
+         .$set_name."<br/>Offer: ".$offername."<br/>Demand: ".$missname."<br/>Applicant Username or Acceptant Username: ".$ruid.
+         "<br/>Offer: ".$remails."<br/>Shipping details:<br/>Delivery address:  ".$raddress."<br/>";
+ $mail->sendEmail($email,$subject,$body);

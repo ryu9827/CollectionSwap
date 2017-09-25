@@ -86,6 +86,6 @@ $uid = $_SESSION['u_id'];
 
   //create new message for both user and reciver
    newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1);
-   newmessage($reciver_uid,$user_uid,$uemail,1, $set_id, $misslist,$offerlist, 1);
+   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, 1);
 
 
