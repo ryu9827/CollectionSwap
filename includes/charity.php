@@ -16,37 +16,68 @@ function charitylist($user_uid){
     return $charitycard;
 }
 
-//upadte charity card to database
-function charitymanagement($charity= array(), $user_uid='', $set_id){
-global $conn;
-
-foreach ($charity as $key => $value){
+function askForCharity($charity, $set_id = ''){
+    global $conn;
+    $cardidlist = array();
+    $cardnamelist = array();
+    $list = array();
+    foreach ($charity as $key => $value){
+        $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND set_id = '$set_id'";
+        $res = mysqli_query($conn, $sql);
+        $list = array();
     
-    $card_id = $key;
-   
-    $sql = "SELECT * FROM charity_card WHERE user_uid = '$user_uid' AND card_id = '$card_id'";
-    $res = mysqli_query($conn,$sql);
-   
-    $row = mysqli_num_rows($res);
-     
-    if($row > 0){
-        $result = mysqli_fetch_array($res);
-        if(!($value == $result['card_status'])){
-            $sql = "DELETE FROM charity_card WHERE card_id = '$card_id' AND user_uid = '$user_uid'";
-            mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($res)) {
+            if(!(in_array($row['user_uid'], $list))){
+            $list[] = $row['user_uid']; 
+            echo $row['user_uid'];
+            }
         }
+  
     }
+    foreach($list as $uid){
+        foreach ($charity as $key => $value){
+          
+            echo $key;
+           // echo $uid;
+            $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND user_uid = '$uid' AND set_id = '$set_id'";
+            $res = mysqli_query($conn, $sql);
+            $num = mysqli_num_rows($res);
+            echo $num;
+            if($num > 0){
+              //  echo $key;
+                $sql = "SELECT * FROM sets_cards WHERE card_id = '$key'";
+                $res = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($res);
+                $cardname = $row['card_name'];
+                
+                $cardnamelist[] = $cardname;
+                $cardidlist[] = $key;
+            }
+        }
+        $freecardname = implode(",",$cardnamelist);
+        $freecardid = implode(",",$cardidlist);
+        
+       //get rating from database
+    $sql = "SELECT * FROM rating WHERE user_uid = '$uid'";
+    $res = mysqli_query($conn, $sql);
+    $rate = mysqli_fetch_array($res);
+    $good = $rate['good'];
+    $normal = $rate['normal'];
+    $bad = $rate['bad'];
     
-    else{
-    if($value == 4){
-    $sql = "INSERT INTO charity_card (card_id, set_id, user_uid,card_status) VALUES ('$key','$set_id', '$user_uid','$value')";
-    mysqli_query($conn, $sql);
+    //get last login time from database
+    $sql = "SELECT * FROM users WHERE user_uid = '$uid'";
+    $res = mysqli_query($conn, $sql);
+    $rate = mysqli_fetch_array($res);
+    $lastlogin = $rate['lastlogin_time'];
     
-   
-      }
+    $provider[] = array('name'=>$uid,'cardid'=>$freecardid, 'cardname'=>$freecardname, 
+        'good'=>$good, 'normal' =>$normal,'bad'=>$bad, 'lastlogin'=>$lastlogin);
     }
-   }
+     return $provider;
+    
 }
+//}
 function charityManagement2($charity= array(), $user_uid='', $set_id =''){
   global $conn;
   $sql = "DELETE FROM charity_card WHERE user_uid = '$user_uid' AND set_id = '$set_id'";
@@ -112,7 +143,7 @@ function rejectcharity($card_id,$provider_uid,$reciver_uid){
     
 }
 
-$charity = array('a001'=>1,'a002'=>0,'a003'=>1);
-$user_uid = 'amy';
-$set_id = 'a';
-charitymanagement($charity,$user_uid, $set_id);
+//$charity = array('a001'=>1,'a002'=>0,'a003'=>1);
+//$user_uid = 'amy';
+//$set_id = 'a';
+//charitymanagement($charity,$user_uid, $set_id);

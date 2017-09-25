@@ -15,8 +15,10 @@ if (!isset($_SESSION['u_id'])){
  
  $obj = $_POST['post_json'];
  var_dump($_POST);
- $charitylist =json_decode($obj,true);
-
- 
- charityManagement2($charitylist,$user_uid,$set_id);
+// $charitylist =json_decode($obj,true);
+$set_id = 1;
+$charitylist = array('1'=>4, '2'=>4,'4'=>4);
+  
+$finallist = askForCharity($charitylist,$set_id);
+echo json_encode($finallist); 
 
