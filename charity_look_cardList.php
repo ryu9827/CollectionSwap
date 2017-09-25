@@ -76,9 +76,9 @@
 
 </form>
 <div class="row">
-    <div class="col-xs-2 col-xs-offset-4">
-        <button class="btn btn-success btn-lg center-block" id="save" >Save</button>
-    </div>
+<!--    <div class="col-xs-2 col-xs-offset-4">-->
+<!--        <button class="btn btn-success btn-lg center-block" id="save" >Save</button>-->
+<!--    </div>-->
     <div class="col-xs-2">
         <button class="btn btn-warning btn-lg center-block" id="match">Start to match</button>
     </div>
@@ -131,15 +131,15 @@
             $("#match").click(function(){
                 var post_data=$("#post_form").serializeJson();//表单序列化
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open('POST','includes/askforCharity.php?set_id='+set_id,true);
+                xmlhttp.open('POST','charity_look_result.php?set_id='+set_id,true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
-                xmlhttp.onreadystatechange = function () {
-                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-                        alert('Successfully saved. Let\'s see who is offering!');
-                        window.location.href = 'charity_look_result.php?set_id='+set_id;
-                    }
-                }
+//                xmlhttp.onreadystatechange = function () {
+//                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+//                        alert('Successfully saved. Let\'s see who is offering!');
+//                        window.location.href = 'charity_look_result.php?set_id='+set_id;
+//                    }
+//                }
             });
         })
 

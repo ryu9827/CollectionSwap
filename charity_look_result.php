@@ -50,8 +50,10 @@ $(document).ready(function(){
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
   $.getJSON(url,dataSend,function(data){
-      console.log(data);
-      alert("no data");
+      if (jQuery.isEmptyObject(data)) {
+          console.log(data);
+          alert("no data");
+      }
   var html = '';
     $.each(data,function(i,item){      
       html = match(i,item);
