@@ -11,7 +11,20 @@
 		<h2>Messages</h2>
 	</div><br/>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-<script>  
+<script>
+//status = 0, accept or reject;
+    function accept() {
+        document.status_0.action="includes/accept.php";
+        document.status_0.submit();
+    }
+
+    function reject() {
+        document.status_0.action="includes/reject.php";
+        document.status_0.submit();
+    }
+
+</script>
+<script>
 $(function(){
 $(document).ready(function(){   
 //使用getJSON方法读取json数据,   
@@ -30,24 +43,25 @@ function message(item){
 	var html='';
 	switch(item.status){
 		case "0":
-		html += '<form action="" method="GET">'+
+		html += '<form action="" name="status_0" method="GET">'+
+                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-danger">'+
-				            '<div class="panel-heading">'+              
+				            '<div class="panel-heading">'+
 				                '<h3 class="panel-title">A New Request</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
-								'<p>'+item.name+' wants to make a swap with you.</p>'+ 
+								'<p>'+item.name+' wants to make a swap with you.</p>'+
 								'<p>Collection Name: '+item.set+'</p>'+
 								'<p>Giving Away: '+item.offer+'</p>'+
 								'<p>Receiving: '+item.get+'</p>'+
 				            '</div>'+
-				            '<div class="panel-footer">'+	
-									'<button type="button" class="btn btn-success" data-dismiss="modal">Accept</button>'+
-							        '<button type="button" class="btn btn-danger  pull-right">Reject</button>'+
-							'</div'+	
+				            '<div class="panel-footer">'+
+									'<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
+							        '<button type="button" class="btn btn-danger  pull-right" onclick="reject()">Reject</button>'+
+							'</div'+
 				        '</div>'+
 				    '</div>'+
 				'</div>'+
@@ -57,26 +71,28 @@ function message(item){
 		html += '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-default">'+
-				            '<div class="panel-heading">'+              
+				            '<div class="panel-heading">'+
 				                '<h3 class="panel-title">Request’s Sent</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
-								'<p>Your swap request has been sent to '+item.name+'. Please wait for the response. </p>'+ 
+								'<p>Your swap request has been sent to '+item.name+'. Please wait for the response. </p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer+'</p>'+
 								'<p>Receiving: '+item.get+'</p>'+
-								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+	
+								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
 				'</div>'
-		break;		
+		break;
 		case "3":
-		html += '<div class="row">'+
+		html += '<form action="includes/swapping.php" name="status_3" method="GET">'+
+                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
+                '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-primary">'+
-				            '<div class="panel-heading">'+             
+				            '<div class="panel-heading">'+
 				                '<h3 class="panel-title">Swapping</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
@@ -86,15 +102,18 @@ function message(item){
 								'<p>Giving Away: '+item.offer+'</p>'+
 								'<p>Receiving: '+item.get+'</p>'+
 				            '</div>'+
-				            '<div class="panel-footer">'+	
-								'<button type="button" class="btn btn-success" data-dismiss="modal">Done</button>'+    
-							'</div'+	
+				            '<div class="panel-footer">'+
+								'<button type="submit" class="btn btn-success" data-dismiss="modal">Done</button>'+
+							'</div'+
 				        '</div>'+
 				    '</div>'+
-				'</div>'
+				'</div>'+
+                '</form>'
 		break;
 		case "4":
-		html += '<div class="row">'+
+		html += '<form action="includes/rate.php" name="status_4" method="POST">'+
+                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
+                '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-success">'+
 				            '<div class="panel-heading">'+
@@ -110,21 +129,22 @@ function message(item){
 				            '<div class="panel-footer">'+
 				            	'<div class="btn-group" data-toggle="buttons">'+
 								  '<label class="btn btn-success active">'+
-								    '<img src="images/icons/happy_face1.gif"><input type="radio" name="options" id="option1" autocomplete="off" checked> Happy'+
+								    '<img src="images/icons/happy_face1.gif"><input type="radio" name="options" id="option1" autocomplete="off" value="1" checked> Happy'+
 								  '</label>'+
 								  '<label class="btn btn-info">'+
-								    '<img src="images/icons/neutral_face1.gif"><input type="radio" name="options" id="option2" autocomplete="off"> Neutral'+
+								    '<img src="images/icons/neutral_face1.gif"><input type="radio" name="options" id="option2" autocomplete="off" value="2"> Neutral'+
 								  '</label>'+
 								  '<label class="btn btn-danger">'+
-								    '<img src="images/icons/sad_face1.gif"><input type="radio" name="options" id="option3" autocomplete="off"> Angry'+
+								    '<img src="images/icons/sad_face1.gif"><input type="radio" name="options" id="option3" autocomplete="off" value="3"> Angry'+
 								  '</label>'+
 								'</div>'+
-								'<button type="button" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
+								'<button type="submit" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
 				                '<p>*It cannot be modified after submission*</p>'+
                             '</div>'+
 				        '</div>'+
 				    '</div>'+
-				'</div>'
+				'</div>'+
+                '</form>'
 		break;
 	}
 	return html;

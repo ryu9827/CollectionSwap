@@ -1,10 +1,17 @@
 <?php
 	include_once 'includes/header.php';
-
+    include_once 'includes/charity.php';
 	if (!isset($_SESSION['u_id'])){
 		header("location:login.php");
-	$set_id=$_GET['set_id'];
-	}
+
+	};
+$set_id = $_POST['set_id'];
+var_dump($set_id);
+$obj = $_POST['card_id'];
+var_dump($obj);
+
+$finallist = askForCharity($obj,$set_id);
+//var_dump($finallist);
 ?>
 
 <!-- 二级导航 -->
@@ -24,11 +31,6 @@ function GetQueryString(name){
 var set_id = GetQueryString("set_id");
 
 function sendRequest(name,offer,miss,set_id){
-//   alert(name);
-//   alert(offer);
-//   alert(miss);
-//   alert(set_id);
-  // alert();
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
@@ -36,98 +38,118 @@ function sendRequest(name,offer,miss,set_id){
 };
 </script>
 
-<script>
-$(function(){  
-$(document).ready(function(){
-    debugger;
-
-    var set_id=GetQueryString("set_id");
-    console.log(set_id);
-  var url = "includes/askforCharity.php";
-  var dataSend = {"act":"getJSON",
-                  "set_id":set_id
-                  };
-//使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
-//注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-  $.getJSON(url,dataSend,function(data){
-      if (jQuery.isEmptyObject(data)) {
-          console.log(data);
-          alert("no data");
-      }
-  var html = '';
-    $.each(data,function(i,item){      
-      html = match(i,item);
-      $('#carousel-inner').after(html); 
-      });
-    //after方法:在每个匹配的元素之后插入内容。
-    });  
-  }); 
-});  
-function match(i,item){
-  this.item = item; 
-  var html='';
-  switch(i){
-    case 0:
-    var name = jQuery.parseJSON(JSON.stringify(item.name));
-    var offer = jQuery.parseJSON(JSON.stringify(item.offer));
-    var miss = jQuery.parseJSON(JSON.stringify(item.miss));
-    html += '<div class="item active">'+
-            '<div class="col-xs-6 col-xs-offset-3">'+
-              '<div class="panel panel-primary">'+
-                '<div class="panel-heading">'+
-                  '<h3 class="panel-title">Best Match</h3>'+
-                '</div>'+
-                '<div class="panel-body">'+
-                  '<p>User Name: '+item.name+'</p>'+
-                  '<p>Set Name: '+item.setname+'</p>'+
-                  '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Demand：'+item.missname+'</p>'+
-                  '<p>Last Login: '+item.lastlogin+'</p>'+
-                  '<p>Rating：</p>'+
-                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
-                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
-                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
-                '</div>'+
-                '<div class="panel-footer">'+
-                // Button trigger modal                
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
-                '</div>'+
-              '</div>'+
-            '</div>'+
-          '</div>'
-    break;
-    default:
-//    var name = jQuery.parseJSON(JSON.stringify(item.name));
-      html += '<div class="item">'+
-              '<div class="col-xs-6 col-xs-offset-3">'+
-              '<div class="panel panel-info">'+
-                '<div class="panel-heading">'+
-                  '<h3 class="panel-title">&nbsp</h3>'+
-                '</div>'+
-                '<div class="panel-body">'+
-                  '<p>User Name: '+item.name+'</p>'+
-                  '<p>Set Name: '+item.setname+'</p>'+
-                  '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Need：'+item.missname+'</p>'+
-                  '<p>Last Login: '+item.lastlogin+'</p>'+
-                  '<p>Rating：</p>'+
-                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
-                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
-                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
-                '</div>'+
-                '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+
-                '</div>'+
-              '</div>'+
-            '</div>'+
-          '</div>'
-    break;    
-  }
-  return html;
-}
-//注:可以是item.address,也可以是item['address'] 
-//firefox报 json文件中 “语法错误 [”,单能加载数据 //ie chrome 无法加载数据 
-</script> 
+<!--<script>-->
+<!--$(function(){-->
+<!--$(document).ready(function(){-->
+<!--    var set_id=GetQueryString("set_id");-->
+<!--    console.log(set_id);-->
+<!--    var getJSON = function(url) {-->
+<!--        return new Promise(function(resolve, reject) {-->
+<!--            var xhr = new XMLHttpRequest();-->
+<!--            xhr.open('POST', url, true);-->
+<!--            xhr.responseType = 'json';-->
+<!--            xhr.onload = function() {-->
+<!--                var status = xhr.status;-->
+<!--                if (status == 200) {-->
+<!--                    resolve(xhr.response);-->
+<!--                } else {-->
+<!--                    reject(status);-->
+<!--                }-->
+<!--            };-->
+<!--            xhr.send();-->
+<!--        });-->
+<!--    };-->
+<!--//    getJSON('charity_look_cardList.php').then(function(data) {-->
+<!--//        alert('Your Json result is:  ' + data); //you can comment this, i used it to debug-->
+<!--//    });-->
+<!---->
+<!---->
+<!---->
+<!--//  var url = "includes/askforCharity.php";-->
+<!--//  var dataSend = {"act":"getJSON",-->
+<!--//                  "set_id":set_id-->
+<!--//                  };-->
+<!--//使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  -->
+<!--//注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   -->
+<!--//  $.getJSON(url,dataSend,function(data){-->
+<!--//      if (jQuery.isEmptyObject(data)) {-->
+<!--//          console.log(data);-->
+<!--//          alert("no data");-->
+<!--//      }-->
+<!--//  var html = '';-->
+<!--//    $.each(data,function(i,item){-->
+<!--//      html = match(i,item);-->
+<!--//      $('#carousel-inner').after(html);-->
+<!--//      });-->
+<!--//    //after方法:在每个匹配的元素之后插入内容。-->
+<!--//    });-->
+<!--  }); -->
+<!--});  -->
+<!--function match(i,item){-->
+<!--  this.item = item; -->
+<!--  var html='';-->
+<!--  switch(i){-->
+<!--    case 0:-->
+<!--    var name = jQuery.parseJSON(JSON.stringify(item.name));-->
+<!--    var offer = jQuery.parseJSON(JSON.stringify(item.offer));-->
+<!--    var miss = jQuery.parseJSON(JSON.stringify(item.miss));-->
+<!--    html += '<div class="item active">'+-->
+<!--            '<div class="col-xs-6 col-xs-offset-3">'+-->
+<!--              '<div class="panel panel-primary">'+-->
+<!--                '<div class="panel-heading">'+-->
+<!--                  '<h3 class="panel-title">Best Match</h3>'+-->
+<!--                '</div>'+-->
+<!--                '<div class="panel-body">'+-->
+<!--                  '<p>User Name: '+item.name+'</p>'+-->
+<!--                  '<p>Set Name: '+item.setname+'</p>'+-->
+<!--                  '<p>Offer：'+item.offername+'</p>'+-->
+<!--                  '<p>Demand：'+item.missname+'</p>'+-->
+<!--                  '<p>Last Login: '+item.lastlogin+'</p>'+-->
+<!--                  '<p>Rating：</p>'+-->
+<!--                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+-->
+<!--                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+-->
+<!--                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+-->
+<!--                '</div>'+-->
+<!--                '<div class="panel-footer">'+-->
+<!--                // Button trigger modal                -->
+<!--                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+-->
+<!--                '</div>'+-->
+<!--              '</div>'+-->
+<!--            '</div>'+-->
+<!--          '</div>'-->
+<!--    break;-->
+<!--    default:-->
+<!--//    var name = jQuery.parseJSON(JSON.stringify(item.name));-->
+<!--      html += '<div class="item">'+-->
+<!--              '<div class="col-xs-6 col-xs-offset-3">'+-->
+<!--              '<div class="panel panel-info">'+-->
+<!--                '<div class="panel-heading">'+-->
+<!--                  '<h3 class="panel-title">&nbsp</h3>'+-->
+<!--                '</div>'+-->
+<!--                '<div class="panel-body">'+-->
+<!--                  '<p>User Name: '+item.name+'</p>'+-->
+<!--                  '<p>Set Name: '+item.setname+'</p>'+-->
+<!--                  '<p>Offer：'+item.offername+'</p>'+-->
+<!--                  '<p>Need：'+item.missname+'</p>'+-->
+<!--                  '<p>Last Login: '+item.lastlogin+'</p>'+-->
+<!--                  '<p>Rating：</p>'+-->
+<!--                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+-->
+<!--                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+-->
+<!--                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+-->
+<!--                '</div>'+-->
+<!--                '<div class="panel-footer">'+-->
+<!--                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\')">Send Request</button>'+-->
+<!--                '</div>'+-->
+<!--              '</div>'+-->
+<!--            '</div>'+-->
+<!--          '</div>'-->
+<!--    break;    -->
+<!--  }-->
+<!--  return html;-->
+<!--}-->
+<!--//注:可以是item.address,也可以是item['address'] -->
+<!--//firefox报 json文件中 “语法错误 [”,单能加载数据 //ie chrome 无法加载数据 -->
+<!--</script> -->
 
 <div class="row">
 <div class="col-xs-8 col-xs-offset-2">

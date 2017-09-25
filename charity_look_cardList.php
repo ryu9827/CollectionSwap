@@ -4,6 +4,7 @@
 	if (!isset($_SESSION['u_uid'])){
 		header("location:login.php");
 	}
+    $set_id=$_GET['set_id'];
 ?>
 
 
@@ -30,11 +31,12 @@
 
 <!-- Start to output the form -->
 <table class="text-center vertical-center">
-<form id="post_form" action="testReceive.php">
+<form id="post_form" action="charity_look_result.php" method="POST">
+    <input type="hidden" name="set_id" value="<?php echo $set_id; ?>">
 <?php
 	include_once 'includes/dbh.inc.php';
 	$u_uid = $_SESSION['u_uid'];
-	$set_id=$_GET['set_id'];
+
       
 	//define status parameter
 	$charitable = 4;
@@ -65,7 +67,7 @@
                     <td>
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->                        
                     </td>
-                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="'.$rows[2].'" '.$isChecked.' value="4">Wanted</td>                    
+                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="card_id['.$rows[2].']" '.$isChecked.' value="4">Wanted</td>                    
                 </tr>
 			';
 	}
@@ -73,16 +75,11 @@
 </table>
 
 <div style="height: 100px; visibility:hidden;"></div>
-
+<button class="btn btn-warning btn-lg center-block" type="submit" id="match">Start to match</button>
 </form>
-<div class="row">
-<!--    <div class="col-xs-2 col-xs-offset-4">-->
-<!--        <button class="btn btn-success btn-lg center-block" id="save" >Save</button>-->
-<!--    </div>-->
-    <div class="col-xs-2">
-        <button class="btn btn-warning btn-lg center-block" id="match">Start to match</button>
-    </div>
-</div>
+
+
+
 
     <script type="text/javascript">
         function GetQueryString(name){
@@ -134,6 +131,7 @@
                 xmlhttp.open('POST','charity_look_result.php?set_id='+set_id,true);
                 xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
                 xmlhttp.send('post_json='+JSON.stringify(post_data));
+                window.location.href = 'charity_look_result.php?set_id='+set_id;
 //                xmlhttp.onreadystatechange = function () {
 //                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
 //                        alert('Successfully saved. Let\'s see who is offering!');
