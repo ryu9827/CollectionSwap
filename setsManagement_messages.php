@@ -14,12 +14,12 @@
 <script>
 //status = 0, accept or reject;
     function accept() {
-        document.status_0.action="includes/accept.php";
+        document.status_0.action="includes/message_acceptswap.php";
         document.status_0.submit();
     }
 
     function reject() {
-        document.status_0.action="includes/reject.php";
+        document.status_0.action="includes/message_rejectswap.php";
         document.status_0.submit();
     }
 

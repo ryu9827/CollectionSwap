@@ -43,10 +43,10 @@ $uid = $_SESSION['u_id'];
      
     }
     
-    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$msg_id,$token){
+    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$token){
         global $conn;
         $time = date('d/m/Y H:i:s');
-        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,msg_id,token) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$msg_id','$token')";
+        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,token) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$token')";
         mysqli_query($conn, $sql);
         echo mysqli_error($conn);
     }
@@ -90,7 +90,7 @@ $uid = $_SESSION['u_id'];
     
 
   //create new message for both user and reciver
-   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1,$token);
-   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, 1,$token);
+   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, $token);
+   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, $token);
 
 

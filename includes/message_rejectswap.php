@@ -32,15 +32,16 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $token = $row['token'];
  $ruid = $row['swap_uid'];
+ $set_id = $row['set_id'];
  
  $sql = "UPDATE messages SET status = '2' WHERE token = '$token' AND user_uid = '$ruid'";
  $offerlist2 = explode(",",$row['offer_id']);
  $misslist2 = explode(",",$row['miss_id']);
  
- swapreject($offerlist2, $user_uid, 1);
- swapreject($misslist2, $user_uid, 2);
- swapreject($misslist2, $ruid, 1);
- swapreject($offerlist2, $ruid, 2);
+ swapreject($offerlist2, $user_uid, 1, $set_id);
+ swapreject($misslist2, $user_uid, 2,$set_id);
+ swapreject($misslist2, $ruid, 1,$set_id);
+ swapreject($offerlist2, $ruid, 2,$set_id);
  
  
  $email = getemail($ruid);
