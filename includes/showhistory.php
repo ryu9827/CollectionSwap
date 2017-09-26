@@ -11,7 +11,7 @@ if (!isset($_SESSION['u_id'])){
 
 global $conn;   
 
-$user_uid = $_SESSION['u_id'];
+$user_uid = $_SESSION['u_uid'];
 $msglist = array();
 //$user_uid = 'amy';
 $sql = "SELECT * FROM messages WHERE user_uid = '$user_uid' AND status IN（'2','3','6'） ORDER BY time";
