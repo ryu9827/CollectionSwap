@@ -14,7 +14,7 @@
   <div class="row">
       <div class="col-xs-3" style="float:none;margin: 0 auto;">      
         <a href="charity_offer_select.php" class="thumbnail">
-          <img src="images/Donate Box.jpg" class="img-responsive" alt="Offer Charity">
+          <img src="images/donate.jpeg" class="img-responsive" alt="Offer Charity">
         </a>  
       </div>
   </div>
@@ -25,7 +25,7 @@
   <div class="row">
       <div class="col-xs-3"  style="float:none;margin: 0 auto;">      
         <a href="charity_look_select.php" class="thumbnail">
-          <img src="images/Apply.JPG" class="img-responsive" alt="Look For Charity">
+          <img src="images/makeWish.jpeg" class="img-responsive" alt="Look For Charity">
         </a>  
       </div>
   </div>

@@ -29,7 +29,7 @@ $(function(){
 $(document).ready(function(){   
 //使用getJSON方法读取json数据,   
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-	$.getJSON('json.php',function(data){
+	$.getJSON('includes/showmessage.php',function(data){
 	var html = '';
 		$.each(data,function(i,item){      
 			html = message(item);
@@ -43,8 +43,8 @@ function message(item){
 	var html='';
 	switch(item.status){
 		case "0":
-		html += '<form action="" name="status_0" method="GET">'+
-                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
+		html += '<form action="" name="status_0" method="POST">'+
+                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-danger">'+
@@ -53,10 +53,10 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
-								'<p>'+item.name+' wants to make a swap with you.</p>'+
+								'<p>'+item.swap_uid+' wants to make a swap with you.</p>'+
 								'<p>Collection Name: '+item.set+'</p>'+
-								'<p>Giving Away: '+item.offer+'</p>'+
-								'<p>Receiving: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer_id+'</p>'+
+								'<p>Receiving: '+item.get_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 									'<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
@@ -76,11 +76,11 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Time: '+item.time+'</p>'+
-								'<p>Your swap request has been sent to '+item.name+'. Please wait for the response. </p>'+
+								'<p>Your swap request has been sent to '+item.swap_uid+'. Please wait for the response. </p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>Giving Away: '+item.offer+'</p>'+
-								'<p>Receiving: '+item.get+'</p>'+
-								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 58 mins 32 seconds.</p>'+
+								'<p>Giving Away: '+item.offer_id+'</p>'+
+								'<p>Receiving: '+item.get_id+'</p>'+
+								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 59 mins.</p>'+
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
@@ -88,7 +88,7 @@ function message(item){
 		break;
 		case "3":
 		html += '<form action="includes/swapping.php" name="status_3" method="GET">'+
-                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
+                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-primary">'+
@@ -96,15 +96,15 @@ function message(item){
 				                '<h3 class="panel-title">Swapping</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
-					            '<p>You are swapping collectables with '+item.name+'.</p>'+
+					            '<p>You are swapping collectables with '+item.swap_uid+'.</p>'+
 								'<p>Collector\'s Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>Giving Away: '+item.offer+'</p>'+
-								'<p>Receiving: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer_id+'</p>'+
+								'<p>Receiving: '+item.get_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
-								'<button type="submit" class="btn btn-success" data-dismiss="modal">Done</button>'+
-							'</div'+
+								'<button type="submit" class="btn btn-success" data-dismiss="modal" >Done</button>'+
+							'</div>'+
 				        '</div>'+
 				    '</div>'+
 				'</div>'+
@@ -112,7 +112,7 @@ function message(item){
 		break;
 		case "4":
 		html += '<form action="includes/rate.php" name="status_4" method="POST">'+
-                '<input type="hidden" name="message_id" value="'+item.message_id+'">'+
+                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-success">'+
@@ -121,10 +121,10 @@ function message(item){
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>Congratulation! This swap process has been successfully completed!</p>'+
-								'<p>Collector: '+item.name+'. Email: '+item.email+'</p>'+
+								'<p>Collector: '+item.swap_uid+'. Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>Giving Away: '+item.offer+'</p>'+
-								'<p>Receiving: '+item.get+'</p>'+
+								'<p>Giving Away: '+item.offer_id+'</p>'+
+								'<p>Receiving: '+item.get_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 				            	'<div class="btn-group" data-toggle="buttons">'+
