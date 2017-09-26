@@ -10,6 +10,7 @@ if (!isset($_SESSION['u_id'])){
      header("location:../login.php");
 
 	}
+date_default_timezone_set('NZ');
 
 //      $reciver_uid = 'Bruce';
 //     $set_id = '1';
@@ -42,10 +43,10 @@ $uid = $_SESSION['u_id'];
      
     }
     
-    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$msg_id){
+    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$msg_id,$token){
         global $conn;
         $time = date('d/m/Y H:i:s');
-        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,msg_id) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$msg_id')";
+        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,msg_id,token) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$msg_id','$token')";
         mysqli_query($conn, $sql);
         echo mysqli_error($conn);
     }
@@ -83,9 +84,13 @@ $uid = $_SESSION['u_id'];
     
    $sql = "UPDATE user_sets SET islocked = '1' WHERE user_id = '$uid'";
    mysqli_query($conn, $sql);
+   
+   $reqtime = time(); 
+   $token = md5($user_uid.$reciver_uid.$reqtime); 
+    
 
   //create new message for both user and reciver
-   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1);
-   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, 1);
+   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, 1,$token);
+   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, 1,$token);
 
 

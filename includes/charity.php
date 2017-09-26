@@ -16,9 +16,9 @@ function charitylist($user_uid){
     return $charitycard;
 }
 
-function askForCharity($charity, $set_id = ''){
+function askForCharity($charity = array(), $set_id = ''){
     global $conn;
-   
+    $provider = array();
     $list = array();
     foreach ($charity as $key => $value){
         $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND set_id = '$set_id'";
@@ -33,6 +33,9 @@ function askForCharity($charity, $set_id = ''){
         }
   
     }
+    $lnum = sizeof($list);
+    if($num > 0){
+    
     foreach($list as $uid){
          $cardidlist = array();
          $cardnamelist = array();
@@ -42,7 +45,7 @@ function askForCharity($charity, $set_id = ''){
             $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND user_uid = '$uid' AND set_id = '$set_id'";
             $res = mysqli_query($conn, $sql);
             $num = mysqli_num_rows($res);
-            echo $num;
+           // echo $num;
             if($num > 0){
               //  echo $key;
                 $sql = "SELECT * FROM sets_cards WHERE card_id = '$key'";
@@ -71,12 +74,12 @@ function askForCharity($charity, $set_id = ''){
     $res = mysqli_query($conn, $sql);
     $rate = mysqli_fetch_array($res);
     $lastlogin = $rate['lastlogin_time'];
-    $provider = array();
+    
     
     $provider[] = array('name'=>$uid,'cardid'=>$freecardid, 'cardname'=>$freecardname, 
         'good'=>$good, 'normal' =>$normal,'bad'=>$bad, 'lastlogin'=>$lastlogin, 'point'=>$point);
     }
-    foreach ($provider as $key => $row) {
+    foreach ($provider as $key2 => $row2) {
       
       $test[$key] = $row['point'];
    
@@ -85,6 +88,9 @@ function askForCharity($charity, $set_id = ''){
      
      return $provider;
     
+  }
+  else return $provider;
+  
 }
 //}
 function charityManagement2($charity= array(), $user_uid='', $set_id =''){

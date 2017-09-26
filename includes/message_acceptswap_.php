@@ -11,7 +11,8 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_uid'];       
+ $user_uid = $_SESSION['u_uid'];   
+ $msg_id = $_POST['message_id'];
 
  function getaddress($uname){
  $sql = "SELECT * FROM users WHERE user_uid = '$uname";
@@ -20,11 +21,18 @@ if (!isset($_SESSION['u_id'])){
  $address = $row['address'];
  return $address;
  }
+
+ 
+ $sql = "SELECT * FROM messages WHERE id = '$msg_id'";
+ $res = mysqli_query($conn, $sql);
+ $row = mysqli_fetch_assoc($res);
+ $token = $row['token'];
+ $ruid = $row['swap_uid'];
  
  $address = getaddress($user_uid);
  $raddress = getaddress($ruid);
  
- $sql = "UPDATE messages SET status = '4' WHERE id = '$msg_id'";
+ $sql = "UPDATE messages SET status = '4' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
  $email = getemail($ruid);
@@ -42,3 +50,5 @@ if (!isset($_SESSION['u_id'])){
          .$set_name."<br/>Offer: ".$offername."<br/>Demand: ".$missname."<br/>Applicant Username or Acceptant Username: ".$ruid.
          "<br/>Offer: ".$remails."<br/>Shipping details:<br/>Delivery address:  ".$raddress."<br/>";
  $mail->sendEmail($email,$subject,$body);
+
+ header('location:../setsManagement_messages.php');

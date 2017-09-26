@@ -11,10 +11,9 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_uid'];       
- 
- $sql = "UPDATE messages SET status = '3' WHERE id = '$msg_id'";
- mysqli_query($conn, $sql);
+ $user_uid = $_SESSION['u_uid'];   
+  $msg_id = $_POST['message_id'];
+
  
  function swapreject($list = array(), $userid, $newstatus, $set_id){
      
@@ -24,10 +23,17 @@ if (!isset($_SESSION['u_id'])){
    }
   
  }
+  
+ $sql = "UPDATE messages SET status = '3' WHERE id = '$msg_id'";
+ mysqli_query($conn, $sql);
  
  $sql = "SELECT * FROM messages WHERE id = '$msg_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
+ $token = $row['token'];
+ $ruid = $row['swap_uid'];
+ 
+ $sql = "UPDATE messages SET status = '2' WHERE token = '$token' AND user_uid = '$ruid'";
  $offerlist2 = explode(",",$row['offer_id']);
  $misslist2 = explode(",",$row['miss_id']);
  
@@ -46,4 +52,4 @@ if (!isset($_SESSION['u_id'])){
        
  $mail->sendEmail($email,$subject,$body);
  
-
+ header('location:../setsManagement_messages.php');
