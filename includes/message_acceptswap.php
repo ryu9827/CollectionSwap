@@ -15,7 +15,7 @@ if (!isset($_SESSION['u_id'])){
  $msg_id = $_POST['message_id'];
 
  function getaddress($uname){
- $sql = "SELECT * FROM users WHERE user_uid = '$uname";
+ $sql = "SELECT * FROM users WHERE user_uid = '$uname'";
  $res = mysqli_query($conn, $sql); 
  $row = mysqli_fetch_assoc($res);
  $address = $row['address'];

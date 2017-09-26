@@ -16,7 +16,7 @@ $(function(){
 $(document).ready(function(){   
 //使用getJSON方法读取json数据,   
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-	$.getJSON('json.php',function(data){
+	$.getJSON('includes/showhistory.php',function(data){
 	var html = '';
 		$.each(data,function(i,item){      
 			html = message(item);
@@ -33,14 +33,12 @@ function message(item){
 			html += '<div class="row">'+
 						'<div class="col-xs-6 col-xs-offset-3">'+
 					    	'<div class="panel panel-warning">'+
-					            '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.message_id+'" aria-expanded="false" aria-controls="'+item.message_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
-					                '<h3 class="panel-title">Request’s Rejected by '+item.name+' ('+item.time+')</h3>'+
+					            '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+					                '<h3 class="panel-title">Request’s Rejected by '+item.swap_uid+' ('+item.time+')</h3>'+
 					            '</div>'+
-					            '<div class="collapse" id="'+item.message_id+'">'+
+					            '<div class="collapse" id="'+item.msg_id+'">'+
 					            '<div class="panel-body">'+									
 									'<p>Collection Name: '+item.set_name+'</p>'+
-//									'<p>What you will offer: '+item.offer+'</p>'+
-//									'<p>What you will get: '+item.get+'</p>'+
 									'<p>You can exchange your cards with other users.</p>'+
 					            '</div>'+
 					        '</div>'+
@@ -48,27 +46,26 @@ function message(item){
 					'</div>'+
 				'</div>'
 		break;	
-		case "5":
-		html += '<div class="row">'+
-					'<div class="col-xs-6 col-xs-offset-3">'+
-						'<div class="panel panel-success">'+
-							'<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.message_id+'" aria-expanded="false" aria-controls="'+item.message_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
-								'<h3 class="panel-title">Swap completed with '+item.name+' ('+item.time+')</h3>'+
-							'</div>'+
-							'<div class="collapse" id="'+item.message_id+'">'+
-								'<div class="panel-body">'+
-								    '<p>This swap is completed.</p>'+
-									'<p>Collector\'s Email: '+item.email+'</p>'+
-									'<p>Collection Name: '+item.set_name+'</p>'+
-//									'<p>What you offered: '+item.offer+'</p>'+
-//									'<p>What you got: '+item.get+'</p>'+
-								'</div>'+
-							'</div>'+
-						'</div>'+
-					'</div>'+
-				'</div>'
+		case "6":
+            html += '<div class="row">'+
+                        '<div class="col-xs-6 col-xs-offset-3">'+
+                            '<div class="panel panel-success">'+
+                                '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+                                    '<h3 class="panel-title">Swap completed with '+item.swap_uid+' ('+item.time+')</h3>'+
+                                '</div>'+
+                                '<div class="collapse" id="'+item.msg_id+'">'+
+                                '<div class="panel-body">'+
+//                                    '<p>This swap is completed.</p>'+
+                                    '<p>Collector\'s Email: '+item.email+'</p>'+
+                                    '<p>Collection Name: '+item.set_name+'</p>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'
 		break;
-		default:		
+		default:
+		    html='<p>No history data available.</p>'
 		break;
 	}
 	return html;

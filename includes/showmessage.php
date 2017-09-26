@@ -22,7 +22,7 @@ if($num > 0){
 while($row = mysqli_fetch_assoc($res)){
     
     $msg = array('swap_uid' => $row['swap_uid'],'email' => $row['swap_email'],'status' => $row['status'],'time' => $row['time'],
-                'set_id' => $row['set_id'],'offer_id' => $row['offer_id'],'msg_id' => $row['id']
+                'set_id' => $row['set_id'],'offer_id' => $row['offer_id'], 'get_id' =>$row['get_id'], 'msg_id' => $row['id']
                );
     $msglist[] = $msg;
 }
