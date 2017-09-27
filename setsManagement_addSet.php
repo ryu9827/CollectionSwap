@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Add Sets</h2>
+		<h2>Add New Collection</h2>
 	</div><br/>
 
 	<div class="col-xs-12">

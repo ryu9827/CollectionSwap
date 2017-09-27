@@ -21,11 +21,12 @@ session_start();
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/moment.js"></script>
 </head>
 
 <body data-spy="scroll">
 <header id="PageHeader1" style="position:fixed;text-align:center;left:0;top:0;right:0;height:100px;z-index:7777;">
-<div id="PageHeader1_Container" style="width:1200px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="PageHeader1_Container" style="width:1400px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
 <div id="wb_MaterialIcon15" style="position:absolute;left:0px;top:10px;width:72px;height:72px;text-align:center;z-index:0;">
 <a href="#"><!--Icon link to add on the left-->
 <div id="MaterialIcon15"><i class="material-icons">&#xe41d;</i></div></a></div>
@@ -33,9 +34,10 @@ session_start();
 <h1 id="Heading2"><a href="index.php" style="color: #0AABE1">Collection Swap</a></h1></div>
 <div id="wb_Heading3" style="position:absolute;left:113px;top:53px;width:207px;height:22px;z-index:2;">
 <h6 id="Heading3">find your last missing</h6></div>
-<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:600px;height:49px;z-index:3;">
+<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:800px;height:49px;z-index:3;">
 	<ul>
-
+    <li id="about"><a class="norm" href="about.php" target="_self">About</a>
+    </li>
 	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
 	</li>
 	<li id="matchUp"><a class="norm" href="matchUp.php" target="_self">Match&nbsp;Up</a>
@@ -44,6 +46,8 @@ session_start();
 	</li>
 	<li id="search"><a class="norm" href="search.php" target="_self">Search</a>
 	</li>
+    <li id="contactUs"><a class="norm" href="contactUs.php" target="_self">Contact Us</a>
+    </li>
         <?php
         if(isset($_SESSION['u_uid'])) {
             $u_uid = $_SESSION['u_uid'];

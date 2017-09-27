@@ -45,14 +45,14 @@ $(function() {
 $.getJSON(url, dataSend, function (data) {
     if (jQuery.isEmptyObject(data)) {
     html = '<div style="text-align: center">' +
-           '<h3 class="center-block">Sorry, there is no user matching with you based on your condition.</h3><br/>'+
-           '<h3 style="text-align: center">You can go and check if there is any one wants to donate.</h3><br/>' +
+           '<h3 class="center-block">Sorry, no results were found!</h3><br/>'+
+           '<h3 style="text-align: center">Would you happy to donate your collectables into our charity functionality?</h3><br/>' +
            '</div>'+
            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>'+
            '<div style="text-align: center">' +
-           '<h3> Or you can turn back and select another set to match up.</h3><br/><br/>' +
+           '<h3> Or you can go back to the previous page and try again?</h3><br/><br/>' +
            '</div>'+
-           '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Turn Back</button>'
+           '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Previous Page</button>'
 
                 $('#noData').after(html);
 
@@ -88,7 +88,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
-                  '<p>Set Name: '+item.setname+'</p>'+
+                  '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer：'+item.offername+'</p>'+
                   '<p>Demand：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
@@ -99,7 +99,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-footer">'+
                 // Button trigger modal                
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+item.name+'\',\''+item.offer+'\',\''+item.miss+'\',\''+set_id+'\',\''+item.missname+'\',\''+item.offername+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+
@@ -115,7 +115,7 @@ function match(i,item){
                 '</div>'+
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
-                  '<p>Set Name: '+item.setname+'</p>'+
+                  '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer：'+item.offername+'</p>'+
                   '<p>Demand：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
@@ -125,7 +125,7 @@ function match(i,item){
                   '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
                 '</div>'+
                 '<div class="panel-footer">'+
-                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
+                  '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+item.name+'\',\''+item.offer+'\',\''+item.miss+'\',\''+set_id+'\',\''+item.missname+'\',\''+item.offername+'\')">Send Request</button>'+
                 '</div>'+
               '</div>'+
             '</div>'+

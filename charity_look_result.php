@@ -10,11 +10,11 @@ $set_id = $_POST['set_id'];
 $obj = $_POST['card_id'];
 //call method to search matching users
 $finallist = askForCharity($obj,$set_id);
+
 if(is_null($finallist)){
     echo "Sorry.No matching user.";
-}else{
-    var_dump($finallist);
 }
+var_dump($finallist);
 ?>
 
 <!-- 二级导航 -->
@@ -54,7 +54,7 @@ function sendRequest(name,offer,miss,set_id){
                 <div id="carousel-inner"><!--add carousel below-->
 
 <?php
-
+$name = $finallist[0]['name'];
 echo'<div class="item active">
     <div class="col-xs-6 col-xs-offset-3">
     <div class="panel panel-primary">
@@ -62,18 +62,18 @@ echo'<div class="item active">
     <h3 class="panel-title">Best Match</h3>
     </div>
     <div class="panel-body">
-    <p>User Name: '+item.name+'</p>
-    <p>Set Name: '+item.setname+'</p>
-    <p>Offer：'+item.offername+'</p>
-    <p>Demand：'+item.missname+'</p>
-    <p>Last Login: '.item.lastlogin.'</p>
+    <p>User Name: '.$name.'</p>
+    <p>Collection Name: '.$finallist['cardname'].'</p>
+    <p>Offer：'.$finallist['cardname'].'</p>
+    <p>Demand：'.$finallist['cardname'].'</p>
+    <p>Last Login: '.$finallist['lastlogin'].'</p>
     <p>Rating：</p>
-    <img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>
-    <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>
-    <img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>
+    <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$finallist['good'].'<br/><br/>
+    <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$finallist['normal'].'<br/><br/>
+    <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$finallist['bad'].'<br/>
     </div>
     <div class="panel-footer">
-    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\"".$name+"\",\""+offer+"\",\""+miss+"\",\""+set_id+"\",\""+missname+"\",\""+offername+"\")">Send Request</button>
+    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" >Send Request</button>
     </div>
     </div>
     </div>

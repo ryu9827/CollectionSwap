@@ -54,12 +54,19 @@
         ';
         $sql_miss = "select card_id, card_name from user_cards_status where set_id='$set_id' and user_uid='$u_uid' and card_status=2 ORDER by card_name";
         $result_miss = mysqli_query($conn, $sql_miss);
-        //      store missing cards in $ar
+
+        //      store missing cards in $ar_miss
         $ar_miss=array();
         while ($rows2=mysqli_fetch_row($result_miss)){
             $ar_miss[$rows2[0]]=$rows2[1];
         }
-		foreach ($ar_miss as $id =>$name){echo '<a href="setsManagement_cardList.php?set_id='.$rows[2].'#'.$id.'">'.$name.'</a>&nbsp&nbsp;&nbsp;';}
+        $num_miss = sizeof($ar_miss);
+        if ($num_miss>0){
+		foreach ($ar_miss as $id =>$name){echo '<a href="setsManagement_cardList.php?set_id='.$rows[2].'#'.$id.'">'.$name.'</a>&nbsp&nbsp;&nbsp;';}}
+		else {echo 'No missing card';}
+
+		//////////////////////////offering////////////////////////////
+        ///
         echo '        
             </div>
 		</div>
@@ -69,12 +76,16 @@
         ';
         $sql_extra = "select card_id, card_name from user_cards_status where set_id='$set_id' and user_uid='$u_uid' and card_status=1 ORDER by card_name";
         $result_extra = mysqli_query($conn, $sql_extra);
-        //      store missing cards in $ar
+
+        //      store missing cards in $ar_miss
         $ar_extra=array();
         while ($rows3=mysqli_fetch_row($result_extra)){
             $ar_extra[$rows3[0]]=$rows3[1];
         }
-        foreach ($ar_extra as $id =>$name){echo '<a href="setsManagement_cardList.php?set_id='.$rows[2].'#'.$id.'">'.$name.'</a>&nbsp&nbsp;&nbsp;';}
+        $num_extra = sizeof($ar_extra);
+        if ($num_extra>0){
+        foreach ($ar_extra as $id =>$name){echo '<a href="setsManagement_cardList.php?set_id='.$rows[2].'#'.$id.'">'.$name.'</a>&nbsp&nbsp;&nbsp;';}}
+        else {echo 'No extra card';}
 
         echo '                
             </div>

@@ -66,7 +66,7 @@ $row= mysqli_fetch_assoc($res);
 				        <div class="col-xs-6">
 							<input type="text" class="form-control" name="address" placeholder="Post Address" value="<?php echo $row['address']; ?>">
 						</div>
-						<button type="submit" class="btn btn-info" name="submit">Save</button>
+						<button type="submit" class="btn btn-info" name="submit">Update</button>
   					</div>
   				</div>
 			</form>
@@ -78,7 +78,7 @@ $row= mysqli_fetch_assoc($res);
                         <div class="col-xs-6">
                             <input type="text" class="form-control" name="postCode" placeholder="Post Code" value="<?php echo $row['user_postcode']; ?>">
                         </div>
-                        <button type="submit" class="btn btn-info" name="submit">Save</button>
+                        <button type="submit" class="btn btn-info" name="submit">Update</button>
                     </div>
                 </div>
             </form>

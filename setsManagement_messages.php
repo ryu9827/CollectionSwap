@@ -82,7 +82,9 @@ function message(item){
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
                                 '<p>Message ID: '+item.msg_id+'</p>'+
-								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 59 mins.</p>'+
+								'<p>The selected collectables have been temporary latched during the swap process!\n' +
+            'Please note that these collectables would be automatically un-latched if you don\'t receive any response from the other party after 7 days. </p>'+
+//                '<p>123123</p>'+
 				            '</div>'+
 				        '</div>'+
 				    '</div>'+
@@ -188,7 +190,7 @@ function message(item){
                 '<p>Collection Name: '+item.set_name+'</p>'+
                 '<p>Asking: '+item.offer_id+'</p>'+
                 '<p>Message ID: '+item.msg_id+'</p>'+
-                '<p>Your missing cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 59 mins.</p>'+
+                '<p>The selected collectables have been temporary latched during the swap process! Please note that these collectables would be automatically un-latched if you don\'t receive any response from the other party after 7 days.</p>'+
                 '</div>'+
                 '</div>'+
                 '</div>'+
