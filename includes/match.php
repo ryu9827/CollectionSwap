@@ -53,6 +53,7 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
   
   
  function usercard($user_uid,$card_status,$set_id){
+     global $conn; 
  $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$card_status' AND set_id = '$set_id' AND islocked = '0'";
  $res = mysqli_query($conn, $sql);
  while($row = mysqli_fetch_assoc($res)){
@@ -71,11 +72,37 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
    }
    
     function getaddress($uname){
- $sql = "SELECT * FROM users WHERE user_uid = '$uname'";
- $res = mysqli_query($conn, $sql); 
- $row = mysqli_fetch_assoc($res);
- $address = $row['address'];
- return $address;
+        global $conn;  
+        $sql = "SELECT * FROM users WHERE user_uid = '$uname'";
+        $res = mysqli_query($conn, $sql); 
+        $row = mysqli_fetch_assoc($res);
+        $address = $row['address'];
+        return $address;
+ }
+ 
+ function getcardname($cardlist){
+      global $conn;  
+      $namelist = array();
+      foreach($offerlist as $value){
+          $sql = "SELECT * FROM sets_cards WHERE card_id = '$value' AND set_id = '$set_id'";
+          $res = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($res);
+          $namelist[]= $row['card_name'];
+          return $namelist;
+       // $offernamelist[] = getCardname($value, $set_id);
+         
+    }
+    
+ }
+ 
+ function getsetname($set_id){
+     global $conn; 
+     $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
+     $res = mysqli_query($conn, $sql);
+     $row = mysqli_fetch_assoc($res);
+     $set_name = $row['set_name'];
+     return $set_name;
+     
  }
  
 

@@ -24,6 +24,13 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $token = $row['token'];
  $ruid = $row['swap_uid'];
+ $offerlist2 = $row['offer_id'];
+ $getlist = $row['get_id'];
+ $set_id = $row['set_id'];
+ 
+ $offername = getcardname($offerlist2);
+ $missname = getcardname($getlist);
+ $set_name = getsetname($set_id);
  
  $address = getaddress($user_uid);
  $raddress = getaddress($ruid);

@@ -37,7 +37,9 @@ $msg_id = $_POST['message_id'];
  $token = $row['token'];
  $ruid = $row['swap_uid'];
  $set_id = $row['set_id'];
- echo $ruid;
+ 
+ $set_name = getsetname($set_id);
+ //echo $ruid;
  
  $sql = "UPDATE messages SET status = '2', time = '$newtime' WHERE token = '$token' AND user_uid = '$ruid'";
  mysqli_query($conn, $sql);
@@ -53,8 +55,8 @@ $msg_id = $_POST['message_id'];
  
  $mail = new sendemail();
  $subject = "Your swap request has been REJECTED!";
- $body = "Dear ".$ruid."：<br/>Unfortunately, your previous swap request has been rejected by".$ruid.
-         "We encourage you to try next match up that you are also interested.<br/>Good Luck!";
+ $body = "Dear ".$ruid."：<br/>Unfortunately, your previous swap request has been rejected by".$ruid."<br/>setname: ".$set_name.
+         "<br/>We encourage you to try next match up that you are also interested.<br/>Good Luck!";
        
  $mail->sendEmail($email,$subject,$body);
  
