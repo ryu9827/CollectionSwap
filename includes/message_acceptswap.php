@@ -2,7 +2,7 @@
 
 include_once 'match.php';
 include_once 'dbh.inc.php';
-include_once 'sendMatchRequest.php';
+include_once 'sendemail.inc.php';
 global $conn;
 ob_start(); 
 session_start();
@@ -20,7 +20,17 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $address = $row['address'];
  return $address;
+ 
  }
+ 
+    function getemail2($user_uid){ 
+       global $conn;  
+       $sql = "SELECT * FROM users WHERE user_uid = '$user_uid'";
+       $res = mysqli_query($conn, $sql);
+       $row = mysqli_fetch_assoc($res);
+       $email = $row['user_email'];
+       return $email;
+   }
 
  
  $sql = "SELECT * FROM messages WHERE id = '$msg_id'";
@@ -35,8 +45,8 @@ if (!isset($_SESSION['u_id'])){
  $sql = "UPDATE messages SET status = '4' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
- $email = getemail($ruid);
- $email = getemail($user_uid);
+ $email = getemail2($ruid);
+ $email = getemail2($user_uid);
  
  $mail = new sendemail();
  $subject = "Your swap request has been Accepted!";
