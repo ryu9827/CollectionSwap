@@ -57,6 +57,7 @@ function message(item){
 								'<p>Collection Name: '+item.set+'</p>'+
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
+                                '<p>Message ID: '+item.msg_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 									'<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
@@ -80,6 +81,7 @@ function message(item){
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
+                                '<p>Message ID: '+item.msg_id+'</p>'+
 								'<p>Your cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 59 mins.</p>'+
 				            '</div>'+
 				        '</div>'+
@@ -87,13 +89,13 @@ function message(item){
 				'</div>'
 		break;
 		case "4":
-		html += '<form action="includes/swapping.php" name="status_3" method="GET">'+
+		html += '<form action="includes/swapping.php" name="status_3" method="POST">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-primary">'+
 				            '<div class="panel-heading">'+
-				                '<h3 class="panel-title">Swapping <span class="danger">Charity</span> </h3>'+
+				                '<h3 class="panel-title">Swapping</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You are swapping collectables with '+item.swap_uid+'.</p>'+
@@ -101,6 +103,7 @@ function message(item){
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
+                                '<p>Message ID: '+item.msg_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 								'<button type="submit" class="btn btn-success" data-dismiss="modal" >Done</button>'+
@@ -125,6 +128,7 @@ function message(item){
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
+                                '<p>Message ID: '+item.msg_id+'</p>'+
 				            '</div>'+
 				            '<div class="panel-footer">'+
 				            	'<div class="btn-group" data-toggle="buttons">'+
@@ -153,14 +157,14 @@ function message(item){
                 '<div class="col-xs-6 col-xs-offset-3">'+
                 '<div class="panel panel-danger">'+
                 '<div class="panel-heading">'+
-                '<h3 class="panel-title">A New <span class="danger">Charity</span> Request</h3>'+
+                '<h3 class="panel-title">A New Charity Request</h3>'+
                 '</div>'+
                 '<div class="panel-body">'+
                 '<p>Time: '+item.time+'</p>'+
-                '<p>'+item.swap_uid+' wants to make a swap with you.</p>'+
+                '<p>'+item.swap_uid+' asks you for a charity.</p>'+
                 '<p>Collection Name: '+item.set+'</p>'+
                 '<p>Giving Away: '+item.offer_id+'</p>'+
-                '<p>Receiving: '+item.get_id+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
                 '</div>'+
                 '<div class="panel-footer">'+
                 '<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
@@ -170,6 +174,25 @@ function message(item){
                 '</div>'+
                 '</div>'+
                 '</form>'
+            break;
+        case "8":
+            html += '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-default">'+
+                '<div class="panel-heading">'+
+                '<h3 class="panel-title">Charity Request’s Sent</h3>'+
+                '</div>'+
+                '<div class="panel-body">'+
+                '<p>Time: '+item.time+'</p>'+
+                '<p>Your swap request has been sent to '+item.swap_uid+'. Please wait for the response. </p>'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Asking: '+item.offer_id+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '<p>Your missing cards have been locked temporarily until receive user\'s response. Or they will be unlocked if the user does not response in 6 days 23 hours 59 mins.</p>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
             break;
 	}
 	return html;

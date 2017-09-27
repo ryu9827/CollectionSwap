@@ -39,6 +39,7 @@ function message(item){
 					            '<div class="collapse" id="'+item.msg_id+'">'+
 					            '<div class="panel-body">'+									
 									'<p>Collection Name: '+item.set_name+'</p>'+
+                                    '<p>Message ID: '+item.msg_id+'</p>'+
 									'<p>You can exchange your cards with other users now.</p>'+
 					            '</div>'+
 					        '</div>'+
@@ -56,6 +57,7 @@ function message(item){
                 '<div class="collapse" id="'+item.msg_id+'">'+
                 '<div class="panel-body">'+
                 '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
                 '<p>You can exchange your cards with other users now.</p>'+
                 '</div>'+
                 '</div>'+
@@ -75,6 +77,7 @@ function message(item){
 //                                    '<p>This swap is completed.</p>'+
                                     '<p>Collector\'s Email: '+item.email+'</p>'+
                                     '<p>Collection Name: '+item.set_name+'</p>'+
+                                    '<p>Message ID: '+item.msg_id+'</p>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
