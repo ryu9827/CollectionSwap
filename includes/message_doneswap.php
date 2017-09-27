@@ -2,7 +2,7 @@
 
 include_once 'match.php';
 include_once 'dbh.inc.php';
-include_once 'sendMatchRequest.php';
+include_once 'match.php';
 
 global $conn;
 ob_start(); 
@@ -12,13 +12,17 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_uid'];   
- $msg_id = $_POST['message_id'];
+// $user_uid = $_SESSION['u_uid'];   
+// $msg_id = $_POST['message_id'];
+ $user_uid = 'amy';
+ $msg_id = '57';
  
   function swapdone($list = array(), $userid, $set_id){
+   global $conn;   
      
   foreach($list as $values){    
-     $sql = "DELECT FROM cards_status WHERE user_uid = '$userid' AND card_id = '$values' AND set_id = '$set_id'";
+    
+     $sql = "DELETE FROM cards_status WHERE user_uid = '$userid' AND card_id = '$values' AND set_id = '$set_id'";
      mysqli_query($conn, $sql);
    }
   
@@ -29,10 +33,10 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $token = $row['token'];
  $set_id = $row['set_id'];
- //$ruid = $row['swap_uid'];
+ $ruid = $row['swap_uid'];
  $offerlist2 = explode(",",$row['offer_id']);
  $misslist2 = explode(",",$row['miss_id']);
- 
+
  swapdone($offerlist2, $user_uid, $set_id);
  swapdone($misslist2, $user_uid, $set_id);
  swapdone($misslist2, $ruid, $set_id );
@@ -47,4 +51,4 @@ if (!isset($_SESSION['u_id'])){
 
 
  
- header('location:../setsManagement_messages.php'); 
+ //header('location:../setsManagement_messages.php'); 

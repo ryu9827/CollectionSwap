@@ -3,6 +3,7 @@
 include_once 'match.php';
 include_once 'dbh.inc.php';
 include_once 'sendemail.inc.php';
+include_once 'match.php';
 global $conn;
 ob_start(); 
 session_start();
@@ -14,22 +15,7 @@ if (!isset($_SESSION['u_id'])){
  $user_uid = $_SESSION['u_uid'];   
  $msg_id = $_POST['message_id'];
 
- function getaddress($uname){
- $sql = "SELECT * FROM users WHERE user_uid = '$uname'";
- $res = mysqli_query($conn, $sql); 
- $row = mysqli_fetch_assoc($res);
- $address = $row['address'];
- return $address;
- }
- 
-  function getemail2($user_uid){ 
-       global $conn;  
-       $sql = "SELECT * FROM users WHERE user_uid = '$user_uid'";
-       $res = mysqli_query($conn, $sql);
-       $row = mysqli_fetch_assoc($res);
-       $email = $row['user_email'];
-       return $email;
-   }
+
 
  
  $sql = "SELECT * FROM messages WHERE id = '$msg_id'";

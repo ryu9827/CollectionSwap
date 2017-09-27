@@ -86,7 +86,7 @@ function message(item){
 				    '</div>'+
 				'</div>'
 		break;
-		case "3":
+		case "4":
 		html += '<form action="includes/swapping.php" name="status_3" method="GET">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
@@ -110,7 +110,7 @@ function message(item){
 				'</div>'+
                 '</form>'
 		break;
-		case "4":
+		case "5":
 		html += '<form action="includes/rate.php" name="status_4" method="POST">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
