@@ -61,7 +61,7 @@ function message(item){
 				            '<div class="panel-footer">'+
 									'<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
 							        '<button type="button" class="btn btn-danger  pull-right" onclick="reject()">Reject</button>'+
-							'</div'+
+							'</div>'+
 				        '</div>'+
 				    '</div>'+
 				'</div>'+
@@ -93,7 +93,7 @@ function message(item){
 					'<div class="col-xs-6 col-xs-offset-3">'+
 				    	'<div class="panel panel-primary">'+
 				            '<div class="panel-heading">'+
-				                '<h3 class="panel-title">Swapping</h3>'+
+				                '<h3 class="panel-title">Swapping <span class="danger">Charity</span> </h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
 					            '<p>You are swapping collectables with '+item.swap_uid+'.</p>'+
@@ -111,7 +111,7 @@ function message(item){
                 '</form>'
 		break;
 		case "5":
-		html += '<form action="includes/rate.php" name="status_4" method="POST">'+
+		html += '<form action="includes/message_rating.php" name="status_4" method="POST">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
@@ -146,6 +146,31 @@ function message(item){
 				'</div>'+
                 '</form>'
 		break;
+        case "7":
+            html += '<form action="" name="status_0" method="POST">'+
+                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
+                '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-danger">'+
+                '<div class="panel-heading">'+
+                '<h3 class="panel-title">A New <span class="danger">Charity</span> Request</h3>'+
+                '</div>'+
+                '<div class="panel-body">'+
+                '<p>Time: '+item.time+'</p>'+
+                '<p>'+item.swap_uid+' wants to make a swap with you.</p>'+
+                '<p>Collection Name: '+item.set+'</p>'+
+                '<p>Giving Away: '+item.offer_id+'</p>'+
+                '<p>Receiving: '+item.get_id+'</p>'+
+                '</div>'+
+                '<div class="panel-footer">'+
+                '<button type="button" class="btn btn-success" data-dismiss="modal" onclick="accept()">Accept</button>'+
+                '<button type="button" class="btn btn-danger  pull-right" onclick="reject()">Reject</button>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</form>'
+            break;
 	}
 	return html;
 }
