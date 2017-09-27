@@ -1,9 +1,15 @@
 <?php
 	include_once 'includes/header.php';
-
+    include_once 'includes/dbh.inc.php';
 	if (!isset($_SESSION['u_id'])){
 		header("location:login.php");
 	}
+global $conn;
+
+$user_uid = $_SESSION['u_uid'];
+$sql = "SELECT * FROM users WHERE user_uid = '$user_uid'";
+$res = mysqli_query($conn, $sql);
+$row= mysqli_fetch_assoc($res);
 ?>
 
 <script type="text/javascript">
@@ -23,7 +29,7 @@
                 <div class="form-group">
                     <div class="row">
                         <label for="First" class="col-xs-3 control-label">First Name: </label>
-                        <label for="First" class="col-xs-1 control-label"><?php echo $_SESSION['u_uid']; ?></label>
+                        <label for="First" class="col-xs-1 control-label"><?php echo $row['user_first']; ?></label>
 <!--                        <button type="submit" class="btn btn-info" name="submit">Save</button>-->
                     </div>
                 </div>
@@ -33,7 +39,7 @@
                 <div class="form-group">
                     <div class="row">
                         <label for="Last" class="col-xs-3 control-label">Last Name: </label>
-                        <label for="Last" class="col-xs-1 control-label"><?php echo $_SESSION['u_uid']; ?></label>
+                        <label for="Last" class="col-xs-1 control-label"><?php echo $row['user_last']; ?></label>
 <!--                        <button type="submit" class="btn btn-info" name="submit">Save</button>-->
                     </div>
                 </div>
@@ -44,7 +50,7 @@
                     <div class="row">
                         <label for="email" class="col-xs-3 control-label">E-mail: </label>
                         <div class="col-xs-6">
-                            <input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo $_SESSION['u_email']; ?>">
+                            <input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo $row['user_email']; ?>">
                         </div>
                         <button type="submit" class="btn btn-info" name="submit">Verify</button>
                     </div>
@@ -58,7 +64,7 @@
 					<div class="row">
 						<label for="uid" class="col-xs-3 control-label">Post Address: </label>
 				        <div class="col-xs-6">
-							<input type="text" class="form-control" name="address" placeholder="Post Address" value="<?php echo $_SESSION['u_uid']; ?>">
+							<input type="text" class="form-control" name="address" placeholder="Post Address" value="<?php echo $row['address']; ?>">
 						</div>
 						<button type="submit" class="btn btn-info" name="submit">Save</button>
   					</div>
@@ -70,7 +76,7 @@
                     <div class="row">
                         <label for="uid" class="col-xs-3 control-label">Post Code: </label>
                         <div class="col-xs-6">
-                            <input type="text" class="form-control" name="postCode" placeholder="Post Code" value="<?php echo $_SESSION['u_uid']; ?>">
+                            <input type="text" class="form-control" name="postCode" placeholder="Post Code" value="<?php echo $row['user_postcode']; ?>">
                         </div>
                         <button type="submit" class="btn btn-info" name="submit">Save</button>
                     </div>
@@ -115,6 +121,41 @@
 	</div>
 </div>
 
+<?php
+$sql2 = "SELECT * FROM rating WHERE user_uid = '$user_uid'";
+$res2 = mysqli_query($conn, $sql2);
+$row2= mysqli_fetch_assoc($res2);
+//var_dump($row2)
+?>
+<div class="row">
+    <div class="col-lg-6 col-xs-offset-3">
+        <div class="well">
+            <div class="row">
+                <p>&nbsp;&nbsp;&nbsp; The rating you received:</p>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    <img class="pull-right" src="images/icons/happy_face1.gif">
+                </div>
+                <div class="col-xs-2">
+                    <h5><?php echo $row2['good']; ?></h5>
+                </div>
+                <div class="col-xs-2">
+                    <img class="pull-right" src="images/icons/neutral_face1.gif">
+                </div>
+                <div class="col-xs-2">
+                    <h5><?php echo $row2['normal']; ?></h5>
+                </div>
+                <div class="col-xs-2">
+                    <img class="pull-right" src="images/icons/sad_face1.gif">
+                </div>
+                <div class="col-xs-2">
+                    <h5><?php echo $row2['bad']; ?></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 			
 					<button type="submit" class="btn btn-danger btn-lg center-block" name="logout" onclick="logout()">Log out</button>
 			

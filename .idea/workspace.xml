@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_history.php" afterPath="$PROJECT_DIR$/setsManagement_history.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_messages.php" afterPath="$PROJECT_DIR$/setsManagement_messages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,41 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="setsManagement_messages.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1467">
-              <caret line="151" column="14" lean-forward="true" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setsManagement_history.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="134" column="60" lean-forward="true" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="message_rating.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/message_rating.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1506486309810" expanded="true" signature="409:452" ph="SELECT * FRO... messages" />
-                <marker date="1506486309810" expanded="true" signature="623:694" ph="UPDATE messa... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -83,7 +49,6 @@
         <option value="$PROJECT_DIR$/charity_offer_select.php" />
         <option value="$PROJECT_DIR$/includes/footer.php" />
         <option value="$PROJECT_DIR$/includes/testReceive.php" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/matchUp.php" />
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/charity_look_select.php" />
@@ -105,13 +70,14 @@
         <option value="$PROJECT_DIR$/charity_look_cardList.php" />
         <option value="$PROJECT_DIR$/charity.php" />
         <option value="$PROJECT_DIR$/includes/message_acceptswap.php" />
-        <option value="$PROJECT_DIR$/includes/showmessage.php" />
-        <option value="$PROJECT_DIR$/includes/showhistory.php" />
         <option value="$PROJECT_DIR$/charity_look_result.php" />
         <option value="$PROJECT_DIR$/includes/charity.php" />
         <option value="$PROJECT_DIR$/css/wb12_bluemonday.css" />
         <option value="$PROJECT_DIR$/setsManagement_messages.php" />
         <option value="$PROJECT_DIR$/setsManagement_history.php" />
+        <option value="$PROJECT_DIR$/includes/showmessage.php" />
+        <option value="$PROJECT_DIR$/includes/showhistory.php" />
+        <option value="$PROJECT_DIR$/profile.php" />
       </list>
     </option>
   </component>
@@ -187,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -209,7 +176,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,15 +280,15 @@
       <workItem from="1506415387144" duration="5696000" />
       <workItem from="1506457562196" duration="2300000" />
       <workItem from="1506475027965" duration="5844000" />
+      <workItem from="1506496297051" duration="1166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179143000" />
+    <option name="totallyTimeSpent" value="183337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1715847" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -363,35 +329,15 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="53" />
+      <option name="time" value="54" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/json_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1505960335992" expanded="true" signature="310:353" ph="select * fro... sets_exist" />
-            <marker date="1505960335992" expanded="true" signature="494:726" ph="..." />
-            <marker date="1505960335992" expanded="true" signature="536:717" ph="..." />
-            <marker date="1505960335992" expanded="true" signature="612:706" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -418,10 +364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1134">
           <caret line="40" column="102" lean-forward="false" selection-start-line="40" selection-start-column="102" selection-end-line="40" selection-end-column="102" />
-          <folding>
-            <element signature="e#2861#2896#0#HTML" expanded="false" />
-            <marker date="1506053139385" expanded="false" signature="3195:3222" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -429,7 +371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1053">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -448,9 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="45" column="45" lean-forward="false" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-          <folding>
-            <element signature="e#1637#1678#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -458,14 +396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="39" column="23" lean-forward="false" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <marker date="1505712577205" expanded="true" signature="626:669" ph="select * fro... sets_exist" />
-            <marker date="1505712577205" expanded="true" signature="792:1008" ph="..." />
-            <marker date="1505712577205" expanded="true" signature="857:989" ph="..." />
-            <marker date="1505712577205" expanded="true" signature="1038:1393" ph="..." />
-            <marker date="1505712577205" expanded="true" signature="1093:1374" ph="..." />
-            <marker date="1505712577205" expanded="true" signature="1226:1345" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -544,10 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1506289683767" expanded="true" signature="2367:2393" ph="..." />
-            <marker date="1506289683767" expanded="true" signature="2519:2545" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,16 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="139" column="8" lean-forward="true" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="44" />
-          <folding>
-            <marker date="1506294530388" expanded="true" signature="990:1037" ph="select * fro... sets_cards" />
-            <marker date="1506294530388" expanded="true" signature="1309:1382" ph="select * fro... cards_status" />
-            <marker date="1506294530388" expanded="true" signature="1309:1403" ph="select * fro... cards_status" />
-            <marker date="1506294530388" expanded="true" signature="1842:1875" ph="..." />
-            <marker date="1506294530388" expanded="true" signature="1842:2593" ph="..." />
-            <marker date="1506294530388" expanded="true" signature="2006:2042" ph="..." />
-            <marker date="1506294530388" expanded="true" signature="2006:2239" ph="..." />
-            <marker date="1506294530388" expanded="true" signature="2045:2213" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -737,36 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/showmessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="101" lean-forward="false" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="101" />
-          <folding>
-            <marker date="1506420374080" expanded="true" signature="241:337" ph="SELECT * FRO... messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/showhistory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding>
-            <marker date="1506484314908" expanded="true" signature="239:331" ph="SELECT * FRO... messages" />
-            <marker date="1506484314908" expanded="true" signature="261:331" ph="SELECT * FRO... messages" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matchUp_result.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="160" column="12" lean-forward="true" selection-start-line="160" selection-start-column="12" selection-end-line="160" selection-end-column="12" />
-          <folding>
-            <marker date="1506294417512" expanded="true" signature="1354:1372" ph="..." />
-            <marker date="1506294417512" expanded="true" signature="1517:1535" ph="..." />
-            <marker date="1506294417512" expanded="true" signature="1778:1796" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,7 +672,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" column="1" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,14 +733,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/includes/rate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -876,25 +758,72 @@
         <state relative-caret-position="-207">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1506486309810" expanded="true" signature="409:452" ph="SELECT * FRO... messages" />
-            <marker date="1506486309810" expanded="true" signature="623:694" ph="UPDATE messa... " />
+            <marker date="1506488309636" expanded="true" signature="409:452" ph="SELECT * FRO... messages" />
+            <marker date="1506488309636" expanded="true" signature="623:694" ph="UPDATE messa... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/showhistory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <marker date="1506489415025" expanded="true" signature="239:331" ph="SELECT * FRO... messages" />
+            <marker date="1506489415025" expanded="true" signature="261:331" ph="SELECT * FRO... messages" />
+            <marker date="1506489415025" expanded="true" signature="504:553" ph="SELECT * FRO... sets_exist" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="133" column="61" lean-forward="false" selection-start-line="133" selection-start-column="61" selection-end-line="133" selection-end-column="61" />
+          <folding>
+            <element signature="e#4984#4990#0#HTML" expanded="true" />
+            <element signature="e#4990#4996#0#HTML" expanded="true" />
+            <element signature="e#4996#5002#0#HTML" expanded="true" />
+            <marker date="1506497242227" expanded="true" signature="207:255" ph="SELECT * FRO... users" />
+            <marker date="1506497242227" expanded="true" signature="4704:4753" ph="SELECT * FRO... rating" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1467">
-          <caret line="151" column="14" lean-forward="true" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
+        <state relative-caret-position="486">
+          <caret line="141" column="69" lean-forward="false" selection-start-line="141" selection-start-column="60" selection-end-line="141" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="134" column="60" lean-forward="true" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
+        <state relative-caret-position="27">
+          <caret line="134" column="60" lean-forward="false" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/showmessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="36" />
+          <folding>
+            <marker date="1506489415027" expanded="true" signature="241:337" ph="SELECT * FRO... messages" />
+            <marker date="1506489415027" expanded="true" signature="538:587" ph="SELECT * FRO... sets_exist" />
+          </folding>
         </state>
       </provider>
     </entry>
