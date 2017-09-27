@@ -74,7 +74,6 @@ function message(item){
                                 '</div>'+
                                 '<div class="collapse" id="'+item.msg_id+'">'+
                                 '<div class="panel-body">'+
-//                                    '<p>This swap is completed.</p>'+
                                     '<p>Collector\'s Email: '+item.email+'</p>'+
                                     '<p>Collection Name: '+item.set_name+'</p>'+
                                     '<p>Message ID: '+item.msg_id+'</p>'+
@@ -87,6 +86,60 @@ function message(item){
 		default:
 		    html='<p>No history data available.</p>'
 		break;
+        case "9":
+            html += '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-warning">'+
+                '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+                '<h3 class="panel-title">Charity Request’s Rejected by '+item.swap_uid+' ('+item.time+')</h3>'+
+                '</div>'+
+                '<div class="collapse" id="'+item.msg_id+'">'+
+                '<div class="panel-body">'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '<p>You can exchange your cards with other users now.</p>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
+            break;
+        case "10":
+            html += '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-default">'+
+                '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+                '<h3 class="panel-title">You Rejected '+item.swap_uid+'\'s Charity Request('+item.time+')</h3>'+
+                '</div>'+
+                '<div class="collapse" id="'+item.msg_id+'">'+
+                '<div class="panel-body">'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '<p>You can exchange your cards with other users now.</p>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
+            break;
+        case "12":
+            html += '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-success">'+
+                '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+                '<h3 class="panel-title">Charity\'s completed with '+item.swap_uid+' ('+item.time+')</h3>'+
+                '</div>'+
+                '<div class="collapse" id="'+item.msg_id+'">'+
+                '<div class="panel-body">'+
+                '<p>Collector\'s Email: '+item.email+'</p>'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
+            break;
 	}
 	return html;
 }

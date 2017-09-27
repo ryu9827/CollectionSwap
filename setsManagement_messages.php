@@ -194,6 +194,30 @@ function message(item){
                 '</div>'+
                 '</div>'
             break;
+        case "11":
+            html += '<form action="includes/swapping.php" name="status_3" method="POST">'+
+                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
+                '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-primary">'+
+                '<div class="panel-heading">'+
+                '<h3 class="panel-title">Charity in Progress</h3>'+
+                '</div>'+
+                '<div class="panel-body">'+
+                '<p>You are donating collections to '+item.swap_uid+'.</p>'+
+                '<p>Collector\'s Email: '+item.email+'</p>'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Donating: '+item.offer_id+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '</div>'+
+                '<div class="panel-footer">'+
+                '<button type="submit" class="btn btn-success" data-dismiss="modal" >Done</button>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</form>'
+            break;
 	}
 	return html;
 }

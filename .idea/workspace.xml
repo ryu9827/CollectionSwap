@@ -14,21 +14,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="setsManagement_messages.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setsManagement_messages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="99" column="55" lean-forward="true" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
+            <state relative-caret-position="1467">
+              <caret line="151" column="14" lean-forward="true" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setsManagement_history.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="setsManagement_history.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+            <state relative-caret-position="522">
+              <caret line="134" column="60" lean-forward="true" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -110,8 +110,8 @@
         <option value="$PROJECT_DIR$/charity_look_result.php" />
         <option value="$PROJECT_DIR$/includes/charity.php" />
         <option value="$PROJECT_DIR$/css/wb12_bluemonday.css" />
-        <option value="$PROJECT_DIR$/setsManagement_history.php" />
         <option value="$PROJECT_DIR$/setsManagement_messages.php" />
+        <option value="$PROJECT_DIR$/setsManagement_history.php" />
       </list>
     </option>
   </component>
@@ -313,12 +313,12 @@
       <workItem from="1506398609074" duration="1459000" />
       <workItem from="1506415387144" duration="5696000" />
       <workItem from="1506457562196" duration="2300000" />
-      <workItem from="1506475027965" duration="5034000" />
+      <workItem from="1506475027965" duration="5844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178333000" />
+    <option name="totallyTimeSpent" value="179143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -882,18 +882,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
+    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="79" column="36" lean-forward="false" selection-start-line="79" selection-start-column="36" selection-end-line="79" selection-end-column="36" />
+        <state relative-caret-position="1467">
+          <caret line="151" column="14" lean-forward="true" selection-start-line="151" selection-start-column="14" selection-end-line="151" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
+    <entry file="file://$PROJECT_DIR$/setsManagement_history.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="99" column="55" lean-forward="true" selection-start-line="99" selection-start-column="55" selection-end-line="99" selection-end-column="55" />
+        <state relative-caret-position="522">
+          <caret line="134" column="60" lean-forward="true" selection-start-line="134" selection-start-column="60" selection-end-line="134" selection-end-column="60" />
           <folding />
         </state>
       </provider>
