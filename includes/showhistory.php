@@ -18,10 +18,16 @@ $sql = "SELECT * FROM messages WHERE user_uid = '$user_uid' AND status IN('2','3
 $res = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($res);
 if($num>0){
+    
+$sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
+$res2 = mysqli_query($conn, $sql);
+$row2 = mysqli_fetch_assoc($res2);
+$set_name = $row2['set_name'];
+
 while($row = mysqli_fetch_assoc($res)){
     
     $msg = array('swap_uid' => $row['swap_uid'],'email' => $row['swap_email'],'status' => $row['status'],'time' => $row['time'],
-                'set_id' => $row['set_id'],'offer_id' => $row['offer_id'],'get_id' =>$row['get_id'],'msg_id' => $row['id']
+                'set_id' => $row['set_id'],'set_name' => $set_name,'offer_id' => $row['offer_id'],'get_id' =>$row['get_id'],'msg_id' => $row['id']
                );
     $msglist[] = $msg;
 }
