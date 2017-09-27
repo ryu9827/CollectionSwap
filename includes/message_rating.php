@@ -33,4 +33,4 @@ if (!isset($_SESSION['u_id'])){
  $sql = "UPDATE messages SET status = '6',time = '$newtime' WHERE id = '$msg_id'";
  mysqli_query($conn, $sql);
  
-//  header('location:../setsManagement_messages.php');
+  header('location:../setsManagement_messages.php');

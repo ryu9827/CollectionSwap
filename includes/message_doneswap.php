@@ -12,10 +12,10 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
-// $user_uid = $_SESSION['u_uid'];   
-// $msg_id = $_POST['message_id'];
- $user_uid = 'amy';
- $msg_id = '57';
+ $user_uid = $_SESSION['u_uid'];   
+ $msg_id = $_POST['message_id'];
+// $user_uid = 'amy';
+// $msg_id = '57';
  
   function swapdone($list = array(), $userid, $set_id){
    global $conn;   
@@ -35,7 +35,7 @@ if (!isset($_SESSION['u_id'])){
  $set_id = $row['set_id'];
  $ruid = $row['swap_uid'];
  $offerlist2 = explode(",",$row['offer_id']);
- $misslist2 = explode(",",$row['miss_id']);
+ $misslist2 = explode(",",$row['get_id']);
 
  swapdone($offerlist2, $user_uid, $set_id);
  swapdone($misslist2, $user_uid, $set_id);
@@ -48,4 +48,4 @@ if (!isset($_SESSION['u_id'])){
  $sql = "UPDATE messages SET status = '5' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
- //header('location:../setsManagement_messages.php'); 
+ header('location:../setsManagement_messages.php'); 

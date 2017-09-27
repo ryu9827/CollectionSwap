@@ -87,7 +87,7 @@ function message(item){
 				'</div>'
 		break;
 		case "4":
-		html += '<form action="includes/swapping.php" name="status_3" method="GET">'+
+		html += '<form action="includes/message_doneswap.php" name="status_3" method="POST">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
@@ -111,7 +111,7 @@ function message(item){
                 '</form>'
 		break;
 		case "5":
-		html += '<form action="includes/rate.php" name="status_4" method="POST">'+
+		html += '<form action="includes/message_rating.php" name="status_4" method="POST">'+
                 '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
                 '<div class="row">'+
 					'<div class="col-xs-6 col-xs-offset-3">'+
