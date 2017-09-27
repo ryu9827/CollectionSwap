@@ -24,13 +24,16 @@ if (!isset($_SESSION['u_id'])){
  $row = mysqli_fetch_assoc($res);
  $token = $row['token'];
  $ruid = $row['swap_uid'];
- $offerlist2 = $row['offer_id'];
- $getlist = $row['get_id'];
+ $offername2 = $row['offer_name'];
+ $getname2 = $row['get_name'];
  $set_id = $row['set_id'];
+ $swap_email = $row['swap_email'];
  
- $offername = getcardname($offerlist2);
- $missname = getcardname($getlist);
+ $offerlist3 = explode(",", $offerlist2);
+ $getlist3 = explode(",",$getlist2);
+ 
  $set_name = getsetname($set_id);
+ 
  
  $address = getaddress($user_uid);
  $raddress = getaddress($ruid);
@@ -38,20 +41,20 @@ if (!isset($_SESSION['u_id'])){
  $sql = "UPDATE messages SET status = '4',time = '$newtime' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
- $email = getemail2($ruid);
+ $remail = getemail2($ruid);
  $email = getemail2($user_uid);
  
  $mail = new sendemail();
  $subject = "Your swap request has been Accepted!";
  $body = "Dear ".$ruid."：<br/> Congratulations!<br/>Your swap request has been successfully accepted!<br/>Collection Set Name: "
-         .$set_name."<br/>Offer: ".$missname."<br/>Demand: ".$offername."<br/>Applicant Username or Acceptant Username: ".$ruid.
-         "<br/>Offer: ".$remails."<br/>Shipping details:<br/>Delivery address:  ".$address."<br/>";
- $mail->sendEmail($email,$subject,$body);
+         .$set_name."<br/>Offer: ".$missname2."<br/>Demand: ".$offername2."<br/>Applicant Username or Acceptant Username: ".$ruid.
+         "<br/>Email: ".$email."<br/>Shipping details:<br/>Delivery address:  ".$address."<br/>";
+ $mail->sendEmail($swap_email,$subject,$body);
  
  $subject = "Swaping Details";
  $body = "Dear ".$user_uid."：<br/> Your already accept the swap request from user: ".$ruid."<br/>Collection Set Name: "
-         .$set_name."<br/>Offer: ".$offername."<br/>Demand: ".$missname."<br/>Applicant Username or Acceptant Username: ".$ruid.
-         "<br/>Offer: ".$remails."<br/>Shipping details:<br/>Delivery address:  ".$raddress."<br/>";
+         .$set_name."<br/>Offer: ".$offername2."<br/>Demand: ".$missname2."<br/>Applicant Username or Acceptant Username: ".$ruid.
+         "<br/>Email: ".$swap_email."<br/>Delivery address:  ".$raddress."<br/>";
  $mail->sendEmail($email,$subject,$body);
 
  header('location:../setsManagement_messages.php');

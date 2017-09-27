@@ -24,8 +24,8 @@ $misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
 $offername = mysqli_real_escape_string($conn,$_POST['offername']);
 $missname = mysqli_real_escape_string($conn,$_POST['missname']);
 
-$offer = explode(",",$offername);
-$miss =  explode(",",$missname);
+//$offer = explode(",",$offername);
+//$miss =  explode(",",$missname);
 
 //date_default_timezone_set('NZ');     
     // $user_uid = $_SESSION['u_id'];
@@ -43,10 +43,10 @@ $uid = $_SESSION['u_id'];
      
     }
     
-    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$token){
+    function newmessage($user_uid,$swap_uid,$swap_email,$status,$set_id,$offer_id,$get_id,$token,$offername,$missname){
         global $conn;
         $time = date('d/m/Y H:i:s');
-        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,token) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$token')";
+        $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,get_id,token,offer_name,get_name) VALUES ('$user_uid','$swap_uid','$swap_email','$status','$time','$set_id','$offer_id','$get_id','$token','$offername','$missname')";
         mysqli_query($conn, $sql);
         echo mysqli_error($conn);
     }
@@ -90,7 +90,7 @@ $uid = $_SESSION['u_id'];
     
 
   //create new message for both user and reciver
-   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, $token);
-   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, $token);
+   newmessage($user_uid, $reciver_uid, $remail,1, $set_id, $offerlist,$misslist, $token,$offername,$missname);
+   newmessage($reciver_uid,$user_uid,$uemail,0, $set_id, $misslist,$offerlist, $token,$missname,$offername);
 
 
