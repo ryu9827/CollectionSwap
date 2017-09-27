@@ -79,14 +79,11 @@
 			}
 		}
 
-		echo '
-                <tr>
-                    <input type="hidden" value="'.$rows[2].'"> <!-- card id -->
+		echo '  <tr>
+                    <input type="hidden" value="'.$rows[2].'" > <!-- card id -->
                     <td>'.$rows[4].'</td> <!--card name-->
-                    <td>
-                        <div class="">
-                            <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->
-                        </div>
+                    <td>                        
+                        <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
                     </td>
                     <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Extra</td>
                     <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Missing</td>                    

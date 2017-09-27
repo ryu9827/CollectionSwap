@@ -131,33 +131,33 @@ $row2= mysqli_fetch_assoc($res2);
     <div class="col-lg-6 col-xs-offset-3">
         <div class="well">
             <div class="row">
-                <p>&nbsp;&nbsp;&nbsp; The rating you received:</p>
+                <label>&nbsp;&nbsp;&nbsp; Feedback:</label>
             </div>
             <div class="row">
                 <div class="col-xs-2">
                     <img class="pull-right" src="images/icons/happy_face1.gif">
                 </div>
                 <div class="col-xs-2">
-                    <h5><?php echo $row2['good']; ?></h5>
+                    <label><?php echo $row2['good']; ?></label>
                 </div>
                 <div class="col-xs-2">
                     <img class="pull-right" src="images/icons/neutral_face1.gif">
                 </div>
                 <div class="col-xs-2">
-                    <h5><?php echo $row2['normal']; ?></h5>
+                    <label><?php echo $row2['normal']; ?></label>
                 </div>
                 <div class="col-xs-2">
                     <img class="pull-right" src="images/icons/sad_face1.gif">
                 </div>
                 <div class="col-xs-2">
-                    <h5><?php echo $row2['bad']; ?></h5>
+                    <label><?php echo $row2['bad']; ?></label>
                 </div>
             </div>
         </div>
     </div>
 </div>
 			
-					<button type="submit" class="btn btn-danger btn-lg center-block" name="logout" onclick="logout()">Log out</button>
+<!--					<button type="submit" class="btn btn-danger btn-lg center-block" name="logout" onclick="logout()">Log out</button>-->
 			
 			
 
