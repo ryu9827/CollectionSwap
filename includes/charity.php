@@ -33,7 +33,7 @@ function askForCharity($charity = array(), $set_id = ''){
         }
   
     }
-    $lnum = sizeof($list);
+    $num = sizeof($list);
     if($num > 0){
     
     foreach($list as $uid){

@@ -39,6 +39,20 @@ function sendRequest(name,offer,miss,set_id){
 	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
 };
 </script>
+
+<div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+        <!-- 轮播图无法停止自动轮播，所以将时间间隔设置为很大的数，这样等于是不再轮播了 -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9999999999">
+            <!-- 轮播图的圆点。这里不需要，所以隐藏了
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol> -->
+            <div class="carousel-inner" role="listbox">
+                <div id="carousel-inner"><!--add carousel below-->
+
 <?php
 
 echo'<div class="item active">
@@ -59,26 +73,14 @@ echo'<div class="item active">
     <img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>
     </div>
     <div class="panel-footer">
-    // Button trigger modal                
-    '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+name+'\',\''+offer+'\',\''+miss+'\',\''+set_id+'\',\''+missname+'\',\''+offername+'\')">Send Request</button>'+
-    '</div>'+
-    '</div>'+
-    '</div>'+
-    '</div>'
+    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\"".$name+"\",\""+offer+"\",\""+miss+"\",\""+set_id+"\",\""+missname+"\",\""+offername+"\")">Send Request</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    ';
 ?>
 
-<div class="row">
-<div class="col-xs-8 col-xs-offset-2">
-<!-- 轮播图无法停止自动轮播，所以将时间间隔设置为很大的数，这样等于是不再轮播了 -->
-	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9999999999"> 
-        <!-- 轮播图的圆点。这里不需要，所以隐藏了
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol> -->
-        <div class="carousel-inner" role="listbox">
-          <div id="carousel-inner">
       <!-- 左，右翻页图标    -->       
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Prev User</p></span>
@@ -93,7 +95,6 @@ echo'<div class="item active">
 </div>
 
 <div style="height: 50px; visibility:hidden;"></div> 
-
 
 <!-- Modal -->
 <div class="modal fade" border="1px" id="sentRequest" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:250px;">
@@ -116,8 +117,6 @@ echo'<div class="item active">
     </div>
   </div>
 </div>
-
-
 
 <!-- 页脚保留一些空白 -->
 <!-- <div style="height: 100px; visibility:hidden;"></div>	  -->

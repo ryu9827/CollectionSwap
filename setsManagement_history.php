@@ -39,14 +39,33 @@ function message(item){
 					            '<div class="collapse" id="'+item.msg_id+'">'+
 					            '<div class="panel-body">'+									
 									'<p>Collection Name: '+item.set_name+'</p>'+
-									'<p>You can exchange your cards with other users.</p>'+
+                                    '<p>Message ID: '+item.msg_id+'</p>'+
+									'<p>You can exchange your cards with other users now.</p>'+
 					            '</div>'+
 					        '</div>'+
 					    '</div>'+
 					'</div>'+
 				'</div>'
-		break;	
-		case "6":
+		break;
+        case "3":
+            html += '<div class="row">'+
+                '<div class="col-xs-6 col-xs-offset-3">'+
+                '<div class="panel panel-default">'+
+                '<div class="panel-heading button" data-toggle="collapse" data-target="#'+item.msg_id+'" aria-expanded="false" aria-controls="'+item.msg_id+'" data-toggle="tooltip" data-placement="left" title="Click to see details">'+
+                '<h3 class="panel-title">You Rejected '+item.swap_uid+' ('+item.time+')</h3>'+
+                '</div>'+
+                '<div class="collapse" id="'+item.msg_id+'">'+
+                '<div class="panel-body">'+
+                '<p>Collection Name: '+item.set_name+'</p>'+
+                '<p>Message ID: '+item.msg_id+'</p>'+
+                '<p>You can exchange your cards with other users now.</p>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>'
+            break;
+        case "6":
             html += '<div class="row">'+
                         '<div class="col-xs-6 col-xs-offset-3">'+
                             '<div class="panel panel-success">'+
@@ -58,6 +77,7 @@ function message(item){
 //                                    '<p>This swap is completed.</p>'+
                                     '<p>Collector\'s Email: '+item.email+'</p>'+
                                     '<p>Collection Name: '+item.set_name+'</p>'+
+                                    '<p>Message ID: '+item.msg_id+'</p>'+
                                 '</div>'+
                             '</div>'+
                         '</div>'+
