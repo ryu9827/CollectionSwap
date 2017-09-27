@@ -12,6 +12,8 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
+date_default_timezone_set('NZ');
+
 $user_uid = $_SESSION['u_uid'];   
 $msg_id = $_POST['message_id'];
 //$user_uid = 'amy';
@@ -28,7 +30,7 @@ $msg_id = $_POST['message_id'];
  }
   
  
- 
+ $newtime = date('d/m/Y H:i:s');
  $sql = "SELECT * FROM messages WHERE id = '$msg_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
@@ -37,9 +39,9 @@ $msg_id = $_POST['message_id'];
  $set_id = $row['set_id'];
  echo $ruid;
  
- $sql = "UPDATE messages SET status = '2' WHERE token = '$token' AND user_uid = '$ruid'";
+ $sql = "UPDATE messages SET status = '2', time = '$newtime' WHERE token = '$token' AND user_uid = '$ruid'";
  mysqli_query($conn, $sql);
- $sql = "UPDATE messages SET status = '3' WHERE id = '$msg_id'";
+ $sql = "UPDATE messages SET status = '3',  time = '$newtime' WHERE id = '$msg_id'";
  mysqli_query($conn, $sql);
  //$offerlist2 = explode(",",$row['offer_id']);
  //$misslist2 = explode(",",$row['miss_id']);

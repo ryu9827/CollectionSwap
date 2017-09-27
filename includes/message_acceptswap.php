@@ -11,13 +11,14 @@ if (!isset($_SESSION['u_id'])){
      header("location:../login.php");
 
 	}
-        
+ date_default_timezone_set('NZ');
+ 
  $user_uid = $_SESSION['u_uid'];   
  $msg_id = $_POST['message_id'];
 
 
 
- 
+ $newtime = date('d/m/Y H:i:s');
  $sql = "SELECT * FROM messages WHERE id = '$msg_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
@@ -27,7 +28,7 @@ if (!isset($_SESSION['u_id'])){
  $address = getaddress($user_uid);
  $raddress = getaddress($ruid);
  
- $sql = "UPDATE messages SET status = '4' WHERE token = '$token'";
+ $sql = "UPDATE messages SET status = '4',time = '$newtime' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
  $email = getemail2($ruid);

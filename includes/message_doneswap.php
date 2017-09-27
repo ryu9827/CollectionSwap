@@ -48,7 +48,4 @@ if (!isset($_SESSION['u_id'])){
  $sql = "UPDATE messages SET status = '5' WHERE token = '$token'";
  mysqli_query($conn, $sql);
  
-
-
- 
  //header('location:../setsManagement_messages.php'); 

@@ -3,18 +3,18 @@
 
 include_once 'dbh.inc.php';
 
-$user_uid ="amy";
-$mark = "normal";
+//$user_uid ="amy";
+//$mark = "normal";
 
-function rating($user_uid, $mark){
+function rating($user_uid, $option){
 
 global $conn;
-switch($mark):
-    case "good": $addpoint = 3;
+switch($option):
+    case '1': $addpoint = 3;$mark = 'good';
         break;
-    case "normal": $addpoint = 2;
+    case '2': $addpoint = 2;$mark = 'noraml';
         break;
-    case "bad": $addpoint = 1;
+    case '3': $addpoint = 1;$mark = 'bad';
         break;
     default:$addpoint = 0;
         break;

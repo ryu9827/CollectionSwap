@@ -24,6 +24,8 @@ if($row){
       $uid = $row['user_uid'];
       $sql1 = "UPDATE users SET verify = 1 WHERE user_uid = '$uid'";   
       mysqli_query($conn, $sql1); 
+      
+      $sql = "INSERT INTO rating (user_uid ) VALUES ('$uid') ";
      
         if(mysqli_affected_rows($conn)!=1) die(0)  ;      
         $msg = 'active successfully';    
