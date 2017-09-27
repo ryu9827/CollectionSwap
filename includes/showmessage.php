@@ -22,6 +22,7 @@ $num = mysqli_num_rows($res);
 if($num > 0){
 $row = mysqli_fetch_assoc($res);
 $set_id = $row['set_id'];
+
 $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
 $res2 = mysqli_query($conn, $sql);
 $row2 = mysqli_fetch_assoc($res2);
