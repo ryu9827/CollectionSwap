@@ -1,47 +1,56 @@
 <?php
 	include_once 'includes/header.php';	
 ?>
-<script src="js/slimbox2/jquery.easing.1.3.js"></script>
-<link href="css/slimbox2/slimbox2.css" rel="stylesheet">
-<script src="js/slimbox2/slimbox2.js"></script>
-<script>  
-// $(function(){
-// $(document).ready(function(){   
-// //使用getJSON方法读取json数据,   
-// //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可   
-// 	$.getJSON('json_search.php',function(data){
-// 	var html = '';
-// 		$.each(data,function(i,item){      
-// 			html = message(item);
-// 			$('#title').after(html); 
-// 			});    
-// 		//after方法:在每个匹配的元素之后插入内容。  
-// 		});  
-// 	}); 
-// });  
+<!--<script>-->
+<!--    slimbox.option({-->
+<!--        overlayOpacity: 0.6,-->
+<!--        resizeEasing: "easeOutElastic",-->
+<!--        captionAnimationDuration: 1,-->
+<!--        counterText: "Image {x} sur {y}",-->
+<!--        closeKeys: [27, 70],-->
+<!--        nextKeys: [39, 83]-->
+<!--    })-->
+<!--</script>-->
+<script>
+    function GetQueryString(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
 
-// function message(item){
-// 	var html='';
-// 	switch(item.status){		
-// 		case "success":
-// 		html += '<div class="row">'+
-// 				  	'<div class="col-md-3" style="float: none;margin: 0 auto">'+
-// 					    '<div class="thumbnail">'+
-// 					    	'<img src="'+item.set_image+'" alt="">'+		        
-// 					        '<ul class="list-group">'+
-// 						        '<li class="list-group-item list-group-item-success">'+item.spare+' people have this as spare. </li>'+
-// 						        '<li class="list-group-item list-group-item-warning">'+item.collecting+' people is also collecting this.</li>'+
-// 					        '</ul>'+
-// 					    '</div>'+
-// 				    '</div>'+
-// 				'</div>'
-// 		break;
-// 		default:
-// 		html += '<p>No result.Is your input right? </p>'		
-// 		break;
-// 	}
-// 	return html;
-// }
+ $(function(){
+ $(document).ready(function(){
+ //使用getJSON方法读取json数据,
+ //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
+     var set_id = GetQueryString("set_id");
+ 	$.getJSON('includes/search.php?set_id='+set_id,function(data){
+ 	var html = '';
+ 		$.each(data,function(i,item){
+ 			html = cards(item);
+ 			$('#title').after(html);
+ 			});
+ 		//after方法:在每个匹配的元素之后插入内容。
+ 		});
+ 	});
+ });
+
+ function cards(item){
+ 	var html='';
+ 	html +=
+        '<div class="col-md-3">'+
+        '<div class="thumbnail">'+
+        '<a href="'+item.card_img+'" rel="lightbox">'+
+        '<img src="'+item.card_img+'" rel="lightbox" alt="">'+
+        '</a>'+
+        '<ul class="list-group">'+
+        '<li class="list-group-item list-group-item-info"> Card Name: '+item.card_name+' </li>'+
+        '<li class="list-group-item list-group-item-success">'+item.extranum+' spares </li>'+
+        '<li class="list-group-item list-group-item-warning"> '+item.missnum+' missings</li>'+
+        '</ul>'+
+        '</div>'+
+        '</div>'
+ 	return html;
+ }
 //注:可以是item.address,也可以是item['address'] 
 //firefox报 json文件中 “语法错误 [”,单能加载数据 //ie chrome 无法加载数据 
 </script> 
@@ -85,109 +94,20 @@ function search($table,$card_name, $status,$set_id){
 		<h2>Collection list</h2>
 	</div><br/>
 
-<!--	<div class="row">-->
-<!--		<div class="col-lg-3" style="float: none;margin: 0 auto">-->
-<!--            <form action="search_inputNum.php">-->
-<!--                <input type="hidden" name="set_id" value="--><?php //echo $set_id ?><!--">-->
-<!--                <div class="input-group">-->
-<!--                    <input id="search" type="text" class="form-control" placeholder="Search for..." name="name" />-->
-<!--                    <span class="input-group-btn">-->
-<!--                        <button class="btn btn-info" type="submit">Search</button>-->
-<!--                    </span>-->
-<!--                </div>-->
-<!--            </form>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--	<br/><br/>-->
-    <p class="clearfix">
-        <a href="images/cardImages/card-1.png" rel="lightbox" title="333" class="thumbnail pull-left">
-            <img src="images/cardImages/card-1.png" rel="lightbox"  alt="123"/>
-        </a>
-    </p>
+<!--    <p class="clearfix">-->
+<!--        <a href="images/cardImages/card-1.png" rel="lightbox" title="333" class="thumbnail pull-left">-->
+<!--            <img src="images/cardImages/card-1.png" rel="lightbox"  alt="123"/>-->
+<!--        </a>-->
+<!--    </p>-->
+<!--<p class="clearfix">-->
+<!--    <a href="images/cardImages/card-6.png" rel="lightbox" title="The Gilles, one of the Belgian cultural traditions. Here at Barvaux." class="thumbnail pull-left">-->
+<!--        <img src="images/cardImages/card-6.png"  alt="Gilles at Barvaux">-->
+<!--    </a>-->
+<!--</p>-->
 
 <div id="title"></div>
- 	<div class="col-md-3">
- 	    <div class="thumbnail">
-            <a href="images/cardImages/card-1.png" rel="lightbox">
- 	        	<img src="images/cardImages/card-1.png" rel="lightbox" alt="">
-            </a>
- 	        <ul class="list-group">
- 	        	<li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
- 		        <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
- 		        <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
- 	        </ul>
- 	    </div>
- 	</div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="thumbnail">
-            <img src="images/cardImages/card-1.png" alt="">
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
-                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
-                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
-            </ul>
-        </div>
-    </div>
+
+
 
 	
 	

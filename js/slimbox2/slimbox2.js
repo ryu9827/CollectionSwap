@@ -54,15 +54,15 @@
 	$.slimbox = function(_images, startImage, _options) {
 		options = $.extend({
 			loop: false,				// Allows to navigate between first and last images
-			overlayOpacity: 0.8,			// 1 is opaque, 0 is completely transparent (change the color in the CSS file)
-			overlayFadeDuration: 400,		// Duration of the overlay fade-in and fade-out animations (in milliseconds)
-			resizeDuration: 400,			// Duration of each of the box resize animations (in milliseconds)
+			overlayOpacity: 0.6,			// 1 is opaque, 0 is completely transparent (change the color in the CSS file)
+			overlayFadeDuration: 4000,		// Duration of the overlay fade-in and fade-out animations (in milliseconds)
+			resizeDuration: 4000,			// Duration of each of the box resize animations (in milliseconds)
 			resizeEasing: "easeOutElastic",			// "swing" is jQuery's default easing
 			initialWidth: 250,			// Initial width of the box (in pixels)
 			initialHeight: 250,			// Initial height of the box (in pixels)
-			imageFadeDuration: 400,			// Duration of the image fade-in animation (in milliseconds)
+			imageFadeDuration: 4000,			// Duration of the image fade-in animation (in milliseconds)
 			captionAnimationDuration: 400,		// Duration of the caption animation (in milliseconds)
-			counterText: "Image {x} of {y}",	// Translate or change as you wish, or set it to false to disable counter text for image groups
+			counterText: "Image {x} sur {y}",	// Translate or change as you wish, or set it to false to disable counter text for image groups
 			closeKeys: [27, 88, 67],		// Array of keycodes to close Slimbox, default: Esc (27), 'x' (88), 'c' (67)
 			previousKeys: [37, 80],			// Array of keycodes to navigate to the previous image, default: Left arrow (37), 'p' (80)
 			nextKeys: [39, 78]			// Array of keycodes to navigate to the next image, default: Right arrow (39), 'n' (78)
