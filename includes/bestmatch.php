@@ -9,7 +9,8 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_uid'];      
+ $user_uid = $_SESSION['u_uid'];     
+ $user_id = $_SESSION['u_id']; 
  
 
  function requestList($user_uid,$status,$set_id){
@@ -24,14 +25,13 @@ if (!isset($_SESSION['u_id'])){
      return $rlist;
  }
  //get set name
- // $set_id = '1';
- $set_id = stripslashes(trim($_GET['set_id'])); 
+// $set_id = stripslashes(trim($_GET['set_id'])); 
  $sql = "SELECT * FROM sets_exist WHERE set_id = '$set_id'";
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
  $set_name = $row['set_name'];
  
- $sql = "SELECT * FROM user_sets WHERE user_id = '$user_uid' AND set_id = '$set_id'";
+ $sql = "SELECT * FROM user_sets WHERE user_id = '$user_id' AND set_id = '$set_id'";
  $res2 = mysqli_query($conn, $sql);
  $row2 = mysqli_fetch_assoc($res2);
  
