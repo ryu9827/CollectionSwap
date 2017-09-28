@@ -55,6 +55,13 @@ function sendRequest(name,offer,miss,set_id){
 
 <?php
 $name = $finallist[0]['name'];
+//$setname = $finallist[0]['setname'];
+$cardname = $finallist[0]['cardname'];
+$good = $finallist[0]['good'];
+$normal = $finallist[0]['normal'];
+$bad = $finallist[0]['bad'];
+$lastlogin = $finallist[0]['lastlogin'];
+
 echo'<div class="item active">
     <div class="col-xs-6 col-xs-offset-3">
     <div class="panel panel-primary">
@@ -63,14 +70,14 @@ echo'<div class="item active">
     </div>
     <div class="panel-body">
     <p>User Name: '.$name.'</p>
-    <p>Collection Name: '.$finallist['cardname'].'</p>
-    <p>Offer：'.$finallist['cardname'].'</p>
-    <p>Demand：'.$finallist['cardname'].'</p>
-    <p>Last Login: '.$finallist['lastlogin'].'</p>
+    <p>Collection Name: '.$cardname.'</p>
+    <p>Offer：'.$cardname.'</p>
+    <p>Demand：'.$cardname.'</p>
+    <p>Last Login: '.$lastlogin.'</p>
     <p>Rating：</p>
-    <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$finallist['good'].'<br/><br/>
-    <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$finallist['normal'].'<br/><br/>
-    <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$finallist['bad'].'<br/>
+    <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$good.'<br/><br/>
+    <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$normal.'<br/><br/>
+    <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
     </div>
     <div class="panel-footer">
     <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" >Send Request</button>
