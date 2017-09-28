@@ -2,10 +2,10 @@
 
 include 'dbh.inc.php';
 
-function search($table,$card_name, $status,$set_id){
+function search($table,$card_id, $status,$set_id){
 
   global $conn;  
-  $sql = "SELECT * FROM $table WHERE card_name like '$card_name' AND set_id = '$set_id' AND card_status = '$status' GROUP BY card_id";
+  $sql = "SELECT * FROM $table WHERE card_id = '$card_id' AND set_id = '$set_id' AND card_status = '$status'";
   $res = mysqli_query($conn, $sql);
   $num = mysqli_num_rows($res);
  
@@ -13,11 +13,32 @@ function search($table,$card_name, $status,$set_id){
 
 }
 
-//$card_id = mysqli_real_escape_string($conn, $_POST['card_id']);
-//$card_id = '%a001%';
+//$set_id = $_POST['set_id'];
+$set_id = '1';
 
-$num1 = search('cards_status', $card_id,1,$set_id);
-$num2 = search('cards_status', $card_id,2,$set_id);
-$num3 = search('charity_card', $card_id,3,$set_id);
+$searchresult = array();
+
+$sql = "SELECT * FROM sets_cards WHERE set_id = '$set_id'";
+$res = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_assoc($res)){
+    $cardinfo = array();
+    $card_id = $row['card_id'];
+    $card_name = $row['card_name'];
+    $card_img = $row['card_images'];
+    //echo $card_id;
+    
+    $extranum = search('cards_status', $card_id,1,$set_id);
+    $missnum = search('cards_status', $card_id,2,$set_id);
+    $charitynum = search('charity_card', $card_id,4,$set_id);
+    $cardinfo = array('card_id'=>$card_id,'card_name'=>$card_name,'card_img'=>$card_img,
+        'extranum'=>$extranum, 'missnum'=>$missnum, 'charitynum'=>$charitynum);
+    $searchresult[] = $cardinfo;
+    
+}
+
+echo json_encode($searchresult);
+
+
 
 
