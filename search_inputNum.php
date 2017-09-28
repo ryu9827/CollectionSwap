@@ -1,6 +1,9 @@
 <?php
 	include_once 'includes/header.php';	
 ?>
+<script src="js/slimbox2/jquery.easing.1.3.js"></script>
+<link href="css/slimbox2/slimbox2.css" rel="stylesheet">
+<script src="js/slimbox2/slimbox2.js"></script>
 <script>  
 // $(function(){
 // $(document).ready(function(){   
@@ -79,36 +82,112 @@ function search($table,$card_name, $status,$set_id){
 ?>
 
 	<div style="text-align: center">
-		<h2>Enter the key word</h2>
+		<h2>Collection list</h2>
 	</div><br/>
 
-	<div class="row">
-		<div class="col-lg-3" style="float: none;margin: 0 auto">
-            <form action="search_inputNum.php">
-                <input type="hidden" name="set_id" value="<?php echo $set_id ?>">
-                <div class="input-group">
-                    <input id="search" type="text" class="form-control" placeholder="Search for..." name="name" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info" type="submit">Search</button>
-                    </span>
-                </div>
-            </form>
-		</div>
-	</div>
-	<br/><br/>
-
+<!--	<div class="row">-->
+<!--		<div class="col-lg-3" style="float: none;margin: 0 auto">-->
+<!--            <form action="search_inputNum.php">-->
+<!--                <input type="hidden" name="set_id" value="--><?php //echo $set_id ?><!--">-->
+<!--                <div class="input-group">-->
+<!--                    <input id="search" type="text" class="form-control" placeholder="Search for..." name="name" />-->
+<!--                    <span class="input-group-btn">-->
+<!--                        <button class="btn btn-info" type="submit">Search</button>-->
+<!--                    </span>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<br/><br/>-->
+    <p class="clearfix">
+        <a href="images/cardImages/card-1.png" rel="lightbox" title="333" class="thumbnail pull-left">
+            <img src="images/cardImages/card-1.png" rel="lightbox"  alt="123"/>
+        </a>
+    </p>
 
 <div id="title"></div>
- 				  	<div class="col-md-3" style="float: none;margin: 0 auto">
- 					    <div class="thumbnail">
- 					    	<img src="images/cardImages/card-1.png" alt="">        
- 					        <ul class="list-group">
- 					        	<li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
- 						        <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
- 						        <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
- 					        </ul>
- 					    </div>
- 				    </div>
+ 	<div class="col-md-3">
+ 	    <div class="thumbnail">
+            <a href="images/cardImages/card-1.png" rel="lightbox">
+ 	        	<img src="images/cardImages/card-1.png" rel="lightbox" alt="">
+            </a>
+ 	        <ul class="list-group">
+ 	        	<li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+ 		        <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+ 		        <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+ 	        </ul>
+ 	    </div>
+ 	</div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="images/cardImages/card-1.png" alt="">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info"> Card Name: <?php echo $card_id ?> </li>
+                <li class="list-group-item list-group-item-success"> <?php echo $num1 ?> people have this as spare. </li>
+                <li class="list-group-item list-group-item-warning"> <?php echo $num2 ?> people is collecting this as well.</li>
+            </ul>
+        </div>
+    </div>
 
 	
 	

@@ -43,7 +43,6 @@ $(function() {
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
 $.getJSON(url, dataSend, function (data) {
-    alert(data);
     if (jQuery.isEmptyObject(data)) { //if no matching user
         html = '<div style="text-align: center">' +
             '<h3 class="center-block">Sorry, no results were found!</h3><br/>' +
@@ -58,7 +57,7 @@ $.getJSON(url, dataSend, function (data) {
     }
     else {
         $.each(data, function (i, datareceive) {
-            if (datareceive.status == "locked") {//if user is locked
+            if (datareceive == "locked") {//if user is locked
                 html = '<div style="text-align: center">' +
                     '<h3 class="center-block">You have a swap in progress!</h3><br/>' +
                     '<h3 style="text-align: center">You can swap with others after complete current swaping.</h3><br/>' +
