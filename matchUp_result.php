@@ -43,31 +43,37 @@ $(function() {
 //使用getJSON方法读取json数据, 发送的数据dataSend只能通过GET获取  
 //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
 $.getJSON(url, dataSend, function (data) {
-    if (jQuery.isEmptyObject(data)) {
-    html = '<div style="text-align: center">' +
-           '<h3 class="center-block">Sorry, no results were found!</h3><br/>'+
-           '<h3 style="text-align: center">Would you happy to donate your collectables into our charity functionality?</h3><br/>' +
-           '</div>'+
-           '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>'+
-           '<div style="text-align: center">' +
-           '<h3> Or you can go back to the previous page and try again?</h3><br/><br/>' +
-           '</div>'+
-           '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Previous Page</button>'
-
+    alert(data);
+    if (jQuery.isEmptyObject(data)) { //if no matching user
+        html = '<div style="text-align: center">' +
+            '<h3 class="center-block">Sorry, no results were found!</h3><br/>' +
+            '<h3 style="text-align: center">Would you happy to donate your collectables into our charity functionality?</h3><br/>' +
+            '</div>' +
+            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
+            '<div style="text-align: center">' +
+            '<h3> Or you can go back to the previous page and try again?</h3><br/><br/>' +
+            '</div>' +
+            '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Previous Page</button>'
+        $('#noData').after(html);
+    }
+    else {
+        $.each(data, function (i, datareceive) {
+            if (datareceive.status == "locked") {//if user is locked
+                html = '<div style="text-align: center">' +
+                    '<h3 class="center-block">You have a swap in progress!</h3><br/>' +
+                    '<h3 style="text-align: center">You can swap with others after complete current swaping.</h3><br/>' +
+                    '</div><br/>' +
+                    '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Previous Page</button>'
                 $('#noData').after(html);
-
             }
-            var html = '';
-            $.each(data, function (i, item) {
-                html = match(i, item);
-                $('#carousel-inner').after(html);
-            });
-            //after方法:在每个匹配的元素之后插入内容。
+            else {
+                html = match(i, datareceive);
+                $('#carousel-inner').after(html);//after方法:在每个匹配的元素之后插入内容。
+            }
         });
+    }
+});
     });
-
-//If no match up result is callback, show Charity tips to user;
-
 });
 
 function match(i,item){
@@ -75,11 +81,6 @@ function match(i,item){
   var html='';
   switch(i){
     case 0:
-    var name = jQuery.parseJSON(JSON.stringify(item.name));
-    var offer = jQuery.parseJSON(JSON.stringify(item.offer));
-    var miss = jQuery.parseJSON(JSON.stringify(item.miss));
-    var offername = jQuery.parseJSON(JSON.stringify(item.offername));
-    var missname = jQuery.parseJSON(JSON.stringify(item.missname));
     html += '<div class="item active">'+
             '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-primary">'+
@@ -106,7 +107,6 @@ function match(i,item){
           '</div>'
     break;
     default:
-    var name = jQuery.parseJSON(JSON.stringify(item.name));
       html += '<div class="item">'+
               '<div class="col-xs-6 col-xs-offset-3">'+
               '<div class="panel panel-info">'+
