@@ -32,12 +32,12 @@ if (!isset($_SESSION['u_id'])){
  $set_name = $row['set_name'];
  
  $sql = "SELECT * FROM user_sets WHERE user_id = '$user_uid' AND set_id = '$set_id'";
- $res = mysqli_query($conn, $sql);
- $row = mysqli_fetch_assoc($res);
+ $res2 = mysqli_query($conn, $sql);
+ $row2 = mysqli_fetch_assoc($res2);
  
  $finallist = array();
  
- if($row['islocked'] == 0){
+ if($row2['islocked'] == 0){
 
  $want = requestList($user_uid,'2',$set_id);
  $extra = requestList($user_uid,'1',$set_id); 
