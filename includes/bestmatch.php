@@ -33,6 +33,8 @@ if (!isset($_SESSION['u_id'])){
  $res = mysqli_query($conn, $sql);
  $row = mysqli_fetch_assoc($res);
  
+ $finallist = array();
+ 
  if($row['islocked'] == 0){
 
  $want = requestList($user_uid,'2',$set_id);
@@ -61,7 +63,7 @@ foreach($result as $key => $value){
 
 arsort($result);
 
-$finallist = array();
+
 
 //create an array to store match result
 foreach($result as $key => $value){
@@ -117,8 +119,8 @@ foreach($result as $key => $value){
  }
  
  else{
-    $json = array('status'=>'locked');
-    echo json_encode($json);
+    $finallist = array('status'=>'locked');
+    echo json_encode($finallist);
  }
 
 
