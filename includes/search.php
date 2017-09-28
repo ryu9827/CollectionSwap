@@ -13,8 +13,8 @@ function search($table,$card_id, $status,$set_id){
 
 }
 
-//$set_id = $_POST['set_id'];
-$set_id = '1';
+$set_id = $_POST['set_id'];
+//$set_id = '1';
 
 $searchresult = array();
 
