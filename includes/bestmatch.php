@@ -9,10 +9,12 @@ if (!isset($_SESSION['u_id'])){
 
 	}
         
- $user_uid = $_SESSION['u_uid'];        
+ $user_uid = $_SESSION['u_uid'];      
+ 
 
  function requestList($user_uid,$status,$set_id){
      global $conn;
+     $rlist = array();
      $sql = "SELECT * FROM cards_status WHERE user_uid = '$user_uid' AND card_status = '$status' AND set_id = '$set_id' AND islocked = '0'";
      $res = mysqli_query($conn, $sql);
      while($row = mysqli_fetch_assoc($res)){
