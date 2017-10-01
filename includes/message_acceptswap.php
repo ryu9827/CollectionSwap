@@ -29,10 +29,12 @@ if (!isset($_SESSION['u_id'])){
  $set_id = $row['set_id'];
  $swap_email = $row['swap_email'];
  
- $//offerlist3 = explode(",", $offerlist2);
- $//getlist3 = explode(",",$getlist2);
+ //offerlist3 = explode(",", $offerlist2);
+ //getlist3 = explode(",",$getlist2);
  
  $set_name = getsetname($set_id);
+ $fullname = getfullname($user_uid);
+ $rfullname = getfullname($ruid);
  
  
  $address = getaddress($user_uid);
@@ -48,13 +50,13 @@ if (!isset($_SESSION['u_id'])){
  $subject = "Your swap request has been Accepted!";
  $body = "Dear ".$ruid."：<br/> Congratulations!<br/>Your swap request has been successfully accepted!<br/>Collection Set Name: "
          .$set_name."<br/>Offer: ".$getname2."<br/>Demand: ".$offername2."<br/>Applicant Username or Acceptant Username: ".$ruid.
-         "<br/>Email: ".$email."<br/>Shipping details:<br/>Delivery address:  ".$address."<br/>";
+         "<br/>Fullname: ".$fullname."<br/>Email: ".$email."<br/>Shipping details:<br/>Delivery address:  ".$address."<br/>";
  $mail->sendEmail($swap_email,$subject,$body);
  
  $subject = "Swaping Details";
  $body = "Dear ".$user_uid."：<br/> Your already accept the swap request from user: ".$ruid."<br/>Collection Set Name: "
          .$set_name."<br/>Offer: ".$offername2."<br/>Demand: ".$getname2."<br/>Applicant Username or Acceptant Username: ".$ruid.
-         "<br/>Email: ".$swap_email."<br/>Delivery address:  ".$raddress."<br/>";
+         "<br/>Fullname: ".$fullname."<br/>Email: ".$swap_email."<br/>Delivery address:  ".$raddress."<br/>";
  $mail->sendEmail($email,$subject,$body);
 
  header('location:../setsManagement_messages.php');

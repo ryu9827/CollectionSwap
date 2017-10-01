@@ -33,13 +33,16 @@ $user_uid = $_SESSION['u_uid'];
 $uid = $_SESSION['u_id'];
      
 //lock the card when request is sent        
-    function lockcard($user_uid,$set_id){
+    function lockcard($user_uid,$set_id, $card_list = array()){
         global $conn;  
     
         $time = time();
-        $sql = "UPDATE cards_status SET islocked = '1', locked_time = '$time' WHERE set_id = '$set_id' AND user_uid = '$user_uid'";
+        foreach ($card_list as $value) {
+            
+        $sql = "UPDATE cards_status SET islocked = '1', locked_time = '$time' WHERE set_id = '$set_id' AND user_uid = '$user_uid' AND card_id = '$value'";
         mysqli_query($conn, $sql);
-        echo mysqli_error($conn); 
+        echo mysqli_error($conn);
+        }
      
     }
     
@@ -60,9 +63,14 @@ $uid = $_SESSION['u_id'];
        return $email;
    }
 
+   $offerlist1 = explode(",", $offerlist);
+   $misslist1 = explode(",", $misslist);
+   
     //change card status when request is sent
-    lockcard($user_uid,$set_id);
-    lockcard($reciver_uid, $set_id);
+    lockcard($user_uid,$set_id, $offerlist1);
+    lockcard($user_uid,$set_id, $misslist1);
+    lockcard($reciver_uid, $set_id, $offerlist1);
+    lockcard($reciver_uid, $set_id, $misslist1);
       
     //get users and reciver email address   
     $uemail = getemail($user_uid);

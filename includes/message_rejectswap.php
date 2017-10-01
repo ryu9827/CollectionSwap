@@ -16,17 +16,18 @@ date_default_timezone_set('NZ');
 
 $user_uid = $_SESSION['u_uid'];   
 $msg_id = $_POST['message_id'];
+
 //$user_uid = 'amy';
 //$msg_id = 57;
  
- function swapreject($userid, $set_id){
+ function swapreject($userid, $set_id, $rejectlist = array()){
     global $conn; 
-//  foreach($list as $values){    
-//     $sql = "UPDATE cards_status SET status = '$status' WHERE user_uid = '$userid' AND card_id = '$values' AND set_id = '$set_id'";
-//     mysqli_query($conn, $sql);
-//   }
-  $sql = "UPDATE cards_status SET islocked = '0' WHERE user_uid = '$userid' AND set_id = '$set_id'";
-  mysqli_query($conn, $sql);
+  foreach($rejectlist as $values){    
+     $sql = "UPDATE cards_status SET status = '0' WHERE user_uid = '$userid' AND card_id = '$values' AND set_id = '$set_id'";
+     mysqli_query($conn, $sql);
+   }
+//  $sql = "UPDATE cards_status SET islocked = '0' WHERE user_uid = '$userid' AND set_id = '$set_id'";
+//  mysqli_query($conn, $sql);
  }
   
  
@@ -37,6 +38,11 @@ $msg_id = $_POST['message_id'];
  $token = $row['token'];
  $ruid = $row['swap_uid'];
  $set_id = $row['set_id'];
+ $offerlist_reject = $row['offer_id'];
+ $getlist_reject = $row['get_id'];
+ 
+ $offerlist_reject2 = explode(",", $offerlist_reject);
+ $getlist_reject2 = explode(",", $getlist_reject);
  
  $set_name = getsetname($set_id);
  //echo $ruid;
@@ -48,8 +54,19 @@ $msg_id = $_POST['message_id'];
  //$offerlist2 = explode(",",$row['offer_id']);
  //$misslist2 = explode(",",$row['miss_id']);
  
- swapreject( $user_uid, $set_id);
- swapreject($ruid, $set_id);
+ swapreject( $user_uid, $set_id, $offerlist_reject2);
+ swapreject( $user_uid, $set_id, $getlist_reject2);
+ swapreject($ruid, $set_id,  $offerlist_reject2);
+ swapreject($ruid, $set_id,  $getlist_reject2);
+ 
+ 
+ $sql = "SELECT * FROM users WHERE user_uid = '$ruid'";
+ $res3 = mysqli_query($conn, $sql);
+ $row3 = mysqli_fetch_assoc($res3);
+ $rid = $row3['user_id'];
+ 
+ $sql = "UPDATE user_sets SET islocked = '0' WHERE user_id = $rid AND set_id = '$set_id'";
+ mysqli_query($conn, $sql);
 
  $email = getemail2($ruid);
  

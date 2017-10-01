@@ -58,9 +58,12 @@
                                         $token_exptime = time()+60*60*24;//set expire time
                                         $lastlogin = date("d/m/Y");
                                         
+                                        $firstname = ucwords($first);
+                                        $lastname = ucwords($last);
+                                        
                                         
 					//Insert the user into the database
-					$sql = "INSERT INTO users ( user_email, user_uid, user_pwd, user_postcode,token,token_time,regtime,lastlogin_time,address) VALUES ('$email', '$uid', '$hashedPwd', '$postcode', '$token', '$token_exptime','$regtime','$lastlogin','$ads');";
+					$sql = "INSERT INTO users ( user_email, user_uid, user_pwd, user_postcode,token,token_time,regtime,lastlogin_time,address,user_first,user_last) VALUES ('$email', '$uid', '$hashedPwd', '$postcode', '$token', '$token_exptime','$regtime','$lastlogin','$ads','$firstname','$lastname');";
 					
 
                                        mysqli_query($conn, $sql);
