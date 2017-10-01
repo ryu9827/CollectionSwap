@@ -30,13 +30,13 @@ include_once('includes/header.php');
 
             <label for="firstname" class="col-xs-2 col-xs-offset-2 control-label">* First Name: </label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                <input type="text" class="form-control" name="first" placeholder="First Name">
             </div>
             </br></br></br>
 
             <label for="lastname" class="col-xs-2 col-xs-offset-2 control-label">* Last Name: </label>
             <div class="col-xs-4">
-                <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                <input type="text" class="form-control" name="last" placeholder="Last Name">
             </div>
             </br></br></br>
 

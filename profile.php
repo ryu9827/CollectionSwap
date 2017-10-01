@@ -19,7 +19,7 @@ $row= mysqli_fetch_assoc($res);
 </script>
 
 	<div style="text-align: center">
-		<h2>User Profile</h2>
+		<h2><?php echo $user_uid; ?> Profile</h2>
 	</div><br/>
 
 <div class="row">
