@@ -105,6 +105,18 @@ function matchup($cardlist = array(),$cardstatus='',$user_uid='',$set_id ){
      
  }
  
+ function getfullname($user_uid){
+      global $conn; 
+     $sql = "SELECT * FROM users WHERE user_uid = '$user_uid'";
+     $res = mysqli_query($conn, $sql);
+     $row = mysqli_fetch_assoc($res);
+     $first = $row['user_first'];
+     $last = $row['user_last'];        
+     $fullname = $first." ".$last;
+     return $fullname;
+     
+ }
+ 
 
 
    
