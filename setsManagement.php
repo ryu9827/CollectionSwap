@@ -42,8 +42,7 @@
         
         <div class="row">
 			<div class="col-xs-4 col-xs-offset-4">
-			<h4 class="text-center">'.$rows[4].'</h4>
-			    <a href="setsManagement_cardList?set_id='.$rows[2].'"><button class="btn btn-info pull-right">Edit</button></a>&nbsp
+			<h4 class="text-center">'.$rows[4].'</h4>			    
 			    <a href="includes/removeSet?set_id='.$rows[2].'"><button class="btn btn-danger pull-right">Remove</button></a>
 			</div>
 		</div>

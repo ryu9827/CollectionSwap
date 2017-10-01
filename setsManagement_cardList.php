@@ -85,9 +85,9 @@
                     <td>                        
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
                     </td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Extra</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Missing</td>                    
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Already Have</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Spare</td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Wanted</td>                    
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Got it</td>
                 </tr>
 			';
 	}

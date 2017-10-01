@@ -50,7 +50,7 @@ $.getJSON(url, dataSend, function (data) {
             '</div>' +
             '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
             '<div style="text-align: center">' +
-            '<h3> Or you can go back to the previous page and try again?</h3><br/><br/>' +
+            '<h3> Or you can go back to the previous page and try again</h3><br/><br/>' +
             '</div>' +
             '<button class="btn btn-default btn-lg center-block" onclick="location.href=\'matchUp.php\'">Previous Page</button>'
         $('#noData').after(html);
@@ -90,7 +90,7 @@ function match(i,item){
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Demand：'+item.missname+'</p>'+
+                  '<p>Request：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
                   '<p>Rating：</p>'+
                   '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
@@ -116,7 +116,7 @@ function match(i,item){
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Demand：'+item.missname+'</p>'+
+                  '<p>Request：'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
                   '<p>Rating：</p>'+
                   '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
