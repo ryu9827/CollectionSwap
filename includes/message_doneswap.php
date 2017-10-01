@@ -42,6 +42,14 @@ if (!isset($_SESSION['u_id'])){
  swapdone($misslist2, $ruid, $set_id );
  swapdone($offerlist2, $ruid, $set_id );
  
+ $sql = "SELECT * FROM users WHERE user_uid = '$ruid'";
+ $res3 = mysqli_query($conn, $sql);
+ $row3 = mysqli_fetch_assoc($res3);
+ $rid = $row3['user_id'];
+ 
+ $sql = "UPDATE user_sets SET islocked = '0' WHERE user_id = $rid AND set_id = '$set_id'";
+ mysqli_query($conn, $sql);
+ 
  $sql = "UPDATE cards_status SET islocked = '0' WHERE user_uid IN ('$user_uid','$ruid' ) AND set_id = '$set_id'";
  mysqli_query($conn, $sql);
  
