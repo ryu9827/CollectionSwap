@@ -36,7 +36,7 @@
 	<ul>
     <li id="about"><a class="norm" href="about.php" target="_self">About</a>
     </li>
-	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Sets&nbsp;Management</a>
+	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Set&nbsp;Management</a>
 	</li>
 	<li id="matchUp"><a class="norm" href="matchUp.php" target="_self">Match&nbsp;Up</a>
 	</li>

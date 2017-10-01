@@ -180,9 +180,9 @@ function match(i,item){
         <p>Attention: Your collectables for the request have been temporary latched during the swap process. If your request has not been reposed in next 7 days or rejected, the latched items would be automatically released.</p>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close">Get It</button>        
+        <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close" onclick="location.href='matchUp.php'">Get It</button>
         <a href="setsManagement_messages.php">
-          <button type="button" class="btn btn-info">View In Message</button>
+          <button type="button" class="btn btn-info" onclick="location.href='setsManagement_messages.php'">View In Message</button>
         </a>      
       </div>
     </div>

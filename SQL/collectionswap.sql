@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-09-24 06:03:55
--- 服务器版本： 5.7.18-log
+-- Generation Time: Sep 29, 2017 at 10:06 PM
+-- Server version: 5.7.18-log
 -- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- 表的结构 `cards_status`
+-- Table structure for table `cards_status`
 --
 
 CREATE TABLE `cards_status` (
@@ -38,60 +38,56 @@ CREATE TABLE `cards_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `cards_status`
+-- Dumping data for table `cards_status`
 --
 
 INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`, `locked_time`, `card_name`, `islocked`) VALUES
-('yehan', '1', 1, 1, '1', NULL, '', 0),
-('yehan', '2', 2, 2, '1', NULL, '', 0),
-('yehan', '3', 1, 3, '1', NULL, '', 0),
-('yehan', '4', 2, 4, '1', NULL, '', 0),
-('yehan', '5', 1, 5, '1', NULL, '', 0),
-('yehan', '6', 1, 6, '1', NULL, '', 0),
-('amy', '5', 0, 11, '2', 1505946042, '', 1),
-('amy', '6', 2, 12, '2', 1505946042, '', 1),
-('wendy', '1', 1, 13, '1', 1505773875, '', 0),
-('wendy', '2', 1, 14, '1', 1505773875, '', 0),
-('wendy', '3', 1, 15, '1', 1505773875, '', 0),
-('wendy', '4', 1, 16, '1', 1505773875, '', 0),
-('wendy', '5', 0, 17, '1', 1505773875, '', 0),
-('wendy', '6', 0, 18, '1', 1505773875, '', 0),
-('Tony', '1', 2, 19, '1', 1505265894, '', 0),
-('Tony', '2', 2, 20, '1', 1505265894, '', 0),
-('Tony', '3', 2, 21, '1', 1505265894, '', 0),
-('Tony', '4', 2, 22, '1', 1505265894, '', 0),
-('Tony', '5', 1, 23, '1', 1505265894, '', 0),
-('Tony', '6', 1, 24, '1', 1505265894, '', 0),
-('Bruce', '1', 1, 25, '1', 1505946042, '', 1),
-('Bruce', '2', 1, 26, '1', 1505946042, '', 1),
-('Bruce', '3', 2, 27, '1', 1505946042, '', 1),
-('Bruce', '4', 2, 28, '1', 1505946042, '', 1),
-('Bruce', '5', 2, 29, '1', 1505946042, '', 1),
-('Bruce', '6', 1, 30, '1', 1505946042, '', 1),
-('xinkai', '1', 2, 31, '1', 1505891611, '', 0),
-('xinkai', '2', 2, 32, '1', 1505891611, '', 0),
-('xinkai', '3', 1, 33, '1', 1505891611, '', 0),
-('xinkai', '4', 1, 34, '1', 1505891611, '', 0),
-('xinkai', '5', 0, 35, '1', 1505891611, '', 0),
-('xinkai1', '2', 2, 37, '1', NULL, '', 0),
-('xinkai1', '3', 1, 38, '1', NULL, '', 0),
-('xinkai1', '4', 2, 39, '1', NULL, '', 0),
-('xinkai1', '5', 2, 40, '1', NULL, '', 0),
-('amy', '1', 2, 44, '2', 1505946042, NULL, 1),
-('amy', '2', 2, 45, '2', 1505946042, NULL, 1),
-('amy', '4', 1, 47, '2', 1505946042, NULL, 1),
-(NULL, NULL, NULL, 48, NULL, NULL, NULL, 0),
-('amy', '3', 2, 49, '2', NULL, NULL, 0),
-('amy', '1', 2, 50, '2', NULL, NULL, 0),
-('amy', '2', 2, 51, '2', NULL, NULL, 0),
-('amy', '3', 2, 52, '2', NULL, NULL, 0),
-('amy', '4', 1, 53, '2', NULL, NULL, 0),
-('amy', '5', 1, 54, '1', NULL, NULL, 0);
+('Yehan', '1', 1, 1, '1', NULL, '', 0),
+('Yehan', '2', 2, 2, '1', NULL, '', 0),
+('Yehan', '3', 1, 3, '1', NULL, '', 0),
+('Yehan', '4', 2, 4, '1', NULL, '', 0),
+('Yehan', '5', 1, 5, '1', NULL, '', 0),
+('Yehan', '6', 1, 6, '1', NULL, '', 0),
+('Wendy', '1', 1, 13, '1', 1505773875, '', 0),
+('Wendy', '2', 1, 14, '1', 1505773875, '', 0),
+('Wendy', '3', 1, 15, '1', 1505773875, '', 0),
+('Wendy', '4', 1, 16, '1', 1505773875, '', 0),
+('Wendy', '5', 0, 17, '1', 1505773875, '', 0),
+('Wendy', '6', 0, 18, '1', 1505773875, '', 0),
+('Tony', '1', 2, 19, '1', 1506629705, '', 0),
+('Tony', '2', 2, 20, '1', 1506629705, '', 0),
+('Tony', '3', 2, 21, '1', 1506629705, '', 0),
+('Tony', '4', 2, 22, '1', 1506629705, '', 0),
+('Tony', '5', 1, 23, '1', 1506629705, '', 0),
+('Tony', '6', 1, 24, '1', 1506629705, '', 0),
+('Bruce', '1', 1, 25, '1', 1506629866, '', 0),
+('Bruce', '2', 1, 26, '1', 1506629866, '', 0),
+('Bruce', '3', 2, 27, '1', 1506629866, '', 0),
+('Bruce', '4', 2, 28, '1', 1506629866, '', 0),
+('Bruce', '5', 2, 29, '1', 1506629866, '', 0),
+('Bruce', '6', 1, 30, '1', 1506629866, '', 0),
+('Xinkai', '4', 2, 34, '1', 1506630018, '', 0),
+('Xinkai', '5', 1, 35, '1', 1506630018, '', 0),
+('Xinkai1', '2', 2, 37, '1', NULL, '', 0),
+('Xinkai1', '3', 1, 38, '1', NULL, '', 0),
+('Xinkai1', '4', 2, 39, '1', NULL, '', 0),
+('Xinkai1', '5', 2, 40, '1', NULL, '', 0),
+('Amy', '36', 2, 49, '2', NULL, NULL, 0),
+('Amy', '33', 1, 50, '2', NULL, NULL, 0),
+('Amy', '35', 2, 51, '2', NULL, NULL, 0),
+('Amy', '37', 1, 53, '2', NULL, NULL, 0),
+('Amy', '101', 1, 56, '3', NULL, NULL, 0),
+('Amy', '102', 1, 57, '3', NULL, NULL, 0),
+('Amy', '103', 2, 58, '3', NULL, NULL, 0),
+('Amy', '104', 2, 59, '3', NULL, NULL, 0),
+('Amy', '4', 2, 67, '1', 1506630018, NULL, 0),
+('Amy', '5', 1, 69, '1', 1506630018, NULL, 0),
+('Amy', '6', 2, 70, '1', 1506630018, NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `charity_card`
+-- Table structure for table `charity_card`
 --
 
 CREATE TABLE `charity_card` (
@@ -103,18 +99,18 @@ CREATE TABLE `charity_card` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `charity_card`
+-- Dumping data for table `charity_card`
 --
 
 INSERT INTO `charity_card` (`id`, `user_uid`, `card_id`, `set_id`, `card_status`) VALUES
-(3, 'amy', '1', '1', 4),
-(4, 'amy', '3', '1', 4),
-(5, 'amy', '2', '1', 4);
+(9, 'Amy', '1', '1', 4),
+(10, 'Amy', '2', '1', 4),
+(11, 'Amy', '6', '1', 4);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `messages`
+-- Table structure for table `messages`
 --
 
 CREATE TABLE `messages` (
@@ -127,65 +123,33 @@ CREATE TABLE `messages` (
   `set_id` varchar(500) DEFAULT NULL,
   `offer_id` varchar(500) DEFAULT NULL,
   `get_id` varchar(45) DEFAULT NULL,
-  `msg_id` varchar(45) DEFAULT NULL
+  `token` varchar(500) DEFAULT NULL,
+  `offer_name` varchar(500) DEFAULT NULL,
+  `get_name` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `messages`
+-- Dumping data for table `messages`
 --
 
-INSERT INTO `messages` (`id`, `user_uid`, `swap_uid`, `swap_email`, `status`, `time`, `set_id`, `offer_id`, `get_id`, `msg_id`) VALUES
-(11, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:42:57', 'null', '1,2', '5,4', '1'),
-(12, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:42:57', 'null', '5,4', '1,2', '1'),
-(13, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:45:45', 'null', '1,2', '5,4', '1'),
-(14, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:45:45', 'null', '5,4', '1,2', '1'),
-(15, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:47:23', 'null', '1,2', '5,4', '1'),
-(16, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:47:23', 'null', '5,4', '1,2', '1'),
-(17, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:49:45', '1', '1,2', '5,4', '1'),
-(18, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:49:45', '1', '5,4', '1,2', '1'),
-(19, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:51:13', '1', 'undefined', 'undefined', '1'),
-(20, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:51:13', '1', 'undefined', 'undefined', '1'),
-(21, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 15:55:41', '1', '5,6,4', '1,2', '1'),
-(22, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 15:55:41', '1', '1,2', '5,6,4', '1'),
-(23, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 16:01:40', '1', 'undefined', 'undefined', '1'),
-(24, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 16:01:40', '1', 'undefined', 'undefined', '1'),
-(25, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 16:03:24', '1', '5,6', '1,2', '1'),
-(26, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 16:03:24', '1', '1,2', '5,6', '1'),
-(27, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 16:05:07', '1', '1,2', '5,6', '1'),
-(28, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 16:05:07', '1', '5,6', '1,2', '1'),
-(29, 'amy', '', '', '1', '20/09/2017 17:02:43', '', '', '', '1'),
-(30, '', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 17:02:43', '', '', '', '1'),
-(31, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 17:21:38', '1', '5,6', '1,2', '1'),
-(32, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 17:21:38', '1', '1,2', '5,6', '1'),
-(33, 'amy', 'Tony', '222@gmail.com', '1', '20/09/2017 17:34:06', 'null', '5,6', '1,2', '1'),
-(34, 'Tony', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 17:34:06', 'null', '1,2', '5,6', '1'),
-(35, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 18:01:41', 'null', 'undefined', 'undefined', '1'),
-(36, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 18:01:41', 'null', 'undefined', 'undefined', '1'),
-(37, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 18:08:27', '1', 'undefined', 'undefined', '1'),
-(38, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 18:08:27', '1', 'undefined', 'undefined', '1'),
-(39, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 18:10:57', '1', 'undefined', 'undefined', '1'),
-(40, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 18:10:57', '1', 'undefined', 'undefined', '1'),
-(41, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 18:13:08', '1', '5,6', '1,2', '1'),
-(42, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 18:13:08', '1', '1,2', '5,6', '1'),
-(43, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 18:14:26', '1', '5,6', '1,2', '1'),
-(44, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 18:14:26', '1', '1,2', '5,6', '1'),
-(45, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 19:09:38', '1', 'undefined', 'undefined', '1'),
-(46, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 19:09:38', '1', 'undefined', 'undefined', '1'),
-(47, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 19:11:51', '1', '5,6', '1,2', '1'),
-(48, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 19:11:51', '1', '1,2', '5,6', '1'),
-(49, 'amy', 'xinkai', '', '1', '20/09/2017 19:13:31', '1', '5', '1,2', '1'),
-(50, 'xinkai', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 19:13:31', '1', '1,2', '5', '1'),
-(51, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 19:15:09', '1', '5,6', '1,2', '1'),
-(52, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 19:15:09', '1', '1,2', '5,6', '1'),
-(53, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '20/09/2017 19:15:23', '1', '5,6', '1,2', '1'),
-(54, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '20/09/2017 19:15:23', '1', '1,2', '5,6', '1'),
-(55, 'amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '21/09/2017 10:20:42', '1', '1,2', '4', '1'),
-(56, 'Bruce', 'amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', '1');
+INSERT INTO `messages` (`id`, `user_uid`, `swap_uid`, `swap_email`, `status`, `time`, `set_id`, `offer_id`, `get_id`, `token`, `offer_name`, `get_name`) VALUES
+(54, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '2', '20/09/2017 19:15:23', '1', '1,2', '5,6', NULL, NULL, NULL),
+(55, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
+(56, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '3', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
+(57, 'Amy', 'Xinkai', '', '5', '26/09/2017 15:41:46', '1', '3', '1,2', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
+(58, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
+(59, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '5', '29/09/2017 09:52:00', '1', '1,5', '2,5', NULL, NULL, NULL),
+(60, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
+(61, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '3', '26/09/2017 15:41:46', '1', '1,5', '2,5', NULL, NULL, NULL),
+(62, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '6', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
+(63, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '6', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
+(65, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '0', '29/09/2017 09:52:23', '1', '1,2', '4', NULL, NULL, NULL),
+(66, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `rating`
+-- Table structure for table `rating`
 --
 
 CREATE TABLE `rating` (
@@ -200,18 +164,19 @@ CREATE TABLE `rating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `rating`
+-- Dumping data for table `rating`
 --
 
 INSERT INTO `rating` (`rate_id`, `user_uid`, `good`, `normal`, `bad`, `average`, `count`, `total`) VALUES
-(1, 'amy', 6, 1, 0, 2.5, 8, 20),
-(2, 'Bruce', 3, 2, 1, 2, 3, 30),
-(3, 'Tony', 2, 4, 1, 4, 4, 20);
+(1, 'Amy', 6, 1, 0, 2.5, 8, 20),
+(2, 'Bruce', 4, 2, 1, 8.25, 4, 33),
+(3, 'Tony', 2, 4, 1, 4, 4, 20),
+(4, 'Xinkai', 2, 2, 3, 4.6, 5, 23);
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sets_cards`
+-- Table structure for table `sets_cards`
 --
 
 CREATE TABLE `sets_cards` (
@@ -223,20 +188,20 @@ CREATE TABLE `sets_cards` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `sets_cards`
+-- Dumping data for table `sets_cards`
 --
 
 INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_name`) VALUES
-(1, '1', '1', 'images/cardImages/card-1.png', 'All Blacks - 1'),
-(2, '1', '2', 'images/cardImages/card-2.png', 'All Blacks - 2'),
-(3, '1', '3', 'images/cardImages/card-3.png', 'All Blacks - 3'),
-(4, '1', '4', 'images/cardImages/card-4.png', 'All Blacks - 4'),
-(5, '1', '5', 'images/cardImages/card-5.png', 'All Blacks - 5'),
-(6, '1', '6', 'images/cardImages/card-6.png', 'All Blacks - 6'),
-(7, '2', '33', 'images/cardImages/Disney-33.jpg', 'Disney - 33'),
-(8, '2', '35', 'images/cardImages/Disney-35.jpg', 'Disney - 35'),
-(9, '2', '36', 'images/cardImages/Disney-36.jpg', 'Disney - 36'),
-(10, '2', '37', 'images/cardImages/Disney-37.jpg', 'Disney - 37'),
+(1, '1', '1', 'images/cardImages/card-1.png', '1001'),
+(2, '1', '2', 'images/cardImages/card-2.png', '1002'),
+(3, '1', '3', 'images/cardImages/card-3.png', '1003'),
+(4, '1', '4', 'images/cardImages/card-4.png', '1004'),
+(5, '1', '5', 'images/cardImages/card-5.png', '1005'),
+(6, '1', '6', 'images/cardImages/card-6.png', '1006'),
+(7, '2', '33', 'images/cardImages/Disney-33.jpg', '2033'),
+(8, '2', '35', 'images/cardImages/Disney-35.jpg', '2035'),
+(9, '2', '36', 'images/cardImages/Disney-36.jpg', '2036'),
+(10, '2', '37', 'images/cardImages/Disney-37.jpg', '2037'),
 (11, '3', '101', 'images/cardImages/Grote Smurf.jpg', 'Grote Smurf'),
 (12, '3', '102', 'images/cardImages/Bril Smurf.jpg', 'Bril Smurf'),
 (13, '3', '103', 'images/cardImages/Smurfin.jpg', 'Smurfin'),
@@ -246,7 +211,7 @@ INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_name`)
 -- --------------------------------------------------------
 
 --
--- 表的结构 `sets_exist`
+-- Table structure for table `sets_exist`
 --
 
 CREATE TABLE `sets_exist` (
@@ -258,7 +223,7 @@ CREATE TABLE `sets_exist` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 转存表中的数据 `sets_exist`
+-- Dumping data for table `sets_exist`
 --
 
 INSERT INTO `sets_exist` (`set_id`, `set_name`, `set_cover_image`, `set_cards_amount`, `ishidden`) VALUES
@@ -269,7 +234,7 @@ INSERT INTO `sets_exist` (`set_id`, `set_name`, `set_cover_image`, `set_cards_am
 -- --------------------------------------------------------
 
 --
--- 表的结构 `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -289,7 +254,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_uid`, `user_postcode`, `user_pwd`, `verify`, `token`, `token_time`, `regtime`, `lastlogin_time`, `address`) VALUES
@@ -327,16 +292,31 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (43, 'fdfd', 'fdfdf', '4343@qqx.com', 'tre', '434', '$2y$10$wVHrgD7.BwNgkAriZE.OQO5hb9KGsYcu65HHmLMxZhBfy1Sd4Zc/i', 0, '2bb2e544c0feb36d9196ba0bc3118c2d', 1503109869, 1503023469, NULL, NULL),
 (44, 'klkl', 'jgddf', 'edcrfv@gmail.com', 'here', '9012', '$2y$10$J4k2o0dXEnK7hoMJ4PV7y.cREdG0Vh9Fquw2dTzYFERs6/5Ys76ze', 0, '0c701927b22789bd07a8a64f8a2797ff', 1503110098, 1503023698, NULL, NULL),
 (45, 'gewe', 'fdsfew', 'ijhg@rere.com', 'uhyt6', '89', '$2y$10$3YukaWVne6GYGoDk/ZVeiexdY4A3b/wSIGshwr1ZDGRfD7gThxm8W', 0, '8b9bd4a710fe2c86a60692a177b22a5f', 1503110382, 1503023982, NULL, NULL),
-(46, 'yehan', 'wang', '900@gmail.com', 'yyy', '123', '$2y$10$fheRgFnLogwadVasVeXevOj0xJQQW40HYamfn/.X/BD0smjsHf21m', 0, 'f107b84469588aba18488363985e1822', 1503361561, 1503275161, NULL, NULL),
-(47, 'aimee', 'aimee', 'yhchixigua@gmail.com', 'aimee123', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL),
-(48, 'bruce', 'li', 'yehan.wang@it.weltec.ac.nz', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017', NULL),
-(49, 'tony', 'wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017', NULL),
-(50, 'amy', 'wang', 'yhchixigua@gmail.com', 'amy', '33232', '$2y$10$xCZXMq74E2yk9IBeqgWZR.gYAp48izIt7Mq4Mxz1tL.0ufunKinMu', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '22/09/2017', NULL);
+(46, 'Yehan', 'Wang', '900@gmail.com', 'Yyy', '123', '$2y$10$fheRgFnLogwadVasVeXevOj0xJQQW40HYamfn/.X/BD0smjsHf21m', 0, 'f107b84469588aba18488363985e1822', 1503361561, 1503275161, NULL, NULL),
+(47, 'Aimee', 'Aimee', 'yhchixigua@gmail.com', 'Xinkai', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL),
+(48, 'Bruce', 'Li', 'yehan.wang@it.weltec.ac.nz', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017', NULL),
+(49, 'Tony', 'Wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017', NULL),
+(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '33232', '$2y$10$xCZXMq74E2yk9IBeqgWZR.gYAp48izIt7Mq4Mxz1tL.0ufunKinMu', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '29/09/2017', '81 karaka street, lower hutt');
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `user_sets`
+-- Stand-in structure for view `user_cards_status`
+-- (See below for the actual view)
+--
+CREATE TABLE `user_cards_status` (
+`user_id` int(11)
+,`user_uid` varchar(45)
+,`set_id` varchar(45)
+,`card_id` varchar(45)
+,`card_status` int(1)
+,`card_name` varchar(500)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_sets`
 --
 
 CREATE TABLE `user_sets` (
@@ -347,16 +327,18 @@ CREATE TABLE `user_sets` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- 转存表中的数据 `user_sets`
+-- Dumping data for table `user_sets`
 --
 
 INSERT INTO `user_sets` (`id`, `user_id`, `set_id`, `islocked`) VALUES
-(5, 50, 1, 0);
+(7, 50, 1, 0),
+(9, 50, 2, 0),
+(8, 50, 3, 0);
 
 -- --------------------------------------------------------
 
 --
--- 替换视图以便查看 `user_sets_details`
+-- Stand-in structure for view `user_sets_details`
 -- (See below for the actual view)
 --
 CREATE TABLE `user_sets_details` (
@@ -370,7 +352,16 @@ CREATE TABLE `user_sets_details` (
 -- --------------------------------------------------------
 
 --
--- 视图结构 `user_sets_details`
+-- Structure for view `user_cards_status`
+--
+DROP TABLE IF EXISTS `user_cards_status`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `user_cards_status`  AS  select `t`.`user_id` AS `user_id`,`t`.`user_uid` AS `user_uid`,`a`.`set_id` AS `set_id`,`a`.`card_id` AS `card_id`,`a`.`card_status` AS `card_status`,`b`.`card_name` AS `card_name` from ((`users` `t` join `cards_status` `a`) join `sets_cards` `b`) where ((`t`.`user_uid` = `a`.`user_uid`) and (`b`.`card_id` = `a`.`card_id`)) ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `user_sets_details`
 --
 DROP TABLE IF EXISTS `user_sets_details`;
 
@@ -438,44 +429,44 @@ ALTER TABLE `user_sets`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- 在导出的表使用AUTO_INCREMENT
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- 使用表AUTO_INCREMENT `cards_status`
+-- AUTO_INCREMENT for table `cards_status`
 --
 ALTER TABLE `cards_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 --
--- 使用表AUTO_INCREMENT `charity_card`
+-- AUTO_INCREMENT for table `charity_card`
 --
 ALTER TABLE `charity_card`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- 使用表AUTO_INCREMENT `messages`
+-- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 --
--- 使用表AUTO_INCREMENT `rating`
+-- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- 使用表AUTO_INCREMENT `sets_exist`
+-- AUTO_INCREMENT for table `sets_exist`
 --
 ALTER TABLE `sets_exist`
   MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- 使用表AUTO_INCREMENT `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
--- 使用表AUTO_INCREMENT `user_sets`
+-- AUTO_INCREMENT for table `user_sets`
 --
 ALTER TABLE `user_sets`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

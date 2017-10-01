@@ -9,7 +9,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Which cards are you searching for charity?</h2>
+		<h2>Which collection are you searching for charity?</h2>
 	</div><br/>
 
 <!-- 定义一下table的尺寸，不然显示得不太好 -->

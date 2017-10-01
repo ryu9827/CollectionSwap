@@ -14,7 +14,7 @@ $finallist = askForCharity($obj,$set_id);
 if(is_null($finallist)){
     echo "Sorry.No matching user.";
 }
-var_dump($finallist);
+//var_dump($finallist);
 ?>
 
 <!-- 二级导航 -->
@@ -80,7 +80,7 @@ echo'<div class="item active">
     <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
     </div>
     <div class="panel-footer">
-    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" >Send Request</button>
+    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" >Ask For Charity</button>
     </div>
     </div>
     </div>
