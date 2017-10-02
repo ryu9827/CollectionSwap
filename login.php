@@ -9,7 +9,7 @@ if (isset($_SESSION['u_id'])){
 	<div style="height: 100px; visibility:hidden;"></div>
 	<div style="text-align: center">
 		<h2>Account Login</h2>
-        <p>Manage your collectables & other information regarding your account</p>
+        <p>Manage your collections & other information regarding your account</p>
 	</div>
 	</br></br>
             <form class="form-horizontal" action="includes/login.inc.php" method="POST">
@@ -27,7 +27,7 @@ if (isset($_SESSION['u_id'])){
                     </div>
                     </br></br></br></br></br>
                     <div class="col-md-4 col-md-offset-4 text-left">
-                        <button type="submit" class="btn btn-info btn-lg" name="submit">Log in</button>
+                        <button type="submit" class="btn btn-blue btn-lg" name="submit">Log in</button>
                     </div>
                     </br></br>
                     <div class="col-md-4 col-md-offset-4 text-right">
@@ -35,7 +35,10 @@ if (isset($_SESSION['u_id'])){
                     </div>
                 </div>
             </form>
-
+    <div class="col-sm-2 col-md-offset-4">
+        <label>Demo Account:</label> amy
+        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Password: </label>123
+    </div>
 <!--	<p class="text-center"><a href="forgetPwd">Forget your password?</a></p>-->
 
 

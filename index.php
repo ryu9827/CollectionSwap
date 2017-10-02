@@ -42,7 +42,7 @@
 	</li>
 	<li id="charity"><a class="norm" href="charity.php" target="_self">Charity</a>
 	</li>
-	<li id="search"><a class="norm" href="search.php" target="_self">Search</a>
+	<li id="search"><a class="norm" href="explore.php" target="_self">Explore</a>
 	</li>
     <li id="contactUs"><a class="norm" href="contactUs.php" target="_self">Contact Us</a>
     </li>
@@ -50,9 +50,9 @@
      if(isset($_SESSION['u_uid'])) {
          $u_uid = $_SESSION['u_uid'];
          echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
-         echo '<li><a class="norm" href="#" name="logout" target="_self" style="text-decoration: underline" onclick="logout()">Log out</a></li>';
+         echo '<li><a class="log btn btn-default" href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>';
      } else{
-         echo '<li id="register"><a class="norm" href="login.php" style="text-decoration: underline" target="_self">Log in</a></li>';}
+         echo '<li id="register"><a class="log btn btn-default" href="login.php" target="_self">Log in</a></li>';}
      ?>
 	</ul>
 </div>
@@ -209,6 +209,7 @@
 </div>
 <div id="wb_Text17">
 <span style="color:#FFFFFF;font-family:Arial;font-size:12px;">Copyright 2017, Delight <br>Powered by WebWox <br>Partner with Wellington Institution of Technology</span>
+</div>
 </div>
 </div>
 </div>

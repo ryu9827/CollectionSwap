@@ -48,7 +48,7 @@ $.getJSON(url, dataSend, function (data) {
             '<h3 class="center-block">Sorry, no results were found!</h3><br/>' +
             '<h3 style="text-align: center">Would you happy to donate your collectables into our charity functionality?</h3><br/>' +
             '</div>' +
-            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
+            '<button class="btn btn-blue btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
             '<div style="text-align: center">' +
             '<h3> Or you can go back to the previous page and try again</h3><br/><br/>' +
             '</div>' +
@@ -89,13 +89,21 @@ function match(i,item){
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
-                  '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Request：'+item.missname+'</p>'+
+                  '<p>Offer:'+item.offername+'</p>'+
+                  '<p>Request:'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
-                  '<p>Rating：</p>'+
-                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
-                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
-                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
+                  '<p>'+item.name+'\'s Feedback:</p>'+
+                '<div class="row">'+
+                    '<div class="col-xs-3 col-xs-offset-2">'+
+                      '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
+                    '</div>'+
+                    '<div class="col-xs-3">'+
+                      '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
+                    '</div>'+
+                    '<div class="col-xs-3">'+
+                      '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
+                    '</div>'+
+                '</div>'+
                 '</div>'+
                 '<div class="panel-footer">'+
                 // Button trigger modal                
@@ -115,13 +123,21 @@ function match(i,item){
                 '<div class="panel-body">'+
                   '<p>User Name: '+item.name+'</p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
-                  '<p>Offer：'+item.offername+'</p>'+
-                  '<p>Request：'+item.missname+'</p>'+
+                  '<p>Offer:'+item.offername+'</p>'+
+                  '<p>Request:'+item.missname+'</p>'+
                   '<p>Last Login: '+item.lastlogin+'</p>'+
-                  '<p>Rating：</p>'+
-                  '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
-                  '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
-                  '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
+                  '<p>'+item.name+'\'s Feedback:</p>'+
+                  '<div class="row">'+
+                '<div class="col-xs-3 col-xs-offset-2">'+
+                    '<img src="images/icons/happy_face1.gif">&nbsp&nbsp'+item.good+'<br/><br/>'+
+                '</div>'+
+                '<div class="col-xs-3">'+
+                    '<img src="images/icons/neutral_face1.gif">&nbsp&nbsp'+item.normal+'<br/><br/>'+
+                '</div>'+
+                '<div class="col-xs-3">'+
+                    '<img src="images/icons/sad_face1.gif">&nbsp&nbsp'+item.bad+'<br/>'+
+                '</div>'+
+                '</div>'+
                 '</div>'+
                 '<div class="panel-footer">'+
                   '<button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''+item.name+'\',\''+item.offer+'\',\''+item.miss+'\',\''+set_id+'\',\''+item.missname+'\',\''+item.offername+'\')">Send Request</button>'+
@@ -182,7 +198,7 @@ function match(i,item){
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close" onclick="location.href='matchUp.php'">Get It</button>
         <a href="setsManagement_messages.php">
-          <button type="button" class="btn btn-info" onclick="location.href='setsManagement_messages.php'">View In Message</button>
+          <button type="button" class="btn btn-blue" onclick="location.href='setsManagement_messages.php'">View In Message</button>
         </a>      
       </div>
     </div>

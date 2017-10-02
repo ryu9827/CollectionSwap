@@ -20,7 +20,7 @@
 		echo '
 		<div class="row">
 			<div class="col-xs-4 col-xs-offset-4">			
-				<a href="search_inputNum.php?set_id='.$rows[0].'" class="thumbnail">
+				<a href="explore_inputNum.php?set_id='.$rows[0].'" class="thumbnail">
 					<img src="'.$rows[2].'" class="img-responsive center-block" alt="'.$rows[1].'">
 				</a>	
 			</div>

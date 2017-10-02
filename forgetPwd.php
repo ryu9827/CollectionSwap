@@ -29,7 +29,7 @@ if (isset($_SESSION['u_id'])){
 				        <div class="col-xs-4">
 							<input type="text" class="form-control" name="uid" placeholder="Valid E-mail address">						
 						</div>
-						<button id="submit" type="submit" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-sm" name="submit">Send E-mail</button>	
+						<button id="submit" type="submit" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-sm" name="submit">Send E-mail</button>
 					</div>					 					
 				</div>
 			</form>

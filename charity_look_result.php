@@ -74,7 +74,7 @@ echo'<div class="item active">
     <p>Offer：'.$cardname.'</p>
     <p>Demand：'.$cardname.'</p>
     <p>Last Login: '.$lastlogin.'</p>
-    <p>Rating：</p>
+    <p>'.$name.'\'s Feedback：</p>
     <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$good.'<br/><br/>
     <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$normal.'<br/><br/>
     <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
@@ -118,7 +118,7 @@ echo'<div class="item active">
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close">Get It</button>        
         <a href="setsManagement_messages.php">
-          <button type="button" class="btn btn-info">View In Message</button>
+          <button type="button" class="btn btn-blue">View In Message</button>
         </a>      
       </div>
     </div>

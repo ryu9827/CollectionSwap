@@ -65,7 +65,7 @@ include_once('includes/header.php');
             </br></br></br>
 
             <div class="col-xs-4 col-xs-offset-4">
-                <button type="submit" class="btn btn-info btn-lg" name="submit">Sign up</button>
+                <button type="submit" class="btn btn-blue btn-lg" name="submit">Sign up</button>
             </div>
             </br></br>
 

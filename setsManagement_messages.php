@@ -52,6 +52,11 @@ function message(item){
 				                '<h3 class="panel-title">A New Request</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
+                            '<div class="row">'+
+                             '<div class="col-xs-8 col-xs-offset-2">'+
+                              '<img src="images/newRequest.png" class="img-responsive">'+
+                             '</div>'+
+                            '</div>'+
 					            '<p>Time: '+item.time+'</p>'+
 								'<p>'+item.swap_uid+' wants to make a swap with you.</p>'+
 								'<p>Collection Name: '+item.set+'</p>'+
@@ -76,14 +81,19 @@ function message(item){
 				                '<h3 class="panel-title">Request’s Sent</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
+                            '<div class="row">'+
+                             '<div class="col-xs-8 col-xs-offset-2">'+
+                              '<img src="images/newRequest.png" class="img-responsive">'+
+                             '</div>'+
+                            '</div>'+
 					            '<p>Time: '+item.time+'</p>'+
 								'<p>Your swap request has been sent to '+item.swap_uid+'. Please wait for the response. </p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
 								'<p>Giving Away: '+item.offer_id+'</p>'+
 								'<p>Receiving: '+item.get_id+'</p>'+
                                 '<p>Message ID: '+item.msg_id+'</p>'+
-								'<p>The selected collectables have been temporary latched during the swap process!\n' +
-            'Please note that these collectables would be automatically un-latched if you don\'t receive any response from the other party after 7 days. </p>'+
+								'<p>The selected collectables have been temporary held during the swap process!\n' +
+            'Please note that these collectables would be automatically released if you don\'t receive any response from the other party after 7 days. </p>'+
 //                '<p>123123</p>'+
 				            '</div>'+
 				        '</div>'+
@@ -100,6 +110,11 @@ function message(item){
 				                '<h3 class="panel-title">Swapping</h3>'+
 				            '</div>'+
 				            '<div class="panel-body">'+
+                            '<div class="row">'+
+                             '<div class="col-xs-8 col-xs-offset-2">'+
+                              '<img src="images/swapping.png" class="img-responsive">'+
+                             '</div>'+
+                            '</div>'+
 					            '<p>You are swapping collectables with '+item.swap_uid+'.</p>'+
 								'<p>Collector\'s Email: '+item.email+'</p>'+
 								'<p>Collection Name: '+item.set_name+'</p>'+
@@ -116,41 +131,51 @@ function message(item){
                 '</form>'
 		break;
 		case "5":
-		html += '<form action="includes/message_rating.php" name="status_4" method="POST">'+
-                '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
+		html +=
+            '<div class="row">'+
+             '<div class="col-xs-6 col-xs-offset-3">'+
+              '<div class="panel panel-success">'+
+               '<div class="panel-heading">'+
+                '<h3 class="panel-title">Swap Completed</h3>'+
+               '</div>'+
+              '<div class="panel-body">'+
                 '<div class="row">'+
-					'<div class="col-xs-6 col-xs-offset-3">'+
-				    	'<div class="panel panel-success">'+
-				            '<div class="panel-heading">'+
-				                '<h3 class="panel-title">Swap Completed</h3>'+
-				            '</div>'+
-				            '<div class="panel-body">'+
-					            '<p>Congratulation! This swap process has been successfully completed!</p>'+
-								'<p>Collector: '+item.swap_uid+'. Email: '+item.email+'</p>'+
-								'<p>Collection Name: '+item.set_name+'</p>'+
-								'<p>Giving Away: '+item.offer_id+'</p>'+
-								'<p>Receiving: '+item.get_id+'</p>'+
-                                '<p>Message ID: '+item.msg_id+'</p>'+
-				            '</div>'+
-				            '<div class="panel-footer">'+
-				            	'<div class="btn-group" data-toggle="buttons">'+
-								  '<label class="btn btn-success active">'+
-								    '<img src="images/icons/happy_face1.gif"><input type="radio" name="options" id="option1" autocomplete="off" value="1" checked> Happy'+
-								  '</label>'+
-								  '<label class="btn btn-info">'+
-								    '<img src="images/icons/neutral_face1.gif"><input type="radio" name="options" id="option2" autocomplete="off" value="2"> Neutral'+
-								  '</label>'+
-								  '<label class="btn btn-danger">'+
-								    '<img src="images/icons/sad_face1.gif"><input type="radio" name="options" id="option3" autocomplete="off" value="3"> Angry'+
-								  '</label>'+
-								'</div>'+
-								'<button type="submit" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
-				                '<p>*It cannot be modified after submission*</p>'+
-                            '</div>'+
-				        '</div>'+
-				    '</div>'+
-				'</div>'+
-                '</form>'
+                 '<div class="col-xs-8 col-xs-offset-2">'+
+                  '<img src="images/rating.png" class="img-responsive">'+
+                 '</div>'+
+                '</div>'+
+               '<p>Congratulation! This swap process has been successfully completed!</p>'+
+               '<p>Collector: '+item.swap_uid+'. Email: '+item.email+'</p>'+
+               '<p>Collection Name: '+item.set_name+'</p>'+
+               '<p>Giving Away: '+item.offer_id+'</p>'+
+               '<p>Receiving: '+item.get_id+'</p>'+
+               '<p>Message ID: '+item.msg_id+'</p>'+
+              '</div>'+
+              '<div class="panel-footer">'+
+               '<input type="hidden" name="message_id" value="'+item.msg_id+'">'+
+               '<form action="includes/message_rating.php" name="status_4" method="POST">'+
+                '<div class="btn-group" data-toggle="buttons">'+
+                 '<label class="btn btn-green active">'+
+                 '<img src="images/icons/happy_face1.gif"><input type="radio" name="options" id="option1" autocomplete="off" value="1" checked> Happy'+
+                 '</label>'+
+                 '<label class="btn btn-blue">'+
+                 '<img src="images/icons/neutral_face1.gif"><input type="radio" name="options" id="option2" autocomplete="off" value="2"> Neutral'+
+                 '</label>'+
+                 '<label class="btn btn-red">'+
+                 '<img src="images/icons/sad_face1.gif"><input type="radio" name="options" id="option3" autocomplete="off" value="3"> Angry'+
+                 '</label>'+
+                '</div>'+
+               '<button type="submit" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
+              '</form>'+
+            '<h5 class="text-danger">*It cannot be modified after submission* &nbsp&nbsp</h5>'+
+            '<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#help">'+
+            '<span class="glyphicon glyphicon-question-sign" aria-hidden="true" aria-label="help" ></span>'+
+            '&nbsp FAQ</button>'+
+            '</div>'+
+            '</div>'+
+            '</div>'+
+            '</div>'
+
 		break;
         case "7":
             html += '<form action="" name="status_0" method="POST">'+
@@ -162,6 +187,11 @@ function message(item){
                 '<h3 class="panel-title">A New Charity Request</h3>'+
                 '</div>'+
                 '<div class="panel-body">'+
+                '<div class="row">'+
+                '<div class="col-xs-8 col-xs-offset-2">'+
+                '<img src="images/newRequest.png" class="img-responsive">'+
+                '</div>'+
+                '</div>'+
                 '<p>Time: '+item.time+'</p>'+
                 '<p>'+item.swap_uid+' asks you for a charity.</p>'+
                 '<p>Collection Name: '+item.set+'</p>'+
@@ -185,6 +215,11 @@ function message(item){
                 '<h3 class="panel-title">Charity Request’s Sent</h3>'+
                 '</div>'+
                 '<div class="panel-body">'+
+                '<div class="row">'+
+                '<div class="col-xs-8 col-xs-offset-2">'+
+                '<img src="images/newRequest.png" class="img-responsive">'+
+                '</div>'+
+                '</div>'+
                 '<p>Time: '+item.time+'</p>'+
                 '<p>Your swap request has been sent to '+item.swap_uid+'. Please wait for the response. </p>'+
                 '<p>Collection Name: '+item.set_name+'</p>'+
@@ -239,6 +274,28 @@ function message(item){
 		</div>
 	</div>
 	<br/>
+
+<!-- Modal -->
+<div class="modal fade" border="1px" id="help" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="top:250px;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">FAQ</h4>
+            </div>
+            <div class="modal-body">
+                <p>Please wait the user's response. </p>
+                <p>Attention: Your collectables for the request have been temporary latched during the swap process. If your request has not been reposed in next 7 days or rejected, the latched items would be automatically released.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close" onclick="location.href='matchUp.php'">Get It</button>
+                <a href="setsManagement_messages.php">
+                    <button type="button" class="btn btn-blue" onclick="location.href='setsManagement_messages.php'">View In Message</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="title"></div>
 

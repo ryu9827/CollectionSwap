@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Card List</h2>
+		<h2>Collection List</h2>
 	</div><br/>
 
 	<div class="col-xs-12">

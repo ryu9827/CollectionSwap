@@ -38,8 +38,8 @@
             <div class="row">
                 <div class="col-xs-4 col-xs-offset-4">
                     <h4 class="text-center">'.$rows[1].'</h4>
-                    <a href="includes/addSet.php?set_id='.$rows[0].'">
-                        <button class="btn btn-info pull-right">Add to My Collection</button>
+                    <a href="includes/addSet.php?set_id='.$rows[0]. '">
+                        <button class="btn btn-blue pull-right">Add to My Collection</button>
                     </a>		    
                 </div>
             </div>
