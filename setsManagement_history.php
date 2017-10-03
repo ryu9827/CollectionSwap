@@ -153,7 +153,8 @@ function message(item){
 			<ul class="nav nav-tabs">
 				<li role="presentation"><a href="setsManagement.php">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages.php">Messages</a></li> 
-				<li role="presentation" class="active"><a href="#">History</a></li> 
+				<li role="presentation" class="active"><a href="#">History</a></li>
+                <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
 			</ul>
 			<br/><br/>
 		</div>

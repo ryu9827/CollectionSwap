@@ -1,0 +1,36 @@
+
+.btn.focus, .btn:focus, .btn.hover, btn:hover{
+    color:#000000;
+}
+
+.btn-green {
+    background-color: #9ef078;
+    border-color: #54dd54;
+    color:#000000;
+}
+ .btn-green.active, .btn-green:active, .btn-green:hover {
+    background-color: #066406;
+    border-color: #3e8f3e;
+    color:#ffffff;
+}
+.btn-blue {
+    background-color: #37ddef;
+    border-color: #66bbd5;
+    color:#000000;
+}
+ .btn-blue.active, .btn-blue:active, .btn-blue:hover{
+    background-color: #084d93;
+    border-color: #024493;
+    color: #ffffff;
+}
+
+.btn-red {
+    background-color: #dd8481;
+    border-color: #ca5350;
+    color:#000000;
+}
+ .btn-red.active, .btn-red:active, .btn-red:hover {
+    background-color: #7c0704;
+    border-color: #b92c28;
+    color: #ffffff;
+}

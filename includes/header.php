@@ -15,12 +15,12 @@ session_start();
 <meta name="generator" content="H@CKED">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut" href="images/timg.ico">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/BlueMonday.css" rel="stylesheet">
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
-
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="css/buttonStyle.css" rel="stylesheet">
 <link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/slimbox2/jquery.easing.1.3.js"></script>
@@ -56,9 +56,9 @@ session_start();
         if(isset($_SESSION['u_uid'])) {
             $u_uid = $_SESSION['u_uid'];
             echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
-            echo '<li><a class="norm" href="#" name="logout" target="_self" style="text-decoration: underline" onclick="logout()">Log out</a></li>';
+            echo '<li><a class="log btn btn-default" href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>';
         } else{
-            echo '<li id="register"><a class="norm" href="login.php" style="text-decoration: underline" target="_self">Log in</a></li>';}
+            echo '<li id="register"><a class="log btn btn-default" href="login.php" target="_self">Log in</a></li>';}
         ?>
 	</ul>
 </div>

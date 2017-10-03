@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Sets Management</h2>
+		<h2>Set Management</h2>
 	</div><br/>
 
 	<div class="col-xs-12">
@@ -16,8 +16,9 @@
 			<ul class="nav nav-tabs">
 				<li role="presentation" class="active"><a href="#">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages">Messages</a></li> 
-				<li role="presentation"><a href="setsManagement_history">History</a></li> 
-			</ul>
+				<li role="presentation"><a href="setsManagement_history">History</a></li>
+                <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
+            </ul>
 			<br/><br/>
 		</div>
 	</div>

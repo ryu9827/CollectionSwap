@@ -16,7 +16,8 @@
 			<ul class="nav nav-tabs">
 				<li role="presentation" class="active"><a href="#">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages.php">Messages</a></li> 
-				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
+				<li role="presentation"><a href="setsManagement_history.php">History</a></li>
+                <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
 			</ul>
 			<br/><br/>
 		</div>
@@ -81,13 +82,13 @@
 
 		echo '  <tr>
                     <input type="hidden" value="'.$rows[2].'" > <!-- card id -->
-                    <td>'.$rows[4].'</td> <!--card name-->
+                    <td><span style="font-size: large">'.$rows[4].'</span></td> <!--card name-->
                     <td>                        
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
                     </td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1">Spare</td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2">Wanted</td>                    
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3">Got it</td>
+                    <td><input class="btn-green" type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1"><span style="font-size: large">Spare</span></td>
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2"><span style="font-size: large">Wanted</span></td>                    
+                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3"><span style="font-size: large">Got It</span></td>
                 </tr>
 			';
 	}
