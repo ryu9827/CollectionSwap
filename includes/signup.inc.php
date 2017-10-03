@@ -9,8 +9,8 @@
         session_start();
         date_default_timezone_set('NZ');
 
-	$first = mysqli_real_escape_string($conn, $_POST['first']);
-	$last = mysqli_real_escape_string($conn, $_POST['last']);
+	$first = mysqli_real_escape_string($conn, $_POST['firstname']);
+	$last = mysqli_real_escape_string($conn, $_POST['lastname']);
 	$email = mysqli_real_escape_string($conn, $_POST['email']);
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);

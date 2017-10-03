@@ -79,6 +79,8 @@ function askForCharity($charity = array(), $set_id = ''){
     $provider[] = array('name'=>$uid,'cardid'=>$freecardid, 'cardname'=>$freecardname, 
         'good'=>$good, 'normal' =>$normal,'bad'=>$bad, 'lastlogin'=>$lastlogin, 'point'=>$point);
     }
+    
+    $test = array();
     foreach ($provider as $key2 => $row2) {
       
       $test[$key] = @$row['point'];
