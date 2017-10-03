@@ -16,7 +16,8 @@
 			<ul class="nav nav-tabs">
 				<li role="presentation" class="active"><a href="#">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages">Messages</a></li> 
-				<li role="presentation"><a href="setsManagement_history">History</a></li> 
+				<li role="presentation"><a href="setsManagement_history">History</a></li>
+                <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
 			</ul>
 			<br/><br/>
 		</div>

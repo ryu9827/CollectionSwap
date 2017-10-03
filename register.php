@@ -10,7 +10,7 @@ include_once('includes/header.php');
 	</div>
 	</br>
 	<form class="form-horizontal" action="includes/signup.inc.php" method="POST">
-		<div class="form-group">
+		<br class="form-group">
             <label for="tips" class="col-xs-2 col-xs-offset-2 control-label"> </label>
             <div>
                 <p>&nbsp&nbsp&nbsp&nbsp Real information needed are marked (*) for posting collections to you </p>
@@ -67,16 +67,16 @@ include_once('includes/header.php');
             <div class="col-xs-4 col-xs-offset-4">
                 <button type="submit" class="btn btn-blue btn-lg" name="submit">Sign up</button>
             </div>
-            </br></br>
+            </br></br></br>
 
-            <div class="col-md-4 col-md-offset-4 text-right">
-                Have an account? &nbsp<a href="login.php " style="text-decoration: underline;">Log in</ a>
-        </div>
-<!--			</br></br></br>-->
-<!--			<div class="col-xs-4 col-xs-offset-4">-->
-<!--				<button type="submit" class="btn btn-info btn-lg" name="submit">Sign up</button>-->
-<!--				<h4 class="pull-right">Have an account already? &nbsp<a href="login.php" style="text-decoration: underline;">Log in</a></h4>-->
-<!--			</div>-->
+            <div class="row">
+                <div class="col-xs-2 col-xs-offset-4">
+                    <a href="privacy.php" style="text-decoration: underline;">Privacy Policy</a>
+                </div>
+                <div class="col-xs-2">
+                   <span class="pull-right">Have an account? &nbsp<a href="login.php " style="text-decoration: underline;">Log in</a></span>
+                </div>
+            </div>
 		</div>
 	</form>
 					

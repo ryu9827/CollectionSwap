@@ -87,7 +87,7 @@ function match(i,item){
                   '<h3 class="panel-title">Best Match</h3>'+
                 '</div>'+
                 '<div class="panel-body">'+
-                  '<p>User Name: '+item.name+'</p>'+
+                  '<p>User Name: <strong>'+item.name+'</strong></p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer:'+item.offername+'</p>'+
                   '<p>Request:'+item.missname+'</p>'+
@@ -121,7 +121,7 @@ function match(i,item){
                   '<h3 class="panel-title">&nbsp</h3>'+
                 '</div>'+
                 '<div class="panel-body">'+
-                  '<p>User Name: '+item.name+'</p>'+
+                  '<p>User Name: <strong>'+item.name+'</strong></p>'+
                   '<p>Collection Name: '+item.setname+'</p>'+
                   '<p>Offer:'+item.offername+'</p>'+
                   '<p>Request:'+item.missname+'</p>'+

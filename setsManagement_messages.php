@@ -168,9 +168,9 @@ function message(item){
                '<button type="submit" class="btn btn-success pull-right" data-dismiss="modal">Submit</button>'+
               '</form>'+
             '<h5 class="text-danger">*It cannot be modified after submission* &nbsp&nbsp</h5>'+
-            '<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#help">'+
-            '<span class="glyphicon glyphicon-question-sign" aria-hidden="true" aria-label="help" ></span>'+
-            '&nbsp FAQ</button>'+
+//            '<button class="btn btn-primary btn-xs" data-toggle="modal" data-target="#help">'+
+//            '<span class="glyphicon glyphicon-question-sign" aria-hidden="true" aria-label="help" ></span>'+
+//            '&nbsp FAQ</button>'+
             '</div>'+
             '</div>'+
             '</div>'+
@@ -268,7 +268,8 @@ function message(item){
 			<ul class="nav nav-tabs">
 				<li role="presentation"><a href="setsManagement.php">My Collection</a></li>
 				<li role="presentation" class="active"><a href="#">Messages</a></li> 
-				<li role="presentation"><a href="setsManagement_history.php">History</a></li> 
+				<li role="presentation"><a href="setsManagement_history.php">History</a></li>
+                <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
 			</ul>
 			<br/><br/>
 		</div>
