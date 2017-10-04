@@ -27,7 +27,7 @@ if (isset($_SESSION['u_id'])){
                     </div>
                     </br></br></br></br></br>
                     <div class="col-md-4 col-md-offset-4 text-left">
-                        <button type="submit" class="btn btn-blue btn-lg" name="submit">Log in</button>
+                        <button type="submit" class="btn btn-info btn-lg" name="submit">Log in</button>
                     </div>
                     </br></br>
                     <div class="col-md-4 col-md-offset-4 text-right">

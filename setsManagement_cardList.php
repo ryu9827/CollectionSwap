@@ -38,7 +38,13 @@
 		width: 100%
 	}
 </style>
-
+<script type="text/javascript">
+    $(function() {
+        $(".input").checkboxradio({
+            icon: false
+        });
+    });
+</script>
 
 
 <!-- Start to output the form -->
@@ -86,9 +92,16 @@
                     <td>                        
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
                     </td>
-                    <td><input class="btn-green" type="radio" name="'.$rows[2].'" '.$isChecked1.' value="1"><span style="font-size: large">Spare</span></td>
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked2.' value="2"><span style="font-size: large">Wanted</span></td>                    
-                    <td><input type="radio" name="'.$rows[2].'" '.$isChecked3.' value="3"><span style="font-size: large">Got It</span></td>
+                    <td>
+                      <label for="'.$rows[2].'1">Spare</label>
+                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'1" '.$isChecked1.' value="1"><span style="font-size: large"></span></td>
+                    <td>
+                      <label for="'.$rows[2].'2">Wanted</label>
+                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'2" '.$isChecked2.' value="2"><span style="font-size: large"></span>
+                    </td>                    
+                    <td>
+                      <label for="'.$rows[2].'3">Got It</label>
+                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'3" '.$isChecked3.' value="3"><span style="font-size: large"></span></td>
                 </tr>
 			';
 	}
@@ -175,6 +188,16 @@
 
     </script>
 <div style="height: 300px; visibility:hidden;"></div>
+<h2>Radio Group</h2>
+<fieldset>
+    <!-- <legend>Select a Location: </legend> -->
+    <label for="radio-1">New York</label>
+    <input type="radio" name="radio-1" id="radio-1" checked>
+    <label for="radio-2">Paris</label>
+    <input type="radio" name="radio-1" id="radio-2">
+    <label for="radio-3">London</label>
+    <input type="radio" name="radio-1" id="radio-3">
+</fieldset>
 	
 <?php
 	include_once 'includes/footer.php';

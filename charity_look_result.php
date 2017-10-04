@@ -7,13 +7,15 @@
 
 	};
 $set_id = $_POST['set_id'];
+global $conn;
+$sql = "SELECT set_name from sets_exist";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_row($result);
+$set_name = $row[0];
+
 $obj = $_POST['card_id'];
 //call method to search matching users
 $finallist = askForCharity($obj,$set_id);
-
-if(is_null($finallist)){
-    echo "Sorry.No matching user.";
-}
 //var_dump($finallist);
 ?>
 
@@ -32,36 +34,53 @@ function GetQueryString(name){
 
 var set_id = GetQueryString("set_id");
 
-function sendRequest(name,offer,miss,set_id){
+function sendRequest(name,cardname,set_id){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&offer='+offer+'&miss='+miss+'&set_id='+set_id);
+	xmlhttp.send('name='+name+'&cardname='+cardname+'&set_id='+set_id);
 };
 </script>
 
-<div class="row">
+<?php
+if(empty($finallist)){
+    echo '
+    <div style="text-align: center">
+            <h3 class="center-block">Sorry, no results were found!</h3><br/>
+            <h3 style="text-align: center">You can go back to the previous page and try other collections.</h3><br/>
+            </div>
+            <br/><br/>
+            <button class="btn btn-default btn-lg center-block" onclick="window.history.go(-1)">Previous Page</button><br/>
+            
+    ';
+}
+else{
+    echo '
+    <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-        <!-- 轮播图无法停止自动轮播，所以将时间间隔设置为很大的数，这样等于是不再轮播了 -->
+        <!-- no need for auto turning, so give a huge number for stopping auto turning -->
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9999999999">
-            <!-- 轮播图的圆点。这里不需要，所以隐藏了
+            <!-- carousel indicators, round white buttons. there is no need, so hidden.
             <ol class="carousel-indicators">
               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol> -->
             <div class="carousel-inner" role="listbox">
-                <div id="carousel-inner"><!--add carousel below-->
+<!--                <div id="carousel-inner">   -->
 
-<?php
-$name = $finallist[0]['name'];
-//$setname = $finallist[0]['setname'];
-$cardname = $finallist[0]['cardname'];
-$good = $finallist[0]['good'];
-$normal = $finallist[0]['normal'];
-$bad = $finallist[0]['bad'];
-$lastlogin = $finallist[0]['lastlogin'];
-
+    ';
+$i =0;
+foreach ($finallist as $key => $value){
+$name = $value['name'];
+//$setname = $value['setname'];
+//var_dump($setname);
+$cardname = $value['cardname'];
+$good = $value['good'];
+$normal = $value['normal'];
+$bad = $value['bad'];
+$lastlogin = $value['lastlogin'];
+if($i==0){//First match is the best match
 echo'<div class="item active">
     <div class="col-xs-6 col-xs-offset-3">
     <div class="panel panel-primary">
@@ -69,37 +88,86 @@ echo'<div class="item active">
     <h3 class="panel-title">Best Match</h3>
     </div>
     <div class="panel-body">
-    <p>User Name: '.$name.'</p>
-    <p>Collection Name: '.$cardname.'</p>
-    <p>Offer：'.$cardname.'</p>
+    <p>User Name: <strong>'.$name.'</strong></p>
+    <p>Collection Name: '.$set_name.'</p>
     <p>Demand：'.$cardname.'</p>
     <p>Last Login: '.$lastlogin.'</p>
     <p>'.$name.'\'s Feedback：</p>
-    <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$good.'<br/><br/>
-    <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$normal.'<br/><br/>
-    <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
+    <div class="row">
+    <div class="col-xs-3 col-xs-offset-2">
+        <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$good.'<br/><br/>
+    </div>
+    <div class="col-xs-3">
+        <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$normal.'<br/><br/>
+    </div>
+    <div class="col-xs-3">
+        <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
+    </div>
+    </div>
     </div>
     <div class="panel-footer">
-    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" >Ask For Charity</button>
+    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''.$name.'\',\''.$cardname.'\',\''.$set_id.'\')">Ask For Charity</button>
     </div>
     </div>
     </div>
     </div>
     ';
-?>
-
-      <!-- 左，右翻页图标    -->       
+}
+else{// after first are normal matches
+    echo'
+    <div class="item">
+    <div class="col-xs-6 col-xs-offset-3">
+    <div class="panel panel-info">
+    <div class="panel-heading">
+    <h3 class="panel-title">&nbsp</h3>
+    </div>
+    <div class="panel-body">
+    <p>User Name: <strong>'.$name.'</strong></p>
+    <p>Collection Name: '.$set_name.'</p>
+    <p>Demand：'.$cardname.'</p>
+    <p>Last Login: '.$lastlogin.'</p>
+    <p>'.$name.'\'s Feedback：</p>
+    <div class="row">
+    <div class="col-xs-3 col-xs-offset-2">
+        <img src="images/icons/happy_face1.gif">&nbsp&nbsp'.$good.'<br/><br/>
+    </div>
+    <div class="col-xs-3">
+        <img src="images/icons/neutral_face1.gif">&nbsp&nbsp'.$normal.'<br/><br/>
+    </div>
+    <div class="col-xs-3">
+        <img src="images/icons/sad_face1.gif">&nbsp&nbsp'.$bad.'<br/>
+    </div>
+    </div>
+    </div>
+    <div class="panel-footer">
+    <button class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''.$name.'\',\''.$cardname.'\',\''.$set_id.'\')">Ask For Charity</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    ';
+};
+$i++;
+}
+echo '
+            </div>
+      <!-- left and right page turning buttons -->       
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Prev User</p></span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Return</p></span>
           <span class="sr-only">Previous</span>
         </a>
         <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><p>Next User</p></span>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"><p>Next</p></span>
           <span class="sr-only">Next</span>
         </a>
     </div>
   </div>
 </div>
+';
+}
+?>
+
 
 <div style="height: 50px; visibility:hidden;"></div> 
 
@@ -118,14 +186,14 @@ echo'<div class="item active">
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close">Get It</button>        
         <a href="setsManagement_messages.php">
-          <button type="button" class="btn btn-blue">View In Message</button>
+          <button type="button" class="btn btn-info">View In Message</button>
         </a>      
       </div>
     </div>
   </div>
 </div>
 
-<!-- 页脚保留一些空白 -->
+<!-- keep some white space as footer -->
 <!-- <div style="height: 100px; visibility:hidden;"></div>	  -->
 	
 <?php

@@ -52,7 +52,7 @@ $row= mysqli_fetch_assoc($res);
                         <div class="col-xs-6">
                             <input type="text" class="form-control" name="email" placeholder="E-mail" value="<?php echo $row['user_email']; ?>">
                         </div>
-                        <button type="submit" class="btn btn-blue" name="submit">Verify</button>
+                        <button type="submit" class="btn btn-info" name="submit">Verify</button>
                     </div>
                 </div>
             </form>
@@ -66,7 +66,7 @@ $row= mysqli_fetch_assoc($res);
 				        <div class="col-xs-6">
 							<input type="text" class="form-control" name="address" placeholder="Post Address" value="<?php echo $row['address']; ?>">
 						</div>
-						<button type="submit" class="btn btn-blue" name="submit">Update</button>
+						<button type="submit" class="btn btn-info" name="submit">Update</button>
   					</div>
   				</div>
 			</form>
@@ -78,7 +78,7 @@ $row= mysqli_fetch_assoc($res);
                         <div class="col-xs-6">
                             <input type="text" class="form-control" name="postCode" placeholder="Post Code" value="<?php echo $row['user_postcode']; ?>">
                         </div>
-                        <button type="submit" class="btn btn-blue" name="submit">Update</button>
+                        <button type="submit" class="btn btn-info" name="submit">Update</button>
                     </div>
                 </div>
             </form>
@@ -113,7 +113,7 @@ $row= mysqli_fetch_assoc($res);
 					</div>
 					</br> 
 					<div class="col-xs-6 col-xs-offset-3">                    
-						<button type="submit" class="btn btn-blue" name="submit">Change Password</button>
+						<button type="submit" class="btn btn-info" name="submit">Change Password</button>
 					</div>  					
 				</div>
 			</form>

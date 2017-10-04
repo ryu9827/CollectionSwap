@@ -18,39 +18,43 @@
         if(r!=null)return  unescape(r[2]); return null;
     }
 
- $(function(){
- $(document).ready(function(){
- //使用getJSON方法读取json数据,
- //注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
-     var set_id = GetQueryString("set_id");
- 	$.getJSON('includes/search.php?set_id='+set_id,function(data){
- 	var html = '';
- 		$.each(data,function(i,item){
- 			html = cards(item);
- 			$('#title').after(html);
- 			});
- 		//after方法:在每个匹配的元素之后插入内容。
- 		});
- 	});
- });
+//    if (!/android|iphone|ipod|series60|symbian|windows ce|blackberry/i.test(navigator.userAgent)) {
+//        jQuery(function ($) {
+            $(document).ready(function () {
+                var set_id = GetQueryString("set_id");
 
- function cards(item){
- 	var html='';
- 	html +=
-        '<div class="col-md-3">'+
-        '<div class="thumbnail">'+
-        '<a href="'+item.card_img+'" rel="lightbox">'+
-        '<img src="'+item.card_img+'" rel="lightbox" alt="">'+
-        '</a>'+
-        '<ul class="list-group">'+
-        '<li class="list-group-item list-group-item-info"> Card Name: '+item.card_name+' </li>'+
-        '<li class="list-group-item list-group-item-success">'+item.extranum+' spares </li>'+
-        '<li class="list-group-item list-group-item-warning"> '+item.missnum+' missings</li>'+
-        '</ul>'+
-        '</div>'+
-        '</div>'
- 	return html;
- }
+                $.getJSON('includes/search.php?set_id=' + set_id, function (data) {
+                    var html = '';
+                    $.each(data, function (i, item) {
+                        html = cards(item);
+                        $('#title').after(html);
+                    });
+                });
+            });
+//        });
+
+        function cards(item) {
+            var html = '';
+            html +=
+                '<div class="col-md-3">' +
+                '<div class="thumbnail">' +
+                '<a href="' + item.card_img + '" rel="lightbox">' +
+                '<img src="' + item.card_img + '" alt="">' +
+                '</a>' +
+                '<ul class="list-group">' +
+                '<li class="list-group-item list-group-item-info"> Card Name: ' + item.card_name + ' </li>' +
+                '<li class="list-group-item list-group-item-success">' + item.extranum + ' spares </li>' +
+                '<li class="list-group-item list-group-item-warning"> ' + item.missnum + ' missings</li>' +
+                '</ul>' +
+                '</div>' +
+                '</div>'
+            return html;
+        }
+//    }
+
+    $("a[rel^='lightbox']").slimbox({/* Put custom options here */}, null, function(el) {
+        return (this == el) || ((this.rel.length > 8) && (this.rel == el.rel));
+    });
 //注:可以是item.address,也可以是item['address'] 
 //firefox报 json文件中 “语法错误 [”,单能加载数据 //ie chrome 无法加载数据 
 </script> 

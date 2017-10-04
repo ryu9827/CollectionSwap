@@ -40,7 +40,6 @@
 <script src="js/skrollr.min.js"></script>
 <script src="js/scrollspy.min.js"></script>
 <script src="js/wb.newsviewer.min.js"></script>
-<!--<script src="js/wwb12.min.js"></script>-->
-<!--<script src="js/wb12_bluemonday.js"></script>-->
+<script src="js/slimbox2/slimbox2.js"></script>
 </body>
 </html>

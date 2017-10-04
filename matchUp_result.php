@@ -48,7 +48,7 @@ $.getJSON(url, dataSend, function (data) {
             '<h3 class="center-block">Sorry, no results were found!</h3><br/>' +
             '<h3 style="text-align: center">Would you happy to donate your collectables into our charity functionality?</h3><br/>' +
             '</div>' +
-            '<button class="btn btn-blue btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
+            '<button class="btn btn-info btn-lg center-block" onclick="location.href=\'charity.php\'">Charity</button><br/>' +
             '<div style="text-align: center">' +
             '<h3> Or you can go back to the previous page and try again</h3><br/><br/>' +
             '</div>' +
@@ -149,15 +149,14 @@ function match(i,item){
   }
   return html;
 }
-//注:可以是item.address,也可以是item['address'] 
-//firefox报 json文件中 “语法错误 [”,单能加载数据 //ie chrome 无法加载数据 
+
 </script> 
 
 <div class="row">
 <div class="col-xs-8 col-xs-offset-2">
-<!-- 轮播图无法停止自动轮播，所以将时间间隔设置为很大的数，这样等于是不再轮播了 -->
+<!-- no need for auto turning, so give a huge number for stopping auto turning  -->
 	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="9999999999"> 
-        <!-- 轮播图的圆点。这里不需要，所以隐藏了
+        <!-- carousel indicators, round white buttons. there is no need, so hidden.
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -165,7 +164,7 @@ function match(i,item){
         </ol> -->
         <div class="carousel-inner" role="listbox">
           <div id="carousel-inner">
-      <!-- 左，右翻页图标    -->       
+      <!-- left and right page turning buttons -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"><p>Return</p></span>
           <span class="sr-only">Previous</span>
@@ -198,7 +197,7 @@ function match(i,item){
       <div class="modal-footer">
         <button type="submit" class="btn btn-success" data-dismiss="modal" aria-label="Close" onclick="location.href='matchUp.php'">Get It</button>
         <a href="setsManagement_messages.php">
-          <button type="button" class="btn btn-blue" onclick="location.href='setsManagement_messages.php'">View In Message</button>
+          <button type="button" class="btn btn-info" onclick="location.href='setsManagement_messages.php'">View In Message</button>
         </a>      
       </div>
     </div>
