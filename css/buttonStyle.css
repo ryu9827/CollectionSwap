@@ -1,12 +1,12 @@
 
 .btn.focus, .btn:focus, .btn.hover, btn:hover{
-    color:#ffffff;
+    color:#000000;
 }
 
 .btn-green {
     background-color: #9ef078;
     border-color: #54dd54;
-    color:#ffffff;
+    color:#000000;
 }
  .btn-green.active, .btn-green:active, .btn-green:hover {
     background-color: #066406;
@@ -16,7 +16,7 @@
 .btn-blue {
     background-color: #37ddef;
     border-color: #66bbd5;
-    color:#ffffff;
+    color:#000000;
 }
  .btn-blue.active, .btn-blue:active, .btn-blue:hover{
     background-color: #084d93;
@@ -27,72 +27,10 @@
 .btn-red {
     background-color: #dd8481;
     border-color: #ca5350;
-    color:#ffffff;
+    color:#000000;
 }
  .btn-red.active, .btn-red:active, .btn-red:hover {
     background-color: #7c0704;
     border-color: #b92c28;
     color: #ffffff;
-}
-
- /*From jQuery UI CSS*/
-.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
-    border-bottom-right-radius: 3px;
-}
-
-
-.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
-    border-bottom-left-radius: 3px;
-}
-
-.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-    border-top-right-radius: 3px;
-}
-
-.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
-    border-top-left-radius: 3px;
-}
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-    border: 1px solid #003eff;
-    background: #007fff;
-    font-weight: normal;
-    color: #ffffff;
-}
-
-.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, a.ui-button, a:link.ui-button, a:visited.ui-button, .ui-button {
-    color: #454545;
-    text-decoration: none;
-}
-
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-    border: 1px solid #c5c5c5;
-    background: #f6f6f6;
-    font-weight: normal;
-    color: #454545;
-}
-
-.ui-widget {
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 1em;
-}
-
-.ui-button, .ui-button:link, .ui-button:visited, .ui-button:hover, .ui-button:active {
-    text-decoration: none;
-}
-
-.ui-button {
-    padding: .4em 1em;
-    display: inline-block;
-    position: relative;
-    line-height: normal;
-    margin-right: .1em;
-    cursor: pointer;
-    vertical-align: middle;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    overflow: visible;
 }

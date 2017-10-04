@@ -14,7 +14,7 @@
 	<div class="col-xs-12">
 		<div class="row">
 			<ul class="nav nav-tabs">
-				<li role="presentation" class="active"><a href="#">My Collection</a></li>
+				<li role="presentation" class="active"><a href="setsManagement.php">My Collection</a></li>
 				<li role="presentation"><a href="setsManagement_messages.php">Messages</a></li> 
 				<li role="presentation"><a href="setsManagement_history.php">History</a></li>
                 <li role="presentation"><a href="setsManagement_FAQ">FAQ</a></li>
@@ -187,18 +187,9 @@
 
 
     </script>
+
 <div style="height: 300px; visibility:hidden;"></div>
-<h2>Radio Group</h2>
-<fieldset>
-    <!-- <legend>Select a Location: </legend> -->
-    <label for="radio-1">New York</label>
-    <input type="radio" name="radio-1" id="radio-1" checked>
-    <label for="radio-2">Paris</label>
-    <input type="radio" name="radio-1" id="radio-2">
-    <label for="radio-3">London</label>
-    <input type="radio" name="radio-1" id="radio-3">
-</fieldset>
-	
+
 <?php
 	include_once 'includes/footer.php';
 ?>

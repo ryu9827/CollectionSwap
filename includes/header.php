@@ -15,16 +15,16 @@ session_start();
 <meta name="generator" content="H@CKED">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut" href="images/timg.ico">
-
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/BlueMonday.css" rel="stylesheet">
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="css/buttonStyle.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/buttonStyle.css" rel="stylesheet">
 <link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
-<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/slimbox2/jquery.easing.1.3.js"></script>
 <script src="js/moment.js"></script>
 </head>
@@ -49,7 +49,7 @@ session_start();
 	</li>
 	<li id="charity"><a class="norm" href="charity.php" target="_self">Charity</a>
 	</li>
-	<li id="search"><a class="norm" href="search.php" target="_self">Search</a>
+	<li id="search"><a class="norm" href="explore.php" target="_self">Explore</a>
 	</li>
     <li id="contactUs"><a class="norm" href="contactUs.php" target="_self">Contact Us</a>
     </li>
@@ -66,4 +66,3 @@ session_start();
 </div>
 </header>
 <div style="height: 100px; visibility:hidden;"></div>
-<div class="container-fluid">
