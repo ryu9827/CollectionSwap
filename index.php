@@ -163,7 +163,7 @@
                     <h2>2.Get Excited</h2>
                 </div>
                 <div class="panel-body">
-                    <h3>We will select and source awesome collectiions from around New Zealand.</h3><br/>
+                    <h3>We will select and source awesome collections from around New Zealand.</h3><br/>
                     <h3> &nbsp</h3>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                     <h2>3.Get Swapping</h2>
                 </div>
                 <div class="panel-body">
-                    <h3>Receive your delivery of superise, quality collectables  to enjoy!</h3><br/>
+                    <h3>Receive your delivery of surprise, quality collectables to enjoy!</h3><br/>
                     <h3> &nbsp</h3>
                 </div>
             </div>

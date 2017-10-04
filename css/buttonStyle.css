@@ -1,12 +1,12 @@
 
 .btn.focus, .btn:focus, .btn.hover, btn:hover{
-    color:#000000;
+    color:#ffffff;
 }
 
 .btn-green {
     background-color: #9ef078;
     border-color: #54dd54;
-    color:#000000;
+    color:#ffffff;
 }
  .btn-green.active, .btn-green:active, .btn-green:hover {
     background-color: #066406;
@@ -16,7 +16,7 @@
 .btn-blue {
     background-color: #37ddef;
     border-color: #66bbd5;
-    color:#000000;
+    color:#ffffff;
 }
  .btn-blue.active, .btn-blue:active, .btn-blue:hover{
     background-color: #084d93;
@@ -27,7 +27,7 @@
 .btn-red {
     background-color: #dd8481;
     border-color: #ca5350;
-    color:#000000;
+    color:#ffffff;
 }
  .btn-red.active, .btn-red:active, .btn-red:hover {
     background-color: #7c0704;
