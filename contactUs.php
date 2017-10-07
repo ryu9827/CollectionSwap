@@ -5,6 +5,7 @@
 	// 	header("location:login.php");
 	// }
 ?>
+    <div class="container">
 <style>
     #map {
         height: 400px;
@@ -38,22 +39,20 @@
     <h3 style="text-align: center">Drop an email to <a href="mailto:hello@collectionswap.co.nz">hello@collectionswap.co.nz</a> and we will get back to you ASAP!</h3><br/><br/>
 </div>
 
-
-
 <div class="row">
     <div class="col-xs-6">
         <div id="map"></div>
     </div>
     <div class="col-xs-6">
         <div class="thumbnail" >
-            <img src="images/contactUs.jpg">
+            <img src="images/about&contactUs/contact.png">
         </div>
     </div>
 </div>
 <p>Collection Swap, 21 Kensington Av, Petone, Wellington 5012, New Zealand</p><br/><br/>
 <div style="height: 50px; visibility:hidden;"></div>
 
-
+</div>
 <?php
 	include_once 'includes/footer_contact&about.php';
 ?>

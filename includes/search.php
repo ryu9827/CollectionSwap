@@ -4,7 +4,7 @@ include 'dbh.inc.php';
 
 function search($table,$card_id, $status,$set_id){
 
-  global $conn;  
+  global $conn;
   $sql = "SELECT * FROM $table WHERE card_id = '$card_id' AND set_id = '$set_id' AND card_status = '$status'";
   $res = mysqli_query($conn, $sql);
   $num = mysqli_num_rows($res);

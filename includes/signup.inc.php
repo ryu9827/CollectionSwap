@@ -4,19 +4,19 @@
 	
 	include_once 'dbh.inc.php';
         include_once 'sendemail.inc.php';
-        
+        global $conn;
+
         ob_start(); 
         session_start();
         date_default_timezone_set('NZ');
-
-	$first = mysqli_real_escape_string($conn, $_POST['firstname']);
-	$last = mysqli_real_escape_string($conn, $_POST['lastname']);
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $uid = mysqli_real_escape_string($conn, $_POST['uid']);
+	$first = mysqli_real_escape_string($conn, $_POST['first']);
+	$last = mysqli_real_escape_string($conn, $_POST['last']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
 	$pwd2 = mysqli_real_escape_string($conn, $_POST['pwd2']);
-        $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
-        $ads = mysqli_real_escape_string($conn, $_POST['address']);
+    $postcode =  mysqli_real_escape_string($conn, $_POST['postcode']);
+    $ads = mysqli_real_escape_string($conn, $_POST['address']);
 	
 
 	//Error handlers

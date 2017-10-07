@@ -25,8 +25,13 @@
 		width: 100%
 	}
 </style>
-
-
+<script type="text/javascript">
+    $(function() {
+        $(".checkbox").checkboxradio({
+            icon: false
+        });
+    });
+</script>
 
 <!-- Start to output the form -->
 <table class="text-center vertical-center">
@@ -61,11 +66,14 @@
 		echo '
                 <tr>
                     <!-- <input type="hidden" value="'.$rows[2].'"> --> <!-- card id -->
-                    <td>'.$rows[4].'</td> <!--card name-->
+                    <td><span style="font-size: large">'.$rows[4].'</span></td> <!--card name-->
                     <td>
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->                        
                     </td>
-                    <td><input type="checkbox" style="width: 18px;height: 18px;padding: 2px 2px 2px 2px;" name="'.$rows[2].'" '.$isChecked.' value="4">Offer This</td>                    
+                    <td>
+                        <label for="'.$rows[2].'"><span style="font-size: large">Offer This</span></label>
+                        <input class="checkbox" type="checkbox" name="'.$rows[2].'" id="'.$rows[2].'" '.$isChecked.' value="4">
+                    </td>                    
                 </tr>
 			';
 	}

@@ -93,14 +93,14 @@
                         <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
                     </td>
                     <td>
-                      <label for="'.$rows[2].'1">Spare</label>
+                      <label for="'.$rows[2].'1"><span style="font-size: large">Spare</span></label>
                       <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'1" '.$isChecked1.' value="1"><span style="font-size: large"></span></td>
                     <td>
-                      <label for="'.$rows[2].'2">Wanted</label>
+                      <label for="'.$rows[2].'2"><span style="font-size: large">Wanted</span></label>
                       <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'2" '.$isChecked2.' value="2"><span style="font-size: large"></span>
                     </td>                    
                     <td>
-                      <label for="'.$rows[2].'3">Got It</label>
+                      <label for="'.$rows[2].'3"><span style="font-size: large">Got It</span></label>
                       <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'3" '.$isChecked3.' value="3"><span style="font-size: large"></span></td>
                 </tr>
 			';

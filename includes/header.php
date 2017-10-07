@@ -20,8 +20,8 @@ session_start();
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/jquery-ui.css" rel="stylesheet">
-    <link href="css/buttonStyle.css" rel="stylesheet">
+<link href="css/jquery-ui.css" rel="stylesheet">
+<link href="css/buttonStyle.css" rel="stylesheet">
 <link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>

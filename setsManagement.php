@@ -23,6 +23,14 @@
 		</div>
 	</div>
 	<br/>
+<script type="text/javascript">
+    function remove(id) {
+        if (confirm("Are you sure to remove this collection from your list?")){
+           debugger;
+            location.href="includes/removeSet?set_id="+id;
+        }
+    }
+</script>
 
 <?php
 	include_once 'includes/dbh.inc.php';
@@ -43,11 +51,11 @@
         
         <div class="row">
 			<div class="col-xs-4 col-xs-offset-4">
-			<h4 class="text-center">'.$rows[4].'</h4>			    
-			    <a href="includes/removeSet?set_id='.$rows[2].'"><button class="btn btn-danger pull-right">Remove</button></a>
+			<h4 class="text-center">'.$rows[4].'</h4>		  
+			   <button id="'.$rows[2].'" class="btn btn-danger pull-right" onclick="remove(id)">Remove</button>
 			</div>
 		</div>
-		<br/>
+		
 		<div class="row">
             <div class="col-xs-6 col-xs-offset-4">
                 <label>Collecting: </label>
