@@ -5,12 +5,38 @@ if (isset($_SESSION['u_id'])){
 	}
 ?>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#submit').click(event(){
+//	$(document).ready(function(){
+//		$('#submit').click(event(){
+//		})
+//	});
+ function formval(){
+     if (check()){
+         alert("Email has been sent. Please check in your email.")
+         return true;
+     }
+     else {
+         alert("Your email address is invalid.");
+         return false;
+     }
+ }
 
-		})
+ function check(){
+     email = document.getElementById('email').value;
+     patt_email = /^[0-9a-zA-Z]+@[0-9a-zA-Z]+[\.]{1}[0-9a-zA-Z]+$/;
+     result = true;
 
-	});
+     if( email == ""|| email == null||  patt_email.test(email)==false)
+     {
+         document.getElementById('email').style.background="yellow";
+         $('#email_div').removeClass('invisible');
+         result = false;
+     }else{
+         $('#email_div').addClass('invisible');
+         document.getElementById('email').style.background="white";
+         result = true;
+     }
+     return result;
+ }
 </script>
 <div class="container-fluid">
 	<div style="height: 100px; visibility:hidden;"></div>
@@ -22,14 +48,14 @@ if (isset($_SESSION['u_id'])){
 		<H4>Please enter your registered Email address below, we will email instructions on how to reset your password.</H4>
 	</div>
 	</br>
-			<form class="form-horizontal" action="includes/sendPWEmail.php" method="POST">
+			<form class="form-horizontal" action="includes/sendPWEmail.php" method="POST" onsubmit="return formval()">
 				<div class="form-group">
 					<div class="row">					
-				        <label for="uid" class="col-xs-2 col-md-offset-2 control-label">E-mail: </label>
-				        <div class="col-xs-4">
-							<input type="text" class="form-control" name="uid" placeholder="Valid E-mail address">						
+       <label for="uid" class="col-xs-2 col-md-offset-2 control-label">E-mail: </label>
+       <div class="col-xs-4">
+							<input type="text" class="form-control" name="uid" id="email" placeholder="Valid E-mail address">
 						</div>
-						<button id="submit" type="submit" class="btn btn-blue" data-toggle="modal" data-target=".bs-example-modal-sm" name="submit">Send E-mail</button>
+						<button id="submit" type="submit" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-sm" name="submit">Send E-mail</button>
 					</div>					 					
 				</div>
 			</form>

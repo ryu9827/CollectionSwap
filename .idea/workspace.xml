@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7efa0160-43ab-4e78-aa62-4532205aedcf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/About.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/contactUs.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/hand_phone1_800_faded.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/phone_tv4_800.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/table1_800_faded2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json_search.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.php" afterPath="$PROJECT_DIR$/about.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charity_look_cardList.php" afterPath="$PROJECT_DIR$/charity_look_cardList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charity_offer_cardList.php" afterPath="$PROJECT_DIR$/charity_offer_cardList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contactUs.php" afterPath="$PROJECT_DIR$/contactUs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/explore_inputNum.php" afterPath="$PROJECT_DIR$/explore_inputNum.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/search.php" afterPath="$PROJECT_DIR$/includes/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/signup.inc.php" afterPath="$PROJECT_DIR$/includes/signup.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pwdReset.php" afterPath="$PROJECT_DIR$/pwdReset.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgetPwd.php" afterPath="$PROJECT_DIR$/forgetPwd.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register.php" afterPath="$PROJECT_DIR$/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement.php" afterPath="$PROJECT_DIR$/setsManagement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setsManagement_cardList.php" afterPath="$PROJECT_DIR$/setsManagement_cardList.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,18 +18,31 @@
       <file leaf-file-name="register.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1143">
-              <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+            <state relative-caret-position="216">
+              <caret line="152" column="41" lean-forward="true" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setsManagement_messages.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
+      <file leaf-file-name="forgetPwd.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forgetPwd.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="299" column="0" lean-forward="true" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+            <state relative-caret-position="594">
+              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+              <folding>
+                <element signature="e#2016#2042#0#HTML" expanded="true" />
+                <element signature="e#2147#2182#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/jquery.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="10989" column="8" lean-forward="false" selection-start-line="10989" selection-start-column="8" selection-end-line="10989" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -123,7 +119,6 @@
         <option value="$PROJECT_DIR$/includes/bestmatch.php" />
         <option value="$PROJECT_DIR$/includes/charity.php" />
         <option value="$PROJECT_DIR$/explore.php" />
-        <option value="$PROJECT_DIR$/forgetPwd.php" />
         <option value="$PROJECT_DIR$/css/wb12_bluemonday.css" />
         <option value="$PROJECT_DIR$/setsManagement_history.php" />
         <option value="$PROJECT_DIR$/setsManagement_FAQ.php" />
@@ -155,8 +150,9 @@
         <option value="$PROJECT_DIR$/explore_inputNum.php" />
         <option value="$PROJECT_DIR$/includes/signup.inc.php" />
         <option value="$PROJECT_DIR$/pwdReset.php" />
-        <option value="$PROJECT_DIR$/register.php" />
         <option value="$PROJECT_DIR$/setsManagement_messages.php" />
+        <option value="$PROJECT_DIR$/forgetPwd.php" />
+        <option value="$PROJECT_DIR$/register.php" />
       </list>
     </option>
   </component>
@@ -233,6 +229,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,7 +279,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,11 +407,12 @@
       <workItem from="1507265992009" duration="354000" />
       <workItem from="1507276837897" duration="3686000" />
       <workItem from="1507411371865" duration="2672000" />
+      <workItem from="1507414390482" duration="1288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334548000" />
+    <option name="totallyTimeSpent" value="335836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1848" height="1098" extended-state="6" />
@@ -484,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forgetPwd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/wb12_bluemonday.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19872">
@@ -520,13 +510,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.min.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="0" column="1871" lean-forward="false" selection-start-line="0" selection-start-column="1871" selection-end-line="0" selection-end-column="1871" />
         </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/jquery-ui-1.12.1.custom/jquery-ui.css" />
@@ -624,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="222" column="11" lean-forward="true" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -813,19 +796,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.php">
+    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1143">
-          <caret line="114" column="14" lean-forward="false" selection-start-line="114" selection-start-column="14" selection-end-line="114" selection-end-column="14" />
+        <state relative-caret-position="495">
+          <caret line="299" column="0" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setsManagement_messages.php">
+    <entry file="file://$PROJECT_DIR$/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="299" column="0" lean-forward="true" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+        <state relative-caret-position="309">
+          <caret line="10989" column="8" lean-forward="false" selection-start-line="10989" selection-start-column="8" selection-end-line="10989" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="152" column="41" lean-forward="true" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forgetPwd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="e#2016#2042#0#HTML" expanded="true" />
+            <element signature="e#2147#2182#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

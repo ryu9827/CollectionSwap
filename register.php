@@ -150,7 +150,7 @@ include_once('includes/header.php');
    <div class="invisible" id="email_div">
    <button type="button" class="btn btn-xs btn-default" aria-label="Left Align">
      <span class="glyphicon glyphicon-info-sign text-danger" aria-hidden="true"></span>
-       </button>Email address must contain '@'.
+       </button>Email address is invalid.
    </div>
 			</br></br>
 
