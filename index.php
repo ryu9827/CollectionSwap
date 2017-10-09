@@ -181,10 +181,21 @@
         </div>
     </div>
 
-    <img src="images/kids-trading-cards.jpg" class="col-xs-8 thumbnail">
+    <img src="images/kids-trading-cards.jpg" class="col-xs-7 thumbnail">
 
-        <div class="col-xs-4">
-            <h2>NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter NewsLetter </h2>
+        <div class="col-xs-5">
+            <h2>BP promotion causes commotion as collectors push the limits</h2><br>
+          <h4>On social media, customers have complained about the collectables' size, with one calling them "half Smurfs" and lamenting the fact they look nothing like their predecessors.<br>
+            "I was so excited to see a new Smurf collection as I still have the original ones BP gave away 30 odd years ago. Seriously disappointed with the micro-size imitation Smurf that I got."<br>
+            Others say the associated merchandising and staff uniforms gave the stations a "bright and happy feeling".<br>
+            BP spokeswoman Leigh Taylor says there are only so many Smurfs to go around and once they're gone, they're gone. If staff were to give out lots of extras, it would mean others would miss out.<br>
+            Taylor says they've tried to make the Smurfs as accessible as possible by including bonus products and shop products in the promotion.<br>
+            She says BP has been "really excited" to see how customers have engaged with the promotion, with some sending in photos from a similar Smurf promotion the company ran in the 1980s.<br>
+            "It's been quite rewarding for us to do something like this."<br>
+            For those with "double-ups", Natalie Lysaght has started the BP Smurf Swap NZ page on Facebook, with around 140 members so far.<br>
+            "I'm surprised that every day there are new member requests, through them just searching for a page, so I'm delighted we can all get together and swap," she says.<br>
+            Lysaght says she's heard of a few petrol stations keeping "spares" at the counters, so people can swap them and staff "occasionally" giving children extra bags.
+          </h4>
         </div>
     </div>
 <!-- footer start -->

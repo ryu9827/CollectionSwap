@@ -1,9 +1,5 @@
 <?php
 	include_once 'includes/header.php';
-
-	// if (!isset($_SESSION['u_id'])){
-	// 	header("location:login.php");
-	// }
 ?>
     <div class="container">
 <style>

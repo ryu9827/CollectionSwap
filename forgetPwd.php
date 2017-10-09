@@ -43,11 +43,11 @@ if (isset($_SESSION['u_id'])){
 	<div style="text-align: center">
 		<h2>Forgot your password?</h2>
 	</div>
-	</br></br>
+	<br><br>
 	<div style="text-align: center">
 		<H4>Please enter your registered Email address below, we will email instructions on how to reset your password.</H4>
 	</div>
-	</br>
+	<br>
 			<form class="form-horizontal" action="includes/sendPWEmail.php" method="POST" onsubmit="return formval()">
 				<div class="form-group">
 					<div class="row">					

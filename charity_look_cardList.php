@@ -33,11 +33,25 @@
         });
     });
 </script>
-
+<script type="text/javascript">
+    function isValid(){
+        var arr=document.getElementsByClassName("checkbox");
+        var result=false;
+        for (var i =0;i<arr.length;i++){
+          if (arr[i].checked){
+              result = true;
+          }
+        }
+        if (!result){
+            alert("At least select one collection to start matching.")
+        }
+        return result;
+    }
+</script>
 
 <!-- Start to output the form -->
 <table class="text-center vertical-center">
-<form id="post_form" action="charity_look_result.php" method="POST">
+<form id="post_form" action="charity_look_result.php" name="form" method="POST" onsubmit="return isValid()">
     <input type="hidden" name="set_id" value="<?php echo $set_id; ?>">
 <?php
 	include_once 'includes/dbh.inc.php';

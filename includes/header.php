@@ -25,8 +25,6 @@ session_start();
 <link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="js/slimbox2/jquery.easing.1.3.js"></script>
-<script src="js/moment.js"></script>
 </head>
 
 <body data-spy="scroll">
