@@ -34,10 +34,10 @@ session_start();
 <a href="AdminAddCardSet.php"><!--Icon link to add on the left-->
 <div id="MaterialIcon15"><i class="material-icons">&#xe41d;</i></div></a></div>
 <div id="wb_Heading2" style="position:absolute;left:74px;top:17px;width:281px;height:36px;text-align:center;z-index:1;">
-<h1 id="Heading2"><a href="index.php" style="color: #0AABE1">Collection Swap</a></h1></div>
+<h1 id="Heading2"><a href="AdminAddCardSet.php" style="color: #0AABE1">Collection Swap</a></h1></div>
 <div id="wb_Heading3" style="position:absolute;left:113px;top:53px;width:207px;height:22px;z-index:2;">
 <h6 id="Heading3">find your last missing</h6></div>
-<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:200px;height:49px;z-index:3;">
+<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:300px;height:49px;z-index:3;">
   <ul>
     <li id="admin"><a class="norm" href="AdminAddCardSet.php" target="_self">Set&nbsp;Admin</a>
     </li>

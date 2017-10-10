@@ -52,7 +52,7 @@
 	while ($rows = mysqli_fetch_row($result)){
 //		$i++;
 		$isChecked = null;
-		$sql_status = "select card_status from charity_card where card_id='$rows[1]'";
+		$sql_status = "select card_status from charity_card where card_id='$rows[1]' and user_uid = '$u_uid'";
 		$result_status = mysqli_query($conn, $sql_status);
         $num = mysqli_num_rows($result_status);
 		 if ( $num > 0 ){
