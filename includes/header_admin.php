@@ -20,11 +20,11 @@ session_start();
 <link href="css/wb12_bluemonday.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="css/jquery-ui.css" rel="stylesheet">
+<!--<link href="css/jquery-ui.css" rel="stylesheet">-->
 <link href="css/buttonStyle.css" rel="stylesheet">
-<link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
+<!--<link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />-->
+<!--<script src="js/jquery-3.2.1.min.js"></script>-->
+<!--<script src="js/jquery-ui.min.js"></script>-->
 </head>
 
 <body data-spy="scroll">
@@ -37,28 +37,18 @@ session_start();
 <h1 id="Heading2"><a href="index.php" style="color: #0AABE1">Collection Swap</a></h1></div>
 <div id="wb_Heading3" style="position:absolute;left:113px;top:53px;width:207px;height:22px;z-index:2;">
 <h6 id="Heading3">find your last missing</h6></div>
-<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:800px;height:49px;z-index:3;">
-	<ul>
-    <li id="about"><a class="norm" href="about.php" target="_self">About</a>
+<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:200px;height:49px;z-index:3;">
+  <ul>
+    <li id="admin"><a class="norm" href="AdminAddCardSet.php" target="_self">Set&nbsp;Admin</a>
     </li>
-	<li id="setsManagement"><a class="norm" href="setsManagement.php" target="_self">Set&nbsp;Management</a>
-	</li>
-	<li id="matchUp"><a class="norm" href="matchUp.php" target="_self">Match&nbsp;Up</a>
-	</li>
-	<li id="charity"><a class="norm" href="charity.php" target="_self">Charity</a>
-	</li>
-	<li id="search"><a class="norm" href="explore.php" target="_self">Explore</a>
-	</li>
-    <li id="contactUs"><a class="norm" href="contactUs.php" target="_self">Contact Us</a>
-    </li>
-        <?php
-        if(isset($_SESSION['u_uid'])) {
-            $u_uid = $_SESSION['u_uid'];
-            echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
-            echo '<li><a class="log btn btn-default" href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>';
-        } else{
-            echo '<li id="register"><a class="log btn btn-default" href="login.php" target="_self">Log in</a></li>';}
-        ?>
+      <?php
+      if(isset($_SESSION['u_uid'])) {
+          $u_uid = $_SESSION['u_uid'];
+          echo '<li id="register"><a class="nidaye" href="profile.php">Hi, '.$u_uid.'</a></li>';
+          echo '<li><a class="log btn btn-default" href="#" name="logout" target="_self" onclick="logout()">Log out</a></li>';
+      } else{
+          echo '<li id="register"><a class="log btn btn-default" href="login.php" target="_self">Log in</a></li>';}
+      ?>
 	</ul>
 </div>
 </div>

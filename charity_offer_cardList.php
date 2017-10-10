@@ -8,7 +8,7 @@
 
 
 	<div style="text-align: center">
-		<h2>Card List</h2>
+		<h2>Collection List</h2>
 	</div><br/>
 
 <!-- 定义一下table的尺寸，不然显示得不太好 -->
@@ -35,7 +35,7 @@
 
 <!-- Start to output the form -->
 <table class="text-center vertical-center">
-<form id="post_form" action="testReceive.php">
+<form id="post_form">
 <?php
 	include_once 'includes/dbh.inc.php';
 	$u_uid = $_SESSION['u_uid'];
@@ -52,7 +52,7 @@
 	while ($rows = mysqli_fetch_row($result)){
 //		$i++;
 		$isChecked = null;
-		$sql_status = "select card_status from charity_card where card_id='$rows[2]'";
+		$sql_status = "select card_status from charity_card where card_id='$rows[1]'";
 		$result_status = mysqli_query($conn, $sql_status);
         $num = mysqli_num_rows($result_status);
 		 if ( $num > 0 ){
@@ -66,13 +66,13 @@
 		echo '
                 <tr>
                     <!-- <input type="hidden" value="'.$rows[2].'"> --> <!-- card id -->
-                    <td><span style="font-size: large">'.$rows[4].'</span></td> <!--card name-->
+                    <td><span style="font-size: large">'.$rows[3].'</span></td> <!--card name-->
                     <td>
-                        <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->                        
+                        <img src="'.$rows[2].'" class="img-responsive center-block thumbnail" alt="'.$rows[3].'"> <!-- card image-->                        
                     </td>
                     <td>
-                        <label for="'.$rows[2].'"><span style="font-size: large">Offer This</span></label>
-                        <input class="checkbox" type="checkbox" name="'.$rows[2].'" id="'.$rows[2].'" '.$isChecked.' value="4">
+                        <label for="'.$rows[1].'"><span style="font-size: large">Offer This</span></label>
+                        <input class="checkbox" type="checkbox" name="'.$rows[1].'" id="'.$rows[1].'" '.$isChecked.' value="4">
                     </td>                    
                 </tr>
 			';

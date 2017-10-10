@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2017 at 10:06 PM
+-- Generation Time: Oct 10, 2017 at 07:20 AM
 -- Server version: 5.7.18-log
 -- PHP Version: 5.6.25
 
@@ -81,8 +81,11 @@ INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`
 ('Amy', '103', 2, 58, '3', NULL, NULL, 0),
 ('Amy', '104', 2, 59, '3', NULL, NULL, 0),
 ('Amy', '4', 2, 67, '1', 1506630018, NULL, 0),
-('Amy', '5', 1, 69, '1', 1506630018, NULL, 0),
-('Amy', '6', 2, 70, '1', 1506630018, NULL, 0);
+('Amy', '5', 2, 69, '1', 1506630018, NULL, 0),
+('Amy', '1', 1, 71, '1', NULL, NULL, 0),
+('Amy', '2', 1, 72, '1', NULL, NULL, 0),
+('Amy', '3', 2, 73, '1', NULL, NULL, 0),
+('Amy', '6', 2, 74, '1', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -103,9 +106,15 @@ CREATE TABLE `charity_card` (
 --
 
 INSERT INTO `charity_card` (`id`, `user_uid`, `card_id`, `set_id`, `card_status`) VALUES
-(9, 'Amy', '1', '1', 4),
-(10, 'Amy', '2', '1', 4),
-(11, 'Amy', '6', '1', 4);
+(12, 'Bruce', '1', '1', 4),
+(13, 'Bruce', '2', '1', 4),
+(14, 'Bruce', '6', '1', 4),
+(15, 'Tony', '1', '1', 4),
+(16, 'Tony', '2', '1', 4),
+(17, 'Tony', '6', '1', 4),
+(36, 'Amy', '119', '7', 4),
+(37, 'Amy', '1', '1', 4),
+(38, 'Amy', '2', '1', 4);
 
 -- --------------------------------------------------------
 
@@ -136,15 +145,27 @@ INSERT INTO `messages` (`id`, `user_uid`, `swap_uid`, `swap_email`, `status`, `t
 (54, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '2', '20/09/2017 19:15:23', '1', '1,2', '5,6', NULL, NULL, NULL),
 (55, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
 (56, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '3', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
-(57, 'Amy', 'Xinkai', '', '5', '26/09/2017 15:41:46', '1', '3', '1,2', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
+(57, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '6', '02/10/2017 11:18:14', '1', '3', '1,2', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
 (58, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
-(59, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '5', '29/09/2017 09:52:00', '1', '1,5', '2,5', NULL, NULL, NULL),
+(59, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '5', '02/10/2017 11:04:17', '1', '1,5', '2,5', NULL, NULL, NULL),
 (60, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
 (61, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '3', '26/09/2017 15:41:46', '1', '1,5', '2,5', NULL, NULL, NULL),
 (62, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '6', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
 (63, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '6', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
 (65, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '0', '29/09/2017 09:52:23', '1', '1,2', '4', NULL, NULL, NULL),
-(66, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL);
+(66, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
+(67, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '04/10/2017 15:06:27', '1', '', '', '089651c38ed10945af84dc829807a984', '', ''),
+(68, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:06:27', '1', '', '', '089651c38ed10945af84dc829807a984', '', ''),
+(69, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '04/10/2017 15:07:20', '1', '', '', '7000ebcc736a7845a80a5c206b781807', '', ''),
+(70, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:07:20', '1', '', '', '7000ebcc736a7845a80a5c206b781807', '', ''),
+(71, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '04/10/2017 15:07:31', '1', '', '', 'fa61cfd9525a758aa33581b158c933bf', '', ''),
+(72, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:07:31', '1', '', '', 'fa61cfd9525a758aa33581b158c933bf', '', ''),
+(73, 'Amy', 'Tony', '222@gmail.com', '1', '04/10/2017 15:07:50', '1', '', '', 'b01cb323dac1bc9e013d9a0ef969da96', '', ''),
+(74, 'Tony', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:07:50', '1', '', '', 'b01cb323dac1bc9e013d9a0ef969da96', '', ''),
+(75, 'Amy', 'Tony', '222@gmail.com', '1', '04/10/2017 15:07:57', '1', '', '', 'bc9d6df416fe3e1ab6e26e11be3211a0', '', ''),
+(76, 'Tony', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:07:57', '1', '', '', 'bc9d6df416fe3e1ab6e26e11be3211a0', '', ''),
+(77, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '04/10/2017 15:08:07', '1', '', '', '268f326a83ca577da507f4ce2ecf3397', '', ''),
+(78, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '0', '04/10/2017 15:08:07', '1', '', '', '268f326a83ca577da507f4ce2ecf3397', '', '');
 
 -- --------------------------------------------------------
 
@@ -171,7 +192,7 @@ INSERT INTO `rating` (`rate_id`, `user_uid`, `good`, `normal`, `bad`, `average`,
 (1, 'Amy', 6, 1, 0, 2.5, 8, 20),
 (2, 'Bruce', 4, 2, 1, 8.25, 4, 33),
 (3, 'Tony', 2, 4, 1, 4, 4, 20),
-(4, 'Xinkai', 2, 2, 3, 4.6, 5, 23);
+(4, 'Xinkai', 5, 2, 3, 4, 8, 32);
 
 -- --------------------------------------------------------
 
@@ -180,9 +201,8 @@ INSERT INTO `rating` (`rate_id`, `user_uid`, `good`, `normal`, `bad`, `average`,
 --
 
 CREATE TABLE `sets_cards` (
-  `id` int(20) NOT NULL,
   `set_id` varchar(500) NOT NULL,
-  `card_id` varchar(500) NOT NULL,
+  `card_id` int(20) NOT NULL,
   `card_images` varchar(500) NOT NULL,
   `card_name` varchar(500) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -191,22 +211,22 @@ CREATE TABLE `sets_cards` (
 -- Dumping data for table `sets_cards`
 --
 
-INSERT INTO `sets_cards` (`id`, `set_id`, `card_id`, `card_images`, `card_name`) VALUES
-(1, '1', '1', 'images/cardImages/card-1.png', '1001'),
-(2, '1', '2', 'images/cardImages/card-2.png', '1002'),
-(3, '1', '3', 'images/cardImages/card-3.png', '1003'),
-(4, '1', '4', 'images/cardImages/card-4.png', '1004'),
-(5, '1', '5', 'images/cardImages/card-5.png', '1005'),
-(6, '1', '6', 'images/cardImages/card-6.png', '1006'),
-(7, '2', '33', 'images/cardImages/Disney-33.jpg', '2033'),
-(8, '2', '35', 'images/cardImages/Disney-35.jpg', '2035'),
-(9, '2', '36', 'images/cardImages/Disney-36.jpg', '2036'),
-(10, '2', '37', 'images/cardImages/Disney-37.jpg', '2037'),
-(11, '3', '101', 'images/cardImages/Grote Smurf.jpg', 'Grote Smurf'),
-(12, '3', '102', 'images/cardImages/Bril Smurf.jpg', 'Bril Smurf'),
-(13, '3', '103', 'images/cardImages/Smurfin.jpg', 'Smurfin'),
-(14, '3', '104', 'images/cardImages/Mopper Smurf.jpg', 'Mopper Smurf'),
-(15, '3', '105', 'images/cardImages/Muziek Smurfs.jpg', 'Muziek Smurfs');
+INSERT INTO `sets_cards` (`set_id`, `card_id`, `card_images`, `card_name`) VALUES
+('1', 1, 'images/cardImages/card-1.png', '1001'),
+('1', 2, 'images/cardImages/card-2.png', '1002'),
+('1', 3, 'images/cardImages/card-3.png', '1003'),
+('1', 4, 'images/cardImages/card-4.png', '1004'),
+('1', 5, 'images/cardImages/card-5.png', '1005'),
+('1', 6, 'images/cardImages/card-6.png', '1006'),
+('2', 33, 'images/cardImages/Disney-33.jpg', '2033'),
+('2', 35, 'images/cardImages/Disney-35.jpg', '2035'),
+('2', 36, 'images/cardImages/Disney-36.jpg', '2036'),
+('2', 37, 'images/cardImages/Disney-37.jpg', '2037'),
+('3', 101, 'images/cardImages/Grote Smurf.jpg', 'Grote Smurf'),
+('3', 102, 'images/cardImages/Bril Smurf.jpg', 'Bril Smurf'),
+('3', 103, 'images/cardImages/Smurfin.jpg', 'Smurfin'),
+('3', 104, 'images/cardImages/Mopper Smurf.jpg', 'Mopper Smurf'),
+('3', 105, 'images/cardImages/Muziek Smurfs.jpg', 'Muziek Smurfs');
 
 -- --------------------------------------------------------
 
@@ -296,7 +316,9 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (47, 'Aimee', 'Aimee', 'yhchixigua@gmail.com', 'Xinkai', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL),
 (48, 'Bruce', 'Li', 'yehan.wang@it.weltec.ac.nz', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017', NULL),
 (49, 'Tony', 'Wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017', NULL),
-(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '33232', '$2y$10$xCZXMq74E2yk9IBeqgWZR.gYAp48izIt7Mq4Mxz1tL.0ufunKinMu', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '29/09/2017', '81 karaka street, lower hutt');
+(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '33232', '$2y$10$ikKkjTpSa0UoMXmes2ncB.CLCy4Nipq3Mc4G4eX3kOb5Rx6O8MiKC', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '10/10/2017', '81 karaka street, lower hutt'),
+(51, 'Zilong', 'Li', 'ryu9827@gmail.com', 'zzz', '5014', '$2y$10$01Nqe8GvwGVDQzCS95Hb4eD2RHlh2ZLu3X1AsSKx6H8kYCO1pu.zK', 0, 'f3abb86bd34cf4d52698f14c0da1dc60', 1506994309, 1506907909, '02/10/2017', '81 karaka street, Wainuiomata, Lower Hutt'),
+(52, 'Aa', 'Aa', '11@a.ccc', 'aa', '1111', '$2y$10$CJYy/Ia1sLq01/ahZbEEHeU3PoDYMcMtZYchyHXvO3hoLMxauRdOa', 0, 'b1b6252885bbf33d866424b2db6e554b', 1507367591, 1507281191, '06/10/2017', '11');
 
 -- --------------------------------------------------------
 
@@ -331,9 +353,10 @@ CREATE TABLE `user_sets` (
 --
 
 INSERT INTO `user_sets` (`id`, `user_id`, `set_id`, `islocked`) VALUES
-(7, 50, 1, 0),
-(9, 50, 2, 0),
-(8, 50, 3, 0);
+(7, 50, 1, 1),
+(9, 50, 2, 1),
+(10, 50, 3, 0),
+(11, 50, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -402,10 +425,8 @@ ALTER TABLE `rating`
 -- Indexes for table `sets_cards`
 --
 ALTER TABLE `sets_cards`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id` (`id`),
-  ADD UNIQUE KEY `card_id` (`card_id`),
-  ADD KEY `card_id_2` (`card_id`);
+  ADD PRIMARY KEY (`card_id`),
+  ADD UNIQUE KEY `card_id` (`card_id`);
 
 --
 -- Indexes for table `sets_exist`
@@ -436,37 +457,42 @@ ALTER TABLE `user_sets`
 -- AUTO_INCREMENT for table `cards_status`
 --
 ALTER TABLE `cards_status`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 --
 -- AUTO_INCREMENT for table `charity_card`
 --
 ALTER TABLE `charity_card`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 --
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
   MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
+-- AUTO_INCREMENT for table `sets_cards`
+--
+ALTER TABLE `sets_cards`
+  MODIFY `card_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=126;
+--
 -- AUTO_INCREMENT for table `sets_exist`
 --
 ALTER TABLE `sets_exist`
-  MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT for table `user_sets`
 --
 ALTER TABLE `user_sets`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

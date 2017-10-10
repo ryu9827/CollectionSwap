@@ -80,13 +80,13 @@
 
 		echo '
                 <tr>
-                    <td><span style="font-size: large">'.$rows[4].'</span></td> <!--card name-->
+                    <td><span style="font-size: large">'.$rows[3].'</span></td> <!--card name-->
                     <td>
-                        <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'"> <!-- card image-->                        
+                        <img src="'.$rows[2].'" class="img-responsive center-block thumbnail" alt="'.$rows[3].'"> <!-- card image-->                        
                     </td>
                     <td>
-                        <label for="'.$rows[2].'"><span style="font-size: large">Wanted</span></label>
-                        <input class="checkbox" type="checkbox" name="card_id['.$rows[2].']" id="'.$rows[2].'" value="4">
+                        <label for="'.$rows[1].'"><span style="font-size: large">Wanted</span></label>
+                        <input class="checkbox" type="checkbox" name="card_id['.$rows[1].']" id="'.$rows[1].'" value="4">
                     </td>                    
                 </tr>
 			';

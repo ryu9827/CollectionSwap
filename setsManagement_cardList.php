@@ -70,7 +70,7 @@
 		$isChecked1=null;
         $isChecked2=null;
         $isChecked3="checked";
-		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[2]' and set_id='$set_id'";
+		$sql_status = "select * from cards_status where user_uid='$u_uid' and card_id='$rows[1]' and set_id='$set_id'";
 		$result_status = mysqli_query($conn, $sql_status);
                 $num = mysqli_num_rows($result_status);
 		 if ( $num > 0 ){
@@ -87,21 +87,21 @@
 		}
 
 		echo '  <tr>
-                    <input type="hidden" value="'.$rows[2].'" > <!-- card id -->
-                    <td><span style="font-size: large">'.$rows[4].'</span></td> <!--card name-->
+                    <input type="hidden" value="'.$rows[1].'" > <!-- card id -->
+                    <td><span style="font-size: large">'.$rows[3].'</span></td> <!--card name-->
                     <td>                        
-                        <img src="'.$rows[3].'" class="img-responsive center-block thumbnail" alt="'.$rows[4].'" id="'.$rows[2].'"> <!-- card image-->                        
+                        <img src="'.$rows[2].'" class="img-responsive center-block thumbnail" alt="'.$rows[3].'" id="'.$rows[1].'"> <!-- card image-->                        
                     </td>
                     <td>
-                      <label for="'.$rows[2].'1"><span style="font-size: large">Spare</span></label>
-                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'1" '.$isChecked1.' value="1"><span style="font-size: large"></span></td>
+                      <label for="'.$rows[1].'1"><span style="font-size: large">Spare</span></label>
+                      <input class="input" type="radio" name="'.$rows[1].'" id="'.$rows[1].'1" '.$isChecked1.' value="1"><span style="font-size: large"></span></td>
                     <td>
-                      <label for="'.$rows[2].'2"><span style="font-size: large">Wanted</span></label>
-                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'2" '.$isChecked2.' value="2"><span style="font-size: large"></span>
+                      <label for="'.$rows[1].'2"><span style="font-size: large">Wanted</span></label>
+                      <input class="input" type="radio" name="'.$rows[1].'" id="'.$rows[1].'2" '.$isChecked2.' value="2"><span style="font-size: large"></span>
                     </td>                    
                     <td>
-                      <label for="'.$rows[2].'3"><span style="font-size: large">Got It</span></label>
-                      <input class="input" type="radio" name="'.$rows[2].'" id="'.$rows[2].'3" '.$isChecked3.' value="3"><span style="font-size: large"></span></td>
+                      <label for="'.$rows[1].'3"><span style="font-size: large">Got It</span></label>
+                      <input class="input" type="radio" name="'.$rows[1].'" id="'.$rows[1].'3" '.$isChecked3.' value="3"><span style="font-size: large"></span></td>
                 </tr>
 			';
 	}
