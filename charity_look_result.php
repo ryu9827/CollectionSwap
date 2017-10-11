@@ -168,7 +168,7 @@ echo '
 }
 ?>
 <br>
-<p class="text-center">* Please be aware that the Charity applicant must be responsible for any relative costs such as two-way freight (stamps, envelops) for each successful request!</p>
+<p class="text-center text-danger">* Please be aware that the Charity applicant must be responsible for any relative costs such as two-way freight (stamps, envelops...) for each successful request!</p>
 
 <div style="height: 50px; visibility:hidden;"></div> 
 

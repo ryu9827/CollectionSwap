@@ -51,15 +51,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <link rel="stylesheet" href="css/AdminAddCardSet.css" type="text/css">
 <div class="body-content">
   <div class="module">
-    <h1>Create New Card Set</h1><br />
+    <h1>Administration Authority Only</h1><br>
+    <h1>Create New Card Set</h1><br>
     <form class="form" action="AdminAddCardSet.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
 	  <td align="left">
-      Set Name：
+      New Collection Name：
       </td>
       <input type="text" placeholder="Set Name" name="setname" required />
 	  <td align="left">
-      Cards Amount：
+     Collectable number：
       </td>
       <input type="number" placeholder="Cards Amount" name="cardsAmount" required />
       <div class="setimage"><label>Select Set cover image: </label><input type="file" name="setimage" accept="image/*" required /></div>

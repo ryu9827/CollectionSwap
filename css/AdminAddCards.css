@@ -212,7 +212,7 @@ body{
 }
 
 select,
-textarea,
+textarea, textarea.focus,
 input[type="text"],
 input[type="password"],
 input[type="address"],
@@ -231,7 +231,7 @@ input[type="number"]
   font-size: 15px;
   line-height: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(220, 220, 220, 1);
   color: rgba(255, 255, 255, 0.7);
   -moz-box-sizing: border-box;
   box-sizing: border-box;

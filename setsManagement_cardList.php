@@ -100,7 +100,7 @@
                       <input class="input" type="radio" name="'.$rows[1].'" id="'.$rows[1].'2" '.$isChecked2.' value="2"><span style="font-size: large"></span>
                     </td>                    
                     <td>
-                      <label for="'.$rows[1].'3"><span style="font-size: large">Got It</span></label>
+                      <label for="'.$rows[1].'3"><span style="font-size: large">Owned</span></label>
                       <input class="input" type="radio" name="'.$rows[1].'" id="'.$rows[1].'3" '.$isChecked3.' value="3"><span style="font-size: large"></span></td>
                 </tr>
 			';

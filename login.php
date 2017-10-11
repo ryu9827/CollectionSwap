@@ -35,10 +35,10 @@ if (isset($_SESSION['u_id'])){
                     </div>
                 </div>
             </form>
-    <div class="col-sm-2 col-md-offset-4">
-        <label>Demo Account:</label> amy
-        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Password: </label>123
-    </div>
+<!--    <div class="col-sm-2 col-md-offset-4">-->
+<!--        <label>Demo Account:</label> amy-->
+<!--        <label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Password: </label>123-->
+<!--    </div>-->
 <!--	<p class="text-center"><a href="forgetPwd">Forget your password?</a></p>-->
 
 

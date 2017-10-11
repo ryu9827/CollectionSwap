@@ -7,7 +7,7 @@ include_once 'includes/header_admin.php';
 $mysqli = new mysqli('localhost', 'root', '123', 'collectionswap');
 
 $setname = $_SESSION['setname'];
-$sqlid = "select set_id from sets_exist where set_name = $setname;";
+$sqlid = "select * from sets_exist where set_name = '$setname';";
 $result1 = mysqli_query($mysqli, $sqlid);	
 foreach($result1 as $key)
 {
@@ -72,8 +72,9 @@ $msg = "";
 echo '
 <div id="content">
 <form method="post" action="AdminAddCards.php" enctype="multipart/form-data">
-  <span class="setname"><img src="'.$_SESSION['setimage'].'" alt="Lights" style="max-width: 500px !important; max-height: 500px !important">'.$setname.'</span><br><br><br><br><br><br>
-<div class="alert alert-success"><font size="+1">'. $_SESSION['message'].' </font></div><br />
+<div class="alert alert-success"><font size="+1">'. $_SESSION['message'].' </font></div><br />  
+<span class="setname"><img src="'.$_SESSION['setimage'].'" alt="Lights" style="max-width: 500px !important; max-height: 500px !important"></span><br><br><br><br><br><br>
+
 <div>
 <input type="file" name="image" required>
 </div>
