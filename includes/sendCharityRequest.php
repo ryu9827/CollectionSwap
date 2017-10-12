@@ -59,7 +59,7 @@ $uid = $_SESSION['u_id'];
     $mail->sendEmail($remail,$subject,$body);
 
    
-   $reqtime = time(); 
+   $regtime = time(); 
    $token = md5($user_uid.$reciver_uid.$reqtime); 
    
     
