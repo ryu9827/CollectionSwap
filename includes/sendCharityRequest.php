@@ -38,7 +38,7 @@ $uid = $_SESSION['u_id'];
        return $email;
    }
 
-   $offerlist1 = explode(",", $offerlist);
+   $offerlist1 = explode(",", $charitylist);
    //$misslist1 = explode(",", $misslist);
       
     //get users and reciver email address   
@@ -54,7 +54,7 @@ $uid = $_SESSION['u_id'];
     //send email to reciver
     $mail = new sendemail();
     $subject = "New Swap Request";
-    $body = "Dear ".$reciver_uid."：<br/>".$user_uid." send you a charity request <br/>card set: ".$set_name."<br/>you need to offer: ".$offername;
+    $body = "Dear ".$reciver_uid."：<br/>".$user_uid." send you a charity request <br/>card set: ".$set_name."<br/>you need to offer: ".$charityname;
         
     $mail->sendEmail($remail,$subject,$body);
 
@@ -66,10 +66,10 @@ $uid = $_SESSION['u_id'];
 
   //create new message for both user and reciver
    $time = date('d/m/Y H:i:s');
-   $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,get_id,token,get_name,regtime) VALUES ('$user_uid','$reciver_uid','$swap_email','$status','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
+   $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,get_id,token,get_name,regtime) VALUES ('$user_uid','$reciver_uid','$uemail','7','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
    mysqli_query($conn, $sql);
-   
-   $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,token,offer_name,regtime) VALUES ('$reciver_uid','$user_uid','$swap_email','$status','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
+  
+   $sql = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,token,offer_name,regtime) VALUES ('$reciver_uid','$user_uid','$remail','8','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
    mysqli_query($conn, $sql);
    
    
