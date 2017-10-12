@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 
 	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
 	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
+       // echo $uid;
 
 	//Error handlers
 	
@@ -22,7 +23,8 @@ if (isset($_POST['submit'])) {
 			echo 'user does not exist';
 			exit();
 		} else {
-			if ($row = mysqli_fetch_assoc($result)) {
+		//	if ($row = mysqli_fetch_assoc($result)) {
+                    $row = mysqli_fetch_assoc($result);
                             if($row['user_uid'] == 'admin'){
                                 $hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if ($hashedPwdCheck == false) {
@@ -36,7 +38,7 @@ if (isset($_POST['submit'])) {
                                             
                                         }
                                 
-                            }
+                     //       }
 				//De-hashing the password
                                 else{
 				$hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
@@ -64,6 +66,6 @@ if (isset($_POST['submit'])) {
 		}
 	
 else {
-	header("Location: ../index.php?login=error");
+	//header("Location: ../index.php?login=error");
 	exit();
 }

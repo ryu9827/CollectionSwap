@@ -83,7 +83,7 @@ function askForCharity($charity = array(), $set_id = ''){
     $test = array();
     foreach ($provider as $key2 => $row2) {
       
-      $test[$key] = @$row['point'];
+      $test[] = @$row['point'];
    
      }
      array_multisort($test, SORT_DESC, $provider);
