@@ -31,10 +31,10 @@ session_start();
 <header id="PageHeader1" style="position:fixed;text-align:center;left:0;top:0;right:0;height:100px;z-index:7777;">
 <div id="PageHeader1_Container" style="width:1400px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
 <div id="wb_MaterialIcon15" style="position:absolute;left:0px;top:10px;width:72px;height:72px;text-align:center;z-index:0;">
-<a href="AdminAddCardSet.php"><!--Icon link to add on the left-->
+<a href="index.php"><!--Icon link to add on the left-->
 <div id="MaterialIcon15"><i class="material-icons">&#xe41d;</i></div></a></div>
 <div id="wb_Heading2" style="position:absolute;left:74px;top:17px;width:281px;height:36px;text-align:center;z-index:1;">
-<h1 id="Heading2"><a href="AdminAddCardSet.php" style="color: #0AABE1">Collection Swap</a></h1></div>
+<h1 id="Heading2"><a href="index.php" style="color: #0AABE1">Collection Swap</a></h1></div>
 <div id="wb_Heading3" style="position:absolute;left:113px;top:53px;width:207px;height:22px;z-index:2;">
 <h6 id="Heading3">find your last missing</h6></div>
 <div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:300px;height:49px;z-index:3;">

@@ -36,7 +36,7 @@ include_once('includes/header.php');
         patt_last = /^[a-zA-Z_]+$/;
         patt_age = /^[0-9]+$/;
 //        patt_address = /^[0-9a-zA-Z]+[ ]{0,1}[a-zA-Z]+[ ]{0,1}[a-zA-Z]+$/;
-        patt_address = /^[0-9a-zA-Z_]+$/;
+        patt_address = /^[0-9a-zA-Z ]+$/;
         patt_postcode = /^[0-9]{4}$/;
         patt_pwd = /^[0-9a-zA-Z#&*]{3,16}$/;
 
