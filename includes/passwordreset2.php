@@ -35,7 +35,8 @@ if (!isset($_SESSION['u_id'])){
             else{
              $hashedPwd = password_hash($newpwd, PASSWORD_DEFAULT);
              $sql = "UPDATE users SET user_pwd = '$hashedPwd' WHERE user_uid = '$user_uid'";
-              mysqli_query($conn, $sql);   
+              mysqli_query($conn, $sql);  
+              echo 'password updated successfully';
             }
         }
 
