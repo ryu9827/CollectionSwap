@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
 		} else {
 		//	if ($row = mysqli_fetch_assoc($result)) {
                     $row = mysqli_fetch_assoc($result);
-                            if($row['user_uid'] == 'admin'){
+                            if($row['user_uid'] == 'admin' || $row['user_uid'] == 'Admin'){
                                 $hashedPwdCheck = password_verify($pwd, $row['user_pwd']);
 				if ($hashedPwdCheck == false) {
                                         echo 'wrong password';
