@@ -23,7 +23,6 @@ $charityname = mysqli_real_escape_string($conn,$_POST['cardname']);
 //var_dump($charitylist);
 
 
-
 //$reciver_uid = 'Bruce';
 //$set_id = '1';
 //$charitylist = '1001,1002';

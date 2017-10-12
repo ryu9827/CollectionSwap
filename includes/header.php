@@ -37,7 +37,7 @@ session_start();
 <h1 id="Heading2"><a href="index.php" style="color: #0AABE1">Collection Swap</a></h1></div>
 <div id="wb_Heading3" style="position:absolute;left:113px;top:53px;width:207px;height:22px;z-index:2;">
 <h6 id="Heading3">find your last missing</h6></div>
-<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:800px;height:49px;z-index:3;">
+<div id="wb_CssMenu1" style="position:absolute;right:10px;top:26px;width:850px;height:49px;z-index:3;">
 	<ul>
     <li id="about"><a class="norm" href="about.php" target="_self">About</a>
     </li>
