@@ -19,9 +19,9 @@ date_default_timezone_set('NZ');
 //get data from front-end
 $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
 $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
-$charitylist = mysqli_real_escape_string($conn,$_POST['offer']);
+$charitylist = mysqli_real_escape_string($conn,$_POST['cardid']);
 //$misslist =  mysqli_real_escape_string($conn,$_POST['miss']);
-$charityname = mysqli_real_escape_string($conn,$_POST['offername']);
+$charityname = mysqli_real_escape_string($conn,$_POST['cardname']);
 //$missname = mysqli_real_escape_string($conn,$_POST['missname']);
 
 
