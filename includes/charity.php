@@ -16,12 +16,12 @@ function charitylist($user_uid){
     return $charitycard;
 }
 
-function askForCharity($charity = array(), $set_id = ''){
+function askForCharity($charity = array(), $set_id = '',$user_uid){
     global $conn;
     $provider = array();
     $list = array();
     foreach ($charity as $key => $value){
-        $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND set_id = '$set_id'";
+        $sql = "SELECT * FROM charity_card WHERE card_id = '$key' AND set_id = '$set_id' AND user_uid != '$user_uid'";
         $res = mysqli_query($conn, $sql);
      //   $list = array();
     

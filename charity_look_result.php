@@ -7,6 +7,7 @@
 
 	};
 $set_id = $_POST['set_id'];
+$user_uid = $_SESSION['u_uid'];
 global $conn;
 $sql = "SELECT set_name from sets_exist";
 $result = mysqli_query($conn, $sql);
@@ -15,7 +16,7 @@ $set_name = $row[0];
 
 $obj = $_POST['card_id'];
 //call method to search matching users
-$finallist = askForCharity($obj,$set_id);
+$finallist = askForCharity($obj,$set_id,$user_uid);
 //var_dump($finallist);
 ?>
 

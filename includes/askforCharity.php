@@ -34,14 +34,14 @@ if (!isset($_SESSION['u_id'])){
              }
          
          else{
-             $finallist = askForCharity($charitylist,$set_id);
+             $finallist = askForCharity($charitylist,$set_id,$user_uid);
          }
          
          
      }
  }
  else{
-     $finallist = askForCharity($charitylist,$set_id);
+     $finallist = askForCharity($charitylist,$set_id,$user_uid);
  }
   
 
