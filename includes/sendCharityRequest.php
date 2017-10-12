@@ -14,16 +14,13 @@ if (!isset($_SESSION['u_id'])){
 	}
 date_default_timezone_set('NZ');
 
-//      $reciver_uid = 'Bruce';
-//     $set_id = '1';
-//      $offerlist = '1,2';
-//      $misslist = '1,2';
 //get data from front-end
 $reciver_uid = mysqli_real_escape_string($conn, $_POST['name']);
 $set_id = mysqli_real_escape_string($conn,$_POST['set_id']);
 $charitylist = mysqli_real_escape_string($conn,$_POST['cardid']);
 
 $charityname = mysqli_real_escape_string($conn,$_POST['cardname']);
+//var_dump($charitylist);
 
 
 
@@ -79,7 +76,7 @@ $uid = $_SESSION['u_id'];
    $sql1 = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,get_id,token,get_name,regtime) VALUES 
            ('$user_uid','$reciver_uid','$uemail','7','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
    mysqli_query($conn, $sql1);
-   echo mysqli_error($conn);
+  // echo mysqli_error($conn);
   
    $sql2 = "INSERT INTO messages (user_uid,swap_uid,swap_email,status,time,set_id,offer_id,token,offer_name,regtime) VALUES ('$reciver_uid','$user_uid','$remail','8','$time','$set_id','$charitylist','$token','$charityname','$regtime')";
    mysqli_query($conn, $sql2);
