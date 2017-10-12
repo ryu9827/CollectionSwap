@@ -32,7 +32,7 @@
 
 <div style="text-align: center">
     <h3 style="text-align: center">Want to send us something in the mail?</h3><br/><br/>
-    <h3 style="text-align: center">Drop an email to <a href="mailto:hello@collectionswap.co.nz">hello@collectionswap.co.nz</a> and we will get back to you ASAP!</h3><br/><br/>
+    <h3 style="text-align: center">Drop an email to <a href="mailto:hello@collectionswap.co.nz">collectionswap@gmail.com</a> and we will get back to you ASAP!</h3><br/><br/>
 </div>
 
 <div class="row">

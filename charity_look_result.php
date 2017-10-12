@@ -37,7 +37,7 @@ var set_id = GetQueryString("set_id");
 
 function sendRequest(name,cardname,set_id){
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open('POST','includes/sendMatchRequest.php',true);
+	xmlhttp.open('POST','includes/sendCharityRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
 	xmlhttp.send('name='+name+'&cardname='+cardname+'&set_id='+set_id);
 };
@@ -77,6 +77,7 @@ $name = $value['name'];
 //$setname = $value['setname'];
 //var_dump($setname);
 $cardname = $value['cardname'];
+$card_id = $value['cardid'];
 $good = $value['good'];
 $normal = $value['normal'];
 $bad = $value['bad'];
