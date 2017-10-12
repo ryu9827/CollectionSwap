@@ -35,11 +35,11 @@ function GetQueryString(name){
 
 var set_id = GetQueryString("set_id");
 
-function sendRequest(name,cardname,set_id){
+function sendRequest(name,cardname,set_id,cardid){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open('POST','includes/sendCharityRequest.php',true);
 	xmlhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-	xmlhttp.send('name='+name+'&cardname='+cardname+'&set_id='+set_id);
+	xmlhttp.send('name='+name+'&cardname='+cardname+'&set_id='+set_id+'&cardid='+cardid);
 };
 </script>
 
@@ -77,7 +77,7 @@ $name = $value['name'];
 //$setname = $value['setname'];
 //var_dump($setname);
 $cardname = $value['cardname'];
-$card_id = $value['cardid'];
+$cardid = $value['cardid'];
 $good = $value['good'];
 $normal = $value['normal'];
 $bad = $value['bad'];
@@ -108,7 +108,7 @@ echo'<div class="item active">
     </div>
     </div>
     <div class="panel-footer">
-    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''.$name.'\',\''.$cardname.'\',\''.$set_id.'\')">Ask For Charity</button>
+    <button type="submit" class="btn btn-success btn-lg center-block" data-toggle="modal" data-target="#sentRequest" onclick="sendRequest(\''.$name.'\',\''.$cardname.'\',\''.$set_id.'\',\''.$cardid.'\')">Ask For Charity</button>
     </div>
     </div>
     </div>

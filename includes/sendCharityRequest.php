@@ -70,7 +70,7 @@ $uid = $_SESSION['u_id'];
 
    
    $regtime = time(); 
-   $token = md5($user_uid.$reciver_uid.$regtime); 
+   $token = md5($user_uid.$reciver_uid.$regtime);
    
     
 
