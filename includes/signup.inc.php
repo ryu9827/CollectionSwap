@@ -62,8 +62,8 @@
                                        $mail = new sendemail();
                                        $subject = "test";
                                        $body = "Dear ".$uid."：<br/>Thanks for registering in collection-swap。<br/>please click below link to active your account。<br/> 
-                                                                     <a href='http://mysites/netbeans/login/includes/active.php?verify=".$token."' target= 
-                                                                     '_blank'>http://mysites/netbeans/login/includes/active.php?verify=".$token."</a><br/> 
+                                                                     <a href='http://mysites/CS/includes/active.php?verify=".$token."' target= 
+                                                                     '_blank'>http://mysites/CS/includes/active.php?verify=".$token."</a><br/> 
                                                                      if the link is not work, please cpqy and paste to your broswer, it will be expired after 24h"; ;
                                        $mail->sendEmail($email,$subject,$body);
                                        //echo $email;

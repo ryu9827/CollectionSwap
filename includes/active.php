@@ -26,13 +26,15 @@ if($row){
       mysqli_query($conn, $sql1); 
       
       $sql = "INSERT INTO rating (user_uid ) VALUES ('$uid') ";
+       mysqli_query($conn, $sql1); 
      
         if(mysqli_affected_rows($conn)!=1) die(0)  ;      
-        $msg = 'active successfully';    
+        $msg = 'active successfully';  
+        header("Location: ../login.php");
     }
 }
  else{
-      $msg = 'error.';     
+      $msg = 'already active, please go login.';     
       } 
      echo $msg;
  ?>

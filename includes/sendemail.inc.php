@@ -25,16 +25,16 @@ class sendemail{
         $mail->Host = "smtp.gmail.com";
         $mail->Port = 465;
 //set email address and pwd
-        $mail->Username = "yhchixigua@gmail.com";
-        $mail->Password = "hanzhilian123";
-        $mail->From = "yhchixigua@gmail.com";
-        $mail->FromName = "test";
+        $mail->Username = "collectionswap@gmail.com";
+        $mail->Password = "administration";
+        $mail->From = "collectionswap@gmail.com";
+        $mail->FromName = "collectionswap team";
         $mail->Subject = $subject;
         $mail->AltBody = $body;
         $mail->WordWrap = 50; // set word wrap
         $mail->MsgHTML($body);
 //set reply to email
-         $mail->AddReplyTo("yhchixigua@gmail.com","aimee");
+         $mail->AddReplyTo("collectionswap@gmail","Admin");
 
 //add attachment
 #$mail->AddAttachment("attachment.jpg");
