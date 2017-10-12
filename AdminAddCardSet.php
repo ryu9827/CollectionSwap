@@ -24,19 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						
 						//if the query is successful, redirect to CardSetAddSuccesfully.php page, done！
 						if($mysqli->query($sql) === true) {
-							$_SESSION['message'] = "Card set create successful! Added \"$setname\" to the database! Please uploade card images ! When the card added to the database, it will display below !";
+							$_SESSION['message'] = "<p>A new collection set has been created successfully!</p> <p>System has added \"$setname\" into the database!</p><p> Check the displayed image below!</p><p> Please upload the selected image!</p>";
 							header("location: AdminAddCards.php");
 						}
 						else {
-							$_SESSION['message'] = "Card set could not be added to the database!";
+							$_SESSION['message'] = "Collection set could not be added to the database!";
 						}
 			}
 			else {
-				$_SESSION['message'] = "File uploade failed!";
+				$_SESSION['message'] = "File upload failed!";
 			}
 		}
 		else {
-			$_SESSION['message'] = "Please only uploade GIF, JPG, or PNG images!";
+			$_SESSION['message'] = "Please only upload GIF, JPG, or PNG images!";
 		}
 }
 
