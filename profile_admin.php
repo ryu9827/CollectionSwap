@@ -122,40 +122,40 @@ $row= mysqli_fetch_assoc($res);
 </div>
 
 <?php
-$sql2 = "SELECT * FROM rating WHERE user_uid = '$user_uid'";
-$res2 = mysqli_query($conn, $sql2);
-$row2= mysqli_fetch_assoc($res2);
-//var_dump($row2)
-?>
-<div class="row">
-    <div class="col-lg-6 col-xs-offset-3">
-        <div class="well">
-            <div class="row">
-                <label>&nbsp;&nbsp;&nbsp; Feedback:</label>
-            </div>
-            <div class="row">
-                <div class="col-xs-2">
-                    <img class="pull-right" src="images/icons/happy_face1.gif">
-                </div>
-                <div class="col-xs-2">
-                    <label><?php echo $row2['good']; ?></label>
-                </div>
-                <div class="col-xs-2">
-                    <img class="pull-right" src="images/icons/neutral_face1.gif">
-                </div>
-                <div class="col-xs-2">
-                    <label><?php echo $row2['normal']; ?></label>
-                </div>
-                <div class="col-xs-2">
-                    <img class="pull-right" src="images/icons/sad_face1.gif">
-                </div>
-                <div class="col-xs-2">
-                    <label><?php echo $row2['bad']; ?></label>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+//$sql2 = "SELECT * FROM rating WHERE user_uid = '$user_uid'";
+//$res2 = mysqli_query($conn, $sql2);
+//$row2= mysqli_fetch_assoc($res2);
+////var_dump($row2)
+//?>
+<!--<div class="row">-->
+<!--    <div class="col-lg-6 col-xs-offset-3">-->
+<!--        <div class="well">-->
+<!--            <div class="row">-->
+<!--                <label>&nbsp;&nbsp;&nbsp; Feedback:</label>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-xs-2">-->
+<!--                    <img class="pull-right" src="images/icons/happy_face1.gif">-->
+<!--                </div>-->
+<!--                <div class="col-xs-2">-->
+<!--                    <label>--><?php //echo $row2['good']; ?><!--</label>-->
+<!--                </div>-->
+<!--                <div class="col-xs-2">-->
+<!--                    <img class="pull-right" src="images/icons/neutral_face1.gif">-->
+<!--                </div>-->
+<!--                <div class="col-xs-2">-->
+<!--                    <label>--><?php //echo $row2['normal']; ?><!--</label>-->
+<!--                </div>-->
+<!--                <div class="col-xs-2">-->
+<!--                    <img class="pull-right" src="images/icons/sad_face1.gif">-->
+<!--                </div>-->
+<!--                <div class="col-xs-2">-->
+<!--                    <label>--><?php //echo $row2['bad']; ?><!--</label>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 			
 <!--					<button type="submit" class="btn btn-danger btn-lg center-block" name="logout" onclick="logout()">Log out</button>-->
 			

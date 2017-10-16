@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2017 at 04:21 AM
--- Server version: 5.7.18-log
+-- Generation Time: Oct 16, 2017 at 09:02 PM
+-- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -214,9 +214,7 @@ INSERT INTO `sets_cards` (`set_id`, `card_id`, `card_images`, `card_name`) VALUE
 ('3', 102, 'images/cardImages/Bril Smurf.jpg', 'Bril Smurf'),
 ('3', 103, 'images/cardImages/Smurfin.jpg', 'Smurfin'),
 ('3', 104, 'images/cardImages/Mopper Smurf.jpg', 'Mopper Smurf'),
-('3', 105, 'images/cardImages/Muziek Smurfs.jpg', 'Muziek Smurfs'),
-('27', 134, 'images/cardImages/enroll-2.png', '2'),
-('27', 133, 'images/cardImages/enroll-1.png', '1');
+('3', 105, 'images/cardImages/Muziek Smurfs.jpg', 'Muziek Smurfs');
 
 -- --------------------------------------------------------
 
@@ -239,8 +237,7 @@ CREATE TABLE `sets_exist` (
 INSERT INTO `sets_exist` (`set_id`, `set_name`, `set_cover_image`, `set_cards_amount`, `ishidden`) VALUES
 (1, 'All Blacks (Weet-Bix)', 'images/setImages/All_Blacks.jpg\r\n', 30, 0),
 (2, 'Disney Movie Stars', 'images/setImages/Disney_Movie_Star.jpg', 100, 0),
-(3, 'Smurf', 'images/setImages/Smurf.jpg', 15, 0),
-(27, 'Dancing', 'images/setimages/2017-04-13_200934.png', 10, 0);
+(3, 'Smurf', 'images/setImages/Smurf.jpg', 15, 0);
 
 -- --------------------------------------------------------
 
@@ -308,7 +305,7 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (47, 'Aimee', 'Aimee', 'yhchixigua@gmail.com', 'Xinkai', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL, NULL),
 (48, 'Bruce', 'Li', 'yehan.wang@it.weltec.ac.nz', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017', NULL, NULL),
 (49, 'Tony', 'Wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017', NULL, NULL),
-(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '3333', '$2y$10$An.2zOCH99bnPetWoBk1/OYh2Y3VgfeaiVUEMtR0xnv5.1i0/aRKe', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '12/10/2017', '81 victoria street, lower hutt', NULL),
+(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '3333', '$2y$10$An.2zOCH99bnPetWoBk1/OYh2Y3VgfeaiVUEMtR0xnv5.1i0/aRKe', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '17/10/2017', '81 victoria street, lower hutt', NULL),
 (51, 'Zilong', 'Li', 'ryu9827@gmail.com', 'zzz', '5014', '$2y$10$01Nqe8GvwGVDQzCS95Hb4eD2RHlh2ZLu3X1AsSKx6H8kYCO1pu.zK', 0, 'f3abb86bd34cf4d52698f14c0da1dc60', 1506994309, 1506907909, '02/10/2017', '81 karaka street, Wainuiomata, Lower Hutt', NULL),
 (52, 'Aa', 'Aa', '11@a.ccc', 'aa', '1111', '$2y$10$CJYy/Ia1sLq01/ahZbEEHeU3PoDYMcMtZYchyHXvO3hoLMxauRdOa', 0, 'b1b6252885bbf33d866424b2db6e554b', 1507367591, 1507281191, '06/10/2017', '11', NULL),
 (53, 'Robert', 'Sutcliffe', 'collectionswap@gmail.com', 'Admin', '2222', '$2y$10$f4DXJZ6OTbKiMK16GE1mKuhpzVMxSAz6771AsuCT4KjGDADmXO6v2', 1, 'df360efb4708891de1735ed1d46e9baa', 1507864887, 1507778487, '12/10/2017', '11111', 40);

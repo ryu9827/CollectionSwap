@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="body-content">
   <div class="module">
     <h1>Administration Authority Only</h1><br>
-    <h1>Create New Card Set</h1><br>
+    <h1>Create New Collection Set</h1><br>
     <form class="form" action="AdminAddCardSet.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"><?= $_SESSION['message'] ?></div>
 	  <td align="left">
