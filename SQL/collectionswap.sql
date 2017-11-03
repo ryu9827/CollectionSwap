@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 16, 2017 at 09:02 PM
+-- Generation Time: Nov 03, 2017 at 09:30 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -42,36 +42,36 @@ CREATE TABLE `cards_status` (
 --
 
 INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`, `locked_time`, `card_name`, `islocked`) VALUES
-('Yehan', '1', 1, 1, '1', NULL, '', 0),
-('Yehan', '2', 2, 2, '1', NULL, '', 0),
-('Yehan', '3', 1, 3, '1', NULL, '', 0),
+('Yehan', '1', 1, 1, '1', 1508276493, '', 0),
+('Yehan', '2', 2, 2, '1', 1508276493, '', 0),
+('Yehan', '3', 1, 3, '1', 1508276493, '', 0),
 ('Yehan', '4', 2, 4, '1', NULL, '', 0),
 ('Yehan', '5', 1, 5, '1', NULL, '', 0),
-('Yehan', '6', 1, 6, '1', NULL, '', 0),
+('Yehan', '6', 1, 6, '1', 1508276493, '', 0),
 ('Wendy', '1', 1, 13, '1', 1505773875, '', 0),
-('Wendy', '2', 1, 14, '1', 1505773875, '', 0),
+('Wendy', '2', 2, 14, '1', 1505773875, '', 0),
 ('Wendy', '3', 1, 15, '1', 1505773875, '', 0),
 ('Wendy', '4', 1, 16, '1', 1505773875, '', 0),
-('Wendy', '5', 0, 17, '1', 1505773875, '', 0),
-('Wendy', '6', 0, 18, '1', 1505773875, '', 0),
-('Tony', '1', 2, 19, '1', 1506629705, '', 0),
+('Wendy', '5', 2, 17, '1', 1505773875, '', 0),
+('Wendy', '6', 1, 18, '1', 1505773875, '', 0),
+('Tony', '1', 1, 19, '1', 1506629705, '', 0),
 ('Tony', '2', 2, 20, '1', 1506629705, '', 0),
-('Tony', '3', 2, 21, '1', 1506629705, '', 0),
+('Tony', '3', 1, 21, '1', 1506629705, '', 0),
 ('Tony', '4', 2, 22, '1', 1506629705, '', 0),
 ('Tony', '5', 1, 23, '1', 1506629705, '', 0),
 ('Tony', '6', 1, 24, '1', 1506629705, '', 0),
-('Bruce', '1', 1, 25, '1', 1506629866, '', 0),
-('Bruce', '2', 1, 26, '1', 1506629866, '', 0),
-('Bruce', '3', 2, 27, '1', 1506629866, '', 0),
-('Bruce', '4', 2, 28, '1', 1506629866, '', 0),
+('Bruce', '1', 2, 25, '1', 1506629866, '', 0),
+('Bruce', '2', 2, 26, '1', 1506629866, '', 0),
+('Bruce', '3', 1, 27, '1', 1506629866, '', 0),
+('Bruce', '4', 1, 28, '1', 1506629866, '', 0),
 ('Bruce', '5', 2, 29, '1', 1506629866, '', 0),
 ('Bruce', '6', 1, 30, '1', 1506629866, '', 0),
 ('Xinkai', '4', 2, 34, '1', 1506630018, '', 0),
 ('Xinkai', '5', 1, 35, '1', 1506630018, '', 0),
-('Xinkai1', '2', 2, 37, '1', NULL, '', 0),
-('Xinkai1', '3', 1, 38, '1', NULL, '', 0),
-('Xinkai1', '4', 2, 39, '1', NULL, '', 0),
-('Xinkai1', '5', 2, 40, '1', NULL, '', 0),
+('Xinkai', '2', 2, 37, '1', NULL, '', 0),
+('Xinkai', '3', 1, 38, '1', NULL, '', 0),
+('Xinkai', '4', 2, 39, '1', NULL, '', 0),
+('Xinkai', '5', 2, 40, '1', NULL, '', 0),
 ('Amy', '36', 2, 49, '2', NULL, NULL, 0),
 ('Amy', '33', 1, 50, '2', NULL, NULL, 0),
 ('Amy', '35', 2, 51, '2', NULL, NULL, 0),
@@ -82,10 +82,10 @@ INSERT INTO `cards_status` (`user_uid`, `card_id`, `card_status`, `id`, `set_id`
 ('Amy', '104', 2, 59, '3', NULL, NULL, 0),
 ('Amy', '4', 2, 67, '1', 1506630018, NULL, 0),
 ('Amy', '5', 1, 69, '1', 1506630018, NULL, 0),
-('Amy', '1', 2, 71, '1', NULL, NULL, 0),
-('Amy', '2', 1, 72, '1', NULL, NULL, 0),
-('Amy', '3', 2, 73, '1', NULL, NULL, 0),
-('Amy', '6', 2, 74, '1', NULL, NULL, 0);
+('Amy', '1', 1, 71, '1', 1508276493, NULL, 0),
+('Amy', '2', 1, 72, '1', 1508276493, NULL, 0),
+('Amy', '3', 2, 73, '1', 1508276493, NULL, 0),
+('Amy', '6', 2, 74, '1', 1508276493, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -112,9 +112,8 @@ INSERT INTO `charity_card` (`id`, `user_uid`, `card_id`, `set_id`, `card_status`
 (4, 'Tony', '2', '1', 4),
 (46, 'Amy', '33', '2', 4),
 (47, 'Amy', '35', '2', 4),
-(55, 'Amy', '1', '1', 4),
-(56, 'Amy', '2', '1', 4),
-(57, 'Amy', '5', '1', 4);
+(64, 'Amy', '1', '1', 4),
+(65, 'Amy', '5', '1', 4);
 
 -- --------------------------------------------------------
 
@@ -143,17 +142,19 @@ CREATE TABLE `messages` (
 
 INSERT INTO `messages` (`id`, `user_uid`, `swap_uid`, `swap_email`, `status`, `time`, `set_id`, `offer_id`, `get_id`, `token`, `offer_name`, `get_name`) VALUES
 (54, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '2', '20/09/2017 19:15:23', '1', '1,2', '5,6', NULL, NULL, NULL),
-(55, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '1', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
+(55, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '2', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
 (56, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '3', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
-(57, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '6', '02/10/2017 11:18:14', '1', '3', '1,2', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
+(57, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '1', '02/10/2017 11:18:14', '1', '3', '1,2', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
 (58, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
 (59, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '5', '02/10/2017 11:04:17', '1', '1,5', '2,5', NULL, NULL, NULL),
 (60, 'Xinkai', 'Amy', 'yhchixigua@gmail.com', '5', '26/09/2017 15:41:46', '1', '1,2', '3', '1d8aac14eb3c2d4d32d7a8f351722137', NULL, NULL),
 (61, 'Amy', 'Xinkai', 'yhchixigua@gmail.com', '3', '26/09/2017 15:41:46', '1', '1,5', '2,5', NULL, NULL, NULL),
 (62, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '6', '27/09/2017 17:27:04', '1', '1,2', '4', NULL, NULL, NULL),
 (63, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '6', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
-(65, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '0', '29/09/2017 09:52:23', '1', '1,2', '4', NULL, NULL, NULL),
-(66, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL);
+(65, 'Amy', 'Bruce', 'yehan.wang@it.weltec.ac.nz', '0', '03/11/2017 17:39:56', '1', '1,2', '4', NULL, NULL, NULL),
+(66, 'Bruce', 'Amy', 'yhchixigua@gmail.com', '1', '21/09/2017 10:20:42', '1', '4', '1,2', NULL, NULL, NULL),
+(67, 'Amy', 'Yehan', '900@gmail.com', '4', '18/10/2017 10:41:34', '1', '1,3,6', '2', '0b640801cf62b7108da213f6c99d2aa3', '1001,1003,1006', '1002'),
+(68, 'Yehan', 'Amy', 'yhchixigua@gmail.com', '4', '18/10/2017 10:41:34', '1', '2', '1,3,6', '0b640801cf62b7108da213f6c99d2aa3', '1002', '1001,1003,1006');
 
 -- --------------------------------------------------------
 
@@ -180,7 +181,9 @@ INSERT INTO `rating` (`rate_id`, `user_uid`, `good`, `normal`, `bad`, `average`,
 (1, 'Amy', 6, 1, 0, 2.5, 8, 20),
 (2, 'Bruce', 4, 2, 1, 8.25, 4, 33),
 (3, 'Tony', 2, 4, 1, 4, 4, 20),
-(4, 'Xinkai', 5, 2, 3, 4, 8, 32);
+(4, 'Xinkai', 5, 2, 3, 4, 8, 32),
+(5, 'Wendy', 12, 1, 0, 0, 0, 0),
+(6, 'Yehan', 9, 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -301,12 +304,12 @@ INSERT INTO `users` (`user_id`, `user_first`, `user_last`, `user_email`, `user_u
 (43, 'fdfd', 'fdfdf', '4343@qqx.com', 'tre', '434', '$2y$10$wVHrgD7.BwNgkAriZE.OQO5hb9KGsYcu65HHmLMxZhBfy1Sd4Zc/i', 0, '2bb2e544c0feb36d9196ba0bc3118c2d', 1503109869, 1503023469, NULL, NULL, NULL),
 (44, 'klkl', 'jgddf', 'edcrfv@gmail.com', 'here', '9012', '$2y$10$J4k2o0dXEnK7hoMJ4PV7y.cREdG0Vh9Fquw2dTzYFERs6/5Ys76ze', 0, '0c701927b22789bd07a8a64f8a2797ff', 1503110098, 1503023698, NULL, NULL, NULL),
 (45, 'gewe', 'fdsfew', 'ijhg@rere.com', 'uhyt6', '89', '$2y$10$3YukaWVne6GYGoDk/ZVeiexdY4A3b/wSIGshwr1ZDGRfD7gThxm8W', 0, '8b9bd4a710fe2c86a60692a177b22a5f', 1503110382, 1503023982, NULL, NULL, NULL),
-(46, 'Yehan', 'Wang', '900@gmail.com', 'Yyy', '123', '$2y$10$fheRgFnLogwadVasVeXevOj0xJQQW40HYamfn/.X/BD0smjsHf21m', 0, 'f107b84469588aba18488363985e1822', 1503361561, 1503275161, NULL, NULL, NULL),
-(47, 'Aimee', 'Aimee', 'yhchixigua@gmail.com', 'Xinkai', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL, NULL),
+(46, 'Yehan', 'Wang', '900@gmail.com', 'Yehan', '123', '$2y$10$fheRgFnLogwadVasVeXevOj0xJQQW40HYamfn/.X/BD0smjsHf21m', 0, 'f107b84469588aba18488363985e1822', 1503361561, 1503275161, '04/10/2017', NULL, NULL),
+(47, 'Aimee', 'Aimee', 'yhchixigua@gmail.com', 'Wendy', '5012', '$2y$10$m8ZyFLncCH8cvhEFdt5.y.ikkGKcVGior8r..oiZbwnq.LyNkKHrS', 0, '6b0b30f331da94ac8a40fa4210b102d1', 1504391139, 1504304739, '04/09/2017', NULL, NULL),
 (48, 'Bruce', 'Li', 'yehan.wang@it.weltec.ac.nz', 'Bruce', '33232', '$2y$10$Rj8R6Jra2jYBaYNKrTjHIutF9PsKxjubt3opbPLRKikmK0lZzw/t2', 1, '3b912a507ce4f3a6a9a34a577ea8451d', 1504587699, 1504501299, '04/09/2017', NULL, NULL),
 (49, 'Tony', 'Wu', '222@gmail.com', 'Tony', '33232', '$2y$10$p688dmExfCMSzojmhwOCB.AtmTHmGj5KBp/1Ig8srI8HibrgTHhz2', 1, 'd24efee2c60e0f6759bde8ccb1c1ef6e', 1504587729, 1504501329, '04/09/2017', NULL, NULL),
-(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '3333', '$2y$10$An.2zOCH99bnPetWoBk1/OYh2Y3VgfeaiVUEMtR0xnv5.1i0/aRKe', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '17/10/2017', '81 victoria street, lower hutt', NULL),
-(51, 'Zilong', 'Li', 'ryu9827@gmail.com', 'zzz', '5014', '$2y$10$01Nqe8GvwGVDQzCS95Hb4eD2RHlh2ZLu3X1AsSKx6H8kYCO1pu.zK', 0, 'f3abb86bd34cf4d52698f14c0da1dc60', 1506994309, 1506907909, '02/10/2017', '81 karaka street, Wainuiomata, Lower Hutt', NULL),
+(50, 'Amy', 'Wang', 'yhchixigua@gmail.com', 'Amy', '3333', '$2y$10$An.2zOCH99bnPetWoBk1/OYh2Y3VgfeaiVUEMtR0xnv5.1i0/aRKe', 0, 'fdfeaadcfcd0241267731ce66ed75eaa', 1504587799, 1504501399, '04/11/2017', '81 victoria street, lower hutt', NULL),
+(51, 'Zilong', 'Li', 'ryu9827@gmail.com', 'Xinkai1', '5014', '$2y$10$01Nqe8GvwGVDQzCS95Hb4eD2RHlh2ZLu3X1AsSKx6H8kYCO1pu.zK', 0, 'f3abb86bd34cf4d52698f14c0da1dc60', 1506994309, 1506907909, '02/10/2017', '81 karaka street, Wainuiomata, Lower Hutt', NULL),
 (52, 'Aa', 'Aa', '11@a.ccc', 'aa', '1111', '$2y$10$CJYy/Ia1sLq01/ahZbEEHeU3PoDYMcMtZYchyHXvO3hoLMxauRdOa', 0, 'b1b6252885bbf33d866424b2db6e554b', 1507367591, 1507281191, '06/10/2017', '11', NULL),
 (53, 'Robert', 'Sutcliffe', 'collectionswap@gmail.com', 'Admin', '2222', '$2y$10$f4DXJZ6OTbKiMK16GE1mKuhpzVMxSAz6771AsuCT4KjGDADmXO6v2', 1, 'df360efb4708891de1735ed1d46e9baa', 1507864887, 1507778487, '12/10/2017', '11111', 40);
 
@@ -343,10 +346,8 @@ CREATE TABLE `user_sets` (
 --
 
 INSERT INTO `user_sets` (`id`, `user_id`, `set_id`, `islocked`) VALUES
-(7, 50, 1, 1),
-(9, 50, 2, 1),
-(10, 50, 3, 1),
-(11, 50, 7, 1);
+(12, 50, 1, 0),
+(11, 50, 7, 0);
 
 -- --------------------------------------------------------
 
@@ -452,17 +453,17 @@ ALTER TABLE `cards_status`
 -- AUTO_INCREMENT for table `charity_card`
 --
 ALTER TABLE `charity_card`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `rate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `sets_cards`
 --
@@ -472,7 +473,7 @@ ALTER TABLE `sets_cards`
 -- AUTO_INCREMENT for table `sets_exist`
 --
 ALTER TABLE `sets_exist`
-  MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `set_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
@@ -482,7 +483,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_sets`
 --
 ALTER TABLE `user_sets`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
