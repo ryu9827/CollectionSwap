@@ -25,6 +25,7 @@ session_start();
 <link href="css/slimbox2/slimbox2.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body data-spy="scroll">

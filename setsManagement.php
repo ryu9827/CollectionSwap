@@ -25,10 +25,26 @@
 	<br/>
 <script type="text/javascript">
     function remove(id) {
-        if (confirm("Are you sure to remove this collection from your list?")){
-           debugger;
-            location.href="includes/removeSet?set_id="+id;
-        }
+//        if (confirm("Are you sure to remove this collection from your list?")){
+//           debugger;
+//            location.href="includes/removeSet?set_id="+id;
+//        }
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: ["No, cancel","I am sure"],
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                location.href="includes/removeSet?set_id="+id;
+//                swal("Poof! Your imaginary file has been deleted!", {
+//                    icon: "success",
+//                });
+            } else {
+                swal("Your imaginary file is safe!");
+              }
+        });
     }
 </script>
 
